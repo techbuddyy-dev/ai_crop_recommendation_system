@@ -1,0 +1,474 @@
+{
+  "crop_id": "castor",
+  "crop_name": "Castor",
+  "aliases": ["Arandi", "Erandi", "Amanakku", "Amudalu"],
+  "crop_group": "Oilseed",
+  "status": "active",
+  "language": "en",
+  "version": "v1.2",
+
+  "master_profile": {
+    "short_description": "Castor is a robust, deep-rooted, highly drought-tolerant non-edible industrial oilseed crop. India is the world's largest producer, primarily growing it in the arid and semi-arid regions.",
+    "seasons_supported": ["Kharif", "Rabi", "Summer"],
+    "regions_supported": ["Gujarat", "Rajasthan", "Andhra Pradesh", "Telangana", "Maharashtra", "Karnataka", "Tamil Nadu"],
+    "agro_climatic_zones": ["Gujarat Plains and Hills Region", "Western Dry Region", "Southern Plateau and Hills Region", "East Coast Plains and Hills Region"],
+
+    "soil_suitability": {
+      "suitable_soil_textures": ["Sandy loam", "Loam", "Well-drained light soils", "Red sandy soils"],
+      "unsuitable_soil_textures": ["Heavy clay with poor drainage", "Highly saline soils"],
+      "ideal_ph_min": 6.0,
+      "ideal_ph_max": 7.5,
+      "acceptable_ph_min": 5.0,
+      "acceptable_ph_max": 8.5,
+      "salinity_tolerance_note": "Moderately tolerant to soil salinity, but high alkalinity restricts deep root penetration.",
+      "drainage_requirement": "Requires excellent drainage. Extremely sensitive to waterlogging, which rapidly causes root and collar rots.",
+      "organic_carbon_note": "Responds well to organic matter, but typically thrives in marginal, low-fertility soils."
+    },
+
+    "climate_suitability": {
+      "ideal_temperature_c_min": 20,
+      "ideal_temperature_c_max": 35,
+      "acceptable_temperature_c_min": 15,
+      "acceptable_temperature_c_max": 40,
+      "ideal_humidity_min": 40,
+      "ideal_humidity_max": 70,
+      "ideal_rainfall_mm_min": 500,
+      "ideal_rainfall_mm_max": 750,
+      "frost_tolerance_note": "Highly sensitive to frost, which damages leaves and developing spikes, causing severe yield loss.",
+      "heat_tolerance_note": "Excellent heat tolerance during the vegetative phase. However, temperatures above 40°C during flowering can cause flower abortion."
+    },
+
+    "water_profile": {
+      "irrigation_required": false,
+      "rainfed_suitable": true,
+      "waterlogging_tolerance": "Very low; standing water for even 24-48 hours causes wilt and plant mortality.",
+      "drought_tolerance": "Exceptionally high; its deep taproot system (up to 2-3 meters) effectively extracts moisture from deep soil layers.",
+      "critical_water_stages": ["Primary spike initiation (45-50 DAS)", "Flowering", "Capsule development"]
+    },
+
+    "nutrient_profile": {
+      "nitrogen_demand": "Moderate to High (60-80 kg/ha for hybrids; split applications highly recommended)",
+      "phosphorus_demand": "Moderate (40-50 kg/ha)",
+      "potassium_demand": "Low to Moderate (20-30 kg/ha, applied mostly in deficient sandy soils)",
+      "micronutrient_notes": ["Sulphur (20 kg/ha) application improves oil content.", "Zinc deficiency in sandy soils can be corrected with 25 kg/ha Zinc Sulphate."]
+    },
+
+    "cropping_context": {
+      "suitable_previous_crops": ["Pearl Millet", "Sorghum", "Green Gram", "Cluster Bean (Guar)", "Cowpea"],
+      "unsuitable_previous_crops": ["Continuous castor cultivation increases Fusarium wilt and nematode populations."],
+      "rotation_notes": ["Pearl Millet - Castor", "Green Gram - Castor", "Castor - Fallow"],
+      "intercrop_options": ["Pigeonpea", "Groundnut", "Cluster Bean", "Cowpea", "Green Gram", "Black Gram"]
+    },
+
+    "crop_duration": {
+      "duration_days_min": 140,
+      "duration_days_max": 210,
+      "maturity_indicators": ["Capsules turn yellowish-brown and dry", "Spikes mature sequentially (primary, secondary, tertiary)"]
+    },
+
+    "recommendation_logic": {
+      "why_recommend_conditions": ["Arid and semi-arid climates", "Light, well-drained sandy soils", "Areas with erratic rainfall"],
+      "why_not_recommend_conditions": ["Heavy rainfall zones", "Frost-prone winters", "Poorly drained heavy clay soils"],
+      "hard_rejection_conditions": ["Frequent flooding or persistent waterlogging"]
+    }
+  },
+
+  "region_season_advisories": [
+    {
+      "advisory_id": "castor_gujarat_kharif",
+      "state_region": "Gujarat",
+      "district": "Banaskantha, Patan, Mehsana, Sabarkantha, Kutch",
+      "season": "Kharif",
+      "advisory_type": "cultivation_guide",
+      "applicability_filters": {
+        "irrigation": "rainfed with protective irrigation",
+        "soil_type": "sandy loam to loam",
+        "sowing_window": "July 15 to August 15"
+      },
+
+      "sowing": {
+        "sowing_window_start": "July 15",
+        "sowing_window_end": "August 20",
+        "seed_rate": { "value": 5, "unit": "kg/ha", "range_type": "recommended", "source_confidence": "high" },
+        "seed_treatment": "Treat seeds with Carbendazim @ 2g/kg or Trichoderma viride @ 10g/kg to prevent wilt and root rot.",
+        "spacing": "120 cm x 60 cm or 150 cm x 90 cm depending on hybrid vigor and irrigation.",
+        "sowing_depth_cm": 5,
+        "nursery_required": false,
+        "transplanting_required": false
+      },
+
+      "land_preparation": {
+        "summary": "Deep ploughing with a mouldboard plough followed by 2-3 harrowings. Sub-soiling once in 3 years helps break hardpans and facilitates deep taproot penetration."
+      },
+
+      "fertilizer": {
+        "basal_dose": "Apply 50% N (30 kg), full P2O5 (40 kg), and full K2O (20 kg) at sowing. Apply Sulphur @ 20 kg/ha.",
+        "top_dressing": "Apply remaining 50% N in two equal splits: at 40-50 DAS (primary spike initiation) and 70-80 DAS.",
+        "organic_manure": "Add 5-10 tonnes/ha of FYM or compost during final land preparation.",
+        "micronutrients": "Foliar spray of 1% FeSO4 or 0.5% ZnSO4 if respective deficiencies occur."
+      },
+
+      "irrigation": {
+        "schedule": "Rainfed in early stages. If dry spells occur, irrigate at primary spike initiation (50 DAS), secondary spike initiation (75 DAS), and tertiary spike stages.",
+        "critical_stages": ["Primary spike emergence", "Flowering", "Capsule development"],
+        "rainfed_advice": "Interculturing (hoeing) 2-3 times before 60 DAS conserves soil moisture and manages weeds."
+      },
+
+      "weed_management": {
+        "summary": "Pre-emergence application of Pendimethalin 30 EC @ 1.0 kg a.i./ha. Manual weeding at 30 and 60 DAS."
+      },
+
+      "pest_management": [
+        {
+          "name": "Castor Semilooper (Achaea janata)",
+          "symptoms": "Caterpillars feed voraciously on leaves, leaving only the midribs. Severe attacks can completely defoliate the plant.",
+          "management": "Spray Bacillus thuringiensis (Bt) @ 1 kg/ha or Quinalphos 25 EC @ 2 ml/L or Profenofos 50 EC @ 1.5 ml/L when larvae cross ETL (4-5/plant)."
+        },
+        {
+          "name": "Capsule Borer (Conogethes punctiferalis)",
+          "symptoms": "Larvae bore into developing capsules and feed on seeds. Webbing of capsules with frass is characteristic.",
+          "management": "Spray Spinosad 45 SC @ 0.2 ml/L or Indoxacarb 14.5 SC @ 0.5 ml/L during spike development stages."
+        },
+        {
+          "name": "Whitefly & Jassids",
+          "symptoms": "Sucking sap leads to yellowing, curling of leaves, and stunted growth.",
+          "management": "Spray Imidacloprid 17.8 SL @ 0.3 ml/L or Thiamethoxam 25 WG @ 0.2 g/L."
+        }
+      ],
+
+      "disease_management": [
+        {
+          "name": "Fusarium Wilt",
+          "symptoms": "Gradual yellowing and drooping of leaves starting from the bottom. Vascular discoloration (browning) inside the stem.",
+          "management": "Grow wilt-resistant hybrids (e.g., GCH-7, DCH-519). Treat seeds with Trichoderma. Practice 2-3 year crop rotation."
+        },
+        {
+          "name": "Botrytis Gray Mold",
+          "symptoms": "Sudden drying of flowers and capsules with a grayish fungal growth under high humidity and continuous rain.",
+          "management": "Avoid dense canopies. Pluck and burn infected spikes. Spray Carbendazim 50 WP @ 1 g/L or Propiconazole 25 EC @ 1 ml/L."
+        }
+      ],
+
+      "deficiency_management": [
+        {
+          "nutrient": "Nitrogen",
+          "symptoms": "Stunted growth and pale yellow older leaves.",
+          "remedy": "Top dress with Urea preceding an irrigation or rain event."
+        }
+      ],
+
+      "harvest": {
+        "harvest_signs": "Capsules on the spikes turn brown to dry. Castor requires multiple pickings (3-4 times) as spikes mature sequentially.",
+        "post_harvest_notes": "Pick mature spikes and sun-dry them for a few days before threshing. Store seeds at 7-8% moisture. Do not allow capsules to over-dry on the plant to prevent shattering.",
+        "expected_duration_days": 160
+      },
+
+      "special_cautions": ["Castor seeds are highly toxic (contain ricin); avoid consumption by humans or livestock.", "Shattering of capsules can cause yield loss; timely picking is crucial."],
+      "faq": [
+        {
+          "question": "Why is my castor crop wilting despite adequate moisture?",
+          "answer": "This is likely due to Fusarium Wilt, a soil-borne fungus, or root rot caused by waterlogging. Ensure planting wilt-resistant varieties and proper field drainage."
+        }
+      ],
+
+      "source_refs": ["src_nau_castor_gujarat", "src_iior_castor_2022"]
+    },
+    {
+      "advisory_id": "castor_telangana_kharif",
+      "state_region": "Telangana & Andhra Pradesh",
+      "district": "Mahabubnagar, Nalgonda, Kurnool, Prakasam",
+      "season": "Kharif",
+      "advisory_type": "cultivation_guide",
+      "applicability_filters": {
+        "irrigation": "rainfed",
+        "soil_type": ["red chalka soils", "sandy loams"],
+        "sowing_window": "June to July"
+      },
+
+      "sowing": {
+        "sowing_window_start": "June 15",
+        "sowing_window_end": "July 31",
+        "seed_rate": { "value": 5, "unit": "kg/ha", "range_type": "recommended" },
+        "seed_treatment": "Treat with Trichoderma viride @ 10g/kg seed to protect against soil-borne wilt.",
+        "spacing": "90 cm x 60 cm or 120 cm x 60 cm for rainfed red soils.",
+        "sowing_depth_cm": 5,
+        "nursery_required": false,
+        "transplanting_required": false
+      },
+
+      "land_preparation": {
+        "summary": "Deep ploughing with a tractor-drawn disc plough. Open furrows at 3 meter intervals to conserve moisture in red chalka soils."
+      },
+
+      "fertilizer": {
+        "basal_dose": "Apply 20 kg N, 40 kg P2O5, and 20 kg K2O/ha.",
+        "top_dressing": "Top-dress 20 kg N/ha at 30 DAS and 20 kg N/ha at 60 DAS.",
+        "organic_manure": "Apply 5 t/ha FYM or castor cake during final ploughing."
+      },
+
+      "irrigation": {
+        "schedule": "Strictly rainfed. Deep tap roots access sub-soil moisture.",
+        "critical_stages": ["Spike initiation", "Capsule filling"]
+      },
+
+      "weed_management": {
+        "summary": "Intercultivate with a blade harrow at 25 and 45 DAS. Pre-emergence Pendimethalin @ 1 L/ha."
+      },
+
+      "pest_management": [
+        {
+          "name": "Spodoptera litura (Tobacco Caterpillar)",
+          "symptoms": "Larvae feed gregariously, scraping the chlorophyll. Later instars defoliate entire plants.",
+          "management": "Use pheromone traps @ 10/ha. Spray Novaluron 10 EC @ 1 ml/L or Spinetoram 11.7 SC @ 1 ml/L."
+        },
+        {
+          "name": "Shoot and Capsule Borer",
+          "symptoms": "Larvae bore into tender shoots and developing capsules. Presence of excreta on webbed capsules.",
+          "management": "Spray Flubendiamide 39.35 SC @ 0.2 ml/L or Thiodicarb 75 WP @ 1 g/L."
+        }
+      ],
+
+      "disease_management": [
+        {
+          "name": "Seedling Blight (Phytophthora)",
+          "symptoms": "Circular dull green patches on cotyledonary leaves. Seedlings rot and collapse during continuous rainy days.",
+          "management": "Ensure prompt drainage. Spray Metalaxyl + Mancozeb (Ridomil MZ) @ 2 g/L."
+        }
+      ],
+
+      "harvest": {
+        "harvest_signs": "Primary spikes mature first (approx 90-100 DAS), followed by secondary and tertiary spikes. Harvest when capsules turn brown.",
+        "post_harvest_notes": "Use safety gear (gloves) while harvesting and threshing due to allergic reactions to castor dust. Dry thoroughly before decortication.",
+        "expected_duration_days": 180
+      },
+
+      "special_cautions": ["Do not delay sowing beyond August, as the crop will face severe moisture stress during the tertiary spike development phase."],
+      "faq": [
+        {
+          "question": "How many times do I need to harvest Castor?",
+          "answer": "Castor has an indeterminate growth habit. You will typically need 3 to 4 pickings at intervals of 25-30 days as primary, secondary, and tertiary spikes mature sequentially."
+        }
+      ],
+      "source_refs": ["src_pjtsau_castor", "src_iior_castor_2022"]
+    }
+  ],
+
+  "risk_library": {
+    "pests": [
+      {
+        "name": "Castor Semilooper",
+        "favorable_conditions": ["Dry spells followed by rain", "August-September period"],
+        "symptoms": ["Defoliated leaves", "Voracious feeding leaving only midribs"],
+        "management": ["Use bird perches", "Foliar sprays of Quinalphos or Bt"]
+      },
+      {
+        "name": "Capsule Borer",
+        "favorable_conditions": ["Humid weather during capsule formation"],
+        "symptoms": ["Frass-covered webbed capsules", "Holes in capsules"],
+        "management": ["Spray Spinosad", "Clean cultivation", "Remove infested spikes"]
+      },
+      {
+        "name": "Tobacco Caterpillar (Spodoptera)",
+        "favorable_conditions": ["Cloudy weather", "Continuous dry spells"],
+        "symptoms": ["Skeletonized leaves", "Mass defoliation by swarms"],
+        "management": ["Pheromone traps", "Novaluron sprays", "Destroy egg masses"]
+      }
+    ],
+    "diseases": [
+      {
+        "name": "Fusarium Wilt",
+        "favorable_conditions": ["Continuous castor cultivation", "Moisture stress and high soil temperatures"],
+        "symptoms": ["Drooping of leaves", "Brown vascular bundles"],
+        "management": ["Wilt-resistant hybrids", "Seed treatment with Trichoderma", "Crop rotation"]
+      },
+      {
+        "name": "Botrytis Gray Mold",
+        "favorable_conditions": ["Continuous rains", "High relative humidity (>85%) during flowering"],
+        "symptoms": ["Gray powdery fungal growth on spikes", "Rotting of capsules"],
+        "management": ["Fungicidal sprays (Carbendazim) during cyclonic weather", "Wider spacing", "Avoid excess Nitrogen"]
+      },
+      {
+        "name": "Seedling Blight",
+        "favorable_conditions": ["Waterlogging", "Continuous heavy rainfall early in the season"],
+        "symptoms": ["Dull green patches on cotyledons", "Seedling collapse"],
+        "management": ["Ensure drainage", "Metalaxyl sprays"]
+      }
+    ],
+    "abiotic_risks": [
+      {
+        "name": "Frost Damage",
+        "trigger_conditions": ["Temperatures dropping below 4°C in winter (Rabi/late Kharif)"],
+        "impact": "Leaves dry up, spikes abort, severe yield loss.",
+        "mitigation": ["Light protective irrigation on cold nights", "Smoke generation around field borders"]
+      },
+      {
+        "name": "Waterlogging",
+        "trigger_conditions": ["Heavy clay soils", "Flat bed sowing", "Continuous monsoon rains"],
+        "impact": "Root asphyxiation, collar rot, sudden wilting, and total plant death.",
+        "mitigation": ["Sow on ridges", "Create drainage channels", "Avoid heavy black soils"]
+      }
+    ]
+  },
+
+  "retrieval_chunks": [
+    {
+      "chunk_id": "castor_overview_001",
+      "chunk_type": "overview",
+      "title": "Castor Crop Overview",
+      "crop_name": "Castor",
+      "state_region": "India",
+      "district": "All",
+      "season": "Kharif/Rabi",
+      "advisory_category": "overview",
+      "text": "Castor is a highly drought-tolerant, deep-rooted non-edible oilseed crop. India dominates global production, primarily cultivating it in the arid and semi-arid tracts of Gujarat, Rajasthan, and Telangana.",
+      "keywords": ["Castor", "Arandi", "Oilseed", "Drought tolerant", "Industrial oil"],
+      "metadata_tags": ["general_info", "intro"],
+      "source_ref_ids": ["src_iior_castor_2022"]
+    },
+    {
+      "chunk_id": "castor_suitability_001",
+      "chunk_type": "suitability",
+      "title": "Castor Suitability Conditions",
+      "crop_name": "Castor",
+      "state_region": "India",
+      "district": "All",
+      "season": "All",
+      "advisory_category": "suitability",
+      "text": "Castor requires well-drained sandy loam or light red soils. It is highly sensitive to waterlogging and frost but can extract moisture from deep soil layers, making it ideal for rainfed regions with erratic rainfall.",
+      "keywords": ["Sandy loam", "Well-drained", "Waterlogging-sensitive", "Frost-sensitive", "Red soil"],
+      "metadata_tags": ["soil", "climate", "water"],
+      "source_ref_ids": ["src_nau_castor_gujarat"]
+    },
+    {
+      "chunk_id": "castor_botrytis_gray_mold_001",
+      "chunk_type": "disease_management",
+      "title": "Managing Botrytis Gray Mold in Castor",
+      "crop_name": "Castor",
+      "state_region": "India",
+      "district": "All",
+      "season": "Kharif/Rabi",
+      "advisory_category": "disease_management",
+      "text": "Botrytis Gray Mold is a destructive disease that attacks castor spikes during continuous rainy or highly humid weather. It covers capsules in a gray fungal dust. To manage it, avoid dense planting, remove infected spikes, and spray Carbendazim preemptively if cyclonic weather is forecast.",
+      "keywords": ["Botrytis", "Gray Mold", "Fungus", "Spikes", "Rotting capsules", "Humidity"],
+      "metadata_tags": ["disease", "fungus", "yield_loss"],
+      "source_ref_ids": ["src_pjtsau_castor"]
+    },
+    {
+      "chunk_id": "castor_semilooper_001",
+      "chunk_type": "pest_management",
+      "title": "Castor Semilooper Management",
+      "crop_name": "Castor",
+      "state_region": "India",
+      "district": "All",
+      "season": "Kharif",
+      "advisory_category": "pest_management",
+      "text": "The Castor Semilooper is a major defoliating pest that can strip entire plants, leaving only leaf midribs. Monitor closely from August to September. Use bird perches and spray Bacillus thuringiensis (Bt) or Quinalphos when larval populations cross the economic threshold limit.",
+      "keywords": ["Semilooper", "Defoliation", "Caterpillar", "Quinalphos", "Bt"],
+      "metadata_tags": ["pest", "caterpillar", "foliage_damage"],
+      "source_ref_ids": ["src_nau_castor_gujarat"]
+    },
+    {
+      "chunk_id": "castor_multiple_pickings_001",
+      "chunk_type": "harvest_management",
+      "title": "Harvesting Castor via Multiple Pickings",
+      "crop_name": "Castor",
+      "state_region": "India",
+      "district": "All",
+      "season": "All",
+      "advisory_category": "harvest_management",
+      "text": "Because Castor has an indeterminate growth habit, its spikes mature at different times (primary first, then secondary, tertiary). Harvesting requires 3 to 4 sequential pickings of brown, dried capsules every 25-30 days to prevent shattering losses.",
+      "keywords": ["Picking", "Harvesting", "Spikes", "Sequential", "Shattering"],
+      "metadata_tags": ["harvest", "labor", "maturity"],
+      "source_ref_ids": ["src_iior_castor_2022"]
+    }
+  ],
+
+  "structured_explanation_rules": [
+    {
+      "rule_id": "castor_arid_match",
+      "condition": "input.rainfall_mm >= 400 AND input.rainfall_mm <= 750 AND input.soil_texture IN ['sandy loam', 'loam', 'red sandy']",
+      "message": "Perfect match for Castor. Your well-drained soil and low/moderate rainfall suit this highly drought-tolerant crop.",
+      "priority": 1,
+      "severity": "positive_match"
+    },
+    {
+      "rule_id": "castor_waterlogging_reject",
+      "condition": "input.soil_drainage == 'poor' OR input.waterlogging_history == true",
+      "message": "Severe Risk: Castor is extremely sensitive to water stagnation. Poorly drained fields will lead to collar rot, wilt, and rapid plant death.",
+      "priority": 1,
+      "severity": "hard_reject"
+    },
+    {
+      "rule_id": "castor_frost_warning",
+      "condition": "input.min_temp_c < 5 AND input.growth_stage IN ['flowering', 'capsule_development']",
+      "message": "Warning: Frost is highly detrimental to Castor, causing flower and leaf drop. Arrange for light irrigation to mitigate cold stress if temperatures drop.",
+      "priority": 2,
+      "severity": "warning"
+    },
+    {
+      "rule_id": "castor_botrytis_warning",
+      "condition": "input.humidity > 85 AND input.weather_forecast == 'continuous_rain' AND input.growth_stage == 'flowering'",
+      "message": "Critical Alert: High humidity and continuous rain during flowering trigger Botrytis Gray Mold. Prepare for preemptive fungicidal sprays to protect the spikes.",
+      "priority": 3,
+      "severity": "warning"
+    }
+  ],
+
+  "ui_response_templates": {
+    "best_match_intro": "Arandi (Castor) is an excellent, high-value commercial crop for your dryland field conditions.",
+    "warning_drainage": "Your field's drainage needs improvement before planting Castor. Stagnant water for even a day will destroy the crop.",
+    "warning_botrytis": "Alert: Weather conditions are highly favorable for Botrytis Gray Mold. Inspect spikes immediately.",
+    "info_multiple_pickings": "Keep in mind that Castor requires multiple harvest passes (pickings) over a couple of months. Ensure labor availability.",
+    "cta_view_advisory": "View full Castor cultivation guidelines",
+    "cta_view_pest_guide": "Read the Semilooper and Capsule Borer Management Guide"
+  },
+
+  "source_registry": [
+    {
+      "source_id": "src_nau_castor_gujarat",
+      "title": "Package of Practices for Castor",
+      "source_type": "manual",
+      "publisher": "Navsari Agricultural University (NAU) / SDAU, Gujarat",
+      "region_scope": "Gujarat",
+      "season_scope": "Kharif",
+      "crop_scope": ["Castor"],
+      "content_summary": "Extensive agronomic guidelines tailored for Gujarat, covering high-yielding hybrids, wilt management, and multi-picking strategies.",
+      "date_published": "2022-06-01",
+      "trust_level": "high"
+    },
+    {
+      "source_id": "src_iior_castor_2022",
+      "title": "Castor Production Technology",
+      "source_type": "pdf",
+      "publisher": "ICAR - Indian Institute of Oilseeds Research (IIOR), Hyderabad",
+      "region_scope": "India",
+      "season_scope": "Kharif and Rabi",
+      "crop_scope": ["Castor"],
+      "content_summary": "National guidelines on castor cultivation, botrytis gray mold management, and integrated pest management against semilooper.",
+      "date_published": "2021-09-10",
+      "trust_level": "high"
+    },
+    {
+      "source_id": "src_pjtsau_castor",
+      "title": "Castor Cultivation in Telangana",
+      "source_type": "bulletin",
+      "publisher": "Professor Jayashankar Telangana State Agricultural University (PJTSAU)",
+      "region_scope": "Telangana",
+      "season_scope": "Kharif",
+      "crop_scope": ["Castor"],
+      "content_summary": "Guide focused on rainfed red chalka soils, spacing requirements, and Botrytis Gray Mold control.",
+      "date_published": "2022-05-25",
+      "trust_level": "high"
+    }
+  ],
+
+  "quality_flags": {
+    "is_complete": true,
+    "missing_fields": [],
+    "weakly_supported_fields": [],
+    "last_reviewed_at": "2024-03-25T00:00:00Z"
+  },
+
+  "updated_at": "2024-03-25T00:00:00Z",
+  "created_at": "2023-12-08T00:00:00Z"
+}

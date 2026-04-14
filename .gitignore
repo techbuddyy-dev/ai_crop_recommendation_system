@@ -1,0 +1,6 @@
+venv/
+.env
+__pycache__/
+*.pyc
+
+# DO NOT ignore chroma_db/ because it is required for zero-cost RAG deployment on Railway

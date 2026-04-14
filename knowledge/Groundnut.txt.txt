@@ -1,0 +1,490 @@
+{
+  "crop_id": "groundnut",
+  "crop_name": "Groundnut",
+  "aliases": ["Peanut", "Moongfali", "Mungfali", "Verkadalai", "Kadalekai", "Palli", "Shengdana"],
+  "crop_group": "Oilseed",
+  "status": "active",
+  "language": "en",
+  "version": "v1.2",
+
+  "master_profile": {
+    "short_description": "Groundnut is a premier oilseed and cash crop in India, widely grown in dryland and rainfed areas. It is a legume that requires loose, friable soils for proper peg penetration and pod development.",
+    "seasons_supported": ["Kharif", "Rabi", "Zaid"],
+    "regions_supported": ["Gujarat", "Andhra Pradesh", "Tamil Nadu", "Karnataka", "Maharashtra", "Rajasthan", "Madhya Pradesh"],
+    "agro_climatic_zones": ["Gujarat Plains and Hills Region", "Southern Plateau and Hills Region", "Western Dry Region", "East Coast Plains and Hills Region"],
+
+    "soil_suitability": {
+      "suitable_soil_textures": ["Sandy loam", "Loamy sand", "Well-drained light soils", "Red sandy soils"],
+      "unsuitable_soil_textures": ["Heavy clay", "Black cotton soils with poor drainage", "Compacted or stony soils"],
+      "ideal_ph_min": 6.0,
+      "ideal_ph_max": 7.5,
+      "acceptable_ph_min": 5.5,
+      "acceptable_ph_max": 8.0,
+      "salinity_tolerance_note": "Moderately sensitive to salinity. High salinity impairs water uptake and pod filling.",
+      "drainage_requirement": "Requires excellent drainage. Waterlogging leads to poor aeration, collar rot, and prevents pegging.",
+      "organic_carbon_note": "Medium organic carbon is preferred. Addition of FYM improves soil friability, which is essential for pod development."
+    },
+
+    "climate_suitability": {
+      "ideal_temperature_c_min": 25,
+      "ideal_temperature_c_max": 35,
+      "acceptable_temperature_c_min": 20,
+      "acceptable_temperature_c_max": 40,
+      "ideal_humidity_min": 50,
+      "ideal_humidity_max": 80,
+      "ideal_rainfall_mm_min": 500,
+      "ideal_rainfall_mm_max": 1000,
+      "frost_tolerance_note": "Highly sensitive to frost, which can kill the plant instantly.",
+      "heat_tolerance_note": "Can tolerate high temperatures, but soil temperature above 35°C during pegging can cause peg abortion."
+    },
+
+    "water_profile": {
+      "irrigation_required": false,
+      "rainfed_suitable": true,
+      "waterlogging_tolerance": "Very low; standing water restricts root respiration and promotes fungal root and stem rots.",
+      "drought_tolerance": "Moderate to High; can survive vegetative drought, but moisture stress at pegging and pod filling severely reduces yield.",
+      "critical_water_stages": ["Flowering (25-35 DAS)", "Pegging (35-50 DAS)", "Pod development (50-70 DAS)"]
+    },
+
+    "nutrient_profile": {
+      "nitrogen_demand": "Low (10-20 kg/ha as starter; fixes atmospheric nitrogen via root nodules)",
+      "phosphorus_demand": "Moderate (40-50 kg/ha; crucial for root growth and nodulation)",
+      "potassium_demand": "Low to Moderate (20-40 kg/ha; mostly in deficient soils)",
+      "micronutrient_notes": ["Calcium is critical: Gypsum (400 kg/ha) application at pegging prevents 'pops' (empty pods).", "Iron and Zinc deficiencies are common in calcareous soils."]
+    },
+
+    "cropping_context": {
+      "suitable_previous_crops": ["Pearl Millet", "Sorghum", "Maize", "Wheat"],
+      "unsuitable_previous_crops": ["Continuous groundnut cultivation increases soil-borne diseases like collar rot and white grub incidence."],
+      "rotation_notes": ["Pearl Millet - Groundnut", "Groundnut - Wheat", "Sorghum - Groundnut", "Rice - Groundnut (Rabi)"],
+      "intercrop_options": ["Pigeonpea (Tur)", "Pearl Millet", "Castor", "Cotton", "Sunflower"]
+    },
+
+    "crop_duration": {
+      "duration_days_min": 90,
+      "duration_days_max": 130,
+      "maturity_indicators": ["Leaves turn yellow and begin to dry", "Inner surface of the pod shell turns dark brown or black", "Kernels become plump and separate easily from the shell"]
+    },
+
+    "recommendation_logic": {
+      "why_recommend_conditions": ["Light, sandy or well-drained loamy soils", "Rainfed conditions with 500-800mm rainfall", "Warm climate"],
+      "why_not_recommend_conditions": ["Heavy clay soils (hinders pegging and harvesting)", "Waterlogged or flood-prone areas", "Frost-prone regions"],
+      "hard_rejection_conditions": ["Soils prone to severe compaction or surface crusting", "High soil salinity"]
+    }
+  },
+
+  "region_season_advisories": [
+    {
+      "advisory_id": "groundnut_gujarat_kharif",
+      "state_region": "Gujarat",
+      "district": "Saurashtra region (Rajkot, Junagadh, Jamnagar, Amreli)",
+      "season": "Kharif",
+      "advisory_type": "cultivation_guide",
+      "applicability_filters": {
+        "irrigation": "rainfed to semi-irrigated",
+        "soil_type": "sandy loam to medium black well-drained soils",
+        "sowing_window": "onset of monsoon (mid-June to July)"
+      },
+
+      "sowing": {
+        "sowing_window_start": "June 15",
+        "sowing_window_end": "July 15",
+        "seed_rate": { "value": 100, "unit": "kg/ha", "range_type": "recommended", "source_confidence": "high" },
+        "seed_treatment": "Treat kernels with Mancozeb 75 WP @ 3g/kg or Tebuconazole 2 DS @ 1.5g/kg to prevent collar rot. Follow with Rhizobium and PSB @ 5g/kg seed.",
+        "spacing": "45 cm x 10 cm (bunch type) or 60 cm x 10 cm (spreading type)",
+        "sowing_depth_cm": 5,
+        "nursery_required": false,
+        "transplanting_required": false
+      },
+
+      "land_preparation": {
+        "summary": "Deep summer ploughing exposes white grub pupae. Prepare a loose, friable seedbed with 2-3 harrowings. Avoid excessive pulverization to prevent surface crusting."
+      },
+
+      "fertilizer": {
+        "basal_dose": "Apply 12.5 kg N and 25 kg P2O5 per hectare at sowing.",
+        "top_dressing": "Not required for N. However, apply Gypsum @ 250-400 kg/ha in the soil near the root zone at 30-40 DAS (pegging stage) to ensure full pod development.",
+        "organic_manure": "Apply 5-10 tonnes/ha of well-rotted FYM to improve soil friability and moisture retention.",
+        "micronutrients": "Foliar spray of 0.5% Ferrous Sulphate + 0.1% Citric acid if iron chlorosis (yellowing of new leaves) appears."
+      },
+
+      "irrigation": {
+        "schedule": "Primarily rainfed. If dry spells occur, provide life-saving irrigation at flowering (30 DAS), peg penetration (45 DAS), and pod development (65 DAS).",
+        "critical_stages": ["Flowering", "Pegging", "Pod development"],
+        "rainfed_advice": "Frequent intercultivation (hoeing) up to 35-40 days controls weeds and conserves moisture. Stop all soil disturbance once pegging starts to avoid breaking the pegs."
+      },
+
+      "weed_management": {
+        "summary": "Pre-emergence application of Pendimethalin 30 EC @ 1.0 kg a.i./ha within 3 days of sowing. One hand weeding at 20-25 DAS. Do not weed mechanically after pegging begins (approx. 40 DAS)."
+      },
+
+      "pest_management": [
+        {
+          "name": "White Grub",
+          "symptoms": "Grubs feed on roots, causing the plant to suddenly wilt and dry up. Easily pulled out of the soil.",
+          "management": "Deep summer ploughing. Seed treatment with Chlorpyrifos 20 EC @ 12.5 ml/kg or Imidacloprid 600 FS @ 2 ml/kg. Soil application of Phorate 10G."
+        },
+        {
+          "name": "Aphids and Thrips",
+          "symptoms": "Suck sap causing stunting. Thrips are vectors for Peanut Bud Necrosis Disease (PBND).",
+          "management": "Spray Imidacloprid 17.8 SL @ 0.3 ml/L or Thiamethoxam 25 WG @ 0.2 g/L."
+        }
+      ],
+
+      "disease_management": [
+        {
+          "name": "Collar Rot (Aspergillus niger)",
+          "symptoms": "Rapid wilting of seedlings. The collar region (near soil surface) becomes water-soaked, turns black, and rots.",
+          "management": "Seed treatment with Tebuconazole or Trichoderma. Avoid deep sowing and avoid mechanical damage to seeds during shelling."
+        },
+        {
+          "name": "Tikka Disease (Leaf Spot)",
+          "symptoms": "Small, dark brown to black circular spots appear on older leaves, surrounded by a yellow halo. Severe infection causes defoliation.",
+          "management": "Spray Mancozeb 75 WP @ 2.5 g/L or Hexaconazole 5 EC @ 1 ml/L at the first sign of spots. Repeat after 15 days if needed."
+        }
+      ],
+
+      "deficiency_management": [
+        {
+          "nutrient": "Calcium",
+          "symptoms": "Poor pod filling resulting in empty shells ('pops'), darkened plumules inside the seed.",
+          "remedy": "Apply Gypsum @ 250-400 kg/ha exactly at the pegging stage (30-40 DAS). Calcium must be absorbed directly by the developing pods, not just the roots."
+        }
+      ],
+
+      "harvest": {
+        "harvest_signs": "Leaves turn yellow, inner shell turns dark brown or black with prominent venation, kernels are full and pinkish/red.",
+        "post_harvest_notes": "Uproot the plants and dry them in the field inverted for 2-3 days. Pluck pods and sun-dry to 8-9% moisture to prevent Aflatoxin (Aspergillus flavus) contamination during storage.",
+        "expected_duration_days": 110
+      },
+
+      "special_cautions": ["Do not disturb the soil (no weeding/hoeing) once pegging has started, as pegs will break and pods will not form.", "Moisture stress at pegging causes massive yield losses."],
+      "faq": [
+        {
+          "question": "Why are my groundnut pods empty (pops)?",
+          "answer": "Empty pods, or 'pops', are caused by Calcium deficiency in the pegging zone. Applying Gypsum at 30-40 days after sowing resolves this issue."
+        },
+        {
+          "question": "Can I grow groundnut in heavy black cotton soil?",
+          "answer": "It is not recommended. Heavy soils become very hard when dry, making peg penetration difficult and harvesting nearly impossible without leaving pods in the soil."
+        }
+      ],
+
+      "source_refs": ["src_jau_groundnut_pop", "src_dgr_groundnut_2022"]
+    },
+    {
+      "advisory_id": "groundnut_ap_rabi_irrigated",
+      "state_region": "Andhra Pradesh & Tamil Nadu",
+      "district": "Anantapur, Kadapa, Chittoor, Villupuram",
+      "season": "Rabi/Summer",
+      "advisory_type": "cultivation_guide",
+      "applicability_filters": {
+        "irrigation": "irrigated",
+        "soil_type": "red sandy loam",
+        "sowing_window": "November to January"
+      },
+
+      "sowing": {
+        "sowing_window_start": "November 15",
+        "sowing_window_end": "January 15",
+        "seed_rate": { "value": 125, "unit": "kg/ha", "range_type": "recommended" },
+        "seed_treatment": "Treat with Trichoderma viride @ 10g/kg or Carbendazim @ 2g/kg. Follow with Rhizobium inoculation.",
+        "spacing": "30 cm x 10 cm (bunch type varieties like Kadiri-6)",
+        "sowing_depth_cm": 4,
+        "nursery_required": false,
+        "transplanting_required": false
+      },
+
+      "land_preparation": {
+        "summary": "Plough 2-3 times to achieve a fine tilth. Ensure proper field leveling to avoid water stagnation during irrigation, which promotes stem rot."
+      },
+
+      "fertilizer": {
+        "basal_dose": "Apply 25 kg N, 50 kg P2O5, and 30 kg K2O per hectare at sowing.",
+        "top_dressing": "Top-dress with Gypsum @ 400 kg/ha at 30-40 DAS alongside earthing up.",
+        "organic_manure": "Apply 10 tonnes/ha of FYM during last ploughing.",
+        "micronutrients": "Spray 0.5% Zinc Sulphate at 30 and 45 DAS if zinc deficiency is observed."
+      },
+
+      "irrigation": {
+        "schedule": "Provide irrigation every 10-12 days. Crucial irrigations at flowering (25 DAS), pegging (40 DAS), and pod development (60 DAS). Withhold irrigation for a few days before harvest to allow slight soil drying.",
+        "critical_stages": ["Pegging", "Pod formation", "Pod maturation"],
+        "rainfed_advice": "Not applicable for Rabi/Summer."
+      },
+
+      "weed_management": {
+        "summary": "Pre-emergence Pendimethalin 30 EC @ 1.0 kg a.i./ha. Perform earthing up at 40 DAS to facilitate peg penetration and smother weeds."
+      },
+
+      "pest_management": [
+        {
+          "name": "Spodoptera litura (Tobacco Caterpillar)",
+          "symptoms": "Larvae skeletonize leaves and defoliate the crop. Often appear in swarms.",
+          "management": "Install pheromone traps @ 10/ha. Spray Novaluron 10 EC @ 1 ml/L or Chlorpyrifos 20 EC @ 2 ml/L at early instar stages."
+        }
+      ],
+
+      "disease_management": [
+        {
+          "name": "Stem Rot / Southern Blight (Sclerotium rolfsii)",
+          "symptoms": "Sudden wilting of branches or entire plants. White fungal mycelium and mustard seed-like sclerotia visible near the soil line.",
+          "management": "Avoid frequent over-irrigation. Apply Trichoderma enriched FYM in the soil. Spray Tebuconazole if symptoms appear."
+        }
+      ],
+
+      "deficiency_management": [
+        {
+          "nutrient": "Iron",
+          "symptoms": "Severe interveinal chlorosis (yellowing) of young leaves, common in calcareous soils.",
+          "remedy": "Spray 0.5% Ferrous Sulphate + 0.1% Citric Acid solution twice at 10-day intervals."
+        }
+      ],
+
+      "harvest": {
+        "harvest_signs": "Leaves turn yellow and dry. Shell interior becomes dark. Moisture content in seeds reaches 20%.",
+        "post_harvest_notes": "Prompt harvesting is essential as delayed harvest leads to pod sprouting in situ and increases aflatoxin risk. Sun-dry to 8% moisture.",
+        "expected_duration_days": 105
+      },
+
+      "special_cautions": ["Do not let the soil crack during the pod maturity stage, as it facilitates entry of Aspergillus flavus, causing Aflatoxin contamination."],
+      "faq": [
+        {
+          "question": "What is earthing up in groundnut?",
+          "answer": "Earthing up involves pulling soil towards the base of the plant at 35-40 days. It creates a loose soil bed around the plant base, allowing easy entry of pegs into the soil."
+        }
+      ],
+
+      "source_refs": ["src_angrau_groundnut_rabi", "src_tnau_agritech_groundnut"]
+    }
+  ],
+
+  "risk_library": {
+    "pests": [
+      {
+        "name": "White Grub",
+        "favorable_conditions": ["Sandy soils", "Early monsoon showers", "Presence of neem/babul trees nearby for adults"],
+        "symptoms": ["Sudden wilting of plants in patches", "Roots severed"],
+        "management": ["Deep summer ploughing", "Seed treatment with Chlorpyrifos", "Light traps for adult beetles"]
+      },
+      {
+        "name": "Spodoptera litura (Tobacco Caterpillar)",
+        "favorable_conditions": ["Continuous dry spell followed by rains"],
+        "symptoms": ["Skeletonization of leaves", "Complete defoliation in severe cases"],
+        "management": ["Pheromone traps", "Spray of Novaluron or Spinetoram"]
+      },
+      {
+        "name": "Termites",
+        "favorable_conditions": ["Dry spells", "Sandy soils", "Undecomposed organic matter"],
+        "symptoms": ["Wilting of plants", "Termite galleries on roots and pods", "Scarification of pods"],
+        "management": ["Use fully decomposed FYM", "Seed treatment with Chlorpyrifos", "Soil application of Fipronil granules"]
+      }
+    ],
+    "diseases": [
+      {
+        "name": "Collar Rot (Aspergillus niger)",
+        "favorable_conditions": ["High soil temperature", "Mechanical damage to seeds"],
+        "symptoms": ["Rotting of hypocotyl/collar region", "Black sooty fungal spores on affected parts"],
+        "management": ["Seed treatment with Tebuconazole", "Careful seed handling"]
+      },
+      {
+        "name": "Tikka Leaf Spot",
+        "favorable_conditions": ["High humidity (>80%)", "Prolonged leaf wetness", "Temperatures between 20-30°C"],
+        "symptoms": ["Dark circular spots with yellow halos", "Premature leaf drop"],
+        "management": ["Crop rotation", "Foliar fungicidal sprays (Mancozeb/Tebuconazole)"]
+      },
+      {
+        "name": "Peanut Bud Necrosis Disease (PBND)",
+        "favorable_conditions": ["High Thrips population"],
+        "symptoms": ["Chlorotic ringspots", "Necrosis of terminal buds", "Stunted bushy growth"],
+        "management": ["Control thrips vector with Imidacloprid", "Early sowing", "Rogue out infected plants"]
+      }
+    ],
+    "abiotic_risks": [
+      {
+        "name": "Aflatoxin Contamination",
+        "trigger_conditions": ["End-of-season drought", "High moisture storage (>10%)", "Pod damage by insects or termites"],
+        "impact": "Fungal growth (Aspergillus flavus) produces highly toxic aflatoxins, ruining crop marketability and export potential.",
+        "mitigation": ["Ensure adequate soil moisture 2-3 weeks before harvest", "Dry pods thoroughly to <8% moisture before storage", "Discard damaged or discolored pods"]
+      },
+      {
+        "name": "Peg Abortion",
+        "trigger_conditions": ["Hard surface crust", "High soil temperature (>35°C)", "Moisture stress during pegging"],
+        "impact": "Pegs fail to enter the soil or abort, leading to zero pod formation.",
+        "mitigation": ["Maintain loose soil via intercultivation before pegging", "Apply light irrigation during pegging"]
+      }
+    ]
+  },
+
+  "retrieval_chunks": [
+    {
+      "chunk_id": "groundnut_overview_001",
+      "chunk_type": "overview",
+      "title": "Groundnut (Peanut) Overview",
+      "crop_name": "Groundnut",
+      "state_region": "India",
+      "district": "All",
+      "season": "Kharif/Rabi",
+      "advisory_category": "overview",
+      "text": "Groundnut, also known as Peanut or Moongfali, is a major oilseed crop. It requires light, loose soils because its flowers produce pegs that must penetrate the ground to form pods.",
+      "keywords": ["Peanut", "Moongfali", "Oilseed", "Legume", "Pegging"],
+      "metadata_tags": ["general_info", "intro"],
+      "source_ref_ids": ["src_dgr_groundnut_2022"]
+    },
+    {
+      "chunk_id": "groundnut_suitability_001",
+      "chunk_type": "suitability",
+      "title": "Groundnut Soil and Climate Requirements",
+      "crop_name": "Groundnut",
+      "state_region": "India",
+      "district": "All",
+      "season": "All",
+      "advisory_category": "suitability",
+      "text": "Groundnut demands well-drained, sandy loam or loamy sand soils. Heavy clay soils restrict peg penetration and make harvesting difficult. It thrives in warm climates with 500-1000mm rainfall.",
+      "keywords": ["Sandy loam", "Drainage", "Peg penetration", "Warm climate"],
+      "metadata_tags": ["soil", "climate", "water"],
+      "source_ref_ids": ["src_jau_groundnut_pop"]
+    },
+    {
+      "chunk_id": "groundnut_gypsum_001",
+      "chunk_type": "nutrient_management",
+      "title": "Importance of Gypsum in Groundnut",
+      "crop_name": "Groundnut",
+      "state_region": "India",
+      "district": "All",
+      "season": "All",
+      "advisory_category": "nutrient_management",
+      "text": "Calcium is critical for pod filling. Applying Gypsum at 250-400 kg/ha during the pegging stage (30-40 days) prevents 'pops' (empty pods) and increases oil content. Calcium must be absorbed directly by the pods from the soil.",
+      "keywords": ["Gypsum", "Calcium", "Pops", "Pegging", "Pod filling", "Empty shells"],
+      "metadata_tags": ["fertilizer", "calcium", "yield"],
+      "source_ref_ids": ["src_dgr_groundnut_2022"]
+    },
+    {
+      "chunk_id": "groundnut_aflatoxin_001",
+      "chunk_type": "harvest_management",
+      "title": "Managing Aflatoxin in Groundnut",
+      "crop_name": "Groundnut",
+      "state_region": "India",
+      "district": "All",
+      "season": "All",
+      "advisory_category": "harvest_management",
+      "text": "Aflatoxin is a toxic fungus (Aspergillus flavus) that infects groundnut pods during end-of-season drought or poor storage. Prevent it by ensuring adequate soil moisture before harvest, avoiding pod damage, and thoroughly sun-drying pods to below 8% moisture before storage.",
+      "keywords": ["Aflatoxin", "Aspergillus flavus", "Toxin", "Storage", "Drought stress"],
+      "metadata_tags": ["harvest", "quality", "storage"],
+      "source_ref_ids": ["src_dgr_groundnut_2022"]
+    },
+    {
+      "chunk_id": "groundnut_whitegrub_001",
+      "chunk_type": "pest_management",
+      "title": "White Grub Management in Groundnut",
+      "crop_name": "Groundnut",
+      "state_region": "India",
+      "district": "All",
+      "season": "Kharif",
+      "advisory_category": "pest_management",
+      "text": "White grubs are devastating root-feeding pests in sandy soils. Manage them by deep summer ploughing to expose pupae, treating seeds with Chlorpyrifos or Imidacloprid, and applying granular insecticides like Phorate in the soil before sowing.",
+      "keywords": ["White grub", "Root damage", "Wilting", "Chlorpyrifos", "Deep ploughing"],
+      "metadata_tags": ["pest", "soil_pest", "white_grub"],
+      "source_ref_ids": ["src_jau_groundnut_pop"]
+    }
+  ],
+
+  "structured_explanation_rules": [
+    {
+      "rule_id": "groundnut_soil_match",
+      "condition": "input.soil_texture IN ['sandy loam', 'loamy sand', 'sandy', 'red sandy'] AND input.soil_drainage == 'well_drained'",
+      "message": "Excellent soil match! Light, well-drained soils allow easy peg penetration and smooth harvesting of groundnut pods.",
+      "priority": 1,
+      "severity": "positive_match"
+    },
+    {
+      "rule_id": "groundnut_heavy_soil_reject",
+      "condition": "input.soil_texture IN ['heavy clay', 'clay']",
+      "message": "Critical Warning: Groundnut is not recommended for heavy clay soils. Clay hardens upon drying, restricting peg penetration and causing severe pod loss during harvest.",
+      "priority": 1,
+      "severity": "hard_reject"
+    },
+    {
+      "rule_id": "groundnut_calcium_recommendation",
+      "condition": "input.growth_stage == 'pegging' OR (input.days_after_sowing >= 30 AND input.days_after_sowing <= 45)",
+      "message": "The crop is at the pegging stage. Apply Gypsum to the soil surface to ensure robust pod development, increase oil content, and prevent empty shells ('pops').",
+      "priority": 2,
+      "severity": "info"
+    },
+    {
+      "rule_id": "groundnut_aflatoxin_warning",
+      "condition": "input.growth_stage == 'harvest' AND input.seed_moisture_percent > 9",
+      "message": "Warning: High seed moisture during storage leads to highly toxic Aflatoxin contamination. Sun-dry the pods until moisture is below 8%.",
+      "priority": 3,
+      "severity": "warning"
+    }
+  ],
+
+  "ui_response_templates": {
+    "best_match_intro": "Moongfali (Groundnut) is highly recommended for your field due to your light, sandy soil profile.",
+    "warning_heavy_soil": "Your field's heavy clay soil is not ideal for Groundnut. It will restrict pod formation and make harvesting very difficult.",
+    "warning_aflatoxin": "Alert: Ensure proper drying of harvested pods to prevent toxic Aflatoxin contamination, which ruins market value.",
+    "cta_view_advisory": "View full Groundnut cultivation advisory",
+    "cta_view_gypsum_guide": "Read the Gypsum Application Guide"
+  },
+
+  "source_registry": [
+    {
+      "source_id": "src_jau_groundnut_pop",
+      "title": "Package of Practices for Kharif Groundnut",
+      "source_type": "manual",
+      "publisher": "Junagadh Agricultural University (JAU), Gujarat",
+      "region_scope": "Gujarat (Saurashtra)",
+      "season_scope": "Kharif",
+      "crop_scope": ["Groundnut"],
+      "content_summary": "State-level agronomic guidelines focusing on Saurashtra region, covering white grub management and gypsum application.",
+      "date_published": "2022-05-15",
+      "trust_level": "high"
+    },
+    {
+      "source_id": "src_dgr_groundnut_2022",
+      "title": "Groundnut Production Technology in India",
+      "source_type": "pdf",
+      "publisher": "ICAR - Directorate of Groundnut Research (DGR), Junagadh",
+      "region_scope": "India",
+      "season_scope": "Kharif and Rabi/Summer",
+      "crop_scope": ["Groundnut"],
+      "content_summary": "Comprehensive national guidelines on groundnut farming, disease (Tikka, PBND) management, and aflatoxin mitigation.",
+      "date_published": "2021-08-10",
+      "trust_level": "high"
+    },
+    {
+      "source_id": "src_angrau_groundnut_rabi",
+      "title": "Rabi/Summer Groundnut Cultivation",
+      "source_type": "bulletin",
+      "publisher": "Acharya N.G. Ranga Agricultural University (ANGRAU)",
+      "region_scope": "Andhra Pradesh",
+      "season_scope": "Rabi/Summer",
+      "crop_scope": ["Groundnut"],
+      "content_summary": "Irrigated groundnut cultivation practices for Rayalaseema and coastal regions, emphasizing stem rot management.",
+      "date_published": "2022-10-05",
+      "trust_level": "high"
+    },
+    {
+      "source_id": "src_tnau_agritech_groundnut",
+      "title": "TNAU Agritech Portal - Groundnut",
+      "source_type": "website",
+      "publisher": "Tamil Nadu Agricultural University (TNAU)",
+      "region_scope": "Tamil Nadu",
+      "season_scope": "Rabi/Zaid",
+      "crop_scope": ["Groundnut"],
+      "content_summary": "Detailed guide on irrigated groundnut, nutrient management (Gypsum), and post-harvest drying.",
+      "date_published": "2023-02-15",
+      "trust_level": "high"
+    }
+  ],
+
+  "quality_flags": {
+    "is_complete": true,
+    "missing_fields": [],
+    "weakly_supported_fields": [],
+    "last_reviewed_at": "2024-03-20T00:00:00Z"
+  },
+
+  "updated_at": "2024-03-20T00:00:00Z",
+  "created_at": "2023-12-05T00:00:00Z"
+}

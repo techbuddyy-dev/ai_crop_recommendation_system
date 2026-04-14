@@ -1,0 +1,419 @@
+{
+  "crop_id": "redgram",
+  "crop_name": "Red Gram",
+  "aliases": ["Pigeonpea", "Arhar", "Tur", "Thogari"],
+  "crop_group": "Pulse",
+  "status": "active",
+  "language": "en",
+  "version": "v1.2",
+
+  "master_profile": {
+    "short_description": "Red Gram (Pigeonpea) is a major Kharif pulse crop in India, widely known for its drought tolerance, deep taproot system, and high protein content. It is a key intercrop component in dryland agriculture.",
+    "seasons_supported": ["Kharif", "Rabi"],
+    "regions_supported": ["Maharashtra", "Karnataka", "Madhya Pradesh", "Uttar Pradesh", "Gujarat", "Andhra Pradesh", "Telangana"],
+    "agro_climatic_zones": ["Western Plateau and Hills Region", "Southern Plateau and Hills Region", "Central Plateau and Hills Region", "Upper Gangetic Plains Region"],
+
+    "soil_suitability": {
+      "suitable_soil_textures": ["Loam", "Sandy loam", "Clay loam", "Deep black cotton soils"],
+      "unsuitable_soil_textures": ["Heavy clay with poor drainage", "Saline-alkaline soils"],
+      "ideal_ph_min": 6.5,
+      "ideal_ph_max": 7.5,
+      "acceptable_ph_min": 5.5,
+      "acceptable_ph_max": 8.0,
+      "salinity_tolerance_note": "Highly sensitive to soil salinity. Yield drastically reduces if soil EC exceeds 2 dS/m.",
+      "drainage_requirement": "Requires excellent drainage; the crop is extremely sensitive to waterlogging, which causes Phytophthora blight and root asphyxiation.",
+      "organic_carbon_note": "Benefits from medium organic carbon. Performs well when incorporated with FYM or compost."
+    },
+
+    "climate_suitability": {
+      "ideal_temperature_c_min": 25,
+      "ideal_temperature_c_max": 35,
+      "acceptable_temperature_c_min": 15,
+      "acceptable_temperature_c_max": 40,
+      "ideal_humidity_min": 50,
+      "ideal_humidity_max": 80,
+      "ideal_rainfall_mm_min": 600,
+      "ideal_rainfall_mm_max": 1000,
+      "frost_tolerance_note": "Highly sensitive to frost, which can kill the plant or cause severe flower drop.",
+      "heat_tolerance_note": "Tolerates high heat during the vegetative phase, but temperatures >35°C during flowering can cause flower drop."
+    },
+
+    "water_profile": {
+      "irrigation_required": false,
+      "rainfed_suitable": true,
+      "waterlogging_tolerance": "Very low; even temporary waterlogging for 2-3 days during early vegetative stages can be fatal.",
+      "drought_tolerance": "Extremely high; possesses a deep taproot (up to 2 meters) that extracts water from lower soil profiles.",
+      "critical_water_stages": ["Branching (40-50 DAS)", "Flowering", "Pod development"]
+    },
+
+    "nutrient_profile": {
+      "nitrogen_demand": "Low (15-20 kg/ha as starter dose; fixes its own N later)",
+      "phosphorus_demand": "Moderate to High (40-50 kg/ha; crucial for root development and nodulation)",
+      "potassium_demand": "Low (20 kg/ha; mostly in deficient soils)",
+      "micronutrient_notes": ["Sulphur (20 kg/ha) is highly recommended to improve protein synthesis and nodulation.", "Zinc deficiency is common; soil application of Zinc Sulphate is beneficial."]
+    },
+
+    "cropping_context": {
+      "suitable_previous_crops": ["Wheat", "Sorghum", "Maize", "Pearl Millet"],
+      "unsuitable_previous_crops": ["Continuous red gram or other pulses increase soil-borne pathogens like Fusarium wilt and nematodes."],
+      "rotation_notes": ["Pigeonpea - Wheat", "Maize - Pigeonpea (Rabi)"],
+      "intercrop_options": ["Cotton (1:1 or 2:1)", "Sorghum (2:1)", "Soybean (4:2)", "Groundnut", "Pearl Millet"]
+    },
+
+    "crop_duration": {
+      "duration_days_min": 120,
+      "duration_days_max": 180,
+      "maturity_indicators": ["Leaves start shedding", "Pods turn brown/dry and become hard", "Seeds detach from the pod wall and rattle when shaken"]
+    },
+
+    "recommendation_logic": {
+      "why_recommend_conditions": ["Rainfed dryland areas", "Well-drained soils", "Intercropping systems to hedge climate risk"],
+      "why_not_recommend_conditions": ["Flood-prone areas", "High rainfall zones with heavy clay", "Frost-prone areas during winter"],
+      "hard_rejection_conditions": ["Severe waterlogging history", "High soil salinity"]
+    }
+  },
+
+  "region_season_advisories": [
+    {
+      "advisory_id": "redgram_maharashtra_kharif",
+      "state_region": "Maharashtra",
+      "district": "Latur, Osmanabad, Yavatmal, Amravati, Akola",
+      "season": "Kharif",
+      "advisory_type": "cultivation_guide",
+      "applicability_filters": {
+        "irrigation": "rainfed",
+        "soil_type": "medium to deep black soils",
+        "sowing_window": "onset of monsoon (June to early July)"
+      },
+
+      "sowing": {
+        "sowing_window_start": "June 15",
+        "sowing_window_end": "July 15",
+        "seed_rate": { "value": 12, "unit": "kg/ha", "range_type": "recommended", "source_confidence": "high" },
+        "seed_treatment": "Treat with Trichoderma viride @ 5g/kg or Thiram + Carbendazim @ 3g/kg. Follow with Rhizobium and PSB culture @ 25g/kg seed each.",
+        "spacing": "90 cm x 20 cm for medium duration; 120 cm x 30 cm for long duration/deep black soils",
+        "sowing_depth_cm": 5,
+        "nursery_required": false,
+        "transplanting_required": false
+      },
+
+      "land_preparation": {
+        "summary": "One deep ploughing followed by 1-2 harrowings to achieve a good tilth. Sowing on ridges and furrows or broad bed and furrow (BBF) is highly recommended to prevent waterlogging during heavy monsoon showers."
+      },
+
+      "fertilizer": {
+        "basal_dose": "Apply 25 kg N, 50 kg P2O5, 25 kg K2O, and 20 kg Sulphur per hectare at sowing. Drill fertilizers 5 cm below and to the side of the seed.",
+        "top_dressing": "Usually not required. Foliar spray of 2% Urea or DAP at the flowering stage prevents flower drop and improves pod setting.",
+        "organic_manure": "5-6 tonnes/ha FYM or compost incorporated during final land preparation.",
+        "micronutrients": "Foliar spray of 0.5% Zinc Sulphate if deficiency symptoms (interveinal chlorosis in younger leaves) appear."
+      },
+
+      "irrigation": {
+        "schedule": "Primarily rainfed. Provide protective irrigation during prolonged dry spells at pre-flowering (60-70 DAS) and pod development (100-110 DAS) stages.",
+        "critical_stages": ["Branching", "Flowering", "Pod formation"],
+        "rainfed_advice": "Practice timely intercultivation (hoeing) to remove weeds and create a soil mulch for moisture conservation."
+      },
+
+      "weed_management": {
+        "summary": "Pre-emergence application of Pendimethalin 30 EC @ 1.0 kg a.i./ha within 3 days of sowing. Follow with one or two manual weedings at 25 and 45 DAS."
+      },
+
+      "pest_management": [
+        {
+          "name": "Gram Pod Borer (Helicoverpa armigera)",
+          "symptoms": "Larvae feed on flowers and bore into developing pods, eating the seeds with half their body outside the pod.",
+          "management": "Install pheromone traps @ 5/ha. Spray HaNPV @ 250 LE/ha. Use Emamectin Benzoate 5 SG or Chlorantraniliprole 18.5 SC at economic threshold levels (1 larva/plant)."
+        },
+        {
+          "name": "Pod Fly (Melanagromyza obtusa)",
+          "symptoms": "No obvious external symptoms initially; maggots feed inside the pod. Later, pinholes are visible on pods where adults emerged.",
+          "management": "Spray systemic insecticides like Dimethoate 30 EC or Thiamethoxam 25 WG at the pod initiation stage."
+        }
+      ],
+
+      "disease_management": [
+        {
+          "name": "Fusarium Wilt",
+          "symptoms": "Gradual yellowing, drooping, and drying of leaves. The entire plant wilts. Internal tissues of the stem and root show brown/black discoloration.",
+          "management": "Use wilt-resistant varieties (e.g., BDN 711, BSMR 736). Practice 3-4 years crop rotation. Seed treatment with Trichoderma is essential."
+        }
+      ],
+
+      "deficiency_management": [
+        {
+          "nutrient": "Sulphur",
+          "symptoms": "Yellowing of youngest leaves first, reduced plant height, and poor nodulation.",
+          "remedy": "Apply Gypsum @ 200 kg/ha at sowing or use Single Super Phosphate (SSP) instead of DAP."
+        }
+      ],
+
+      "harvest": {
+        "harvest_signs": "Majority of the leaves drop, pods turn dry and brown, and seeds become hard (approx. 15% moisture content).",
+        "post_harvest_notes": "Cut plants near the ground, bundle them, and sun-dry for a few days before threshing. Store grains at 9-10% moisture to prevent bruchid attacks.",
+        "expected_duration_days": 160
+      },
+
+      "special_cautions": ["Nipping: Pluck the terminal bud (nipping) at 45-50 days after sowing. This suppresses apical dominance, encourages secondary branching, and increases the number of pods."],
+      "faq": [
+        {
+          "question": "Why is my Tur crop dropping flowers?",
+          "answer": "Flower drop in Pigeonpea can occur due to moisture stress, excessively high temperatures (>35°C), cloudy weather during flowering, or insect attacks (like thrips/pod borer). A 2% Urea or DAP spray can help reduce physiological flower drop."
+        }
+      ],
+
+      "source_refs": ["src_mpkv_tur_pop", "src_icrisat_pigeonpea"]
+    },
+    {
+      "advisory_id": "redgram_karnataka_kharif",
+      "state_region": "Karnataka",
+      "district": "Kalaburagi, Yadgir, Bidar, Raichur, Vijayapura",
+      "season": "Kharif",
+      "advisory_type": "cultivation_guide",
+      "applicability_filters": {
+        "irrigation": "rainfed",
+        "soil_type": "deep black soils",
+        "sowing_window": "June to July"
+      },
+
+      "sowing": {
+        "sowing_window_start": "June 10",
+        "sowing_window_end": "July 20",
+        "seed_rate": { "value": 10, "unit": "kg/ha", "range_type": "recommended" },
+        "seed_treatment": "Treat with Metalaxyl @ 4g/kg seed to prevent Phytophthora blight. Rhizobium culture application is mandatory.",
+        "spacing": "120 cm x 30 cm for TS-3R and Asha varieties.",
+        "sowing_depth_cm": 5,
+        "nursery_required": false,
+        "transplanting_required": true
+      },
+
+      "land_preparation": {
+        "summary": "Deep summer ploughing to expose pupae of pod borers. Broad Bed Furrow (BBF) method is highly recommended for water management."
+      },
+
+      "fertilizer": {
+        "basal_dose": "25 kg N, 50 kg P2O5 per hectare.",
+        "top_dressing": "Foliar spray of 19:19:19 @ 5g/L during the flowering stage.",
+        "organic_manure": "5 tonnes/ha FYM or compost."
+      },
+
+      "irrigation": {
+        "schedule": "Rainfed. If available, one protective irrigation at pod formation.",
+        "critical_stages": ["Flowering", "Pod formation"]
+      },
+
+      "weed_management": {
+        "summary": "Apply Pendimethalin @ 1 L/ha as pre-emergence. Carry out two inter-cultivations using a hoe at 30 and 45 DAS."
+      },
+
+      "pest_management": [
+        {
+          "name": "Maruca vitrata (Spotted Pod Borer)",
+          "symptoms": "Webbing of flowers and pods. Caterpillars feed inside the webs.",
+          "management": "Spray Novaluron 10 EC @ 1.0 ml/L or Spinosad 45 SC @ 0.3 ml/L at flowering."
+        }
+      ],
+
+      "disease_management": [
+        {
+          "name": "Sterility Mosaic Disease (SMD)",
+          "symptoms": "Bushy appearance with pale green mosaic leaves. No flowers or pods are formed.",
+          "management": "Grow resistant varieties like TS-3R or Asha. Spray Dicofol 18.5 EC @ 2.5 ml/L to control the mite vector."
+        }
+      ],
+
+      "harvest": {
+        "harvest_signs": "80% of pods turn brown and dry.",
+        "post_harvest_notes": "Kalaburagi Tur has a GI tag; ensure proper drying to maintain grain quality.",
+        "expected_duration_days": 150
+      },
+
+      "special_cautions": ["Transplanting of Tur is becoming popular in Karnataka to manage delayed monsoons. Raise seedlings in polythene bags and transplant at 25-30 days."],
+      "source_refs": ["src_uas_raichur_tur"]
+    }
+  ],
+
+  "risk_library": {
+    "pests": [
+      {
+        "name": "Pod Borer Complex (Helicoverpa & Maruca)",
+        "favorable_conditions": ["Cloudy weather", "Intermittent rains during flowering"],
+        "symptoms": ["Bore holes in pods", "Webbing of flowers and pods (Maruca)"],
+        "management": ["Bird perches @ 50/ha", "Sequential insecticide sprays during flowering and podding", "Pheromone traps"]
+      }
+    ],
+    "diseases": [
+      {
+        "name": "Phytophthora Stem Blight",
+        "favorable_conditions": ["Continuous heavy rains", "Waterlogged poorly drained soils"],
+        "symptoms": ["Brown to black necrotic lesions on the main stem", "Rapid wilting and death of young plants"],
+        "management": ["Planting on BBF or ridges", "Ensure strict drainage", "Seed treatment with Metalaxyl"]
+      },
+      {
+        "name": "Fusarium Wilt",
+        "favorable_conditions": ["High soil temperatures", "Continuous pigeonpea cultivation"],
+        "symptoms": ["Wilting in patches", "Vascular browning"],
+        "management": ["Crop rotation", "Resistant varieties", "Trichoderma application"]
+      },
+      {
+        "name": "Sterility Mosaic Disease (SMD)",
+        "favorable_conditions": ["Presence of Eriophyid mites (Aceria cajani)"],
+        "symptoms": ["Stunted and bushy plants", "Light green/yellow mosaic pattern on leaves", "Complete absence of flowers/pods"],
+        "management": ["Rogue out infected plants early", "Use resistant varieties", "Acaricide sprays to control mites"]
+      }
+    ],
+    "abiotic_risks": [
+      {
+        "name": "Waterlogging",
+        "trigger_conditions": ["Heavy monsoon showers combined with flat sowing in clay soils"],
+        "impact": "Root suffocation, leaf yellowing, Phytophthora infection, and rapid plant death.",
+        "mitigation": ["Broad Bed Furrow (BBF) method", "Proper field levelling", "Surface drainage channels"]
+      }
+    ]
+  },
+
+  "retrieval_chunks": [
+    {
+      "chunk_id": "redgram_overview_001",
+      "chunk_type": "overview",
+      "title": "Red Gram (Pigeonpea/Tur) Overview",
+      "crop_name": "Red Gram",
+      "state_region": "India",
+      "district": "All",
+      "season": "Kharif",
+      "advisory_category": "overview",
+      "text": "Red Gram, Arhar, or Tur is a vital Kharif pulse crop. It is deeply rooted, highly drought-tolerant, and perfectly suited for rainfed intercropping systems in India.",
+      "keywords": ["Tur", "Arhar", "Pigeonpea", "Pulse", "Dryland", "Intercropping"],
+      "metadata_tags": ["general_info", "intro"],
+      "source_ref_ids": ["src_icrisat_pigeonpea"]
+    },
+    {
+      "chunk_id": "redgram_bbf_method_001",
+      "chunk_type": "cultivation_practice",
+      "title": "Broad Bed Furrow (BBF) Method for Tur",
+      "crop_name": "Red Gram",
+      "state_region": "India",
+      "district": "All",
+      "season": "Kharif",
+      "advisory_category": "cultivation_practice",
+      "text": "The Broad Bed and Furrow (BBF) method is highly recommended for Pigeonpea. It prevents waterlogging during heavy rains by safely draining excess water through furrows, and it also conserves moisture during dry spells.",
+      "keywords": ["BBF", "Broad Bed Furrow", "Waterlogging", "Drainage", "Moisture conservation"],
+      "metadata_tags": ["agronomy", "water_management"],
+      "source_ref_ids": ["src_icrisat_pigeonpea"]
+    },
+    {
+      "chunk_id": "redgram_smd_disease_001",
+      "chunk_type": "disease_management",
+      "title": "Sterility Mosaic Disease (SMD) in Pigeonpea",
+      "crop_name": "Red Gram",
+      "state_region": "India",
+      "district": "All",
+      "season": "Kharif",
+      "advisory_category": "disease_management",
+      "text": "Sterility Mosaic Disease (SMD), often called the 'green plague' of pigeonpea, causes plants to become bushy and sterile, yielding no pods. It is spread by eriophyid mites. Use resistant varieties and spray miticides like Dicofol to control vectors.",
+      "keywords": ["Sterility Mosaic", "SMD", "Mites", "Bushy plant", "Green plague"],
+      "metadata_tags": ["Disease", "SMD", "Vector control"],
+      "source_ref_ids": ["src_mpkv_tur_pop"]
+    },
+    {
+      "chunk_id": "redgram_nipping_001",
+      "chunk_type": "cultivation_practice",
+      "title": "Nipping Practice in Pigeonpea",
+      "crop_name": "Red Gram",
+      "state_region": "India",
+      "district": "All",
+      "season": "Kharif",
+      "advisory_category": "cultivation_practice",
+      "text": "Nipping involves plucking the apical (top) buds at 45-50 days after sowing. This breaks apical dominance, promotes lateral branching, increases canopy size, and ultimately leads to a higher number of pods per plant.",
+      "keywords": ["Nipping", "Topping", "Branching", "Apical bud", "Yield increase"],
+      "metadata_tags": ["agronomy", "yield_enhancement"],
+      "source_ref_ids": ["src_mpkv_tur_pop"]
+    }
+  ],
+
+  "structured_explanation_rules": [
+    {
+      "rule_id": "redgram_dryland_match",
+      "condition": "input.irrigation_available == false AND input.soil_drainage == 'well_drained'",
+      "message": "Red Gram is an excellent fit for your rainfed and well-drained conditions due to its deep taproot and drought resilience.",
+      "priority": 1,
+      "severity": "positive_match"
+    },
+    {
+      "rule_id": "redgram_waterlogging_reject",
+      "condition": "input.soil_drainage == 'poor' OR input.waterlogging_history == true",
+      "message": "Severe Risk: Red Gram is highly sensitive to water stagnation. Poor drainage will cause Phytophthora blight and wilt, leading to crop failure.",
+      "priority": 1,
+      "severity": "hard_reject"
+    },
+    {
+      "rule_id": "redgram_frost_warning",
+      "condition": "input.min_temp_c < 10 AND input.growth_stage == 'flowering'",
+      "message": "Warning: Cold stress or frost during the reproductive phase can cause massive flower drop and yield loss.",
+      "priority": 2,
+      "severity": "warning"
+    },
+    {
+      "rule_id": "redgram_nipping_tip",
+      "condition": "input.days_after_sowing >= 40 AND input.days_after_sowing <= 55",
+      "message": "Tip: Your crop is at the optimal stage for 'nipping' (plucking top buds). This encourages lateral branching and increases pod yield.",
+      "priority": 3,
+      "severity": "info"
+    }
+  ],
+
+  "ui_response_templates": {
+    "best_match_intro": "Tur (Red Gram) is highly recommended for your field, especially as a rainfed crop or intercrop.",
+    "warning_drainage": "Your field's drainage needs improvement before planting Tur. Consider the Broad Bed Furrow (BBF) method to prevent water stagnation.",
+    "cta_view_advisory": "View full Tur (Red Gram) cultivation advisory",
+    "cta_view_smd_guide": "Read the Sterility Mosaic Disease Management Guide"
+  },
+
+  "source_registry": [
+    {
+      "source_id": "src_mpkv_tur_pop",
+      "title": "Package of Practices for Kharif Pulses (Tur)",
+      "source_type": "manual",
+      "publisher": "Mahatma Phule Krishi Vidyapeeth (MPKV), Rahuri",
+      "region_scope": "Maharashtra",
+      "season_scope": "Kharif",
+      "crop_scope": ["Red Gram"],
+      "content_summary": "State-level agronomic practices, pest management, and disease control guidelines for pigeonpea in Maharashtra.",
+      "date_published": "2022-05-15",
+      "trust_level": "high"
+    },
+    {
+      "source_id": "src_icrisat_pigeonpea",
+      "title": "Pigeonpea Best Management Practices",
+      "source_type": "pdf",
+      "publisher": "ICRISAT",
+      "region_scope": "India (Semi-Arid Tropics)",
+      "season_scope": "Kharif",
+      "crop_scope": ["Red Gram"],
+      "content_summary": "Comprehensive global and national insights on pigeonpea cultivation, varietal selection, and intercropping models.",
+      "date_published": "2021-02-10",
+      "trust_level": "high"
+    },
+    {
+      "source_id": "src_uas_raichur_tur",
+      "title": "Pigeonpea Production Technology",
+      "source_type": "bulletin",
+      "publisher": "University of Agricultural Sciences (UAS), Raichur",
+      "region_scope": "Karnataka",
+      "season_scope": "Kharif",
+      "crop_scope": ["Red Gram"],
+      "content_summary": "Guidelines specifically targeting the major Tur producing districts of Northern Karnataka, including GI-tagged Kalaburagi Tur.",
+      "date_published": "2023-04-05",
+      "trust_level": "high"
+    }
+  ],
+
+  "quality_flags": {
+    "is_complete": true,
+    "missing_fields": [],
+    "weakly_supported_fields": [],
+    "last_reviewed_at": "2024-04-12T00:00:00Z"
+  },
+
+  "updated_at": "2024-04-12T00:00:00Z",
+  "created_at": "2023-11-22T00:00:00Z"
+}

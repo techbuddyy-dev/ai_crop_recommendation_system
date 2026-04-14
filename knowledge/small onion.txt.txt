@@ -1,0 +1,479 @@
+{
+  "crop_id": "small_onion",
+  "crop_name": "Small Onion",
+  "aliases": ["Aggregatum Onion", "Multiplier Onion", "Sambhar Onion", "Shallot", "Chinna Vengayam"],
+  "crop_group": "Vegetable",
+  "status": "active",
+  "language": "en",
+  "version": "v1.2",
+
+  "master_profile": {
+    "short_description": "Small onion, also known as aggregatum or multiplier onion, is a commercially important short-duration bulb crop in South India. It is propagated primarily through bulbs and is highly valued for its distinct pungency and flavor.",
+    "seasons_supported": ["Kharif", "Rabi", "Zaid"],
+    "regions_supported": ["Tamil Nadu", "Karnataka", "Andhra Pradesh", "Odisha", "Kerala"],
+    "agro_climatic_zones": ["Southern Plateau and Hills Region", "East Coast Plains and Hills Region", "West Coast Plains and Ghats Region"],
+
+    "soil_suitability": {
+      "suitable_soil_textures": ["Red loam", "Sandy loam", "Friable alluvial soils"],
+      "unsuitable_soil_textures": ["Heavy clay", "Poorly drained soils", "Highly alkaline or saline soils"],
+      "ideal_ph_min": 6.0,
+      "ideal_ph_max": 7.5,
+      "acceptable_ph_min": 5.5,
+      "acceptable_ph_max": 8.0,
+      "salinity_tolerance_note": "Highly sensitive to salinity and alkalinity, which restrict root development and cluster formation.",
+      "drainage_requirement": "Requires exceptionally well-drained soils. Waterlogging promotes basal rot and destroys the bulb clusters.",
+      "organic_carbon_note": "Requires high organic matter to keep the soil friable, allowing multiple bulbs (tillers) to expand easily."
+    },
+
+    "climate_suitability": {
+      "ideal_temperature_c_min": 15,
+      "ideal_temperature_c_max": 25,
+      "acceptable_temperature_c_min": 12,
+      "acceptable_temperature_c_max": 32,
+      "ideal_humidity_min": 50,
+      "ideal_humidity_max": 70,
+      "ideal_rainfall_mm_min": 500,
+      "ideal_rainfall_mm_max": 750,
+      "frost_tolerance_note": "Sensitive to frost, though mostly grown in frost-free tropical/sub-tropical zones of South India.",
+      "heat_tolerance_note": "Excessive heat (>35°C) combined with moisture stress causes early maturity and significantly reduces the size of the bulb clusters."
+    },
+
+    "water_profile": {
+      "irrigation_required": true,
+      "rainfed_suitable": false,
+      "waterlogging_tolerance": "Very low; standing water for even 24 hours causes root decay, bulb rotting, and rapid spread of fungal diseases.",
+      "drought_tolerance": "Low; possesses a shallow, fibrous root system. Requires frequent, light irrigations.",
+      "critical_water_stages": ["Bulb initiation (30-40 DAT)", "Bulb enlargement (50-65 DAT)"]
+    },
+
+    "nutrient_profile": {
+      "nitrogen_demand": "Moderate to High (60-90 kg/ha applied in splits)",
+      "phosphorus_demand": "Moderate (60 kg/ha for healthy root establishment)",
+      "potassium_demand": "Moderate (30-50 kg/ha for bulb quality and storage)",
+      "micronutrient_notes": ["Sulphur (20-30 kg/ha) is absolutely critical to develop the distinct pungent flavor (allyl propyl disulphide) of Sambhar onions.", "Zinc Sulphate helps prevent tip yellowing."]
+    },
+
+    "cropping_context": {
+      "suitable_previous_crops": ["Legumes", "Cereals (Maize, Sorghum)", "Cotton"],
+      "unsuitable_previous_crops": ["Other Allium species (Garlic, Common Onion) to prevent buildup of soil-borne pathogens and nematodes."],
+      "rotation_notes": ["Maize - Small Onion", "Legume - Small Onion - Sorghum", "Paddy - Small Onion (in delta regions)"],
+      "intercrop_options": ["Sugarcane (in the early stages of cane growth)", "Cotton", "Turmeric"]
+    },
+
+    "crop_duration": {
+      "duration_days_min": 70,
+      "duration_days_max": 90,
+      "maturity_indicators": ["Leaves turn yellow and dry from the top", "Neck fall (tops bend over)", "Bulb clusters attain full size and characteristic pink/red color"]
+    },
+
+    "recommendation_logic": {
+      "why_recommend_conditions": ["Well-drained friable red loamy soils", "Assured irrigation", "Short window available for crop rotation"],
+      "why_not_recommend_conditions": ["Heavy, compact clay soils that restrict cluster expansion", "Waterlogged areas"],
+      "hard_rejection_conditions": ["High soil salinity/alkalinity", "Persistent waterlogging"]
+    }
+  },
+
+  "region_season_advisories": [
+    {
+      "advisory_id": "small_onion_tn_kharif",
+      "state_region": "Tamil Nadu",
+      "district": "Perambalur, Trichy, Dindigul, Tiruppur, Coimbatore",
+      "season": "Kharif",
+      "advisory_type": "cultivation_guide",
+      "applicability_filters": {
+        "irrigation": "irrigated",
+        "soil_type": "red loam to sandy loam",
+        "sowing_window": "April - May or June - July"
+      },
+
+      "sowing": {
+        "sowing_window_start": "April 15",
+        "sowing_window_end": "July 15",
+        "seed_rate": { "value": 1500, "unit": "kg/ha of bulbs", "range_type": "recommended", "source_confidence": "high" },
+        "seed_treatment": "Use medium-sized disease-free bulbs. Treat bulbs with Trichoderma viride @ 4g/kg or Carbendazim @ 2g/kg for 15 minutes before planting to prevent basal rot.",
+        "spacing": "15 cm x 10 cm",
+        "sowing_depth_cm": 3,
+        "nursery_required": false,
+        "transplanting_required": false
+      },
+
+      "land_preparation": {
+        "summary": "Plough the field 3-4 times to achieve a fine tilth. Form ridges and furrows at 45 cm spacing or prepare broad beds to ensure excellent drainage during monsoon rains."
+      },
+
+      "fertilizer": {
+        "basal_dose": "Apply 30 kg N, 60 kg P2O5, and 30 kg K2O per hectare as basal dose. Apply 20 kg Sulphur per hectare for better pungency.",
+        "top_dressing": "Apply the remaining 30 kg N at 30 days after planting. Do not apply nitrogen after 45 days to avoid thick necks.",
+        "organic_manure": "Apply 25 tonnes/ha of well-rotted FYM or compost, along with Azospirillum and Phosphobacteria (2 kg/ha each) during the last ploughing.",
+        "micronutrients": "Foliar spray of Zinc Sulphate @ 0.5% at 30 and 45 days if deficiency symptoms appear."
+      },
+
+      "irrigation": {
+        "schedule": "Irrigate immediately after planting, then on the 3rd day (life irrigation). Subsequently, irrigate every 7-10 days depending on soil moisture. Stop irrigation 10-15 days before harvest.",
+        "critical_stages": ["Bulb cluster initiation", "Bulb enlargement"],
+        "rainfed_advice": "Ensure excess rainwater drains quickly. Stagnant water causes rotting of the bulb clusters."
+      },
+
+      "weed_management": {
+        "summary": "Pre-emergence application of Pendimethalin 30 EC @ 3.0 L/ha or Oxyfluorfen 23.5% EC @ 1.5 ml/L within 3 days of planting. Perform manual weeding at 20 and 40 days after planting."
+      },
+
+      "pest_management": [
+        {
+          "name": "Onion Thrips (Thrips tabaci)",
+          "symptoms": "Nymphs and adults suck sap from foliage, causing silvery white patches, curling, and drying of leaves. Severe infestation stunts bulb growth.",
+          "management": "Install blue sticky traps. Spray Dimethoate 30 EC @ 1.5 ml/L or Fipronil 5 SC @ 1.5 ml/L. Always mix a sticker (0.5 ml/L) with the spray."
+        },
+        {
+          "name": "Cutworm / Leaf eating caterpillar",
+          "symptoms": "Caterpillars cut the seedlings at the base or feed on leaves.",
+          "management": "Spray Spodoptera litura NPV @ 250 LE/ha or Chlorpyriphos 20 EC @ 2 ml/L during evening hours."
+        }
+      ],
+
+      "disease_management": [
+        {
+          "name": "Basal Rot (Fusarium oxysporum)",
+          "symptoms": "Yellowing of leaves from tip downwards. The base of the bulb cluster rots, turning soft and watery. White fungal growth is visible on the roots.",
+          "management": "Treat seed bulbs with Trichoderma. Avoid waterlogging. Crop rotation with non-allium crops. Drench affected patches with Copper Oxychloride 50 WP @ 2.5 g/L."
+        },
+        {
+          "name": "Purple Blotch (Alternaria porri)",
+          "symptoms": "Small, sunken, purplish lesions with concentric rings on leaves. Lesions enlarge and cause leaves to break.",
+          "management": "Spray Mancozeb 75 WP @ 2.5 g/L or Tebuconazole 25.9 EC @ 1.5 ml/L at 15-day intervals upon symptom appearance."
+        }
+      ],
+
+      "deficiency_management": [
+        {
+          "nutrient": "Sulphur",
+          "symptoms": "Pale green young leaves, small bulb size, and lack of characteristic pungency.",
+          "remedy": "Soil application of Gypsum or use of Ammonium Sulphate as a nitrogen source."
+        }
+      ],
+
+      "harvest": {
+        "harvest_signs": "Leaves turn yellow and begin to dry. 60-75% of the plants show 'neck fall'. The bulb clusters attain their characteristic pink/red color.",
+        "post_harvest_notes": "Uproot the plants and cure them in the field under shade for 3-5 days. Cut the tops leaving a 2 cm neck. Store in well-ventilated rooms to prevent rotting and sprouting.",
+        "expected_duration_days": 80
+      },
+
+      "special_cautions": ["Selection of healthy, medium-sized seed bulbs is crucial since viral and fungal diseases are easily carried over in the planting material.", "Avoid late nitrogen application to ensure proper curing and keeping quality."],
+      "faq": [
+        {
+          "question": "Why are my small onions not forming multiple clusters?",
+          "answer": "Lack of cluster formation can be due to hard/compact clay soil, nutrient deficiency, or high temperatures. Ensure the soil is loose and friable (add FYM) to allow easy multiplication."
+        },
+        {
+          "question": "How do I prevent my harvested small onions from rotting?",
+          "answer": "Stop irrigation 10-15 days before harvest. Cure the bulbs thoroughly in the shade, leave a 2 cm neck when topping, and store them in a dry, well-ventilated area."
+        }
+      ],
+
+      "source_refs": ["src_tnau_agritech_small_onion", "src_dogr_onion_pop"]
+    },
+    {
+      "advisory_id": "small_onion_karnataka_rabi",
+      "state_region": "Karnataka",
+      "district": "Chitradurga, Chamarajanagar, Mysore, Davangere",
+      "season": "Rabi",
+      "advisory_type": "cultivation_guide",
+      "applicability_filters": {
+        "irrigation": "irrigated",
+        "soil_type": "sandy loam to red loam",
+        "sowing_window": "September - October"
+      },
+
+      "sowing": {
+        "sowing_window_start": "September 15",
+        "sowing_window_end": "October 30",
+        "seed_rate": { "value": 1200, "unit": "kg/ha of bulbs", "range_type": "recommended" },
+        "seed_treatment": "Soak seed bulbs in a solution of Pseudomonas fluorescens @ 10g/L for 20 minutes and shade dry before planting.",
+        "spacing": "15 cm x 10 cm",
+        "sowing_depth_cm": 3,
+        "nursery_required": false,
+        "transplanting_required": false
+      },
+
+      "land_preparation": {
+        "summary": "Deep ploughing followed by 2 cross harrowings to achieve fine tilth. Incorporate 20 t/ha of well-rotted FYM. Form flat beds or ridges and furrows depending on irrigation method."
+      },
+
+      "fertilizer": {
+        "basal_dose": "Apply 30 kg N, 60 kg P2O5, and 30 kg K2O per hectare at planting.",
+        "top_dressing": "Apply 30 kg N/ha exactly at 30 days after planting. Do not apply nitrogen after 45 days.",
+        "organic_manure": "Ensure abundant FYM application to keep the soil friable during the cool dry Rabi season."
+      },
+
+      "irrigation": {
+        "schedule": "Provide a light irrigation immediately after planting. Subsequent irrigations every 8-10 days depending on soil moisture. Ensure critical stages are well-watered.",
+        "critical_stages": ["Bulb cluster initiation", "Bulb enlargement"]
+      },
+
+      "weed_management": {
+        "summary": "Apply Oxyfluorfen 23.5% EC @ 1.5 ml/L as pre-emergence. Conduct manual weeding carefully at 20 and 40 days to avoid damaging shallow roots."
+      },
+
+      "pest_management": [
+        {
+          "name": "Bulb Mite (Rhizoglyphus spp.)",
+          "symptoms": "Mites feed on the roots and basal plate, causing stunting and secondary fungal infections. Bulbs rot in storage.",
+          "management": "Use clean, mite-free seed bulbs. Hot water treatment of seed bulbs (45°C for 10 min) before planting if history of infestation."
+        },
+        {
+          "name": "Stem and Bulb Nematode",
+          "symptoms": "Bloated, spongy leaves and soft, rotting bulbs. Plants easily pull out of the soil.",
+          "management": "Strict crop rotation avoiding Alliums for 3-4 years. Apply Neem Cake @ 500 kg/ha during land preparation."
+        }
+      ],
+
+      "disease_management": [
+        {
+          "name": "Twister Disease (Anthracnose/Colletotrichum)",
+          "symptoms": "Curling, twisting, and chlorosis of leaves resulting in elongated 'false stems' and poor bulb formation.",
+          "management": "Spray Pyraclostrobin 20 WG @ 1ml/L or Chlorothalonil 75 WP @ 2g/L. Ensure excellent field drainage."
+        }
+      ],
+
+      "harvest": {
+        "harvest_signs": "Tops bend over and dry up. Cluster bulbs separate easily. Colors turn deep pink to purple.",
+        "post_harvest_notes": "Rabi crop stores much better than Kharif. Cure properly under shade for 5-7 days before topping.",
+        "expected_duration_days": 85
+      },
+      "special_cautions": ["Do not use seed bulbs from fields infected with Twister disease or Nematodes."],
+      "source_refs": ["src_uas_bangalore_onion", "src_dogr_onion_pop"]
+    }
+  ],
+
+  "risk_library": {
+    "pests": [
+      {
+        "name": "Thrips",
+        "favorable_conditions": ["Dry and warm weather", "Lack of rainfall"],
+        "symptoms": ["Silvery white blotches on leaves", "Curling of leaves", "Stunted growth"],
+        "management": ["Blue sticky traps", "Sprays of Fipronil or Spinosad with wetting agent"]
+      },
+      {
+        "name": "Onion Maggot",
+        "favorable_conditions": ["High organic matter application just before planting", "Cool, wet weather"],
+        "symptoms": ["Yellowing of plants", "Maggots feeding inside the basal stem/bulb"],
+        "management": ["Well-rotted FYM only", "Soil application of Carbofuran"]
+      },
+      {
+        "name": "Bulb Mite",
+        "favorable_conditions": ["High soil moisture", "Storage in humid conditions"],
+        "symptoms": ["Stunted plant growth", "Rotting basal plates", "Feeding scars on bulbs"],
+        "management": ["Hot water treatment of seed bulbs", "Use certified clean planting material"]
+      },
+      {
+        "name": "Stem and Bulb Nematode",
+        "favorable_conditions": ["Continuous Allium cultivation", "Wet soil"],
+        "symptoms": ["Bloated, distorted leaves", "Soft, spongy bulbs"],
+        "management": ["Crop rotation with non-hosts", "Application of Neem cake"]
+      }
+    ],
+    "diseases": [
+      {
+        "name": "Purple Blotch",
+        "favorable_conditions": ["High humidity (>70%)", "Frequent rains or heavy dew"],
+        "symptoms": ["Purple-centered oval lesions", "Leaf breakage"],
+        "management": ["Avoid dense planting", "Spray Mancozeb or Azoxystrobin"]
+      },
+      {
+        "name": "Basal Rot",
+        "favorable_conditions": ["High soil temperature and moisture", "Poor drainage"],
+        "symptoms": ["Yellowing from leaf tips downward", "Rotting of the basal plate", "Root decay"],
+        "management": ["Bulb treatment with Trichoderma", "Crop rotation", "Proper drainage"]
+      },
+      {
+        "name": "Twister Disease (Anthracnose)",
+        "favorable_conditions": ["High rainfall and humidity", "Warm weather"],
+        "symptoms": ["Twisting and curling of leaves", "Elongated necks", "Pinkish spore masses"],
+        "management": ["Spray Chlorothalonil or Pyraclostrobin", "Ensure drainage"]
+      }
+    ],
+    "abiotic_risks": [
+      {
+        "name": "Waterlogging",
+        "trigger_conditions": ["Heavy continuous rains", "Flat bed planting on heavy soils"],
+        "impact": "Root asphyxiation, rapid spread of basal rot, and complete decay of bulb clusters.",
+        "mitigation": ["Plant on ridges and furrows or broad beds", "Ensure field leveling"]
+      },
+      {
+        "name": "Bolting",
+        "trigger_conditions": ["Extreme temperature fluctuations", "Late planting", "Nutrient stress"],
+        "impact": "Premature seed stalk formation leading to hard, unmarketable bulbs with poor storage life.",
+        "mitigation": ["Plant within recommended windows", "Maintain balanced soil moisture and nutrition"]
+      }
+    ]
+  },
+
+  "retrieval_chunks": [
+    {
+      "chunk_id": "small_onion_overview_001",
+      "chunk_type": "overview",
+      "title": "Small Onion Overview",
+      "crop_name": "Small Onion",
+      "state_region": "South India",
+      "district": "All",
+      "season": "Kharif/Rabi",
+      "advisory_category": "overview",
+      "text": "Small Onion (Aggregatum/Multiplier Onion), popularly known as Chinna Vengayam or Sambhar Onion, is a highly valued, short-duration commercial crop in South India. It is propagated through bulb clusters and is famous for its intense flavor.",
+      "keywords": ["Small Onion", "Chinna Vengayam", "Aggregatum", "Sambhar Onion", "Multiplier"],
+      "metadata_tags": ["general_info", "intro"],
+      "source_ref_ids": ["src_tnau_agritech_small_onion"]
+    },
+    {
+      "chunk_id": "small_onion_suitability_001",
+      "chunk_type": "suitability",
+      "title": "Small Onion Soil and Climate Suitability",
+      "crop_name": "Small Onion",
+      "state_region": "South India",
+      "district": "All",
+      "season": "All",
+      "advisory_category": "suitability",
+      "text": "Requires highly friable, well-drained red loam or sandy loam soils to allow the bulb clusters to multiply and expand. Heavy clay soils restrict growth. It is extremely sensitive to waterlogging and salinity.",
+      "keywords": ["Red loam", "Friable soil", "Drainage", "Bulb multiplication"],
+      "metadata_tags": ["soil", "climate", "water"],
+      "source_ref_ids": ["src_uas_bangalore_onion"]
+    },
+    {
+      "chunk_id": "small_onion_pungency_001",
+      "chunk_type": "nutrient_management",
+      "title": "Sulphur for Flavor and Pungency",
+      "crop_name": "Small Onion",
+      "state_region": "South India",
+      "district": "All",
+      "season": "All",
+      "advisory_category": "nutrient_management",
+      "text": "The signature strong flavor and pungency of Small Onion (Sambhar Onion) come from allyl propyl disulphide. To maximize this, an application of 20-30 kg/ha of elemental Sulphur or Gypsum during basal dressing is critical.",
+      "keywords": ["Sulphur", "Pungency", "Flavor", "Gypsum", "Sambhar Onion"],
+      "metadata_tags": ["nutrient", "quality", "flavor"],
+      "source_ref_ids": ["src_tnau_agritech_small_onion"]
+    },
+    {
+      "chunk_id": "small_onion_curing_001",
+      "chunk_type": "harvest_management",
+      "title": "Curing Small Onions for Better Shelf Life",
+      "crop_name": "Small Onion",
+      "state_region": "South India",
+      "district": "All",
+      "season": "All",
+      "advisory_category": "harvest_management",
+      "text": "Curing is vital to prevent post-harvest rot. After uprooting, dry the bulb clusters in the shade for 3-5 days. Ensure leaves cover the bulbs to avoid direct sun scald. Top them leaving a 2 cm neck to block entry of fungal pathogens into the bulb.",
+      "keywords": ["Curing", "Shelf life", "Storage", "Shade dry", "Topping"],
+      "metadata_tags": ["harvest", "post_harvest", "storage"],
+      "source_ref_ids": ["src_dogr_onion_pop"]
+    },
+    {
+      "chunk_id": "small_onion_seed_bulb_001",
+      "chunk_type": "sowing_management",
+      "title": "Selecting Seed Bulbs for Propagation",
+      "crop_name": "Small Onion",
+      "state_region": "South India",
+      "district": "All",
+      "season": "All",
+      "advisory_category": "sowing_management",
+      "text": "Unlike common onions, Small Onions are planted using seed bulbs. Always select medium-sized, firm, and fully cured bulbs free from cuts and rot. Treat them with Trichoderma viride to prevent carryover of basal rot into the new crop.",
+      "keywords": ["Seed bulb", "Propagation", "Trichoderma", "Selection"],
+      "metadata_tags": ["sowing", "seed_treatment", "disease_prevention"],
+      "source_ref_ids": ["src_tnau_agritech_small_onion"]
+    }
+  ],
+
+  "structured_explanation_rules": [
+    {
+      "rule_id": "small_onion_soil_match",
+      "condition": "input.soil_drainage == 'well_drained' AND input.soil_texture IN ['red loam', 'sandy loam', 'loam']",
+      "message": "Your well-drained, friable soil is ideal for Small Onion, allowing for excellent cluster multiplication and bulb expansion.",
+      "priority": 1,
+      "severity": "positive_match"
+    },
+    {
+      "rule_id": "small_onion_heavy_soil_warning",
+      "condition": "input.soil_texture == 'heavy clay'",
+      "message": "Warning: Heavy clay soils restrict the multiplication of bulb clusters and retain too much moisture, leading to basal rot. Broad bed furrows and heavy organic amendments are mandatory.",
+      "priority": 1,
+      "severity": "hard_reject"
+    },
+    {
+      "rule_id": "small_onion_waterlogging_reject",
+      "condition": "input.soil_drainage == 'poor' OR input.waterlogging_history == true",
+      "message": "Critical Warning: Small Onion is highly susceptible to basal rot in waterlogged conditions. Poor drainage will lead to total crop failure.",
+      "priority": 1,
+      "severity": "hard_reject"
+    },
+    {
+      "rule_id": "small_onion_sulphur_recommendation",
+      "condition": "input.growth_stage == 'sowing' OR input.growth_stage == 'land_preparation'",
+      "message": "Tip: To achieve the signature strong flavor of Sambhar Onions, ensure you apply 20-30 kg/ha of Sulphur (or Gypsum) during basal dressing.",
+      "priority": 2,
+      "severity": "info"
+    },
+    {
+      "rule_id": "small_onion_bulb_size_warning",
+      "condition": "input.days_after_planting > 45 AND input.nitrogen_applied_recently == true",
+      "message": "Warning: Applying nitrogen this late in the crop cycle will cause thick necks, delay bulb maturity, and drastically reduce storage life.",
+      "priority": 3,
+      "severity": "warning"
+    }
+  ],
+
+  "ui_response_templates": {
+    "best_match_intro": "Chinna Vengayam (Small Onion) is a highly profitable, short-duration crop perfectly suited for your friable, well-drained soil.",
+    "warning_heavy_soil": "Your field's heavy soil will restrict the formation of onion clusters. Ensure you plant on ridges and improve soil looseness with organic manure.",
+    "warning_nematode": "Alert: Nematode pressure is a major risk for repeated Allium cultivation. If your field has a history of nematodes, rotate with cereals first.",
+    "info_sulphur_pungency": "Don't forget: Sulphur application is the secret to getting highly pungent, premium-quality Sambhar onions.",
+    "cta_view_advisory": "View full Small Onion cultivation advisory",
+    "cta_view_curing_guide": "Read the Post-Harvest Curing and Storage Guide"
+  },
+
+  "source_registry": [
+    {
+      "source_id": "src_tnau_agritech_small_onion",
+      "title": "TNAU Agritech Portal - Horticultural Crops (Small Onion)",
+      "source_type": "web",
+      "publisher": "Tamil Nadu Agricultural University (TNAU)",
+      "region_scope": "Tamil Nadu",
+      "season_scope": "Kharif and Rabi",
+      "crop_scope": ["Small Onion"],
+      "content_summary": "Extensive state-level guidelines for Aggregatum onion cultivation, highlighting seed bulb treatment, nutrient requirements, and pest management.",
+      "date_published": "2021-06-15",
+      "trust_level": "high"
+    },
+    {
+      "source_id": "src_dogr_onion_pop",
+      "title": "Onion Production Technology",
+      "source_type": "pdf",
+      "publisher": "ICAR - Directorate of Onion and Garlic Research (DOGR), Pune",
+      "region_scope": "India",
+      "season_scope": "All Seasons",
+      "crop_scope": ["Onion", "Small Onion"],
+      "content_summary": "National guidelines covering disease mitigation, weed management, and scientific curing methods for all Allium species.",
+      "date_published": "2022-04-10",
+      "trust_level": "high"
+    },
+    {
+      "source_id": "src_uas_bangalore_onion",
+      "title": "Package of Practices for Horticultural Crops",
+      "source_type": "manual",
+      "publisher": "University of Agricultural Sciences (UAS), Bangalore",
+      "region_scope": "Karnataka",
+      "season_scope": "Rabi",
+      "crop_scope": ["Small Onion"],
+      "content_summary": "Best practices for cultivating multiplier onions in Karnataka's red loamy soils, including Twister disease and Bulb Mite management.",
+      "date_published": "2022-08-20",
+      "trust_level": "high"
+    }
+  ],
+
+  "quality_flags": {
+    "is_complete": true,
+    "missing_fields": [],
+    "weakly_supported_fields": [],
+    "last_reviewed_at": "2024-05-15T00:00:00Z"
+  },
+
+  "updated_at": "2024-05-15T00:00:00Z",
+  "created_at": "2023-12-28T00:00:00Z"
+}

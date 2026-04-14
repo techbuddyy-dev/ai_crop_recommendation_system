@@ -1,0 +1,486 @@
+{
+  "crop_id": "cotton",
+  "crop_name": "Cotton",
+  "aliases": ["Kapas", "White Gold", "Rui", "Hathi"],
+  "crop_group": "Fiber",
+  "status": "active",
+  "language": "en",
+  "version": "v1.2",
+
+  "master_profile": {
+    "short_description": "Cotton is the most important commercial fiber crop in India, often called 'White Gold'. It is predominantly grown in the Kharif season and plays a major role in the industrial and agricultural economy.",
+    "seasons_supported": ["Kharif", "Rabi", "Summer"],
+    "regions_supported": ["Maharashtra", "Gujarat", "Telangana", "Punjab", "Haryana", "Rajasthan", "Madhya Pradesh", "Andhra Pradesh", "Karnataka", "Tamil Nadu"],
+    "agro_climatic_zones": ["Western Plateau and Hills Region", "Central Plateau and Hills Region", "Trans-Gangetic Plains Region", "Southern Plateau and Hills Region", "Gujarat Plains and Hills Region"],
+
+    "soil_suitability": {
+      "suitable_soil_textures": ["Deep black cotton soils (Vertisols)", "Clay loam", "Alluvial soils", "Sandy loam (with irrigation)"],
+      "unsuitable_soil_textures": ["Shallow gravelly soils", "Highly waterlogged heavy clays", "Extremely sandy soils without moisture retention"],
+      "ideal_ph_min": 6.0,
+      "ideal_ph_max": 8.0,
+      "acceptable_ph_min": 5.5,
+      "acceptable_ph_max": 8.5,
+      "salinity_tolerance_note": "Moderately tolerant to soil salinity, but highly sensitive during the germination and seedling stages.",
+      "drainage_requirement": "Requires well-drained soils. Highly sensitive to waterlogging, which restricts root respiration and causes square/boll dropping.",
+      "organic_carbon_note": "Responds excellently to organic manure. Deep black soils with high organic matter retain moisture, sustaining the crop during dry spells."
+    },
+
+    "climate_suitability": {
+      "ideal_temperature_c_min": 21,
+      "ideal_temperature_c_max": 37,
+      "acceptable_temperature_c_min": 15,
+      "acceptable_temperature_c_max": 43,
+      "ideal_humidity_min": 50,
+      "ideal_humidity_max": 80,
+      "ideal_rainfall_mm_min": 500,
+      "ideal_rainfall_mm_max": 900,
+      "frost_tolerance_note": "Highly sensitive to frost. Frost kills the plant and abruptly stops boll development.",
+      "heat_tolerance_note": "Tolerates high heat well, but extremely hot and dry winds during flowering can cause excessive shedding of squares and young bolls."
+    },
+
+    "water_profile": {
+      "irrigation_required": false,
+      "rainfed_suitable": true,
+      "waterlogging_tolerance": "Very low; standing water for more than 48 hours causes reddening of leaves, wilt, and massive boll drop.",
+      "drought_tolerance": "High; its deep taproot system allows it to withstand prolonged dry spells, typical in rainfed Central India.",
+      "critical_water_stages": ["Square formation (45-50 DAS)", "Flowering (60-70 DAS)", "Boll development (90-100 DAS)"]
+    },
+
+    "nutrient_profile": {
+      "nitrogen_demand": "High (100-150 kg/ha for irrigated/Bt hybrids, 50-80 kg/ha for rainfed)",
+      "phosphorus_demand": "Moderate (50-60 kg/ha)",
+      "potassium_demand": "Moderate to High (50-60 kg/ha; crucial for fiber quality and disease resistance)",
+      "micronutrient_notes": ["Magnesium deficiency is common, causing 'reddening of cotton' (lalya). Spraying 1% MgSO4 is widely recommended.", "Zinc and Boron are essential for square retention and boll size."]
+    },
+
+    "cropping_context": {
+      "suitable_previous_crops": ["Soybean", "Pigeonpea", "Wheat", "Sorghum", "Maize"],
+      "unsuitable_previous_crops": ["Continuous cotton cultivation leads to severe buildup of Pink Bollworm and soil-borne wilt."],
+      "rotation_notes": ["Soybean - Cotton", "Cotton - Wheat (in North India)", "Sorghum - Cotton"],
+      "intercrop_options": ["Pigeonpea (Tur) in 6:1 or 8:1 ratio", "Black Gram", "Green Gram", "Soybean"]
+    },
+
+    "crop_duration": {
+      "duration_days_min": 150,
+      "duration_days_max": 180,
+      "maturity_indicators": ["Bolls turn brown and crack open to expose white lint", "Leaves turn yellow or red and start shedding"]
+    },
+
+    "recommendation_logic": {
+      "why_recommend_conditions": ["Deep black soils", "Moderate rainfall regions", "Long growing season with plenty of sunshine"],
+      "why_not_recommend_conditions": ["Areas with persistent heavy rains during boll opening", "Poorly drained soils", "Frost-prone winters"],
+      "hard_rejection_conditions": ["Severe waterlogging history", "Extreme salinity (>8 dS/m)"]
+    }
+  },
+
+  "region_season_advisories": [
+    {
+      "advisory_id": "cotton_maharashtra_kharif_bt",
+      "state_region": "Maharashtra",
+      "district": "Vidarbha, Marathwada, Khandesh",
+      "season": "Kharif",
+      "advisory_type": "cultivation_guide",
+      "applicability_filters": {
+        "irrigation": "rainfed to semi-irrigated",
+        "soil_type": "medium to deep black soils",
+        "variety_type": "Bt Cotton Hybrids"
+      },
+
+      "sowing": {
+        "sowing_window_start": "June 15",
+        "sowing_window_end": "July 15",
+        "seed_rate": { "value": 1.5, "unit": "kg/ha", "range_type": "recommended", "source_confidence": "high" },
+        "seed_treatment": "Most Bt cotton seeds come pre-treated. If not, treat with Imidacloprid 70 WS @ 5-7g/kg seed for sucking pests, and Trichoderma viride @ 10g/kg for root rot.",
+        "spacing": "90 cm x 60 cm on medium soils; 120 cm x 60 cm on deep black soils",
+        "sowing_depth_cm": 5,
+        "nursery_required": false,
+        "transplanting_required": false
+      },
+
+      "land_preparation": {
+        "summary": "Deep summer ploughing (once in 3 years) helps expose Pink Bollworm pupae to solar heat. Follow with 2-3 harrowings. Sowing on Broad Bed Furrow (BBF) or ridges is strongly advised to manage waterlogging."
+      },
+
+      "fertilizer": {
+        "basal_dose": "Apply 20% N, full P2O5 (60 kg), and full K2O (60 kg) at sowing. Apply along the seed line.",
+        "top_dressing": "Apply 40% N at 30-40 DAS (squaring) and the remaining 40% N at 60-70 DAS (flowering/boll formation).",
+        "organic_manure": "Apply 5-10 tonnes/ha of well-decomposed FYM or compost before the last harrowing.",
+        "micronutrients": "Foliar spray of 1% Magnesium Sulphate (MgSO4) + 1% Urea at 60 and 80 DAS to prevent reddening of leaves."
+      },
+
+      "irrigation": {
+        "schedule": "Primarily rainfed. Provide protective irrigation during dry spells at critical stages: square formation (45-50 DAS), peak flowering (70-80 DAS), and boll development (90-100 DAS).",
+        "critical_stages": ["Squaring", "Flowering", "Boll development"],
+        "rainfed_advice": "Frequent intercultivation (hoeing) during early stages creates a soil mulch to conserve moisture. Tie ridges at intervals to harvest rainwater in-situ."
+      },
+
+      "weed_management": {
+        "summary": "Pre-emergence application of Pendimethalin 30 EC @ 1.0 kg a.i./ha. Post-emergence directed spray of Pyrithiobac sodium 10% EC @ 62.5 g a.i./ha at 20-30 DAS for broad-leaved weeds."
+      },
+
+      "pest_management": [
+        {
+          "name": "Pink Bollworm (Pectinophora gossypiella)",
+          "symptoms": "Larvae tunnel into developing bolls, eating seeds and staining lint. 'Rosette flowers' (petals tied together) are an early sign.",
+          "management": "Strictly plant non-Bt refugia (20% or 5 rows) around the field. Install pheromone traps @ 5/ha. Spray Emamectin Benzoate 5 SG or Spinetoram 11.7 SC when catches exceed 8 moths/trap/night."
+        },
+        {
+          "name": "Sucking Pests (Whitefly, Jassids, Thrips, Aphids)",
+          "symptoms": "Curling, yellowing, or reddening of leaves. Sooty mold develops on honeydew secreted by whiteflies and aphids.",
+          "management": "Use yellow/blue sticky traps. Spray Flonicamid 50 WG @ 0.3 g/L or Diafenthiuron 50 WP @ 0.6 g/L if population crosses ETL."
+        }
+      ],
+
+      "disease_management": [
+        {
+          "name": "Alternaria Leaf Spot",
+          "symptoms": "Small, pale to brown, irregular spots on leaves that cause premature defoliation.",
+          "management": "Spray Mancozeb 75 WP @ 2.5 g/L or Propiconazole 25 EC @ 1 ml/L at disease onset."
+        },
+        {
+          "name": "Fusarium Wilt / Root Rot",
+          "symptoms": "Yellowing and drooping of leaves, starting from the lower canopy. Discoloration of the stem/root vascular tissues.",
+          "management": "Seed treatment with Trichoderma. Avoid waterlogging. Practice crop rotation with cereals."
+        }
+      ],
+
+      "deficiency_management": [
+        {
+          "nutrient": "Magnesium",
+          "symptoms": "Leaves turn purplish-red between green veins ('Lalya' disease), leading to early leaf drop and poor boll filling.",
+          "remedy": "Foliar spray of 1% MgSO4 combined with 1% Urea or 2% DAP during the squaring and boll formation stages."
+        }
+      ],
+
+      "harvest": {
+        "harvest_signs": "Bolls crack open fully, exposing fluffy white lint. Leaves naturally begin to dry and shed.",
+        "post_harvest_notes": "Pick cotton manually in the morning when dew is gone but before it gets too hot and dry (reduces trash/dry leaf bits). Do 3-4 pickings. Terminate the crop by December/January to break the Pink Bollworm lifecycle.",
+        "expected_duration_days": 160
+      },
+
+      "special_cautions": ["Do not extend the crop beyond January to prevent Pink Bollworm survival to the next season.", "Planting refuge (non-Bt cotton) is legally and scientifically required to delay pest resistance."],
+      "faq": [
+        {
+          "question": "Why are my cotton leaves turning red?",
+          "answer": "This physiological disorder is known as 'Reddening' or 'Lalya'. It is caused by nitrogen/magnesium deficiency, waterlogging, or severe sucking pest attack. Spraying 1% MgSO4 and 1% Urea usually controls it."
+        },
+        {
+          "question": "Why are squares and small bolls falling off?",
+          "answer": "Excessive shedding can be due to extreme heat, moisture stress, waterlogging, or pest damage (like bollworms). Hormonal spray of Planofix (NAA) @ 1 ml per 4.5 liters of water can reduce physiological shedding."
+        }
+      ],
+
+      "source_refs": ["src_cicr_cotton_pop", "src_pdkv_kharif_cotton"]
+    },
+    {
+      "advisory_id": "cotton_punjab_haryana_kharif",
+      "state_region": "Punjab & Haryana",
+      "district": "Bathinda, Mansa, Sirsa, Fatehabad, Hisar",
+      "season": "Kharif",
+      "advisory_type": "cultivation_guide",
+      "applicability_filters": {
+        "irrigation": "assured irrigation",
+        "soil_type": "sandy loam to loam",
+        "variety_type": "Bt Cotton Hybrids"
+      },
+
+      "sowing": {
+        "sowing_window_start": "April 15",
+        "sowing_window_end": "May 15",
+        "seed_rate": { "value": 2.0, "unit": "kg/ha", "range_type": "recommended" },
+        "seed_treatment": "Pre-treated Bt seeds.",
+        "spacing": "67.5 cm x 60 cm",
+        "sowing_depth_cm": 4,
+        "nursery_required": false,
+        "transplanting_required": false
+      },
+
+      "land_preparation": {
+        "summary": "Deep ploughing. Perform a heavy pre-sowing irrigation (rauni) to ensure uniform germination in the hot summer months."
+      },
+
+      "fertilizer": {
+        "basal_dose": "Apply 50% P2O5 and 50% K2O at sowing. Avoid basal Nitrogen to prevent early vegetative overgrowth.",
+        "top_dressing": "Apply Nitrogen in 3 equal splits: at thinning (20-25 DAS), squaring (45 DAS), and flowering (65 DAS).",
+        "micronutrients": "Foliar spray of 2% KNO3 at the boll development stage improves boll weight and lint quality."
+      },
+
+      "irrigation": {
+        "schedule": "First irrigation 4-6 weeks after sowing. Subsequent irrigations every 15-20 days depending on rain. Do not delay irrigation during the peak flowering and boll formation stages.",
+        "critical_stages": ["Flowering", "Boll development"]
+      },
+
+      "weed_management": {
+        "summary": "Apply Pendimethalin @ 1 L/ha as pre-emergence. Interculture with a tractor-drawn cultivator before the canopy closes."
+      },
+
+      "pest_management": [
+        {
+          "name": "Whitefly (Bemisia tabaci)",
+          "symptoms": "Severe honeydew secretion leading to black sooty mold. Primary vector for Cotton Leaf Curl Virus (CLCuV).",
+          "management": "Avoid late sowing (after May 15). Spray Flonicamid 50 WG @ 0.3 g/L or Spiromesifen 22.9 SC @ 1 ml/L. Do not use synthetic pyrethroids as they cause resurgence."
+        },
+        {
+          "name": "Pink Bollworm",
+          "symptoms": "Bore holes in bolls, stained lint.",
+          "management": "Terminate crop by November. Do not stack cotton sticks in the field."
+        }
+      ],
+
+      "disease_management": [
+        {
+          "name": "Cotton Leaf Curl Virus (CLCuV)",
+          "symptoms": "Upward or downward curling of leaves, thickened veins, and cup-shaped leafy enations on the underside of leaves.",
+          "management": "Use highly tolerant Bt hybrids. Control Whitefly strictly. Uproot alternate weed hosts like Kanghi Buti (Sida cordifolia)."
+        }
+      ],
+
+      "harvest": {
+        "harvest_signs": "Bolls crack completely open.",
+        "post_harvest_notes": "Pick when dew dries up. Store in a dry place to prevent yellowing of lint.",
+        "expected_duration_days": 170
+      },
+
+      "special_cautions": ["Sowing after May 15 heavily increases the risk of Whitefly and CLCuV.", "Do not apply excessive urea as it attracts sucking pests and delays maturity."],
+      "faq": [
+        {
+          "question": "How to prevent dropping of squares?",
+          "answer": "Maintain soil moisture, avoid water stagnation, and spray Planofix (NAA) at the squaring stage to reduce physiological dropping."
+        }
+      ],
+
+      "source_refs": ["src_pau_cotton_pop", "src_hau_cotton_manual"]
+    }
+  ],
+
+  "risk_library": {
+    "pests": [
+      {
+        "name": "Pink Bollworm (Pectinophora gossypiella)",
+        "favorable_conditions": ["Continuous cotton cropping", "Extending crop duration beyond January"],
+        "symptoms": ["Rosette flowers", "Bore holes in bolls", "Stained, rotten lint", "Blind bolls"],
+        "management": ["Crop termination by Jan", "Pheromone traps", "Planting non-Bt refuge", "Mating disruption pastes", "Shredding crop residues"]
+      },
+      {
+        "name": "Whitefly (Bemisia tabaci)",
+        "favorable_conditions": ["Dry, hot weather", "Excessive nitrogen application", "Late sowing in North India"],
+        "symptoms": ["Honeydew secretion", "Sooty mold on leaves", "Transmission of Cotton Leaf Curl Virus (CLCuV)"],
+        "management": ["Yellow sticky traps", "Judicious nitrogen use", "Avoid synthetic pyrethroids", "Flonicamid or Diafenthiuron sprays"]
+      },
+      {
+        "name": "Jassids (Amrasca biguttula)",
+        "favorable_conditions": ["High humidity", "Early growth stages"],
+        "symptoms": ["Downward curling of leaves", "Yellowing and reddening of leaf margins (Hopper burn)"],
+        "management": ["Seed treatment with Imidacloprid", "Spray Thiamethoxam"]
+      }
+    ],
+    "diseases": [
+      {
+        "name": "Cotton Leaf Curl Virus (CLCuV)",
+        "favorable_conditions": ["High whitefly population (Endemic in North India)"],
+        "symptoms": ["Upward/downward curling of leaves", "Thickened veins", "Enations (leafy outgrowths) on leaf underside"],
+        "management": ["Resistant varieties", "Vector (Whitefly) control", "Eradication of weed hosts"]
+      },
+      {
+        "name": "Bacterial Blight (Angular Leaf Spot)",
+        "favorable_conditions": ["High humidity", "Frequent rains", "Temperatures between 28-30°C"],
+        "symptoms": ["Water-soaked angular spots on leaves", "Black arm (stem lesions)", "Boll rot"],
+        "management": ["Copper oxychloride + Streptocycline spray", "Disease-free seeds"]
+      }
+    ],
+    "abiotic_risks": [
+      {
+        "name": "Waterlogging (Parawilt)",
+        "trigger_conditions": ["Heavy, continuous monsoon rains on deep black soils", "Poor drainage"],
+        "impact": "Root asphyxiation leading to sudden wilt (Parawilt), reddening of leaves, and massive shedding of squares/bolls.",
+        "mitigation": ["Broad Bed Furrow (BBF) planting", "Surface drainage", "Foliar spray of 2% Urea or Cobalt Chloride to revive plants post-drainage"]
+      },
+      {
+        "name": "Reddening of Cotton (Lalya)",
+        "trigger_conditions": ["Magnesium deficiency", "Nitrogen starvation during boll filling", "Waterlogging or severe sucking pest attack"],
+        "impact": "Leaves turn purplish-red, photosynthesis drops, causing premature boll drop and poor lint quality.",
+        "mitigation": ["Foliar spray of 1% MgSO4 + 1% Urea at squaring and boll formation"]
+      }
+    ]
+  },
+
+  "retrieval_chunks": [
+    {
+      "chunk_id": "cotton_overview_001",
+      "chunk_type": "overview",
+      "title": "Cotton Crop Overview",
+      "crop_name": "Cotton",
+      "state_region": "India",
+      "district": "All",
+      "season": "Kharif",
+      "advisory_category": "overview",
+      "text": "Cotton (Kapas), known as 'White Gold', is a critical commercial fiber crop in India. Cultivated mainly on the deep black soils of Central and Western India, Bt Cotton hybrids dominate the landscape, providing built-in resistance to the American Bollworm.",
+      "keywords": ["Cotton", "Kapas", "White Gold", "Fiber", "Bt Cotton", "Kharif"],
+      "metadata_tags": ["general_info", "intro"],
+      "source_ref_ids": ["src_cicr_cotton_pop"]
+    },
+    {
+      "chunk_id": "cotton_suitability_001",
+      "chunk_type": "suitability",
+      "title": "Cotton Soil and Climate Suitability",
+      "crop_name": "Cotton",
+      "state_region": "India",
+      "district": "All",
+      "season": "Kharif",
+      "advisory_category": "suitability",
+      "text": "Cotton thrives in deep black soils (Vertisols) that retain moisture, making it resilient in rainfed conditions. It requires warm climates (21-37°C) and is highly sensitive to waterlogging, which can cause 'Parawilt'.",
+      "keywords": ["Black soil", "Deep root", "Waterlogging sensitive", "Parawilt", "Vertisols"],
+      "metadata_tags": ["soil", "climate", "water"],
+      "source_ref_ids": ["src_pdkv_kharif_cotton"]
+    },
+    {
+      "chunk_id": "cotton_pink_bollworm_001",
+      "chunk_type": "pest_management",
+      "title": "Managing Pink Bollworm in Bt Cotton",
+      "crop_name": "Cotton",
+      "state_region": "India",
+      "district": "All",
+      "season": "Kharif",
+      "advisory_category": "pest_management",
+      "text": "Pink Bollworm has developed resistance to Bt Cotton in many areas. Management requires a multi-pronged approach: planting 20% non-Bt refuge, installing pheromone traps, avoiding crop extension beyond January, and shredding crop residues to kill overwintering pupae.",
+      "keywords": ["Pink Bollworm", "PBW", "Bt Cotton", "Refuge", "Pheromone traps", "Crop termination"],
+      "metadata_tags": ["pest", "bollworm", "resistance"],
+      "source_ref_ids": ["src_cicr_cotton_pop"]
+    },
+    {
+      "chunk_id": "cotton_reddening_001",
+      "chunk_type": "nutrient_management",
+      "title": "Reddening of Cotton (Lalya)",
+      "crop_name": "Cotton",
+      "state_region": "Central India",
+      "district": "All",
+      "season": "Kharif",
+      "advisory_category": "nutrient_management",
+      "text": "Reddening of cotton leaves, often called 'Lalya', is a physiological disorder caused by Magnesium and Nitrogen deficiency during the heavy demand period of boll filling. To prevent this, spray a mixture of 1% Magnesium Sulphate (MgSO4) and 1% Urea at 60 and 80 days after sowing.",
+      "keywords": ["Reddening", "Lalya", "Magnesium", "MgSO4", "Urea", "Physiological disorder"],
+      "metadata_tags": ["nutrient", "deficiency", "yield"],
+      "source_ref_ids": ["src_pdkv_kharif_cotton"]
+    },
+    {
+      "chunk_id": "cotton_clcuv_001",
+      "chunk_type": "disease_management",
+      "title": "Cotton Leaf Curl Virus (CLCuV) Management",
+      "crop_name": "Cotton",
+      "state_region": "North India",
+      "district": "All",
+      "season": "Kharif",
+      "advisory_category": "disease_management",
+      "text": "CLCuV is endemic to North India (Punjab, Haryana). It causes leaves to curl upwards or downwards with thickened veins. Since it is a virus transmitted by the Whitefly, management relies on planting tolerant hybrids, timely sowing before May 15, and strict Whitefly control.",
+      "keywords": ["CLCuV", "Leaf Curl Virus", "Whitefly", "North India", "Timely sowing"],
+      "metadata_tags": ["disease", "virus", "vector"],
+      "source_ref_ids": ["src_pau_cotton_pop"]
+    }
+  ],
+
+  "structured_explanation_rules": [
+    {
+      "rule_id": "cotton_soil_match",
+      "condition": "input.soil_texture IN ['black soil', 'clay loam', 'alluvial'] AND input.soil_drainage == 'well_drained'",
+      "message": "Deep black soils or rich alluvial soils with good drainage are the most ideal conditions for cultivating high-yielding Cotton.",
+      "priority": 1,
+      "severity": "positive_match"
+    },
+    {
+      "rule_id": "cotton_waterlogging_reject",
+      "condition": "input.soil_drainage == 'poor' OR input.waterlogging_history == true",
+      "message": "Critical Warning: Cotton is highly susceptible to Parawilt and massive square drop in waterlogged conditions. You must adopt ridge and furrow or BBF methods.",
+      "priority": 1,
+      "severity": "hard_reject"
+    },
+    {
+      "rule_id": "cotton_pink_bollworm_warning",
+      "condition": "input.pest_history_pbw == true AND input.crop_duration_planned > 160",
+      "message": "Warning: Extending the cotton crop beyond January dramatically increases Pink Bollworm survival. Terminate the crop early to break the pest cycle.",
+      "priority": 2,
+      "severity": "warning"
+    },
+    {
+      "rule_id": "cotton_clcuv_late_sowing_warning",
+      "condition": "input.region IN ['Punjab', 'Haryana', 'Rajasthan'] AND input.sowing_date > 'May 15'",
+      "message": "Alert: Sowing after May 15 in North India severely increases the risk of Whitefly attacks and Cotton Leaf Curl Virus (CLCuV). Monitor vectors closely.",
+      "priority": 3,
+      "severity": "warning"
+    },
+    {
+      "rule_id": "cotton_reddening_tip",
+      "condition": "input.growth_stage == 'boll_development' OR input.days_after_sowing >= 60",
+      "message": "Tip: To prevent the 'Lalya' (reddening) disease and ensure heavy boll filling, apply a foliar spray of 1% Magnesium Sulphate + 1% Urea now.",
+      "priority": 4,
+      "severity": "info"
+    }
+  ],
+
+  "ui_response_templates": {
+    "best_match_intro": "Kapas (Cotton) is an excellent, high-value commercial crop perfectly suited for your deep black/alluvial soils.",
+    "warning_drainage": "Your field is prone to water stagnation, which can cause 'Parawilt' in cotton. Please plant on raised beds to ensure proper drainage.",
+    "warning_pest": "Alert: Ensure you plant the mandatory 20% non-Bt refuge seeds around your field to protect against Pink Bollworm resistance.",
+    "cta_view_advisory": "View full Cotton cultivation guidelines",
+    "cta_view_pbw_guide": "Read the Pink Bollworm Management Protocol"
+  },
+
+  "source_registry": [
+    {
+      "source_id": "src_cicr_cotton_pop",
+      "title": "Cotton Production Technology",
+      "source_type": "pdf",
+      "publisher": "ICAR - Central Institute for Cotton Research (CICR), Nagpur",
+      "region_scope": "India",
+      "season_scope": "Kharif",
+      "crop_scope": ["Cotton"],
+      "content_summary": "Comprehensive national guidelines on Bt Cotton cultivation, Pink Bollworm management, and high-density planting systems (HDPS).",
+      "date_published": "2022-04-15",
+      "trust_level": "high"
+    },
+    {
+      "source_id": "src_pdkv_kharif_cotton",
+      "title": "Package of Practices for Kharif Cotton",
+      "source_type": "manual",
+      "publisher": "Dr. Panjabrao Deshmukh Krishi Vidyapeeth (PDKV), Akola",
+      "region_scope": "Maharashtra (Vidarbha)",
+      "season_scope": "Kharif",
+      "crop_scope": ["Cotton"],
+      "content_summary": "State-specific agronomic guidelines, nutrient management (addressing Lalya/reddening), and pest schedules for Central India's rainfed belts.",
+      "date_published": "2021-05-20",
+      "trust_level": "high"
+    },
+    {
+      "source_id": "src_pau_cotton_pop",
+      "title": "Package of Practices for Kharif Crops (Cotton)",
+      "source_type": "manual",
+      "publisher": "Punjab Agricultural University (PAU), Ludhiana",
+      "region_scope": "Punjab",
+      "season_scope": "Kharif",
+      "crop_scope": ["Cotton"],
+      "content_summary": "Guidelines specific to North India focusing on irrigated cotton, CLCuV management, and Whitefly control.",
+      "date_published": "2023-03-05",
+      "trust_level": "high"
+    },
+    {
+      "source_id": "src_hau_cotton_manual",
+      "title": "Cotton Cultivation Guide",
+      "source_type": "bulletin",
+      "publisher": "CCS Haryana Agricultural University (CCS HAU)",
+      "region_scope": "Haryana",
+      "season_scope": "Kharif",
+      "crop_scope": ["Cotton"],
+      "content_summary": "Detailed pest management strategies, especially for Pink Bollworm and Whitefly in the Trans-Gangetic plains.",
+      "date_published": "2022-02-10",
+      "trust_level": "high"
+    }
+  ],
+
+  "quality_flags": {
+    "is_complete": true,
+    "missing_fields": [],
+    "weakly_supported_fields": [],
+    "last_reviewed_at": "2024-04-20T00:00:00Z"
+  },
+
+  "updated_at": "2024-04-20T00:00:00Z",
+  "created_at": "2023-12-15T00:00:00Z"
+}

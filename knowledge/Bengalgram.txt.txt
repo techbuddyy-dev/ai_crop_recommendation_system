@@ -1,0 +1,444 @@
+{
+  "crop_id": "bengalgram",
+  "crop_name": "Bengal Gram",
+  "aliases": ["Chickpea", "Chana", "Gram", "Garbanzo bean"],
+  "crop_group": "Pulse",
+  "status": "active",
+  "language": "en",
+  "version": "v1.2",
+
+  "master_profile": {
+    "short_description": "Bengal Gram (Chickpea) is the most important Rabi pulse crop in India, known for its high protein content and ability to grow on residual soil moisture.",
+    "seasons_supported": ["Rabi"],
+    "regions_supported": ["Madhya Pradesh", "Maharashtra", "Rajasthan", "Uttar Pradesh", "Karnataka", "Andhra Pradesh", "Gujarat"],
+    "agro_climatic_zones": ["Central Plateau and Hills Region", "Western Plateau and Hills Region", "Upper Gangetic Plains Region", "Southern Plateau and Hills Region"],
+
+    "soil_suitability": {
+      "suitable_soil_textures": ["Clay loam", "Black cotton soil (Vertisols)", "Loam", "Sandy loam"],
+      "unsuitable_soil_textures": ["Heavy, poorly drained clay", "Saline and alkaline soils", "Highly acidic soils"],
+      "ideal_ph_min": 6.0,
+      "ideal_ph_max": 7.5,
+      "acceptable_ph_min": 5.5,
+      "acceptable_ph_max": 8.5,
+      "salinity_tolerance_note": "Highly sensitive to soil salinity and alkalinity. Does not perform well in waterlogged conditions.",
+      "drainage_requirement": "Requires well-drained soils; extremely sensitive to standing water at any growth stage.",
+      "organic_carbon_note": "Benefits from medium organic carbon. Application of FYM helps in conserving soil moisture for rainfed cultivation."
+    },
+
+    "climate_suitability": {
+      "ideal_temperature_c_min": 15,
+      "ideal_temperature_c_max": 25,
+      "acceptable_temperature_c_min": 5,
+      "acceptable_temperature_c_max": 30,
+      "ideal_humidity_min": 40,
+      "ideal_humidity_max": 60,
+      "ideal_rainfall_mm_min": 400,
+      "ideal_rainfall_mm_max": 700,
+      "frost_tolerance_note": "Highly sensitive to frost, particularly during the flowering and early pod-formation stages.",
+      "heat_tolerance_note": "High temperatures (>30°C) during the reproductive phase cause flower drop and forced maturity."
+    },
+
+    "water_profile": {
+      "irrigation_required": false,
+      "rainfed_suitable": true,
+      "waterlogging_tolerance": "Very low; even 24 hours of standing water can cause severe root suffocation and wilt.",
+      "drought_tolerance": "High; tap root system allows it to extract moisture from deeper soil layers.",
+      "critical_water_stages": ["Pre-flowering (45-50 DAS)", "Pod development (70-75 DAS)"]
+    },
+
+    "nutrient_profile": {
+      "nitrogen_demand": "Low (15-20 kg/ha as a starter dose, as it fixes atmospheric nitrogen)",
+      "phosphorus_demand": "Moderate (40-60 kg/ha, essential for root development and nodulation)",
+      "potassium_demand": "Low (20-30 kg/ha, mostly in deficient soils)",
+      "micronutrient_notes": ["Sulphur (20 kg/ha) is highly recommended for pulse quality. Zinc and Molybdenum deficiencies can limit nitrogen fixation."]
+    },
+
+    "cropping_context": {
+      "suitable_previous_crops": ["Rice", "Soybean", "Maize", "Sorghum", "Pearl Millet"],
+      "unsuitable_previous_crops": ["Continuous cultivation of chickpea or other pulses increases the incidence of soil-borne diseases like Fusarium wilt."],
+      "rotation_notes": ["Soybean - Chickpea (Central India)", "Rice - Chickpea (Eastern/Northern India)", "Pearl Millet - Chickpea (Rajasthan)"],
+      "intercrop_options": ["Wheat", "Mustard", "Linseed", "Safflower", "Coriander"]
+    },
+
+    "crop_duration": {
+      "duration_days_min": 90,
+      "duration_days_max": 150,
+      "maturity_indicators": ["Plants turn light yellow and dry up", "Pods become dry and hard", "Seeds rattle inside the pods when shaken", "Grain moisture reaches 15%"]
+    },
+
+    "recommendation_logic": {
+      "why_recommend_conditions": ["Cool, dry winters", "Heavy moisture-retentive soils (like black soils)", "Rainfed or limited irrigation situations"],
+      "why_not_recommend_conditions": ["Frost-prone regions during flowering", "Areas with heavy winter rains", "Poorly drained or saline soils"],
+      "hard_rejection_conditions": ["Persistent waterlogging", "Hot and humid tropical conditions"]
+    }
+  },
+
+  "region_season_advisories": [
+    {
+      "advisory_id": "bengalgram_mp_rabi",
+      "state_region": "Madhya Pradesh",
+      "district": "Ujjain, Vidisha, Sehore, Sagar, Raisen",
+      "season": "Rabi",
+      "advisory_type": "cultivation_guide",
+      "applicability_filters": {
+        "irrigation": "rainfed to semi-irrigated",
+        "soil_type": "medium to deep black soils",
+        "sowing_window": "timely sown (October)"
+      },
+
+      "sowing": {
+        "sowing_window_start": "October 01",
+        "sowing_window_end": "October 30",
+        "seed_rate": { "value": 75, "unit": "kg/ha", "range_type": "recommended", "source_confidence": "high" },
+        "seed_treatment": "Treat seed with Trichoderma viride @ 5g/kg or Carboxin + Thiram @ 2g/kg to prevent wilt. Follow with Rhizobium and PSB culture @ 5g/kg seed each.",
+        "spacing": "30 cm x 10 cm for Desi types; 45 cm x 10 cm for Kabuli types",
+        "sowing_depth_cm": 8,
+        "nursery_required": false,
+        "transplanting_required": false
+      },
+
+      "land_preparation": {
+        "summary": "One deep ploughing followed by 1-2 cross harrowings to achieve a rough tilth. Rough tilth is preferred over fine tilth to facilitate soil aeration and moisture absorption."
+      },
+
+      "fertilizer": {
+        "basal_dose": "Apply 20 kg N, 50 kg P2O5, and 20 kg K2O + 20 kg Sulphur per hectare at the time of sowing. Drill fertilizers 5-7 cm below the seed.",
+        "top_dressing": "Not recommended in rainfed conditions. Foliar spray of 2% Urea or DAP at flowering can boost yields.",
+        "organic_manure": "5 tonnes/ha FYM or compost during land preparation.",
+        "micronutrients": "Foliar spray of 0.5% Zinc sulphate if zinc deficiency is noticed."
+      },
+
+      "irrigation": {
+        "schedule": "If grown on residual moisture, no irrigation. If limited water is available, give 1-2 irrigations: first at branching/pre-flowering (45 DAS) and second at pod formation (75 DAS).",
+        "critical_stages": ["Pre-flowering", "Pod development"],
+        "rainfed_advice": "Do not irrigate during active flowering as it may induce excessive vegetative growth and flower drop."
+      },
+
+      "weed_management": {
+        "summary": "Pre-emergence application of Pendimethalin 30 EC @ 1.0 kg a.i./ha within 3 days of sowing. One hand weeding at 25-30 DAS."
+      },
+
+      "pest_management": [
+        {
+          "name": "Gram Pod Borer (Helicoverpa armigera)",
+          "symptoms": "Larvae feed on foliage initially, later bore into pods and feed on developing seeds. Half the caterpillar's body remains outside the pod.",
+          "management": "Install pheromone traps @ 5/ha. Spray HaNPV @ 250 LE/ha or Emamectin benzoate 5 SG @ 220 g/ha when larval population crosses ETL (1 larva/meter row)."
+        },
+        {
+          "name": "Cutworm (Agrotis ipsilon)",
+          "symptoms": "Larvae cut the young seedlings at the ground level during the night.",
+          "management": "Deep summer ploughing to expose pupae. Apply Quinalphos 1.5% dust @ 25 kg/ha in the soil before sowing."
+        }
+      ],
+
+      "disease_management": [
+        {
+          "name": "Fusarium Wilt",
+          "symptoms": "Drooping of leaves and wilting of the entire plant. Roots show blackish discoloration, and internal stem tissues turn dark brown.",
+          "management": "Grow wilt-resistant varieties (e.g., JG 315, JG 11, JAKI 9218). Seed treatment with Trichoderma. Follow a 3-year crop rotation."
+        },
+        {
+          "name": "Ascochyta Blight",
+          "symptoms": "Circular brown spots with dark margins on leaves, stems, and pods. Can cause severe blighting under cool, wet conditions.",
+          "management": "Use disease-free seeds. Treat seeds with fungicides. Spray Chlorothalonil 75 WP or Mancozeb @ 2 g/L of water if symptoms appear."
+        }
+      ],
+
+      "deficiency_management": [
+        {
+          "nutrient": "Sulphur",
+          "symptoms": "Yellowing of young leaves (unlike Nitrogen deficiency which affects older leaves first), reduced nodulation.",
+          "remedy": "Apply Gypsum @ 200 kg/ha or use SSP as the phosphorus source instead of DAP."
+        }
+      ],
+
+      "harvest": {
+        "harvest_signs": "Leaves shed, entire plant turns golden-yellow/brown, pods are dry and seeds are hard with 15% moisture.",
+        "post_harvest_notes": "Harvested plants are dried in the sun for 4-5 days before threshing. Store seeds at around 8-10% moisture to prevent bruchid (pulse beetle) attack.",
+        "expected_duration_days": 115
+      },
+
+      "special_cautions": ["Nipping/Topping: Pluck the apical buds (top 2 cm) at 35-40 days after sowing to encourage lateral branching and increase pod bearing. Can be done manually or by allowing sheep to lightly graze the field."],
+      "faq": [
+        {
+          "question": "Why should I not irrigate during the flowering stage?",
+          "answer": "Irrigating during full flowering shifts the plant's energy towards vegetative growth instead of reproductive growth, leading to flower shedding and reduced yield."
+        }
+      ],
+
+      "source_refs": ["src_jnkvv_chickpea_mp", "src_iipr_chickpea_pop"]
+    },
+    {
+      "advisory_id": "bengalgram_ap_rabi_irrigated",
+      "state_region": "Andhra Pradesh & Karnataka",
+      "district": "Kurnool, Anantapur, Dharwad, Kalaburagi",
+      "season": "Rabi",
+      "advisory_type": "cultivation_guide",
+      "applicability_filters": {
+        "irrigation": "semi-irrigated",
+        "soil_type": "deep black cotton soils",
+        "sowing_window": "early to mid October"
+      },
+
+      "sowing": {
+        "sowing_window_start": "October 1",
+        "sowing_window_end": "October 20",
+        "seed_rate": { "value": 60, "unit": "kg/ha", "range_type": "recommended" },
+        "seed_treatment": "Treat seed with Trichoderma viride @ 10g/kg seed. In areas with high dry root rot history, treat with Carboxin + Thiram.",
+        "spacing": "30 cm x 10 cm",
+        "sowing_depth_cm": 5,
+        "nursery_required": false,
+        "transplanting_required": false
+      },
+
+      "land_preparation": {
+        "summary": "Deep ploughing in summer. Secondary tillage with harrow and cultivator to achieve a medium-rough seedbed. Moisture conservation is key."
+      },
+
+      "fertilizer": {
+        "basal_dose": "Apply 20 kg N and 50 kg P2O5 per hectare.",
+        "top_dressing": "Not required. Spray 2% Urea at flowering and pod development stages if moisture is sufficient."
+      },
+
+      "irrigation": {
+        "schedule": "First irrigation at 30-35 DAS (before flowering). Second irrigation at 65-70 DAS (pod development).",
+        "critical_stages": ["Branching", "Pod filling"],
+        "rainfed_advice": "Do not over-irrigate. Water stagnation for even 12 hours causes wilt."
+      },
+
+      "weed_management": {
+        "summary": "Pre-emergence Pendimethalin 30 EC @ 1-1.5 L/ha. Hand weed at 30 DAS."
+      },
+
+      "pest_management": [
+        {
+          "name": "Spodoptera exigua (Tobacco caterpillar)",
+          "symptoms": "Defoliation in early stages. Skeletonized leaves.",
+          "management": "Use pheromone traps. Spray Novaluron 10 EC @ 1.0 ml/L or Chlorantraniliprole 18.5 SC @ 0.3 ml/L."
+        }
+      ],
+
+      "disease_management": [
+        {
+          "name": "Dry Root Rot (Macrophomina phaseolina)",
+          "symptoms": "Sudden drying of plants. Roots become brittle and break easily. Black sclerotial bodies visible on roots.",
+          "management": "Avoid late sowing as high temperatures (>30°C) favor this disease. Maintain soil moisture via protective irrigation."
+        }
+      ],
+
+      "harvest": {
+        "harvest_signs": "Crop matures in 95-105 days in Southern India due to warmer winters.",
+        "post_harvest_notes": "Use varieties like NBeG 47 or NBeG 3 for mechanical combine harvesting.",
+        "expected_duration_days": 100
+      },
+
+      "special_cautions": ["Southern zones experience early onset of summer; strictly avoid delayed sowing past October to escape terminal heat stress and dry root rot."],
+      "faq": [
+        {
+          "question": "Can I harvest Bengal gram with a combine harvester?",
+          "answer": "Yes, if you use specifically developed tall and erect varieties like NBeG 47, NBeG 3, or JG 24, which hold pods higher off the ground."
+        }
+      ],
+
+      "source_refs": ["src_angrau_chickpea", "src_uasd_chana_pop"]
+    }
+  ],
+
+  "risk_library": {
+    "pests": [
+      {
+        "name": "Gram Pod Borer (Helicoverpa armigera)",
+        "favorable_conditions": ["Cloudy weather during pod formation", "Overlapping crop stages"],
+        "symptoms": ["Holes in pods", "Defoliation", "Presence of green/brown caterpillars"],
+        "management": ["Bird perches @ 50/ha", "Intercropping with coriander to attract predators", "Need-based chemical sprays (Emamectin benzoate)"]
+      }
+    ],
+    "diseases": [
+      {
+        "name": "Fusarium Wilt",
+        "favorable_conditions": ["High soil temperature and moisture stress at early stages", "Continuous chickpea cropping"],
+        "symptoms": ["Sudden drooping of plants", "Internal browning of roots and stems"],
+        "management": ["Resistant varieties (e.g., JG 11, JAKI 9218)", "Seed treatment with Trichoderma", "Deep sowing"]
+      },
+      {
+        "name": "Dry Root Rot",
+        "favorable_conditions": ["High temperature (>30°C) combined with moisture stress at flowering/podding"],
+        "symptoms": ["Sudden drying of plants", "Brittle roots with dark sclerotial bodies"],
+        "management": ["Timely sowing to avoid terminal heat", "Protective irrigation at pod filling"]
+      }
+    ],
+    "abiotic_risks": [
+      {
+        "name": "Frost Damage",
+        "trigger_conditions": ["Sudden drop in night temperature (< 4°C) during flowering/podding"],
+        "impact": "Flowers dry up, young pods abort, leading to near-total yield loss if severe.",
+        "mitigation": ["Light irrigation if frost is predicted", "Smoke generation around field boundaries at night"]
+      },
+      {
+        "name": "Waterlogging",
+        "trigger_conditions": ["Heavy winter showers", "Poorly drained fields", "Excessive irrigation"],
+        "impact": "Root suffocation, wilting, and sudden plant mortality.",
+        "mitigation": ["Ensure proper drainage before sowing", "Avoid heavy soils in high rainfall zones"]
+      }
+    ]
+  },
+
+  "retrieval_chunks": [
+    {
+      "chunk_id": "bengalgram_overview_001",
+      "chunk_type": "overview",
+      "title": "Bengal Gram (Chickpea) Overview",
+      "crop_name": "Bengal Gram",
+      "state_region": "India",
+      "district": "All",
+      "season": "Rabi",
+      "advisory_category": "overview",
+      "text": "Bengal Gram, or Chana, is a prominent Rabi pulse crop in India. It requires cool climate and thrives on residual soil moisture in the post-monsoon season.",
+      "keywords": ["Chana", "Chickpea", "Pulse", "Rabi", "Protein"],
+      "metadata_tags": ["general_info", "intro"],
+      "source_ref_ids": ["src_iipr_chickpea_pop"]
+    },
+    {
+      "chunk_id": "bengalgram_suitability_001",
+      "chunk_type": "suitability",
+      "title": "Bengal Gram Soil and Climate Requirements",
+      "crop_name": "Bengal Gram",
+      "state_region": "India",
+      "district": "All",
+      "season": "Rabi",
+      "advisory_category": "suitability",
+      "text": "Requires well-drained loam or black cotton soils with pH 6.0-7.5. Ideal temperatures range from 15-25°C. It is highly sensitive to frost, waterlogging, and soil salinity.",
+      "keywords": ["Black soil", "Cool climate", "Drainage", "Frost-sensitive"],
+      "metadata_tags": ["soil", "climate", "water"],
+      "source_ref_ids": ["src_iipr_chickpea_pop"]
+    },
+    {
+      "chunk_id": "bengalgram_nipping_001",
+      "chunk_type": "cultivation_practice",
+      "title": "Nipping or Topping in Bengal Gram",
+      "crop_name": "Bengal Gram",
+      "state_region": "India",
+      "district": "All",
+      "season": "Rabi",
+      "advisory_category": "cultivation_practice",
+      "text": "Nipping (plucking the apical buds) at 35-40 days after sowing restricts vertical growth and encourages lateral branching. This results in more flowers and a 15-20% higher pod yield.",
+      "keywords": ["Nipping", "Topping", "Branching", "Yield increase"],
+      "metadata_tags": ["agronomy", "yield_enhancement"],
+      "source_ref_ids": ["src_jnkvv_chickpea_mp"]
+    },
+    {
+      "chunk_id": "bengalgram_pod_borer_001",
+      "chunk_type": "pest_management",
+      "title": "Managing Gram Pod Borer (Helicoverpa)",
+      "crop_name": "Bengal Gram",
+      "state_region": "India",
+      "district": "All",
+      "season": "Rabi",
+      "advisory_category": "pest_management",
+      "text": "Helicoverpa armigera is the most destructive pest of chickpea. Manage it by setting up bird perches (50/ha), using pheromone traps, and spraying HaNPV or Emamectin benzoate at the early larval stage.",
+      "keywords": ["Pod borer", "Helicoverpa armigera", "HaNPV", "Emamectin", "Bird perches"],
+      "metadata_tags": ["pest", "caterpillar", "borer"],
+      "source_ref_ids": ["src_iipr_chickpea_pop"]
+    }
+  ],
+
+  "structured_explanation_rules": [
+    {
+      "rule_id": "bengalgram_soil_match",
+      "condition": "input.soil_drainage == 'well_drained' AND input.soil_texture IN ['clay loam', 'loam', 'black soil']",
+      "message": "Your soil conditions are highly suitable for Bengal Gram. Moisture retentive soils with good drainage promote robust growth.",
+      "priority": 1,
+      "severity": "positive_match"
+    },
+    {
+      "rule_id": "bengalgram_waterlogging_reject",
+      "condition": "input.soil_drainage == 'poor' OR input.waterlogging_history == true",
+      "message": "Bengal Gram is extremely sensitive to waterlogging. Poor drainage will lead to root rot and crop failure.",
+      "priority": 1,
+      "severity": "hard_reject"
+    },
+    {
+      "rule_id": "bengalgram_frost_warning",
+      "condition": "input.min_temp_c < 5 AND input.growth_stage IN ['flowering', 'podding']",
+      "message": "Warning: Approaching frost conditions can cause severe flower and pod drop. Arrange for protective light irrigation or create smoke barriers.",
+      "priority": 2,
+      "severity": "warning"
+    },
+    {
+      "rule_id": "bengalgram_nipping_tip",
+      "condition": "input.days_after_sowing >= 30 AND input.days_after_sowing <= 40",
+      "message": "Tip: Your crop is at the right stage for 'nipping' (topping the apical buds). This will encourage lateral branching and higher yields.",
+      "priority": 3,
+      "severity": "info"
+    }
+  ],
+
+  "ui_response_templates": {
+    "best_match_intro": "Bengal Gram (Chana) is an excellent choice for your Rabi sowing, matching well with your soil moisture and temperature profile.",
+    "warning_drainage": "Your field has a history of water stagnation, which is dangerous for Chana. Ensure strict drainage measures or opt for a different crop.",
+    "warning_terminal_heat": "Alert: Ensure early sowing in your region to escape dry root rot and terminal heat stress during pod filling.",
+    "cta_view_advisory": "View full Bengal Gram cultivation advisory",
+    "cta_view_wilt_guide": "Read Fusarium Wilt Management Guide"
+  },
+
+  "source_registry": [
+    {
+      "source_id": "src_jnkvv_chickpea_mp",
+      "title": "Package of Practices for Rabi Crops (Chickpea)",
+      "source_type": "manual",
+      "publisher": "Jawaharlal Nehru Krishi Vishwa Vidyalaya (JNKVV), Jabalpur",
+      "region_scope": "Madhya Pradesh",
+      "season_scope": "Rabi",
+      "crop_scope": ["Bengal Gram"],
+      "content_summary": "Extensive state-level guidelines for chickpea cultivation in Central India's black soil regions.",
+      "date_published": "2022-09-01",
+      "trust_level": "high"
+    },
+    {
+      "source_id": "src_iipr_chickpea_pop",
+      "title": "Chickpea Production Technology",
+      "source_type": "pdf",
+      "publisher": "ICAR - Indian Institute of Pulses Research (IIPR), Kanpur",
+      "region_scope": "India",
+      "season_scope": "Rabi",
+      "crop_scope": ["Bengal Gram"],
+      "content_summary": "National-level best practices for chickpea agronomy, disease (wilt) management, and integrated pest management.",
+      "date_published": "2021-10-10",
+      "trust_level": "high"
+    },
+    {
+      "source_id": "src_angrau_chickpea",
+      "title": "Chickpea Production Guidelines",
+      "source_type": "bulletin",
+      "publisher": "Acharya N.G. Ranga Agricultural University (ANGRAU)",
+      "region_scope": "Andhra Pradesh",
+      "season_scope": "Rabi",
+      "crop_scope": ["Bengal Gram"],
+      "content_summary": "Varieties and practices suitable for short mild winters of southern India.",
+      "date_published": "2022-08-15",
+      "trust_level": "high"
+    },
+    {
+      "source_id": "src_uasd_chana_pop",
+      "title": "Bengal Gram Cultivation Practices",
+      "source_type": "website",
+      "publisher": "University of Agricultural Sciences, Dharwad",
+      "region_scope": "Karnataka",
+      "season_scope": "Rabi",
+      "crop_scope": ["Bengal Gram"],
+      "content_summary": "Pest management and mechanical harvesting strategies for Chana in Karnataka.",
+      "date_published": "2023-01-20",
+      "trust_level": "high"
+    }
+  ],
+
+  "quality_flags": {
+    "is_complete": true,
+    "missing_fields": [],
+    "weakly_supported_fields": [],
+    "last_reviewed_at": "2024-03-25T00:00:00Z"
+  },
+
+  "updated_at": "2024-03-25T00:00:00Z",
+  "created_at": "2023-11-20T00:00:00Z"
+}

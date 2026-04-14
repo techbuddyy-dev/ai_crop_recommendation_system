@@ -1,0 +1,493 @@
+{
+  "crop_id": "tomato",
+  "crop_name": "Tomato",
+  "aliases": ["Tamatar", "Thakkali", "Takkali"],
+  "crop_group": "Vegetable",
+  "status": "active",
+  "language": "en",
+  "version": "v1.2",
+
+  "master_profile": {
+    "short_description": "Tomato is one of the most important and widely grown vegetable crops in India. It is a warm-season crop, rich in vitamins and lycopene, cultivated for both fresh market and processing.",
+    "seasons_supported": ["Kharif", "Rabi", "Zaid"],
+    "regions_supported": ["Andhra Pradesh", "Madhya Pradesh", "Karnataka", "Maharashtra", "Gujarat", "Odisha", "West Bengal", "Bihar", "Uttar Pradesh"],
+    "agro_climatic_zones": ["Southern Plateau and Hills Region", "Central Plateau and Hills Region", "Western Plateau and Hills Region", "Upper Gangetic Plains Region"],
+
+    "soil_suitability": {
+      "suitable_soil_textures": ["Sandy loam", "Loam", "Clay loam", "Well-drained alluvial soils"],
+      "unsuitable_soil_textures": ["Heavy clay with poor drainage", "Highly alkaline or saline soils"],
+      "ideal_ph_min": 6.0,
+      "ideal_ph_max": 7.0,
+      "acceptable_ph_min": 5.5,
+      "acceptable_ph_max": 7.5,
+      "salinity_tolerance_note": "Moderately sensitive to soil salinity. High salinity reduces seed germination, plant growth, and fruit size.",
+      "drainage_requirement": "Requires excellent drainage. Waterlogging leads to poor root respiration, blossom drop, and high incidence of root rot and bacterial wilt.",
+      "organic_carbon_note": "Highly responsive to organic matter. Application of FYM or compost improves moisture retention, aeration, and root proliferation."
+    },
+
+    "climate_suitability": {
+      "ideal_temperature_c_min": 20,
+      "ideal_temperature_c_max": 25,
+      "acceptable_temperature_c_min": 15,
+      "acceptable_temperature_c_max": 35,
+      "ideal_humidity_min": 50,
+      "ideal_humidity_max": 70,
+      "ideal_rainfall_mm_min": 600,
+      "ideal_rainfall_mm_max": 1200,
+      "frost_tolerance_note": "Highly sensitive to frost. Frost causes severe damage to foliage and kills the plant.",
+      "heat_tolerance_note": "Temperatures above 35°C reduce fruit set, cause blossom drop, and inhibit lycopene (red pigment) development, making fruits yellowish-orange."
+    },
+
+    "water_profile": {
+      "irrigation_required": true,
+      "rainfed_suitable": false,
+      "waterlogging_tolerance": "Very low; even 24 hours of standing water can cause severe root suffocation and wilting.",
+      "drought_tolerance": "Low; sudden fluctuations in soil moisture cause fruit cracking and blossom-end rot.",
+      "critical_water_stages": ["Flowering", "Fruit setting", "Fruit enlargement"]
+    },
+
+    "nutrient_profile": {
+      "nitrogen_demand": "High (100-150 kg/ha in split applications to prevent excessive vegetative growth)",
+      "phosphorus_demand": "Moderate to High (60-80 kg/ha; essential for root growth and early establishment)",
+      "potassium_demand": "High (50-100 kg/ha; crucial for fruit size, shape, and color)",
+      "micronutrient_notes": ["Calcium is highly critical to prevent Blossom End Rot (BER).", "Boron prevents fruit cracking and improves fruit setting."]
+    },
+
+    "cropping_context": {
+      "suitable_previous_crops": ["Cereals (Wheat, Maize, Paddy)", "Legumes", "Cabbage", "Onion"],
+      "unsuitable_previous_crops": ["Other Solanaceous crops (Potato, Brinjal, Chili) due to the buildup of soil-borne pathogens like Bacterial Wilt and root-knot nematodes."],
+      "rotation_notes": ["Paddy - Tomato", "Maize - Tomato", "Legume - Tomato"],
+      "intercrop_options": ["Marigold (as a trap crop for fruit borer)", "Onion", "Garlic", "Coriander"]
+    },
+
+    "crop_duration": {
+      "duration_days_min": 120,
+      "duration_days_max": 150,
+      "maturity_indicators": ["Fruits reach physiological maturity (turning from green to breaker/pink/red stage)", "Seeds are fully developed inside the locules"]
+    },
+
+    "recommendation_logic": {
+      "why_recommend_conditions": ["Well-drained soils with neutral pH", "Assured irrigation facilities", "Mild temperatures and plenty of sunshine"],
+      "why_not_recommend_conditions": ["Areas with persistent waterlogging", "Continuous high heat (>38°C) without shade nets", "Severe frost-prone areas"],
+      "hard_rejection_conditions": ["Fields with recent history of severe Bacterial Wilt", "Highly saline or alkaline soils"]
+    }
+  },
+
+  "region_season_advisories": [
+    {
+      "advisory_id": "tomato_maharashtra_kharif",
+      "state_region": "Maharashtra",
+      "district": "Nashik, Pune, Ahmednagar, Satara",
+      "season": "Kharif",
+      "advisory_type": "cultivation_guide",
+      "applicability_filters": {
+        "irrigation": "irrigated (drip preferred)",
+        "soil_type": "medium black to sandy loam",
+        "sowing_window": "May to June (Nursery), June to July (Transplanting)"
+      },
+
+      "sowing": {
+        "sowing_window_start": "June 15",
+        "sowing_window_end": "July 15",
+        "seed_rate": { "value": 150, "unit": "g/ha for hybrids", "range_type": "recommended", "source_confidence": "high" },
+        "seed_treatment": "Treat seeds with Thiram or Captan @ 2g/kg or Trichoderma viride @ 4g/kg. Follow with Imidacloprid 70 WS @ 5g/kg to protect seedlings from whiteflies in the nursery.",
+        "spacing": "90 cm x 45 cm or 120 cm x 45 cm for hybrids on raised beds",
+        "sowing_depth_cm": 1.5,
+        "nursery_required": true,
+        "transplanting_required": true
+      },
+
+      "land_preparation": {
+        "summary": "Deep ploughing followed by 2-3 harrowings. Prepare raised beds (120 cm wide, 15 cm high) to avoid waterlogging. Laying drip irrigation lines and plastic mulching is highly recommended to control weeds and conserve moisture."
+      },
+
+      "fertilizer": {
+        "basal_dose": "Apply 50 kg N, 60 kg P2O5, and 50 kg K2O per hectare as a basal dose along with 25 tonnes/ha of FYM during bed preparation.",
+        "top_dressing": "Apply 50 kg N and 50 kg K2O per hectare in 2-3 equal splits at 30, 45, and 60 days after transplanting. If using drip, apply via fertigation.",
+        "organic_manure": "Apply neem cake (500 kg/ha) to control root-knot nematodes.",
+        "micronutrients": "Foliar spray of 0.2% Borax and 0.5% Zinc Sulphate at flowering stage to prevent fruit cracking and improve fruit set."
+      },
+
+      "irrigation": {
+        "schedule": "Provide light irrigation immediately after transplanting. Drip irrigation is ideal (2-3 liters/plant/day depending on weather). Irrigate every 5-7 days under surface irrigation. Avoid severe moisture fluctuations.",
+        "critical_stages": ["Flowering", "Fruit setting", "Fruit development"],
+        "rainfed_advice": "Not recommended without supplementary irrigation. Ensure excellent drainage during monsoon."
+      },
+
+      "weed_management": {
+        "summary": "Pre-plant incorporation of Pendimethalin 30 EC @ 1.0 kg a.i./ha. Plastic mulching is the most effective method. Do manual weeding in inter-row spaces if mulch is not used."
+      },
+
+      "pest_management": [
+        {
+          "name": "Tomato Fruit Borer (Helicoverpa armigera)",
+          "symptoms": "Larvae bore into fruits, leaving their hind part outside. Causes severe fruit rotting and yield loss.",
+          "management": "Plant 1 row of African tall marigold for every 16 rows of tomato as a trap crop. Install pheromone traps @ 5/ha. Spray Spinosad 45 SC @ 0.3 ml/L or Chlorantraniliprole 18.5 SC @ 0.3 ml/L at economic threshold levels."
+        },
+        {
+          "name": "Whitefly (Bemisia tabaci)",
+          "symptoms": "Suck sap from leaves causing yellowing. They are the primary vectors of Tomato Leaf Curl Virus (ToLCV).",
+          "management": "Use yellow sticky traps @ 20/ha. Grow seedlings under 40-mesh nylon net. Spray Imidacloprid 17.8 SL @ 0.3 ml/L or Diafenthiuron 50 WP @ 1 g/L."
+        },
+        {
+          "name": "South American Tomato Pinworm (Tuta absoluta)",
+          "symptoms": "Blotch-like leaf mines and galleries; larvae bore into buds, stems, and fruits, causing extensive rotting.",
+          "management": "Use Tuta pheromone traps. Spray Flubendiamide 20 WG @ 0.3 ml/L or Cyantraniliprole 10.26 OD @ 1.8 ml/L."
+        }
+      ],
+
+      "disease_management": [
+        {
+          "name": "Tomato Leaf Curl Virus (ToLCV)",
+          "symptoms": "Upward curling and puckering of leaves, severe stunting, and bushy appearance with poor fruit set.",
+          "management": "Plant highly tolerant/resistant hybrids (e.g., Arka Rakshak). Uproot and burn infected plants immediately. Control whitefly vectors strictly."
+        },
+        {
+          "name": "Early Blight (Alternaria solani)",
+          "symptoms": "Dark brown to black spots with concentric rings (target board effect) on older leaves. Defoliation occurs in severe cases.",
+          "management": "Spray Mancozeb 75 WP @ 2 g/L or Azoxystrobin 23 SC @ 1 ml/L at 10-15 day intervals."
+        },
+        {
+          "name": "Bacterial Wilt (Ralstonia solanacearum)",
+          "symptoms": "Sudden wilting of the entire plant while it is still green. Stems exude a milky bacterial ooze when cut and placed in clear water.",
+          "management": "Grow resistant varieties. Practice 3-year crop rotation with non-solanaceous crops. Drench root zone with Copper Oxychloride 50 WP @ 3 g/L or bleaching powder @ 15 kg/ha."
+        }
+      ],
+
+      "deficiency_management": [
+        {
+          "nutrient": "Calcium",
+          "symptoms": "Blossom End Rot (BER): Water-soaked spots on the blossom end of the fruit that enlarge, darken, and become leathery/sunken.",
+          "remedy": "Maintain uniform soil moisture. Foliar spray of 0.5% Calcium Chloride (CaCl2) during fruit development stage."
+        },
+        {
+          "nutrient": "Boron",
+          "symptoms": "Fruit cracking (radial or concentric splits on the fruit surface).",
+          "remedy": "Foliar spray of 0.2% Borax at the time of fruit setting."
+        }
+      ],
+
+      "harvest": {
+        "harvest_signs": "Depending on market distance: 'Breaker' stage (10% pink) for distant markets; 'Pink/Red' stage for local markets; 'Fully Ripe' for processing.",
+        "post_harvest_notes": "Harvest carefully by snapping the pedicel. Grade fruits based on size and color. Pack in well-ventilated plastic crates or CFB boxes to avoid crushing and transport to cool, shaded areas.",
+        "expected_duration_days": 130
+      },
+
+      "special_cautions": ["Staking (providing support with bamboo/wire) is highly recommended for indeterminate and semi-determinate hybrids to prevent soil contact of fruits and improve spraying efficiency.", "Avoid moisture stress followed by heavy watering, as this is the primary cause of fruit cracking."],
+      "faq": [
+        {
+          "question": "Why are the bottoms of my tomatoes turning black and rotting?",
+          "answer": "This is Blossom End Rot (BER), caused by a localized calcium deficiency in the fruit. It is usually triggered by irregular watering (drought followed by heavy irrigation). Keep soil moisture consistent and spray Calcium Chloride."
+        },
+        {
+          "question": "Why are my tomato leaves curling and plants stunting?",
+          "answer": "If the leaves are curling upwards, shrinking, and turning yellow, it's likely Tomato Leaf Curl Virus (ToLCV) transmitted by whiteflies. Infected plants cannot be cured and must be uprooted and destroyed. Prevent it by controlling whiteflies and planting resistant hybrids."
+        }
+      ],
+
+      "source_refs": ["src_iihr_tomato_pop", "src_mpkv_tomato_kharif"]
+    },
+    {
+      "advisory_id": "tomato_ap_karnataka_rabi",
+      "state_region": "Andhra Pradesh & Karnataka",
+      "district": "Chittoor, Anantapur, Kolar, Bengaluru Rural, Hassan",
+      "season": "Rabi",
+      "advisory_type": "cultivation_guide",
+      "applicability_filters": {
+        "irrigation": "irrigated (drip)",
+        "soil_type": "red loam to sandy loam",
+        "sowing_window": "Nursery in Sep-Oct, Transplant in Oct-Nov"
+      },
+
+      "sowing": {
+        "sowing_window_start": "October 15",
+        "sowing_window_end": "November 30",
+        "seed_rate": { "value": 150, "unit": "g/ha", "range_type": "recommended" },
+        "seed_treatment": "Treat nursery soil with Trichoderma viride. Seed treatment with Imidacloprid to deter early sucking pests.",
+        "spacing": "120 cm x 45 cm for indeterminate hybrids.",
+        "sowing_depth_cm": 1.5,
+        "nursery_required": true,
+        "transplanting_required": true
+      },
+
+      "land_preparation": {
+        "summary": "Deep ploughing. Form raised beds. Lay drip laterals and install silver-black plastic mulch to repel thrips and whiteflies, and to conserve soil temperature during cool Rabi nights."
+      },
+
+      "fertilizer": {
+        "basal_dose": "60 kg N, 80 kg P2O5, 60 kg K2O/ha.",
+        "top_dressing": "Fertigation schedule starting 10 days after transplanting using water-soluble fertilizers (19:19:19, 13:0:45, Calcium Nitrate).",
+        "organic_manure": "25 t/ha FYM + Neem cake 500 kg/ha to manage root-knot nematodes prevalent in red sandy soils."
+      },
+
+      "irrigation": {
+        "schedule": "Drip irrigation daily or on alternate days for 45-60 mins depending on discharge rate. Prevent extreme dry spells to avoid Blossom End Rot.",
+        "critical_stages": ["Flowering", "Fruit development"]
+      },
+
+      "weed_management": {
+        "summary": "Mulching significantly reduces weed emergence. Spray Oxyfluorfen 23.5 EC @ 1.5 ml/L on walkways if required."
+      },
+
+      "pest_management": [
+        {
+          "name": "Leaf Miner (Liriomyza trifolii)",
+          "symptoms": "Serpentine, white mines on leaves causing drying and defoliation.",
+          "management": "Spray Neem Seed Kernel Extract (NSKE) 5% or Cyromazine 10.26 OD @ 1.8 ml/L."
+        },
+        {
+          "name": "Root-Knot Nematode",
+          "symptoms": "Stunted patches, daytime wilting, root galls.",
+          "management": "Apply Paecilomyces lilacinus to soil. Grow marigold as a trap crop."
+        }
+      ],
+
+      "disease_management": [
+        {
+          "name": "Late Blight (Phytophthora infestans)",
+          "symptoms": "Water-soaked dark patches on leaves, white cottony growth on the underside during cool, humid, foggy mornings.",
+          "management": "Spray Mancozeb @ 2 g/L preemptively. Curative spray of Cymoxanil + Mancozeb @ 3 g/L or Dimethomorph @ 1.5 g/L."
+        }
+      ],
+
+      "harvest": {
+        "harvest_signs": "Pick at breaker stage for distant markets. Cool Rabi temperatures enhance Lycopene development.",
+        "expected_duration_days": 140
+      },
+      "special_cautions": ["Staking is absolute mandatory for high-yielding indeterminate hybrids like Arka Rakshak or private sector hybrids.", "Late Blight can destroy the entire crop within a week if cool, foggy weather persists. Vigilant monitoring and preventive fungicide sprays are essential."],
+      "source_refs": ["src_iihr_tomato_pop", "src_angrau_tomato_rabi"]
+    }
+  ],
+
+  "risk_library": {
+    "pests": [
+      {
+        "name": "Tomato Fruit Borer (Helicoverpa armigera)",
+        "favorable_conditions": ["Warm weather", "Flowering to fruiting stages"],
+        "symptoms": ["Bore holes on fruits", "Larvae with half body outside the fruit"],
+        "management": ["Trap crop: Marigold", "Pheromone traps", "Bt or Spinosad sprays"]
+      },
+      {
+        "name": "Whitefly (Bemisia tabaci)",
+        "favorable_conditions": ["Hot and dry weather", "Presence of weed hosts"],
+        "symptoms": ["Yellowing leaves", "Sooty mold", "Transmission of ToLCV"],
+        "management": ["Yellow sticky traps", "Systemic insecticides (Imidacloprid)", "Seedling nets"]
+      },
+      {
+        "name": "South American Tomato Pinworm (Tuta absoluta)",
+        "favorable_conditions": ["Dry and warm periods"],
+        "symptoms": ["Blotch leaf mines", "Pin holes on fruits with frass", "Extensive rotting"],
+        "management": ["Pheromone water traps", "Cyantraniliprole or Flubendiamide sprays", "Destruction of infested plant debris"]
+      },
+      {
+        "name": "Root-Knot Nematodes",
+        "favorable_conditions": ["Sandy soils", "Continuous Solanaceous cropping"],
+        "symptoms": ["Daytime wilting", "Stunted growth", "Knot-like galls on roots"],
+        "management": ["Crop rotation", "Neem cake application", "Marigold trap crop"]
+      }
+    ],
+    "diseases": [
+      {
+        "name": "Tomato Leaf Curl Virus (ToLCV)",
+        "favorable_conditions": ["High whitefly populations", "Susceptible hybrids"],
+        "symptoms": ["Upward leaf curling", "Severe stunting", "Bushy appearance", "Zero fruit set"],
+        "management": ["Resistant varieties (e.g., Arka Rakshak, Arka Samrat)", "Vector control", "Rogueing"]
+      },
+      {
+        "name": "Bacterial Wilt (Ralstonia solanacearum)",
+        "favorable_conditions": ["High soil moisture and temperature", "Nematode infestation", "Continuous Solanaceous cropping"],
+        "symptoms": ["Sudden green wilt", "Milky bacterial ooze from cut stems immersed in water"],
+        "management": ["Crop rotation", "Resistant varieties", "Bleaching powder drenching"]
+      },
+      {
+        "name": "Late Blight (Phytophthora infestans)",
+        "favorable_conditions": ["High humidity (>90%)", "Cool temperatures (15-20°C)", "Fog/heavy dew"],
+        "symptoms": ["Water-soaked dark lesions on leaves", "White fungal growth on leaf undersides", "Firm, dark brown rot on fruits"],
+        "management": ["Preventive sprays of Mancozeb", "Curative sprays of Cymoxanil or Dimethomorph", "Avoid overhead irrigation"]
+      }
+    ],
+    "abiotic_risks": [
+      {
+        "name": "Blossom End Rot (BER)",
+        "trigger_conditions": ["Irregular watering", "Calcium deficiency", "High salinity"],
+        "impact": "Black, leathery sunken spots on the blossom end of fruits making them unmarketable.",
+        "mitigation": ["Consistent irrigation", "Calcium Chloride foliar spray"]
+      },
+      {
+        "name": "Fruit Cracking",
+        "trigger_conditions": ["Prolonged dry spell followed by heavy irrigation or rain", "Boron deficiency"],
+        "impact": "Radial or concentric cracks on fruit skin, leading to secondary fungal infections.",
+        "mitigation": ["Maintain uniform soil moisture", "Foliar spray of Borax (0.2%)"]
+      }
+    ]
+  },
+
+  "retrieval_chunks": [
+    {
+      "chunk_id": "tomato_overview_001",
+      "chunk_type": "overview",
+      "title": "Tomato Crop Overview",
+      "crop_name": "Tomato",
+      "state_region": "India",
+      "district": "All",
+      "season": "Kharif/Rabi/Zaid",
+      "advisory_category": "overview",
+      "text": "Tomato (Tamatar) is a high-value, nutrient-rich vegetable crop grown globally. In India, it is cultivated year-round. It is highly responsive to good management practices like drip irrigation, mulching, and staking, yielding very high returns.",
+      "keywords": ["Tomato", "Tamatar", "Vegetable", "High value", "Lycopene"],
+      "metadata_tags": ["general_info", "intro"],
+      "source_ref_ids": ["src_iihr_tomato_pop"]
+    },
+    {
+      "chunk_id": "tomato_suitability_001",
+      "chunk_type": "suitability",
+      "title": "Tomato Soil and Climate Requirements",
+      "crop_name": "Tomato",
+      "state_region": "India",
+      "district": "All",
+      "season": "All",
+      "advisory_category": "suitability",
+      "text": "Tomatoes need well-drained, sandy loam to clay loam soils with a pH of 6.0-7.0. They are extremely sensitive to waterlogging. Ideal temperatures are 20-25°C; temperatures above 35°C reduce fruit set and inhibit red color (lycopene) formation.",
+      "keywords": ["Well-drained", "Temperature sensitive", "Waterlogging", "Lycopene"],
+      "metadata_tags": ["soil", "climate", "water"],
+      "source_ref_ids": ["src_mpkv_tomato_kharif"]
+    },
+    {
+      "chunk_id": "tomato_ber_001",
+      "chunk_type": "deficiency_management",
+      "title": "Blossom End Rot in Tomato",
+      "crop_name": "Tomato",
+      "state_region": "India",
+      "district": "All",
+      "season": "All",
+      "advisory_category": "deficiency_management",
+      "text": "Blossom End Rot causes black, sunken spots on the bottom of the tomato fruit. It is caused by a localized calcium deficiency in the fruit, most often triggered by irregular watering (drought followed by heavy watering). Ensure steady soil moisture and spray 0.5% Calcium Chloride.",
+      "keywords": ["Blossom End Rot", "Calcium", "Watering", "Fruit spot", "BER"],
+      "metadata_tags": ["disease", "calcium", "water_management"],
+      "source_ref_ids": ["src_iihr_tomato_pop"]
+    },
+    {
+      "chunk_id": "tomato_bacterial_wilt_001",
+      "chunk_type": "disease_management",
+      "title": "Bacterial Wilt Management",
+      "crop_name": "Tomato",
+      "state_region": "India",
+      "district": "All",
+      "season": "Kharif/Rabi",
+      "advisory_category": "disease_management",
+      "text": "Bacterial wilt causes the sudden collapse of green, healthy-looking plants. To confirm, cut a wilting stem and suspend it in clear water; a milky bacterial ooze will emerge. It is incurable once infected. Prevent by avoiding planting after brinjal or potato, using resistant varieties like Arka Rakshak, and treating soil with bleaching powder.",
+      "keywords": ["Bacterial Wilt", "Sudden wilt", "Milky ooze", "Crop rotation", "Ralstonia"],
+      "metadata_tags": ["disease", "bacteria", "soil_borne"],
+      "source_ref_ids": ["src_angrau_tomato_rabi"]
+    },
+    {
+      "chunk_id": "tomato_tuta_absoluta_001",
+      "chunk_type": "pest_management",
+      "title": "South American Tomato Pinworm (Tuta absoluta)",
+      "crop_name": "Tomato",
+      "state_region": "India",
+      "district": "All",
+      "season": "All",
+      "advisory_category": "pest_management",
+      "text": "Tuta absoluta is an invasive, highly destructive pest. It mines blotches into leaves and bores tiny pinholes into fruits, causing massive rotting. Install specific Tuta pheromone water traps immediately after transplanting and spray Cyantraniliprole if the threshold is crossed.",
+      "keywords": ["Tuta absoluta", "Pinworm", "Leaf miner", "Pheromone trap", "Rotting fruit"],
+      "metadata_tags": ["pest", "invasive", "borer"],
+      "source_ref_ids": ["src_iihr_tomato_pop"]
+    }
+  ],
+
+  "structured_explanation_rules": [
+    {
+      "rule_id": "tomato_drainage_match",
+      "condition": "input.soil_drainage == 'well_drained'",
+      "message": "Your well-drained soil is ideal for Tomato cultivation, significantly reducing the risk of root rot and bacterial wilt.",
+      "priority": 1,
+      "severity": "positive_match"
+    },
+    {
+      "rule_id": "tomato_waterlogging_reject",
+      "condition": "input.soil_drainage == 'poor' OR input.waterlogging_history == true",
+      "message": "Critical Warning: Tomatoes are highly sensitive to waterlogging, which causes wilt and blossom drop. Cultivation on flat beds is not recommended; use high raised beds.",
+      "priority": 1,
+      "severity": "hard_reject"
+    },
+    {
+      "rule_id": "tomato_temperature_warning",
+      "condition": "input.max_temp_c > 35 AND input.growth_stage IN ['flowering', 'fruit_setting']",
+      "message": "Warning: Temperatures above 35°C will cause severe flower drop and inhibit red color (lycopene) development in fruits. Maintain strict soil moisture and consider shade nets if possible.",
+      "priority": 2,
+      "severity": "warning"
+    },
+    {
+      "rule_id": "tomato_rotation_reject",
+      "condition": "input.previous_crop IN ['potato', 'brinjal', 'chili', 'tomato']",
+      "message": "Critical Warning: Planting tomato after other solanaceous crops exponentially increases the risk of severe Bacterial Wilt and root-knot nematodes. Please practice crop rotation with cereals or legumes.",
+      "priority": 1,
+      "severity": "hard_reject"
+    },
+    {
+      "rule_id": "tomato_fog_late_blight_warning",
+      "condition": "input.weather_forecast == 'fog' OR input.weather_forecast == 'heavy_dew' AND input.min_temp_c < 20",
+      "message": "Alert: Cool, foggy mornings are the perfect trigger for Late Blight. Apply a preventive spray of Mancozeb immediately to protect the crop.",
+      "priority": 3,
+      "severity": "critical"
+    }
+  ],
+
+  "ui_response_templates": {
+    "best_match_intro": "Tamatar (Tomato) is a highly profitable vegetable crop ideally suited for your well-drained soil and available drip irrigation.",
+    "warning_rotation": "Your previous crop belongs to the same family as tomatoes, which highly increases disease risks like Bacterial Wilt. Crop rotation is strongly advised.",
+    "warning_late_blight": "Emergency Alert: Cool and humid conditions have triggered a high risk of Late Blight. Take immediate preventive action.",
+    "info_staking": "Tip: Remember to stake your tomato plants. Keeping the fruits off the ground prevents rotting and improves yield quality.",
+    "cta_view_advisory": "View full Tomato cultivation advisory",
+    "cta_view_tuta_guide": "Read the Tuta absoluta Pest Management Guide"
+  },
+
+  "source_registry": [
+    {
+      "source_id": "src_iihr_tomato_pop",
+      "title": "Tomato Production Technology",
+      "source_type": "pdf",
+      "publisher": "ICAR - Indian Institute of Horticultural Research (IIHR), Bengaluru",
+      "region_scope": "India",
+      "season_scope": "All Seasons",
+      "crop_scope": ["Tomato"],
+      "content_summary": "Comprehensive guidelines covering ToLCV resistant hybrids (Arka Rakshak), drip irrigation, Tuta absoluta management, and physiological disorders.",
+      "date_published": "2021-08-10",
+      "trust_level": "high"
+    },
+    {
+      "source_id": "src_mpkv_tomato_kharif",
+      "title": "Package of Practices for Vegetable Crops (Tomato)",
+      "source_type": "manual",
+      "publisher": "Mahatma Phule Krishi Vidyapeeth (MPKV), Rahuri",
+      "region_scope": "Maharashtra",
+      "season_scope": "Kharif and Rabi",
+      "crop_scope": ["Tomato"],
+      "content_summary": "State-level agronomic guidelines detailing raised bed preparation, mulching, staking, and precise fertigation schedules.",
+      "date_published": "2022-05-15",
+      "trust_level": "high"
+    },
+    {
+      "source_id": "src_angrau_tomato_rabi",
+      "title": "Rabi Tomato Cultivation Guide",
+      "source_type": "bulletin",
+      "publisher": "Acharya N.G. Ranga Agricultural University (ANGRAU)",
+      "region_scope": "Andhra Pradesh",
+      "season_scope": "Rabi",
+      "crop_scope": ["Tomato"],
+      "content_summary": "Focuses on late blight management during cool foggy weather and bacterial wilt prevention in Southern plateaus.",
+      "date_published": "2022-10-01",
+      "trust_level": "high"
+    }
+  ],
+
+  "quality_flags": {
+    "is_complete": true,
+    "missing_fields": [],
+    "weakly_supported_fields": [],
+    "last_reviewed_at": "2024-04-15T00:00:00Z"
+  },
+
+  "updated_at": "2024-04-15T00:00:00Z",
+  "created_at": "2024-01-10T00:00:00Z"
+}

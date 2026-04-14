@@ -1,0 +1,560 @@
+{
+  "crop_id": "sorghum",
+  "crop_name": "Sorghum",
+  "aliases": ["Jowar", "Great Millet", "Cholam", "Jonna", "Sorgho"],
+  "crop_group": "Cereal",
+  "status": "active",
+  "language": "en",
+  "version": "v1.2",
+
+  "master_profile": {
+    "short_description": "Sorghum (Jowar) is a major dryland cereal and fodder crop in India, known for its extreme drought tolerance and hardiness. It is widely grown in Kharif for grain and fodder, and in Rabi primarily for high-quality grain on residual moisture.",
+    "seasons_supported": ["Kharif", "Rabi", "Summer"],
+    "regions_supported": ["Maharashtra", "Karnataka", "Andhra Pradesh", "Telangana", "Madhya Pradesh", "Rajasthan", "Gujarat", "Tamil Nadu", "Uttar Pradesh", "Haryana"],
+    "agro_climatic_zones": ["Western Plateau and Hills Region", "Southern Plateau and Hills Region", "Central Plateau and Hills Region", "Trans-Gangetic Plains Region"],
+
+    "soil_suitability": {
+      "suitable_soil_textures": ["Clay loam", "Black cotton soil (Vertisols)", "Sandy loam", "Red loamy soils"],
+      "unsuitable_soil_textures": ["Heavy clay with poor drainage", "Extremely sandy shallow soils without moisture retention"],
+      "ideal_ph_min": 6.0,
+      "ideal_ph_max": 7.5,
+      "acceptable_ph_min": 5.5,
+      "acceptable_ph_max": 8.5,
+      "salinity_tolerance_note": "Moderately tolerant to soil salinity and alkalinity, performing significantly better than maize in such conditions.",
+      "drainage_requirement": "Requires moderately well-drained soils; highly susceptible to waterlogging.",
+      "organic_carbon_note": "Responds well to organic carbon enrichment, though typically grown in marginal soils."
+    },
+
+    "climate_suitability": {
+      "ideal_temperature_c_min": 25,
+      "ideal_temperature_c_max": 32,
+      "acceptable_temperature_c_min": 15,
+      "acceptable_temperature_c_max": 40,
+      "ideal_humidity_min": 40,
+      "ideal_humidity_max": 70,
+      "ideal_rainfall_mm_min": 400,
+      "ideal_rainfall_mm_max": 750,
+      "frost_tolerance_note": "Highly sensitive to frost; growth stops below 15°C.",
+      "heat_tolerance_note": "Excellent heat tolerance; can survive temperatures up to 40°C by rolling its leaves and entering dormancy."
+    },
+
+    "water_profile": {
+      "irrigation_required": false,
+      "rainfed_suitable": true,
+      "waterlogging_tolerance": "Low; sensitive to standing water, especially during early seedling stages.",
+      "drought_tolerance": "Extremely high; possesses a massive root system and waxy leaf coating to prevent transpiration.",
+      "critical_water_stages": ["Seedling stage", "Panicle initiation", "Flowering", "Grain filling"]
+    },
+
+    "nutrient_profile": {
+      "nitrogen_demand": "Moderate (80-100 kg/ha for hybrids, 40-60 kg/ha for rainfed local varieties)",
+      "phosphorus_demand": "Moderate (40-50 kg/ha)",
+      "potassium_demand": "Moderate (40-50 kg/ha)",
+      "micronutrient_notes": ["Iron deficiency (chlorosis) can occur in highly calcareous soils.", "Zinc deficiency may occur in intensively cropped soils."]
+    },
+
+    "cropping_context": {
+      "suitable_previous_crops": ["Legumes (Green gram, Black gram, Soybean)", "Cotton", "Groundnut"],
+      "unsuitable_previous_crops": ["Continuous sorghum or maize without rotation, as it depletes nutrients and builds up shoot fly/stem borer populations."],
+      "rotation_notes": ["Soybean - Rabi Sorghum", "Mungbean - Rabi Sorghum", "Cotton - Sorghum"],
+      "intercrop_options": ["Pigeonpea (Tur) in 2:1 or 4:1 ratio", "Green gram", "Cowpea", "Soybean"]
+    },
+
+    "crop_duration": {
+      "duration_days_min": 90,
+      "duration_days_max": 120,
+      "maturity_indicators": ["Grains become hard and dark", "Black layer forms at the base of the kernel", "Leaves dry up while the stalk may remain green (in stay-green varieties)"]
+    },
+
+    "recommendation_logic": {
+      "why_recommend_conditions": ["Low rainfall regions (400-600mm)", "Dryland farming", "Deep black soils with residual moisture for Rabi"],
+      "why_not_recommend_conditions": ["High rainfall areas (>1000mm) causing grain mold", "Waterlogged fields"],
+      "hard_rejection_conditions": ["Frost-prone areas", "Persistent flooding"]
+    }
+  },
+
+  "region_season_advisories": [
+    {
+      "advisory_id": "sorghum_maharashtra_rabi",
+      "state_region": "Maharashtra",
+      "district": "Solapur, Pune, Ahmednagar, Marathwada region",
+      "season": "Rabi",
+      "advisory_type": "cultivation_guide",
+      "applicability_filters": {
+        "irrigation": "rainfed",
+        "soil_type": "medium to deep black soils",
+        "sowing_window": "mid-September to mid-October"
+      },
+
+      "sowing": {
+        "sowing_window_start": "September 15",
+        "sowing_window_end": "October 15",
+        "seed_rate": { "value": 10, "unit": "kg/ha", "range_type": "recommended", "source_confidence": "high" },
+        "seed_treatment": "Treat with Thiamethoxam 30 FS @ 3 ml/kg seed for shoot fly, followed by Azotobacter and PSB @ 25g/kg seed.",
+        "spacing": "45 cm x 15 cm",
+        "sowing_depth_cm": 4,
+        "nursery_required": false,
+        "transplanting_required": false
+      },
+
+      "land_preparation": {
+        "summary": "Deep ploughing once in 3 years. Harrowing 2-3 times to preserve moisture. Compartment bunding in August helps in in-situ moisture conservation for Rabi sorghum."
+      },
+
+      "fertilizer": {
+        "basal_dose": "For rainfed: 40 kg N, 20 kg P2O5, 20 kg K2O per ha at the time of sowing. Place fertilizer 5 cm below the seed.",
+        "top_dressing": "Usually not done in strictly rainfed conditions. If protective irrigation is available, apply 20 kg N/ha at 30-35 days.",
+        "organic_manure": "5-6 tonnes/ha FYM mixed into the soil during last harrowing.",
+        "micronutrients": "Foliar spray of 0.5% Iron sulphate if chlorosis is observed."
+      },
+
+      "irrigation": {
+        "schedule": "Grown purely on residual soil moisture. If protective irrigation is available, apply at panicle initiation (35-40 DAS) and flowering (60-65 DAS).",
+        "critical_stages": ["Panicle initiation", "Flowering", "Grain filling"],
+        "rainfed_advice": "Practice frequent intercultivation (hoeing) to create a soil mulch and close soil cracks to reduce moisture loss."
+      },
+
+      "weed_management": {
+        "summary": "Pre-emergence Atrazine @ 0.5 kg a.i./ha in 500 liters of water. Carry out 2-3 hoeings at 3 weeks and 5 weeks after sowing."
+      },
+
+      "pest_management": [
+        {
+          "name": "Shoot Fly",
+          "symptoms": "Dead heart in seedlings (1-4 weeks old); central leaf dries and can be pulled out easily.",
+          "management": "Early sowing (before Oct 15). Seed treatment with Imidacloprid or Thiamethoxam. Increase seed rate and thin out infested plants."
+        },
+        {
+          "name": "Stem Borer",
+          "symptoms": "Shot holes on leaves, dead hearts in later stages, extensive tunneling in the stem.",
+          "management": "Uproot and burn stubbles after harvest. Apply Carbofuran 3G granules in leaf whorls at 25-30 DAS."
+        }
+      ],
+
+      "disease_management": [
+        {
+          "name": "Charcoal Rot",
+          "symptoms": "Premature drying of leaves, weak stalks that break easily (lodging), interior of stalk is shredded and black.",
+          "management": "Conserve soil moisture. Grow resistant/tolerant varieties like M35-1. Maintain optimal plant population."
+        }
+      ],
+
+      "deficiency_management": [
+        {
+          "nutrient": "Iron",
+          "symptoms": "Interveinal chlorosis (yellowing) of younger leaves.",
+          "remedy": "Spray 0.5% Ferrous Sulphate + 0.1% Citric acid, 2-3 times at 10-day intervals."
+        }
+      ],
+
+      "harvest": {
+        "harvest_signs": "Grains become hard (<20% moisture), black layer forms at the hilar region. Lower leaves dry up.",
+        "post_harvest_notes": "Sun-dry earheads for 3-4 days to bring moisture to 10-12% for safe storage. Stalks are harvested, dried, and stacked for fodder.",
+        "expected_duration_days": 115
+      },
+
+      "special_cautions": ["Do not delay sowing beyond October 15 to avoid severe shoot fly attacks and moisture depletion."],
+      "faq": [
+        {
+          "question": "What is a 'stay-green' variety?",
+          "answer": "Stay-green varieties (like M35-1) retain green leaves even after the grain has matured, providing high-quality nutritious fodder along with the grain."
+        }
+      ],
+
+      "source_refs": ["src_mpkv_rabi_sorghum", "src_iimr_sorghum_2022"]
+    },
+    {
+      "advisory_id": "sorghum_karnataka_kharif",
+      "state_region": "Karnataka",
+      "district": "Dharwad, Belagavi, Haveri, Bagalkot",
+      "season": "Kharif",
+      "advisory_type": "cultivation_guide",
+      "applicability_filters": {
+        "irrigation": "rainfed",
+        "soil_type": ["red loamy", "medium black soils"],
+        "sowing_window": "June"
+      },
+
+      "sowing": {
+        "sowing_window_start": "June 01",
+        "sowing_window_end": "June 30",
+        "seed_rate": { "value": 7.5, "unit": "kg/ha", "range_type": "recommended", "source_confidence": "high" },
+        "seed_treatment": "Treat with Carbendazim @ 2g/kg seed. Soak seeds in 2% KH2PO4 for 6 hours followed by shade drying to improve drought resistance.",
+        "spacing": "45 cm x 15 cm",
+        "sowing_depth_cm": 3,
+        "nursery_required": false,
+        "transplanting_required": false
+      },
+
+      "land_preparation": {
+        "summary": "Ploughing followed by 2 harrowing passes before the onset of monsoon. Sowing should commence immediately after the first soaking monsoon showers."
+      },
+
+      "fertilizer": {
+        "basal_dose": "40 kg N, 40 kg P2O5, and 40 kg K2O per hectare at sowing.",
+        "top_dressing": "40 kg N per hectare at 30-35 days after sowing (knee-high stage) when adequate soil moisture is present.",
+        "organic_manure": "Add 5 tons FYM/ha during land preparation.",
+        "micronutrients": "Zinc Sulphate @ 15 kg/ha as basal application in zinc-deficient soils."
+      },
+
+      "irrigation": {
+        "schedule": "Rainfed crop. Depends on monsoon rains.",
+        "critical_stages": ["Seedling", "Booting", "Flowering"],
+        "rainfed_advice": "Ensure field drainage to prevent water stagnation during heavy monsoon downpours."
+      },
+
+      "weed_management": {
+        "summary": "Pre-emergence application of Atrazine 50 WP @ 1.0 kg/ha in 500L water within 3 days of sowing. Follow with manual weeding at 30 DAS. Warning: Do not use Atrazine if intercropping with pulses (Pigeonpea/Green gram)."
+      },
+
+      "pest_management": [
+        {
+          "name": "Sorghum Midge",
+          "symptoms": "Maggots feed on developing ovaries causing empty, chaffy spikelets. Red ooze from florets when squeezed.",
+          "management": "Uniform date of sowing in the region. Avoid late sowing. Spray Malathion 50 EC @ 1.5 L/ha at 90% panicle emergence."
+        },
+        {
+          "name": "Fall Armyworm",
+          "symptoms": "Ragged feeding on whorl leaves, large amount of frass (excreta) inside the whorl.",
+          "management": "Whorl application of Emamectin benzoate 5 SG @ 0.4 g/L or Spinetoram 11.7 SC @ 0.5 ml/L."
+        }
+      ],
+
+      "disease_management": [
+        {
+          "name": "Grain Mold",
+          "symptoms": "Fungal growth (pink, white, or black) on grains. Occurs when rainfall coincides with grain maturity stage.",
+          "management": "Grow tolerant varieties. Spray Propiconazole @ 1 ml/L or Mancozeb @ 2.5 g/L at 50% flowering and repeat 10 days later if rains persist."
+        },
+        {
+          "name": "Downy Mildew",
+          "symptoms": "Systemic infection causing stunted growth, chlorotic streaks on leaves, and leaf shredding.",
+          "management": "Rogue out infected plants. Seed treatment with Metalaxyl @ 4g/kg seed."
+        }
+      ],
+
+      "deficiency_management": [
+        {
+          "nutrient": "Nitrogen",
+          "symptoms": "Yellowing of older leaves, stunted growth.",
+          "remedy": "Top dress with Urea immediately after a rain event."
+        }
+      ],
+
+      "harvest": {
+        "harvest_signs": "Grains turn hard, physiological maturity reached.",
+        "post_harvest_notes": "Harvest immediately after maturity in Kharif to avoid grain mold and bird damage.",
+        "expected_duration_days": 110
+      },
+
+      "special_cautions": ["Striga (Witchweed) is a severe parasitic weed in continuous sorghum fields. Practice crop rotation with Cotton or Soybean to break its cycle."],
+      "faq": [
+        {
+          "question": "How do I manage Striga weed?",
+          "answer": "Striga is a parasitic weed that attaches to sorghum roots. Practice crop rotation, apply heavy doses of FYM, and spray 2,4-D @ 1.0 kg/ha as post-emergence strictly directed at the weed."
+        }
+      ],
+
+      "source_refs": ["src_uasd_kharif_sorghum", "src_iimr_sorghum_2022"]
+    },
+    {
+      "advisory_id": "sorghum_north_india_summer_fodder",
+      "state_region": "North India",
+      "district": "UP, Haryana, Punjab, Rajasthan",
+      "season": "Summer",
+      "advisory_type": "cultivation_guide",
+      "applicability_filters": {
+        "irrigation": "irrigated",
+        "soil_type": "loam to sandy loam",
+        "sowing_window": "March to May"
+      },
+
+      "sowing": {
+        "sowing_window_start": "March 15",
+        "sowing_window_end": "May 30",
+        "seed_rate": { "value": 40, "unit": "kg/ha", "range_type": "recommended", "source_confidence": "high" },
+        "seed_treatment": "No specific seed treatment required unless soil pests are prevalent.",
+        "spacing": "30 cm row-to-row (dense planting for fodder)",
+        "sowing_depth_cm": 3,
+        "nursery_required": false,
+        "transplanting_required": false
+      },
+
+      "land_preparation": {
+        "summary": "1-2 ploughings followed by planking to create a fine tilth and conserve moisture before the hot summer months."
+      },
+
+      "fertilizer": {
+        "basal_dose": "40 kg N and 20 kg P2O5 per hectare.",
+        "top_dressing": "40 kg N per hectare at 30 days after sowing. For multi-cut varieties, apply 30 kg N/ha after each cut.",
+        "organic_manure": "10 tons FYM/ha."
+      },
+
+      "irrigation": {
+        "schedule": "Provide irrigation every 10-15 days during peak summer.",
+        "critical_stages": ["Seedling", "Vegetative growth"],
+        "rainfed_advice": "Not recommended as a rainfed summer crop due to extreme heat and potential for severe HCN toxicity under drought."
+      },
+
+      "weed_management": {
+        "summary": "Dense planting usually suppresses weeds. One manual weeding at 20 DAS if weed pressure is high."
+      },
+
+      "pest_management": [
+        {
+          "name": "Shoot Fly",
+          "symptoms": "Dead hearts in early stages.",
+          "management": "Increase seed rate (already 40 kg/ha for fodder) to compensate for loss. Avoid early March sowing if temperatures are cool."
+        }
+      ],
+
+      "disease_management": [
+        {
+          "name": "Leaf Blight",
+          "symptoms": "Long elliptical necrotic spots on leaves, reducing fodder quality.",
+          "management": "Grow multi-cut resistant varieties like SSG 59-3."
+        }
+      ],
+
+      "harvest": {
+        "harvest_signs": "Harvest at 50% flowering stage for maximum yield and optimal nutritional quality (protein content).",
+        "post_harvest_notes": "For multi-cut varieties, take the first cut at 50-55 days leaving a 5 cm stubble, and subsequent cuts every 40 days.",
+        "expected_duration_days": 60
+      },
+
+      "special_cautions": ["Sorghum poisoning (Prussic acid/HCN toxicity) in cattle: NEVER feed drought-stressed young sorghum plants (less than 45 days old) to livestock. Irrigate the crop well before harvesting for fodder to dilute HCN levels."],
+      "faq": [
+        {
+          "question": "Can I feed young sorghum plants to my cattle?",
+          "answer": "No, young plants, especially those under moisture stress, contain high levels of HCN (Prussic acid) which is highly toxic to ruminants. Wait until the crop is at least 45-50 days old or at the heading stage."
+        }
+      ],
+
+      "source_refs": ["src_ndri_fodder_guide"]
+    }
+  ],
+
+  "risk_library": {
+    "pests": [
+      {
+        "name": "Sorghum Shoot Fly (Atherigona soccata)",
+        "favorable_conditions": ["Late sowing", "High humidity", "Moderate temperatures (20-30°C)"],
+        "symptoms": ["Dead heart in young seedlings (1-4 weeks)", "Side tillers produced after main shoot dies", "Maggots feeding inside the central shoot"],
+        "management": ["Timely/Synchronized sowing", "Seed treatment with Imidacloprid 70 WS (5g/kg) or Thiamethoxam", "Use of fish meal traps"]
+      },
+      {
+        "name": "Fall Armyworm (FAW)",
+        "favorable_conditions": ["Continuous availability of host plants (Maize/Sorghum)"],
+        "symptoms": ["Papery windows on leaves", "Extensive ragged defoliation", "Large amounts of sawdust-like frass in leaf whorls"],
+        "management": ["Whorl application of Emamectin Benzoate 5 SG or Spinetoram 11.7 SC", "Install pheromone traps @ 15/ha"]
+      },
+      {
+        "name": "Sorghum Midge (Contarinia sorghicola)",
+        "favorable_conditions": ["Staggered sowing in a region", "High humidity during flowering"],
+        "symptoms": ["Maggots feed on developing ovaries", "Empty, chaffy spikelets", "Red ooze when florets are squeezed"],
+        "management": ["Uniform sowing dates", "Spray Malathion or Quinalphos at 90% panicle emergence"]
+      }
+    ],
+    "diseases": [
+      {
+        "name": "Charcoal Rot (Macrophomina phaseolina)",
+        "favorable_conditions": ["Moisture stress (drought) during post-flowering", "High soil temperature (>35°C)"],
+        "symptoms": ["Lodging of plants", "Shredding of basal internodes", "Tiny black sclerotia in pith tissue resembling charcoal dust"],
+        "management": ["Conserve soil moisture", "Grow tolerant cultivars (e.g., M35-1)", "Avoid high plant density"]
+      },
+      {
+        "name": "Grain Mold",
+        "favorable_conditions": ["Rainfall and high humidity coinciding with grain maturity (Common in Kharif)"],
+        "symptoms": ["Grains covered with pink, white, or black fungal growth", "Grains become powdery and toxic"],
+        "management": ["Harvest immediately upon physiological maturity", "Spray Propiconazole or Mancozeb at flowering and dough stage"]
+      }
+    ],
+    "abiotic_risks": [
+      {
+        "name": "Waterlogging",
+        "trigger_conditions": ["Heavy rainfall", "Poorly drained soils"],
+        "impact": "Stunted growth, yellowing, root suffocation, and plant death if submerged for >48 hours.",
+        "mitigation": ["Provide surface drainage", "Plant on ridges and furrows"]
+      },
+      {
+        "name": "HCN / Prussic Acid Toxicity",
+        "trigger_conditions": ["Young crop (<45 days)", "Severe drought stress", "Stunted growth"],
+        "impact": "Lethal poisoning to cattle if fed as green fodder.",
+        "mitigation": ["Do not feed crop before 50 days", "Provide irrigation to stressed crops before harvest", "Sun-dry or ensile to reduce toxicity"]
+      }
+    ]
+  },
+
+  "retrieval_chunks": [
+    {
+      "chunk_id": "sorghum_overview_001",
+      "chunk_type": "overview",
+      "title": "Sorghum crop overview",
+      "crop_name": "Sorghum",
+      "state_region": "India",
+      "district": "All",
+      "season": "Kharif/Rabi",
+      "advisory_category": "overview",
+      "text": "Sorghum (Jowar) is a versatile, climate-resilient crop serving as food, feed, and fodder. It thrives in semi-arid regions with minimal water and provides excellent grain and dry fodder security.",
+      "keywords": ["Jowar", "dryland", "millet", "drought-tolerant", "fodder"],
+      "metadata_tags": ["general_info", "intro"],
+      "source_ref_ids": ["src_iimr_sorghum_2022"]
+    },
+    {
+      "chunk_id": "sorghum_suitability_001",
+      "chunk_type": "suitability",
+      "title": "Sorghum suitability requirements",
+      "crop_name": "Sorghum",
+      "state_region": "India",
+      "district": "All",
+      "season": "All",
+      "advisory_category": "suitability",
+      "text": "Requires 400-750mm rainfall and temperatures between 25-32°C. It is excellent for deep black soils in rainfed conditions due to its massive root system and drought tolerance.",
+      "keywords": ["temperature", "rainfall", "black soil", "rainfed"],
+      "metadata_tags": ["soil", "climate", "water"],
+      "source_ref_ids": ["src_mpkv_rabi_sorghum"]
+    },
+    {
+      "chunk_id": "sorghum_hcn_warning_001",
+      "chunk_type": "warning",
+      "title": "HCN (Prussic Acid) Toxicity in Sorghum Fodder",
+      "crop_name": "Sorghum",
+      "state_region": "India",
+      "district": "All",
+      "season": "All",
+      "advisory_category": "warning",
+      "text": "WARNING: Young sorghum plants (<45 days old), especially those stunted by drought or frost, accumulate high levels of dhurrin, which breaks down into toxic Prussic Acid (HCN) when consumed by cattle. Always harvest for fodder at the 50% flowering stage or irrigate well before cutting to ensure safety.",
+      "keywords": ["HCN", "Prussic acid", "toxicity", "poisoning", "fodder warning", "cattle"],
+      "metadata_tags": ["caution", "livestock", "fodder"],
+      "source_ref_ids": ["src_ndri_fodder_guide"]
+    },
+    {
+      "chunk_id": "sorghum_striga_weed_001",
+      "chunk_type": "weed_management",
+      "title": "Managing Striga (Witchweed) in Sorghum",
+      "crop_name": "Sorghum",
+      "state_region": "India",
+      "district": "All",
+      "season": "Kharif/Rabi",
+      "advisory_category": "weed_management",
+      "text": "Striga is a devastating root-parasitic weed in continuous sorghum cultivation. It causes severe stunting and yellowing. Break the cycle by rotating with trap crops like Cotton, Sunflower, or Soybean. Use directed sprays of 2,4-D on the weed before it flowers.",
+      "keywords": ["Striga", "Witchweed", "Parasitic weed", "Crop rotation"],
+      "metadata_tags": ["Weeds", "Parasite", "Rotation"],
+      "source_ref_ids": ["src_uasd_kharif_sorghum"]
+    },
+    {
+      "chunk_id": "sorghum_grain_mold_001",
+      "chunk_type": "disease_management",
+      "title": "Grain Mold Management in Kharif Sorghum",
+      "crop_name": "Sorghum",
+      "state_region": "India",
+      "district": "All",
+      "season": "Kharif",
+      "advisory_category": "disease_management",
+      "text": "Grain mold strikes when unseasonal rains coincide with the harvesting stage of Kharif sorghum, causing grains to turn pink/black and lose market value. Harvest promptly at physiological maturity. Preventive sprays of Propiconazole at flowering reduce incidence.",
+      "keywords": ["Grain mold", "black grain", "fungus", "Propiconazole", "Kharif rains"],
+      "metadata_tags": ["Disease", "Quality loss", "Post-harvest"],
+      "source_ref_ids": ["src_iimr_sorghum_2022"]
+    }
+  ],
+
+  "structured_explanation_rules": [
+    {
+      "rule_id": "sorghum_drought_suitability",
+      "condition": "input.rainfall_mm >= 400 AND input.rainfall_mm <= 700 AND input.irrigation_available == false",
+      "message": "Excellent choice for your dryland conditions. Sorghum requires very little water and handles drought exceptionally well.",
+      "priority": 1,
+      "severity": "positive_match"
+    },
+    {
+      "rule_id": "sorghum_waterlogging_reject",
+      "condition": "input.soil_drainage == 'poor' OR input.flood_prone == true",
+      "message": "Sorghum is highly sensitive to waterlogging. Ensure excellent drainage or choose a different crop like paddy.",
+      "priority": 1,
+      "severity": "hard_reject"
+    },
+    {
+      "rule_id": "sorghum_frost_warning",
+      "condition": "input.min_temp_c < 10",
+      "message": "Warning: Temperatures below 15°C severely stunt vegetative growth, and frost can be fatal to sorghum.",
+      "priority": 2,
+      "severity": "warning"
+    },
+    {
+      "rule_id": "sorghum_continuous_cropping_warning",
+      "condition": "input.previous_crop == 'Sorghum' OR input.previous_crop == 'Maize'",
+      "message": "Caution: Growing Sorghum continuously after Sorghum or Maize increases the risk of Shoot Fly, Stem Borer, and Striga weed buildup. Consider a legume rotation.",
+      "priority": 3,
+      "severity": "warning"
+    }
+  ],
+
+  "ui_response_templates": {
+    "best_match_intro": "Jowar (Sorghum) is a highly recommended, low-risk crop for your area's soil and water profile.",
+    "warning_low_rainfall": "Even though rainfall is slightly low, Sorghum's deep roots and extreme drought tolerance make it a viable and safe option.",
+    "warning_fodder_toxicity": "Alert: If you are growing this for fodder, ensure you wait until 50% flowering before feeding to livestock to avoid fatal Prussic acid toxicity.",
+    "cta_view_advisory": "View full Jowar cultivation guidelines",
+    "cta_view_pest_guide": "Explore Fall Armyworm and Shoot Fly management"
+  },
+
+  "source_registry": [
+    {
+      "source_id": "src_mpkv_rabi_sorghum",
+      "title": "Package of Practices for Rabi Sorghum",
+      "source_type": "manual",
+      "publisher": "Mahatma Phule Krishi Vidyapeeth (MPKV), Rahuri",
+      "region_scope": "Maharashtra",
+      "season_scope": "Rabi",
+      "crop_scope": ["Sorghum"],
+      "content_summary": "Official state guidelines for Rabi Sorghum cultivation on residual moisture.",
+      "date_published": "2021-08-10",
+      "trust_level": "high"
+    },
+    {
+      "source_id": "src_iimr_sorghum_2022",
+      "title": "Sorghum Cultivation Guide",
+      "source_type": "pdf",
+      "publisher": "ICAR - Indian Institute of Millets Research (IIMR), Hyderabad",
+      "region_scope": "India",
+      "season_scope": "Kharif and Rabi",
+      "crop_scope": ["Sorghum"],
+      "content_summary": "Comprehensive overview of sorghum agronomy, pest, and disease management in India.",
+      "date_published": "2022-04-01",
+      "trust_level": "high"
+    },
+    {
+      "source_id": "src_uasd_kharif_sorghum",
+      "title": "Kharif Sorghum Production Technology",
+      "source_type": "bulletin",
+      "publisher": "University of Agricultural Sciences (UAS), Dharwad",
+      "region_scope": "Karnataka",
+      "season_scope": "Kharif",
+      "crop_scope": ["Sorghum"],
+      "content_summary": "Best practices for Kharif sorghum including Midge and Grain Mold management.",
+      "date_published": "2021-05-15",
+      "trust_level": "high"
+    },
+    {
+      "source_id": "src_ndri_fodder_guide",
+      "title": "Fodder Production and Conservation Manual",
+      "source_type": "pdf",
+      "publisher": "National Dairy Research Institute (NDRI)",
+      "region_scope": "India",
+      "season_scope": "Summer/Kharif",
+      "crop_scope": ["Sorghum", "Maize", "Berseem"],
+      "content_summary": "Guidelines for maximum yield and safe feeding practices of green fodders to livestock.",
+      "date_published": "2020-03-20",
+      "trust_level": "high"
+    }
+  ],
+
+  "quality_flags": {
+    "is_complete": true,
+    "missing_fields": [],
+    "weakly_supported_fields": [],
+    "last_reviewed_at": "2024-02-10T00:00:00Z"
+  },
+
+  "updated_at": "2024-02-10T00:00:00Z",
+  "created_at": "2023-11-05T00:00:00Z"
+}

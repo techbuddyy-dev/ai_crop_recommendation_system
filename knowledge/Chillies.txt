@@ -1,0 +1,503 @@
+{
+  "crop_id": "chili",
+  "crop_name": "Chili",
+  "aliases": ["Chilli", "Mirchi", "Hari Mirch", "Lal Mirch", "Milagai", "Pachai Milagai"],
+  "crop_group": "Spice/Vegetable",
+  "status": "active",
+  "language": "en",
+  "version": "v1.2",
+
+  "master_profile": {
+    "short_description": "Chili is a highly indispensable spice and vegetable crop in India, which is the world's largest producer, consumer, and exporter. It is grown for its pungency (capsaicin) and red pigment (capsanthin).",
+    "seasons_supported": ["Kharif", "Rabi", "Zaid"],
+    "regions_supported": ["Andhra Pradesh", "Telangana", "Karnataka", "Maharashtra", "Madhya Pradesh", "Tamil Nadu", "West Bengal", "Gujarat", "Odisha", "Punjab"],
+    "agro_climatic_zones": ["Southern Plateau and Hills Region", "East Coast Plains and Hills Region", "Central Plateau and Hills Region", "Western Plateau and Hills Region", "Lower Gangetic Plains Region"],
+
+    "soil_suitability": {
+      "suitable_soil_textures": ["Well-drained red loams", "Sandy loam", "Clay loam", "Black cotton soils"],
+      "unsuitable_soil_textures": ["Heavy clay with poor drainage", "Highly saline and alkaline soils", "Waterlogged soils"],
+      "ideal_ph_min": 6.0,
+      "ideal_ph_max": 7.0,
+      "acceptable_ph_min": 5.5,
+      "acceptable_ph_max": 7.5,
+      "salinity_tolerance_note": "Moderately sensitive to soil salinity. High salinity impairs seed germination, stunts growth, and causes premature flower drop.",
+      "drainage_requirement": "Requires exceptionally well-drained soils. Chili cannot withstand waterlogging for even a day, which causes immediate leaf shedding and root rot.",
+      "organic_carbon_note": "Responds excellently to organic manure (FYM or compost). High organic carbon ensures steady nutrient release and improves water holding capacity in lighter soils."
+    },
+
+    "climate_suitability": {
+      "ideal_temperature_c_min": 20,
+      "ideal_temperature_c_max": 30,
+      "acceptable_temperature_c_min": 15,
+      "acceptable_temperature_c_max": 35,
+      "ideal_humidity_min": 50,
+      "ideal_humidity_max": 70,
+      "ideal_rainfall_mm_min": 600,
+      "ideal_rainfall_mm_max": 1200,
+      "frost_tolerance_note": "Highly sensitive to frost. Frost completely destroys the foliage and fruits.",
+      "heat_tolerance_note": "Temperatures consistently above 35°C lead to severe flower and fruit drop (abscission) and poor fruit development."
+    },
+
+    "water_profile": {
+      "irrigation_required": true,
+      "rainfed_suitable": true,
+      "waterlogging_tolerance": "Very low; standing water restricts oxygen to the roots causing wilt, leaf drop, and plant death.",
+      "drought_tolerance": "Low to Moderate; prolonged moisture stress causes flower drop and reduces fruit size and pungency.",
+      "critical_water_stages": ["Flowering", "Fruit setting", "Fruit development"]
+    },
+
+    "nutrient_profile": {
+      "nitrogen_demand": "High (120-150 kg/ha; applied in 3-4 splits to prevent excessive vegetative growth and encourage continuous fruiting)",
+      "phosphorus_demand": "Moderate (60-80 kg/ha for healthy root establishment)",
+      "potassium_demand": "Moderate to High (50-80 kg/ha; improves fruit color, quality, and disease resistance)",
+      "micronutrient_notes": ["Zinc (Zinc Sulphate foliar spray) and Boron are critical to prevent flower drop and improve fruit retention.", "Planofix (NAA) is often used to control physiological flower drop."]
+    },
+
+    "cropping_context": {
+      "suitable_previous_crops": ["Cereals (Wheat, Maize, Jowar)", "Legumes (Green Gram, Black Gram, Cowpea)", "Castor"],
+      "unsuitable_previous_crops": ["Tomato", "Brinjal", "Potato", "Tobacco", "Other Solanaceous crops (increases risk of Bacterial Wilt, Nematodes, and viral diseases)"],
+      "rotation_notes": ["Maize - Chili", "Legume - Chili", "Paddy - Chili"],
+      "intercrop_options": ["Onion", "Garlic", "Coriander", "Marigold (as trap crop for nematodes and borers)"]
+    },
+
+    "crop_duration": {
+      "duration_days_min": 150,
+      "duration_days_max": 180,
+      "maturity_indicators": ["Green chilies: Reaches full size and turns dark green/shiny", "Red/Dry chilies: Fruits turn deep red, begin to shrivel, and moisture drops"]
+    },
+
+    "recommendation_logic": {
+      "why_recommend_conditions": ["Well-drained loamy or black soils", "Warm, moderately humid climate", "Assured irrigation or well-distributed rainfall"],
+      "why_not_recommend_conditions": ["Waterlogged or heavy clay fields", "Frost-prone areas", "Fields previously planted with tomato/brinjal"],
+      "hard_rejection_conditions": ["Persistent flooding", "High soil salinity"]
+    }
+  },
+
+  "region_season_advisories": [
+    {
+      "advisory_id": "chili_ap_kharif",
+      "state_region": "Andhra Pradesh & Telangana",
+      "district": "Guntur, Prakasam, Khammam, Warangal, Krishna",
+      "season": "Kharif",
+      "advisory_type": "cultivation_guide",
+      "applicability_filters": {
+        "irrigation": "irrigated (drip preferred) or rainfed",
+        "soil_type": "black cotton soils to red loams",
+        "sowing_window": "July to August (Transplanting)"
+      },
+
+      "sowing": {
+        "sowing_window_start": "July 15",
+        "sowing_window_end": "August 30",
+        "seed_rate": { "value": 200, "unit": "g/ha for hybrids", "range_type": "recommended", "source_confidence": "high" },
+        "seed_treatment": "Treat seeds with Thiram or Captan @ 3g/kg or Trichoderma viride @ 10g/kg. Follow with Imidacloprid 70 WS @ 8g/kg to protect seedlings from sucking pests (thrips/whiteflies) in the nursery.",
+        "spacing": "90 cm x 60 cm or 120 cm x 45 cm for spreading hybrids",
+        "sowing_depth_cm": 1.5,
+        "nursery_required": true,
+        "transplanting_required": true
+      },
+
+      "land_preparation": {
+        "summary": "Deep ploughing followed by 2-3 harrowings. Prepare raised beds (120 cm wide, 15 cm high) especially in black soils to facilitate drainage. Drip irrigation combined with silver-black plastic mulching is highly recommended for weed control and moisture conservation."
+      },
+
+      "fertilizer": {
+        "basal_dose": "Apply 50 kg N, 60 kg P2O5, and 50 kg K2O per hectare as basal along with 25 tonnes/ha FYM.",
+        "top_dressing": "Apply 100 kg N and 50 kg K2O in 3 to 4 equal splits at 30, 60, 90, and 120 days after transplanting (preferably via fertigation).",
+        "organic_manure": "Apply Neem cake @ 500 kg/ha to suppress soil-borne pathogens and nematodes.",
+        "micronutrients": "Foliar spray of 0.2% Borax and 0.5% Zinc Sulphate at flowering. Spray Planofix (NAA 10 ppm) to prevent flower drop."
+      },
+
+      "irrigation": {
+        "schedule": "Provide life irrigation on the 3rd day of transplanting. Irrigate every 5-7 days under flood irrigation, or daily/alternate days via drip. Do not over-irrigate during flowering as it causes flower drop.",
+        "critical_stages": ["Flowering", "Fruit setting", "Fruit development"],
+        "rainfed_advice": "Ensure proper surface drainage. Stagnant water for >24 hours causes wilt."
+      },
+
+      "weed_management": {
+        "summary": "Pre-plant incorporation or pre-emergence application of Pendimethalin 30 EC @ 1.0 kg a.i./ha. Plastic mulching is extremely effective. Hand weeding at 20 and 40 DAT."
+      },
+
+      "pest_management": [
+        {
+          "name": "Chili Thrips (Scirtothrips dorsalis)",
+          "symptoms": "Nymphs and adults suck sap, causing leaves to curl *upward*. Leaves become brittle and boat-shaped. Heavy infestation leads to stunted growth and flower drop.",
+          "management": "Use blue sticky traps. Spray Spinosad 45 SC @ 0.3 ml/L, Fipronil 5 SC @ 1.5 ml/L, or Diafenthiuron 50 WP @ 1 g/L."
+        },
+        {
+          "name": "Yellow Mite (Polyphagotarsonemus latus)",
+          "symptoms": "Leaves curl *downward*. Leaves become thick, brittle, and develop a shiny/leathery appearance with an elongated petiole.",
+          "management": "Spray Spiromesifen 22.9 SC @ 1 ml/L, Propargite 57 EC @ 2 ml/L, or Dicofol 18.5 EC @ 2.5 ml/L."
+        },
+        {
+          "name": "Fruit Borer (Helicoverpa armigera / Spodoptera litura)",
+          "symptoms": "Caterpillars bore into fruits and feed on seeds. Spodoptera causes skeletonization of leaves.",
+          "management": "Install pheromone traps @ 10/ha. Plant African tall marigold as a trap crop. Spray Chlorantraniliprole 18.5 SC @ 0.3 ml/L or Emamectin Benzoate 5 SG @ 0.4 g/L."
+        }
+      ],
+
+      "disease_management": [
+        {
+          "name": "Chili Leaf Curl Virus (ChiLCV)",
+          "symptoms": "Severe curling, puckering, and reduced size of leaves. Plant becomes bushy with very few flowers and fruits. Transmitted by Whiteflies.",
+          "management": "Grow tolerant hybrids. Strict vector (Whitefly) control using yellow sticky traps and Imidacloprid/Acetamiprid. Uproot and burn infected plants early."
+        },
+        {
+          "name": "Die-back and Anthracnose (Colletotrichum capsici)",
+          "symptoms": "Die-back of branches from the tip downwards. Circular, sunken, dark-centered necrotic spots on ripe red fruits, ruining market value.",
+          "management": "Use disease-free seeds. Seed treatment is vital. Spray Mancozeb 75 WP @ 2.5 g/L or Azoxystrobin + Difenoconazole @ 1 ml/L at flowering and fruit development."
+        },
+        {
+          "name": "Bacterial Wilt / Fusarium Wilt",
+          "symptoms": "Sudden wilting of the plant while foliage is still green. Roots show rotting and vascular browning.",
+          "management": "Avoid crop rotation with solanaceous crops. Ensure good drainage. Drench the root zone with Copper Oxychloride @ 3 g/L."
+        }
+      ],
+
+      "deficiency_management": [
+        {
+          "nutrient": "Zinc",
+          "symptoms": "Little leaf condition, rosetting, severe flower drop, and very small fruits.",
+          "remedy": "Foliar spray of 0.5% Zinc Sulphate twice at 15-day intervals during flowering."
+        }
+      ],
+
+      "harvest": {
+        "harvest_signs": "For green chilies: Harvest when fruits are fully grown, dark green, and firm. For dry red chilies: Harvest when fruits turn deep red and begin to wrinkle.",
+        "post_harvest_notes": "Dry red chilies in the sun on clean tarpaulins until moisture reaches 8-10%. Avoid direct soil contact to prevent Aflatoxin contamination. Store in cool, dry conditions.",
+        "expected_duration_days": 160
+      },
+
+      "special_cautions": ["Do not apply excessive Nitrogen as it leads to rank vegetative growth, delays maturity, and increases susceptibility to thrips and sucking pests.", "Avoid sudden moisture stress followed by heavy watering, which causes flower drop."],
+      "faq": [
+        {
+          "question": "Why are my chili leaves curling upwards?",
+          "answer": "Upward curling is a classic symptom of Thrips infestation. Spray recommended insecticides like Spinosad or Fipronil to control them."
+        },
+        {
+          "question": "Why are my chili leaves curling downwards?",
+          "answer": "Downward curling with a leathery texture is caused by Yellow Mites. Use acaricides (miticides) like Spiromesifen or Propargite."
+        },
+        {
+          "question": "Why are the flowers falling off my chili plants?",
+          "answer": "Flower drop can be caused by extreme heat, moisture stress, over-watering, or zinc/boron deficiency. Regulate watering and spray Planofix (NAA) @ 1 ml/4.5 L water to reduce drop."
+        }
+      ],
+
+      "source_refs": ["src_angrau_chili_pop", "src_iivr_chili_guidelines"]
+    },
+    {
+      "advisory_id": "chili_karnataka_rabi",
+      "state_region": "Karnataka",
+      "district": "Dharwad, Haveri, Gadag, Belagavi, Bellary",
+      "season": "Rabi",
+      "advisory_type": "cultivation_guide",
+      "applicability_filters": {
+        "irrigation": "irrigated",
+        "soil_type": "medium black to red loam",
+        "sowing_window": "September to October (Transplanting)"
+      },
+
+      "sowing": {
+        "sowing_window_start": "September 15",
+        "sowing_window_end": "October 30",
+        "seed_rate": { "value": 250, "unit": "g/ha for hybrids", "range_type": "recommended" },
+        "seed_treatment": "Treat nursery beds with Trichoderma. Treat seeds with Pseudomonas fluorescens @ 10g/kg.",
+        "spacing": "75 cm x 60 cm",
+        "sowing_depth_cm": 1.5,
+        "nursery_required": true,
+        "transplanting_required": true
+      },
+
+      "land_preparation": {
+        "summary": "Deep ploughing followed by harrowing. Prepare ridges and furrows for proper irrigation management during the dry winter."
+      },
+
+      "fertilizer": {
+        "basal_dose": "Apply 50 kg N, 50 kg P2O5, and 50 kg K2O per hectare as basal.",
+        "top_dressing": "Apply 50 kg N in 2 splits at 30 and 60 days after transplanting.",
+        "organic_manure": "15 tonnes/ha FYM enriched with Trichoderma.",
+        "micronutrients": "Foliar spray of multi-micronutrient mixture at vegetative and flowering stages."
+      },
+
+      "irrigation": {
+        "schedule": "Irrigate at 8-10 day intervals. Over-irrigation in winter can lead to collar rot and damping off.",
+        "critical_stages": ["Flowering", "Fruit development"],
+        "rainfed_advice": "Rabi crop requires assured irrigation."
+      },
+
+      "weed_management": {
+        "summary": "Pre-emergence application of Pendimethalin 30 EC @ 1.0 kg a.i./ha. Follow with inter-cultivation using a hoe at 25 and 45 DAT."
+      },
+
+      "pest_management": [
+        {
+          "name": "Aphids (Aphis gossypii)",
+          "symptoms": "Nymphs and adults suck sap from tender shoots. Secretion of honeydew promotes sooty mold, turning leaves black and reducing photosynthesis.",
+          "management": "Spray Dimethoate 30 EC @ 2 ml/L or Acetamiprid 20 SP @ 0.2 g/L."
+        }
+      ],
+
+      "disease_management": [
+        {
+          "name": "Powdery Mildew (Leveillula taurica)",
+          "symptoms": "White powdery growth on the lower surface of older leaves with corresponding yellow patches on the upper surface. Leads to severe defoliation in cool, dry winter months.",
+          "management": "Spray Wettable Sulphur 80 WP @ 3 g/L or Hexaconazole 5 EC @ 1 ml/L at disease onset."
+        }
+      ],
+
+      "harvest": {
+        "harvest_signs": "Pick green chilies regularly to stimulate further flowering. For Byadagi types (wrinkled red chilies), harvest when fully ripe and dark red.",
+        "post_harvest_notes": "Sun-dry red chilies until the moisture is reduced to 10% to retain the dark red color (capsanthin) characteristic of the Byadagi variety.",
+        "expected_duration_days": 150
+      },
+
+      "special_cautions": ["Powdery mildew is highly prevalent in the Rabi season; early fungicidal intervention is critical.", "Do not allow water stress during fruit filling as it causes blossom end rot and reduces pungency."],
+      "faq": [
+        {
+          "question": "How to retain the bright red color of Byadagi chilies?",
+          "answer": "Harvest only fully ripe red fruits. Dry them on a clean, dry surface (like a tarpaulin) in partial shade if sunlight is too intense, to avoid bleaching of the red pigment."
+        }
+      ],
+
+      "source_refs": ["src_uhs_bagalkot_chili", "src_uas_dharwad_chili"]
+    }
+  ],
+
+  "risk_library": {
+    "pests": [
+      {
+        "name": "Thrips",
+        "favorable_conditions": ["Dry and warm weather", "Delayed monsoon"],
+        "symptoms": ["Upward curling of leaves", "Boat-shaped leaves", "Scraping on leaf surface"],
+        "management": ["Blue sticky traps", "Sprays of Fipronil or Spinosad"]
+      },
+      {
+        "name": "Yellow Mites",
+        "favorable_conditions": ["Warm, humid conditions", "Shady areas"],
+        "symptoms": ["Downward curling of leaves", "Elongated petioles", "Leathery leaf surface"],
+        "management": ["Miticides like Spiromesifen or Dicofol"]
+      },
+      {
+        "name": "Fruit Borer",
+        "favorable_conditions": ["Flowering and fruiting stage"],
+        "symptoms": ["Circular boreholes on fruits", "Larvae feeding inside the chili"],
+        "management": ["Marigold trap crop", "Pheromone traps", "Emamectin Benzoate"]
+      },
+      {
+        "name": "Aphids",
+        "favorable_conditions": ["Cool and humid weather", "High nitrogen application"],
+        "symptoms": ["Curled, deformed leaves", "Honeydew and sooty mold", "Vector for viral diseases"],
+        "management": ["Yellow sticky traps", "Spray Dimethoate or Acetamiprid"]
+      }
+    ],
+    "diseases": [
+      {
+        "name": "Die-back and Anthracnose",
+        "favorable_conditions": ["High humidity", "Frequent rains during fruit ripening"],
+        "symptoms": ["Twigs die from top downwards", "Sunken dark spots on red fruits"],
+        "management": ["Fungicidal sprays (Mancozeb/Azoxystrobin)", "Use of clean seed"]
+      },
+      {
+        "name": "Chili Leaf Curl Virus",
+        "favorable_conditions": ["High whitefly vector population"],
+        "symptoms": ["Severe leaf puckering", "Bushy stunting", "Failure to set fruit"],
+        "management": ["Resistant hybrids", "Vector control", "Early uprooting of infected plants"]
+      },
+      {
+        "name": "Powdery Mildew",
+        "favorable_conditions": ["Cool nights and warm days (Rabi)", "High humidity without rainfall"],
+        "symptoms": ["White powdery spots on lower leaf surface", "Yellow patches on upper surface", "Premature defoliation"],
+        "management": ["Spray Wettable Sulphur", "Ensure adequate spacing for aeration"]
+      }
+    ],
+    "abiotic_risks": [
+      {
+        "name": "Flower Drop (Abscission)",
+        "trigger_conditions": ["Temperatures >35°C", "Excessive or insufficient soil moisture", "Nitrogen imbalance"],
+        "impact": "Massive loss of potential fruits leading to drastically reduced yields.",
+        "mitigation": ["Maintain uniform soil moisture", "Spray Planofix (NAA) at 10 ppm", "Foliar zinc/boron"]
+      },
+      {
+        "name": "Waterlogging Wilt",
+        "trigger_conditions": ["Heavy monsoon rains on poorly drained soils"],
+        "impact": "Root asphyxiation, sudden leaf drop, and plant death within 48 hours.",
+        "mitigation": ["Raised bed planting", "Ensure rapid surface drainage"]
+      },
+      {
+        "name": "Sunscald",
+        "trigger_conditions": ["Direct exposure of fruits to intense sunlight", "Severe defoliation due to pests/diseases"],
+        "impact": "White or yellow blister-like patches on exposed fruits, rendering them unmarketable.",
+        "mitigation": ["Maintain healthy foliage canopy", "Provide light shade netting if possible"]
+      }
+    ]
+  },
+
+  "retrieval_chunks": [
+    {
+      "chunk_id": "chili_overview_001",
+      "chunk_type": "overview",
+      "title": "Chili (Mirchi) Crop Overview",
+      "crop_name": "Chili",
+      "state_region": "India",
+      "district": "All",
+      "season": "Kharif/Rabi/Zaid",
+      "advisory_category": "overview",
+      "text": "Chili (Mirchi) is a universally grown spice and vegetable crop in India. It is highly valued for fresh green chilies as well as dried red chilies. Pest management (thrips, mites) and viral disease control are critical for success.",
+      "keywords": ["Chili", "Mirchi", "Spice", "Vegetable", "Capsaicin"],
+      "metadata_tags": ["general_info", "intro"],
+      "source_ref_ids": ["src_iivr_chili_guidelines"]
+    },
+    {
+      "chunk_id": "chili_suitability_001",
+      "chunk_type": "suitability",
+      "title": "Chili Soil and Climate Requirements",
+      "crop_name": "Chili",
+      "state_region": "India",
+      "district": "All",
+      "season": "All",
+      "advisory_category": "suitability",
+      "text": "Chili thrives in well-drained red loams and black cotton soils with a pH of 6.0-7.0. It requires a warm climate (20-30°C). It is extremely sensitive to waterlogging, frost, and temperatures over 35°C, which cause flower drop.",
+      "keywords": ["Well-drained", "Warm climate", "Flower drop", "Waterlogging"],
+      "metadata_tags": ["soil", "climate", "water"],
+      "source_ref_ids": ["src_angrau_chili_pop"]
+    },
+    {
+      "chunk_id": "chili_curling_001",
+      "chunk_type": "pest_management",
+      "title": "Leaf Curling in Chili",
+      "crop_name": "Chili",
+      "state_region": "India",
+      "district": "All",
+      "season": "All",
+      "advisory_category": "pest_management",
+      "text": "Leaf curling is the most common issue in chili. Upward curling is caused by Thrips, managed with Spinosad or Fipronil. Downward curling is caused by Yellow Mites, managed with acaricides like Spiromesifen. Viral curling (ChiLCV) requires whitefly control and rogueing.",
+      "keywords": ["Upward curling", "Downward curling", "Thrips", "Mites", "Leaf Curl Virus"],
+      "metadata_tags": ["pest_control", "symptoms", "diagnosis"],
+      "source_ref_ids": ["src_angrau_chili_pop"]
+    },
+    {
+      "chunk_id": "chili_irrigation_001",
+      "chunk_type": "water_management",
+      "title": "Irrigation Management for Chili",
+      "crop_name": "Chili",
+      "state_region": "India",
+      "district": "All",
+      "season": "All",
+      "advisory_category": "water_management",
+      "text": "Chili is very sensitive to both over-watering and drought. Stagnant water causes instant wilt, while drought during flowering causes severe flower drop. Drip irrigation is highly recommended to maintain uniform soil moisture.",
+      "keywords": ["Irrigation", "Waterlogging", "Drought", "Flower drop", "Drip irrigation"],
+      "metadata_tags": ["water", "irrigation_schedule", "stress"],
+      "source_ref_ids": ["src_iivr_chili_guidelines"]
+    },
+    {
+      "chunk_id": "chili_powdery_mildew_001",
+      "chunk_type": "disease_management",
+      "title": "Powdery Mildew in Rabi Chili",
+      "crop_name": "Chili",
+      "state_region": "India",
+      "district": "All",
+      "season": "Rabi",
+      "advisory_category": "disease_management",
+      "text": "Powdery mildew is a major threat to Rabi chili crops. It appears as a white powdery growth on the lower leaf surface, causing leaves to turn yellow and drop prematurely. Protect the canopy by spraying Wettable Sulphur (80 WP) at the first sign of the disease.",
+      "keywords": ["Powdery mildew", "Rabi", "Defoliation", "Wettable Sulphur", "Fungus"],
+      "metadata_tags": ["disease", "fungicide", "rabi"],
+      "source_ref_ids": ["src_uhs_bagalkot_chili"]
+    }
+  ],
+
+  "structured_explanation_rules": [
+    {
+      "rule_id": "chili_drainage_match",
+      "condition": "input.soil_drainage == 'well_drained'",
+      "message": "Your well-drained soil is excellent for Chili, significantly reducing the risk of root rot and sudden wilt.",
+      "priority": 1,
+      "severity": "positive_match"
+    },
+    {
+      "rule_id": "chili_waterlogging_reject",
+      "condition": "input.soil_drainage == 'poor' OR input.waterlogging_history == true",
+      "message": "Critical Warning: Chili cannot tolerate waterlogging even for a day. Poorly drained fields will cause immediate leaf drop and crop failure. Use high raised beds.",
+      "priority": 1,
+      "severity": "hard_reject"
+    },
+    {
+      "rule_id": "chili_rotation_reject",
+      "condition": "input.previous_crop IN ['tomato', 'brinjal', 'potato', 'tobacco', 'chili']",
+      "message": "Warning: Planting chili after other solanaceous crops increases the risk of severe Bacterial Wilt and Nematodes. Practice crop rotation with cereals or legumes.",
+      "priority": 1,
+      "severity": "warning"
+    },
+    {
+      "rule_id": "chili_temperature_flower_drop",
+      "condition": "input.max_temp_c > 35 AND input.growth_stage == 'flowering'",
+      "message": "Warning: High temperatures (>35°C) will induce severe flower drop. Maintain uniform soil moisture and consider spraying Planofix (NAA).",
+      "priority": 2,
+      "severity": "warning"
+    },
+    {
+      "rule_id": "chili_high_temp_sunscald",
+      "condition": "input.max_temp_c >= 38 AND input.canopy_cover == 'poor'",
+      "message": "Alert: High temperatures and poor foliage cover strongly expose the developing fruits to Sunscald. Protect the canopy from defoliating pests to provide natural shade to the fruits.",
+      "priority": 3,
+      "severity": "warning"
+    }
+  ],
+
+  "ui_response_templates": {
+    "best_match_intro": "Mirchi (Chili) is a highly profitable commercial crop perfectly suited for your well-drained soil and climate conditions.",
+    "warning_rotation": "Your previous crop belongs to the same family as chili. This highly increases disease risks like Wilt and Nematodes. Crop rotation is strongly advised.",
+    "warning_curling": "If you observe leaf curling, check the direction: upward means Thrips, downward means Mites. Apply the specific targeted pesticide immediately.",
+    "warning_sunscald": "Take care to preserve the leaf canopy against pests; otherwise, intense sunlight will cause sunscald, ruining your fruit quality.",
+    "cta_view_advisory": "View full Mirchi (Chili) cultivation advisory"
+  },
+
+  "source_registry": [
+    {
+      "source_id": "src_angrau_chili_pop",
+      "title": "Package of Practices for Chilli",
+      "source_type": "manual",
+      "publisher": "Acharya N. G. Ranga Agricultural University (ANGRAU), Guntur",
+      "region_scope": "Andhra Pradesh",
+      "season_scope": "Kharif and Rabi",
+      "crop_scope": ["Chili"],
+      "content_summary": "State-specific agronomic guidelines from the largest chili-producing state, focusing on nutrient scheduling, virus vector control, and die-back management.",
+      "date_published": "2022-05-15",
+      "trust_level": "high"
+    },
+    {
+      "source_id": "src_iivr_chili_guidelines",
+      "title": "Chilli Production Technology",
+      "source_type": "pdf",
+      "publisher": "ICAR - Indian Institute of Vegetable Research (IIVR), Varanasi",
+      "region_scope": "India",
+      "season_scope": "All Seasons",
+      "crop_scope": ["Chili"],
+      "content_summary": "National guidelines covering hybrid selection, physiological disorders (flower drop), and IPM for sucking pests (thrips/mites).",
+      "date_published": "2021-08-20",
+      "trust_level": "high"
+    },
+    {
+      "source_id": "src_uhs_bagalkot_chili",
+      "title": "Chilli Cultivation and Pest Management",
+      "source_type": "bulletin",
+      "publisher": "University of Horticultural Sciences (UHS), Bagalkot",
+      "region_scope": "Karnataka",
+      "season_scope": "Rabi",
+      "crop_scope": ["Chili"],
+      "content_summary": "Detailed guidelines for cultivating Byadagi chili, managing powdery mildew, and post-harvest drying for color retention.",
+      "date_published": "2023-01-10",
+      "trust_level": "high"
+    }
+  ],
+
+  "quality_flags": {
+    "is_complete": true,
+    "missing_fields": [],
+    "weakly_supported_fields": [],
+    "last_reviewed_at": "2024-05-10T00:00:00Z"
+  },
+
+  "updated_at": "2024-05-10T00:00:00Z",
+  "created_at": "2024-01-25T00:00:00Z"
+}

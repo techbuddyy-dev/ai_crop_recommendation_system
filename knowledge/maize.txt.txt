@@ -1,0 +1,729 @@
+{
+  "crop_id": "maize",
+  "crop_name": "Maize",
+  "aliases": [
+    "Corn",
+    "Makka",
+    "Makkacholam",
+    "Bhutta"
+  ],
+  "crop_group": "Cereal",
+  "status": "active",
+  "language": "en",
+  "version": "v2",
+  "master_profile": {
+    "short_description": "Maize is the third most important food crop in India after rice and wheat. Termed as the 'Queen of Cereals', it has the highest genetic yield potential among cereals and is grown across Kharif, Rabi, and Spring seasons.",
+    "seasons_supported": [
+      "Kharif",
+      "Rabi",
+      "Spring"
+    ],
+    "regions_supported": [
+      "Karnataka",
+      "Madhya Pradesh",
+      "Maharashtra",
+      "Tamil Nadu",
+      "Telangana",
+      "Bihar",
+      "Andhra Pradesh",
+      "Uttar Pradesh",
+      "Rajasthan"
+    ],
+    "agro_climatic_zones": [
+      "Southern Plateau and Hills Region",
+      "Central Plateau and Hills Region",
+      "Middle Gangetic Plain Region"
+    ],
+    "soil_suitability": {
+      "suitable_soil_textures": [
+        "Deep Loam",
+        "Silty Loam",
+        "Clay Loam",
+        "Alluvial"
+      ],
+      "unsuitable_soil_textures": [
+        "Heavy Clay",
+        "Poorly Drained Soils",
+        "Saline Soils"
+      ],
+      "ideal_ph": {
+        "min": 5.5,
+        "max": 7.5,
+        "unit": "pH",
+        "source_confidence": "high",
+        "source_ref_ids": [
+          "src_maize_001"
+        ]
+      },
+      "acceptable_ph": {
+        "min": 5.0,
+        "max": 8.0,
+        "unit": "pH"
+      },
+      "salinity_tolerance_note": "Highly sensitive to salinity and sodicity. High exchangeable sodium severely impacts growth.",
+      "drainage_requirement": "Requires excellent drainage. Extremely sensitive to waterlogging, especially at seedling and silking stages.",
+      "organic_carbon_note": "Soils rich in organic matter (above 0.75%) produce significantly higher yields."
+    },
+    "climate_suitability": {
+      "ideal_temperature": {
+        "min": 21,
+        "max": 32,
+        "unit": "Celsius",
+        "source_confidence": "high"
+      },
+      "acceptable_temperature": {
+        "min": 15,
+        "max": 40,
+        "unit": "Celsius"
+      },
+      "ideal_humidity": {
+        "min": 50,
+        "max": 75,
+        "unit": "%"
+      },
+      "ideal_rainfall": {
+        "min": 500,
+        "max": 750,
+        "unit": "mm",
+        "source_confidence": "high"
+      },
+      "frost_tolerance_note": "Highly susceptible to frost. Frost during early vegetative stages can kill the crop.",
+      "heat_tolerance_note": "Temperatures above 35°C during tasseling/silking lead to pollen desiccation, poor pollination, and reduced seed set."
+    },
+    "water_profile": {
+      "irrigation_required": true,
+      "rainfed_suitable": true,
+      "waterlogging_tolerance": "Very Low",
+      "drought_tolerance": "Low to Moderate",
+      "critical_water_stages": [
+        "Tasseling",
+        "Silking",
+        "Early grain filling (Dough stage)"
+      ]
+    },
+    "nutrient_profile": {
+      "nitrogen_demand": {
+        "value": "120-150",
+        "unit": "kg/ha",
+        "source_confidence": "high"
+      },
+      "phosphorus_demand": {
+        "value": "60-75",
+        "unit": "kg/ha",
+        "source_confidence": "high"
+      },
+      "potassium_demand": {
+        "value": "40-60",
+        "unit": "kg/ha",
+        "source_confidence": "high"
+      },
+      "micronutrient_notes": [
+        "Zinc deficiency is very common in maize (white bud disease). Application of 25 kg/ha ZnSO4 is recommended.",
+        "Iron deficiency can occur in calcareous soils, requiring foliar FeSO4 sprays."
+      ]
+    },
+    "cropping_context": {
+      "suitable_previous_crops": [
+        "Legumes",
+        "Potato",
+        "Mustard",
+        "Wheat"
+      ],
+      "unsuitable_previous_crops": [
+        "Sorghum (due to exhaustive nutrient uptake)"
+      ],
+      "rotation_notes": [
+        "Maize-Wheat, Maize-Potato, and Maize-Mustard are highly profitable cropping systems in Northern India.",
+        "Including a legume crop like cowpea improves soil nitrogen."
+      ],
+      "intercrop_options": [
+        "Cowpea",
+        "Soybean",
+        "Green Gram",
+        "Black Gram"
+      ]
+    },
+    "crop_duration": {
+      "duration_days": {
+        "min": 90,
+        "max": 150,
+        "unit": "days",
+        "source_confidence": "high"
+      },
+      "maturity_indicators": [
+        "Husks turn yellow and dry out",
+        "Grains become hard and glossy",
+        "Black layer formation at the base of the kernel"
+      ]
+    },
+    "recommendation_logic": {
+      "why_recommend_conditions": [
+        "Well-drained loamy soils",
+        "Moderate rainfall (500-700mm) evenly distributed",
+        "Availability of protective irrigation during silking"
+      ],
+      "why_not_recommend_conditions": [
+        "Frequent waterlogging",
+        "High soil salinity",
+        "Extreme heat (>38°C) expected during flowering"
+      ],
+      "hard_rejection_conditions": [
+        "Severe waterlogging",
+        "Continuous frost"
+      ]
+    }
+  },
+  "region_season_advisories": [
+    {
+      "advisory_id": "maize_bihar_rabi",
+      "state_region": "Bihar",
+      "district": "Samastipur, Begusarai, Khagaria, Purnea",
+      "season": "Rabi",
+      "advisory_type": "cultivation_guide",
+      "applicability_filters": {
+        "irrigation_type": "Irrigated",
+        "soil_type": [
+          "Sandy Loam",
+          "Loam",
+          "Alluvial"
+        ],
+        "sowing_window": "Mid-October to Mid-November"
+      },
+      "sowing": {
+        "sowing_window_start": "October 15",
+        "sowing_window_end": "November 15",
+        "seed_rate": {
+          "value": "20",
+          "unit": "kg/ha",
+          "source_confidence": "high"
+        },
+        "seed_treatment": "Treat with Carbendazim @ 2g/kg seed + Imidacloprid @ 4ml/kg seed. Protects against early soil-borne fungi and termites.",
+        "spacing": "60 cm row-to-row and 20 cm plant-to-plant",
+        "sowing_depth_cm": 4.0,
+        "nursery_required": false,
+        "transplanting_required": false
+      },
+      "land_preparation": {
+        "summary": "Winter maize requires a fine tilth. 1 deep ploughing followed by 2-3 harrowing. Laser land leveling is highly recommended to ensure uniform irrigation and avoid cold-water stagnation."
+      },
+      "fertilizer": {
+        "recommended_default": {
+          "basal_dose": "20% N, full P2O5, and full K2O at sowing.",
+          "top_dressing": "40% N at knee-high (45 DAS), 30% N at pre-tasseling, 10% N at early grain filling.",
+          "organic_manure": "10 tonnes FYM/ha.",
+          "micronutrients": "Apply 25 kg/ha Zinc Sulphate."
+        },
+        "conflict_note": "Rabi maize takes longer to grow due to cold stress, so splitting Nitrogen into 3-4 doses rather than 2 is crucial for optimal uptake."
+      },
+      "irrigation": {
+        "schedule": "Requires 4-6 irrigations depending on winter rains. First irrigation at knee-high stage (40-45 DAS).",
+        "critical_stages": [
+          "Knee-high",
+          "Tasseling",
+          "Silking",
+          "Dough stage"
+        ],
+        "rainfed_advice": "Rabi maize is not recommended without assured irrigation in Bihar."
+      },
+      "weed_management": {
+        "summary": "Pre-emergence: Atrazine @ 1.0 kg a.i./ha in 500 liters of water. Post-emergence: Topramezone @ 25.2 g a.i./ha at 25-30 DAS for broad-spectrum weed control."
+      },
+      "pest_management": [
+        {
+          "name": "Pink Stem Borer (Sesamia inferens)",
+          "symptoms": "Dead hearts in young plants, circular/oblong feeding holes.",
+          "management": "Removal of dead hearts. Whorl application of Carbofuran 3G @ 10kg/ha at 30 DAS."
+        },
+        {
+          "name": "Termites",
+          "symptoms": "Wilting and drying of plants, presence of termites in roots/lower stem.",
+          "management": "Seed treatment with Imidacloprid. Apply Chlorpyriphos 20 EC @ 2.5 L/ha with irrigation water."
+        }
+      ],
+      "disease_management": [
+        {
+          "name": "Turcicum Leaf Blight",
+          "symptoms": "Long, elliptical, grayish-green or brown lesions.",
+          "management": "Spray Mancozeb @ 2.5 g/L of water at the onset of disease."
+        }
+      ],
+      "harvest": {
+        "harvest_signs": "Black layer formation. Crop duration is 140-150 days (longer than Kharif).",
+        "post_harvest_notes": "Sun-drying is critical as winter harvest often has higher initial moisture (25-30%).",
+        "expected_duration_days": 145
+      },
+      "special_cautions": [
+        "Protect from severe frost by applying light irrigation if frost is forecasted."
+      ],
+      "faq": [
+        {
+          "question": "Why is my Rabi maize growing so slowly?",
+          "answer": "Low temperatures during December-January slow down the metabolic rate. Growth will accelerate as temperatures rise in February."
+        }
+      ],
+      "source_refs": [
+        "src_maize_003"
+      ]
+    },
+    {
+      "advisory_id": "maize_karnataka_kharif",
+      "state_region": "Karnataka",
+      "district": "Davangere, Haveri, Shivamogga, Chitradurga",
+      "season": "Kharif",
+      "advisory_type": "cultivation_guide",
+      "applicability_filters": {
+        "irrigation_type": "Rainfed and Irrigated",
+        "soil_type": [
+          "Red Sandy Loam",
+          "Deep Black Soil"
+        ],
+        "sowing_window": "June to July"
+      },
+      "sowing": {
+        "sowing_window_start": "June 1",
+        "sowing_window_end": "July 31",
+        "seed_rate": {
+          "value": "20",
+          "unit": "kg/ha",
+          "source_confidence": "high"
+        },
+        "seed_treatment": "Treat with Thiamethoxam 30 FS @ 8 ml/kg seed for early FAW and shoot fly protection.",
+        "spacing": "60 cm x 20 cm or 75 cm x 20 cm",
+        "sowing_depth_cm": 4.0,
+        "nursery_required": false,
+        "transplanting_required": false
+      },
+      "fertilizer": {
+        "recommended_default": {
+          "basal_dose": "50% N, 100% P, 100% K at sowing.",
+          "top_dressing": "25% N at 30 DAS, 25% N at 50 DAS.",
+          "organic_manure": "Apply 10 t/ha of FYM."
+        }
+      },
+      "irrigation": {
+        "schedule": "Mostly rainfed. If dry spell occurs, irrigate during tasseling and silking.",
+        "critical_stages": [
+          "Silking",
+          "Grain filling"
+        ]
+      },
+      "pest_management": [
+        {
+          "name": "Fall Armyworm (FAW)",
+          "symptoms": "Extensive defoliation, frass in whorl.",
+          "management": "Spray Spinetoram 11.7 SC @ 0.5ml/L or Chlorantraniliprole 18.5 SC @ 0.4 ml/L. Direct spray nozzles directly into the whorl."
+        }
+      ],
+      "disease_management": [
+        {
+          "name": "Sorghum Downy Mildew",
+          "symptoms": "Yellowing of leaves, white downy growth on the under surface, 'crazy top' appearance.",
+          "management": "Seed treatment with Metalaxyl 35 WS @ 4g/kg seed. Spray Metalaxyl + Mancozeb @ 2.5g/L."
+        }
+      ],
+      "harvest": {
+        "harvest_signs": "Leaves turn yellow, cobs point downward, grains are hard.",
+        "expected_duration_days": 110
+      },
+      "special_cautions": [
+        "FAW incidence is severe in this region. Do not delay sowing; synchronized community sowing reduces pest load."
+      ],
+      "source_refs": [
+        "src_maize_004"
+      ]
+    },
+    {
+      "advisory_id": "maize_mp_kharif",
+      "state_region": "Madhya Pradesh",
+      "district": "All districts",
+      "season": "Kharif",
+      "advisory_type": "cultivation_guide",
+      "applicability_filters": {
+        "irrigation_type": "Rainfed and Irrigated",
+        "soil_type": [
+          "Loam",
+          "Clay Loam",
+          "Alluvial"
+        ],
+        "sowing_window": "June to July"
+      },
+      "sowing": {
+        "sowing_window_start": "June 15",
+        "sowing_window_end": "July 15",
+        "seed_rate": {
+          "value": "20",
+          "unit": "kg/ha",
+          "source_confidence": "high"
+        },
+        "seed_treatment": "Treat with Thiram or Captan @ 2.5 g/kg seed followed by Imidacloprid @ 4 ml/kg to protect against soil-borne diseases and shoot fly.",
+        "spacing": "60-75 cm row-to-row and 20-25 cm plant-to-plant",
+        "sowing_depth_cm": 3.5,
+        "nursery_required": false,
+        "transplanting_required": false
+      },
+      "land_preparation": {
+        "summary": "Deep ploughing with mould board plough followed by 2-3 harrowings. Make ridges and furrows for proper drainage and moisture conservation."
+      },
+      "fertilizer": {
+        "recommended_default": {
+          "basal_dose": "1/3rd N, full P2O5, and full K2O at sowing.",
+          "top_dressing": "1/3rd N at knee-high stage (30-35 DAS) and 1/3rd N at tasseling stage.",
+          "organic_manure": "10-15 tonnes FYM per hectare applied 15-20 days before sowing.",
+          "micronutrients": "Zinc Sulphate @ 25 kg/ha applied as basal."
+        },
+        "conflict_note": "Some sources recommend applying Nitrogen in 4 splits for lighter soils to avoid leaching."
+      },
+      "irrigation": {
+        "schedule": "Provide protective irrigation if dry spells exceed 10-12 days.",
+        "critical_stages": [
+          "Tasseling",
+          "Silking",
+          "Grain filling"
+        ],
+        "rainfed_advice": "Ensure ridge planting. Maintain proper drainage to prevent water stagnation during heavy monsoon downpours."
+      },
+      "weed_management": {
+        "summary": "Pre-emergence application of Atrazine @ 1.0-1.5 kg a.i./ha within 2 days of sowing. Follow up with one inter-cultivation or manual weeding at 30 DAS. Tembotrione 42% SC @ 120 g a.i./ha can be used as post-emergence at 20-25 DAS for mixed weed flora."
+      },
+      "pest_management": [
+        {
+          "name": "Fall Armyworm (FAW)",
+          "symptoms": "Papery windows on leaves, ragged holes, presence of sawdust-like frass in the central whorl.",
+          "management": "Seed treatment with Cyantraniliprole + Thiamethoxam. Whorl application of Emamectin Benzoate 5 SG @ 0.4g/L or Spinetoram 11.7 SC @ 0.5ml/L at early infestation."
+        },
+        {
+          "name": "Stem Borer (Chilo partellus)",
+          "symptoms": "Shot holes on leaves, dead heart formation in young plants.",
+          "management": "Release Trichogramma chilonis @ 1,00,000/ha. Apply Carbofuran 3G @ 10 kg/ha in whorls at 25-30 DAS."
+        }
+      ],
+      "disease_management": [
+        {
+          "name": "Turcicum Leaf Blight",
+          "symptoms": "Long, elliptical, grayish-green or brown lesions on leaves.",
+          "management": "Use resistant hybrids. Spray Mancozeb 75 WP @ 2.5 g/L or Azoxystrobin + Tebuconazole @ 1 ml/L at disease onset."
+        },
+        {
+          "name": "Maydis Leaf Blight",
+          "symptoms": "Small, diamond-shaped, necrotic lesions with yellow halos.",
+          "management": "Spray Mancozeb @ 2.5 g/L of water at 10-15 days interval."
+        }
+      ],
+      "deficiency_management": [
+        {
+          "nutrient": "Zinc",
+          "symptoms": "Broad bands of bleached tissue on either side of the midrib (White bud).",
+          "remedy": "Foliar spray of 0.5% Zinc Sulphate + 0.25% lime."
+        }
+      ],
+      "harvest": {
+        "harvest_signs": "Husk turns yellow and dry. Kernels are hard with 20-25% moisture. Black layer visible at the kernel base.",
+        "post_harvest_notes": "Dehusk and sun-dry cobs for 3-4 days to bring grain moisture down to 10-12% before shelling and storage.",
+        "expected_duration_days": 110
+      },
+      "special_cautions": [
+        "Avoid waterlogging for more than 24 hours at early seedling stage.",
+        "Do not spray Atrazine if intercropping with legumes."
+      ],
+      "faq": [
+        {
+          "question": "How to identify Fall Armyworm attack early?",
+          "answer": "Look for elongated papery windows on young leaves caused by early instar larvae scraping the green tissue."
+        }
+      ],
+      "source_refs": [
+        "src_maize_001",
+        "src_maize_002"
+      ]
+    }
+  ],
+  "risk_library": {
+    "pests": [
+      {
+        "name": "Fall Armyworm (Spodoptera frugiperda)",
+        "favorable_conditions": [
+          "Warm and humid weather",
+          "Continuous availability of maize in the region"
+        ],
+        "symptoms": [
+          "Papery windows",
+          "Extensive defoliation",
+          "Frass in whorls"
+        ],
+        "management": [
+          "Deep summer ploughing",
+          "Intercropping with pulses",
+          "Spray Spinetoram or Chlorantraniliprole"
+        ]
+      },
+      {
+        "name": "Pink Stem Borer (Sesamia inferens)",
+        "favorable_conditions": [
+          "Rabi season",
+          "Stubble left from previous crop"
+        ],
+        "symptoms": [
+          "Dead hearts in young seedlings",
+          "Pin holes on leaves"
+        ],
+        "management": [
+          "Remove dead hearts",
+          "Apply Carbofuran 3G in whorls"
+        ]
+      }
+    ],
+    "diseases": [
+      {
+        "name": "Stalk Rots (Charcoal Rot / Pythium Stalk Rot)",
+        "favorable_conditions": [
+          "High temperature",
+          "Moisture stress post-flowering followed by rainfall"
+        ],
+        "symptoms": [
+          "Lower internodes turn brown and soft",
+          "Premature drying of plants",
+          "Lodging"
+        ],
+        "management": [
+          "Avoid moisture stress at flowering",
+          "Apply Trichoderma viride in soil",
+          "Balanced potassium application"
+        ]
+      },
+      {
+        "name": "Downy Mildew",
+        "favorable_conditions": [
+          "High humidity",
+          "Overcast skies",
+          "Temperatures between 20-25°C"
+        ],
+        "symptoms": [
+          "Chlorotic streaks",
+          "White fluffy growth on underside of leaves",
+          "Malformation of tassels (Crazy Top)"
+        ],
+        "management": [
+          "Seed treatment with Metalaxyl",
+          "Rogue out infected plants",
+          "Crop rotation"
+        ]
+      }
+    ],
+    "abiotic_risks": [
+      {
+        "name": "Waterlogging",
+        "trigger_conditions": [
+          "Heavy continuous rains",
+          "Poorly drained heavy clay soils"
+        ],
+        "impact": "Root respiration stops, leading to stunting, nutrient deficiency, and plant death within 48-72 hours.",
+        "mitigation": [
+          "Ridge and furrow planting",
+          "Prompt drainage of excess water",
+          "Foliar spray of 2% Urea post-drainage for recovery"
+        ]
+      },
+      {
+        "name": "Frost Damage",
+        "trigger_conditions": [
+          "Temperatures dropping below 2°C in Northern India during Rabi"
+        ],
+        "impact": "Freezing of plant cell sap, leading to cell bursting, tissue death, and severe yield loss.",
+        "mitigation": [
+          "Light irrigation on cold nights",
+          "Creating smoke around the field borders"
+        ]
+      }
+    ]
+  },
+  "retrieval_chunks": [
+    {
+      "chunk_id": "maize_overview_001",
+      "chunk_type": "overview",
+      "title": "Maize Overview and Importance in India",
+      "crop_name": "Maize",
+      "text": "Maize is a versatile cereal crop grown in Kharif, Rabi, and Spring seasons in India. It requires well-drained soils and is highly responsive to fertilizers.",
+      "keywords": [
+        "Maize",
+        "Cereal",
+        "Kharif",
+        "Rabi",
+        "Versatile"
+      ],
+      "search_boost": 1.5,
+      "state_region": "India",
+      "district": "All",
+      "season": "All",
+      "advisory_category": "overview",
+      "metadata_tags": [
+        "General Info",
+        "Introduction"
+      ],
+      "applicability_tags": [
+        "All India"
+      ],
+      "source_ref_ids": [
+        "src_maize_001"
+      ]
+    },
+    {
+      "chunk_id": "maize_faw_management_001",
+      "chunk_type": "pest_management",
+      "title": "Fall Armyworm (FAW) Control in Maize",
+      "crop_name": "Maize",
+      "text": "Fall Armyworm is the most destructive pest in maize. Early detection via papery windows on leaves is crucial. Management includes whorl application of Emamectin Benzoate or Spinetoram.",
+      "keywords": [
+        "Fall Armyworm",
+        "FAW",
+        "Emamectin",
+        "Spinetoram",
+        "Papery windows"
+      ],
+      "search_boost": 2.0,
+      "state_region": "India",
+      "district": "All",
+      "season": "Kharif",
+      "advisory_category": "pest_management",
+      "metadata_tags": [
+        "Pest",
+        "FAW",
+        "Emergency"
+      ],
+      "applicability_tags": [
+        "Kharif",
+        "Humid regions"
+      ],
+      "source_ref_ids": [
+        "src_maize_002"
+      ]
+    },
+    {
+      "chunk_id": "maize_rabi_benefits_001",
+      "chunk_type": "agronomy",
+      "title": "Benefits of Cultivating Rabi Maize",
+      "crop_name": "Maize",
+      "text": "Rabi maize generally offers 20-30% higher yields compared to Kharif maize due to mild temperatures, fewer cloudy days (better photosynthesis), better water management, and lower incidence of pests and diseases.",
+      "keywords": [
+        "Rabi Maize",
+        "Winter Maize",
+        "Yield advantage",
+        "Bihar",
+        "Andhra Pradesh"
+      ],
+      "search_boost": 1.2
+    },
+    {
+      "chunk_id": "maize_waterlogging_caution_001",
+      "chunk_type": "warning",
+      "title": "Waterlogging Sensitivity in Maize",
+      "crop_name": "Maize",
+      "text": "Maize cannot tolerate standing water for more than 24-48 hours. Waterlogging at the seedling and knee-high stages causes severe stunting and yellowing. Always plant on ridges or raised beds in high-rainfall zones.",
+      "keywords": [
+        "Waterlogging",
+        "Yellowing",
+        "Ridge planting",
+        "Drainage",
+        "Sensitive"
+      ],
+      "search_boost": 1.8
+    }
+  ],
+  "structured_explanation_rules": [
+    {
+      "rule_id": "maize_ph_match",
+      "priority": 1,
+      "severity": "info",
+      "rule_type": "positive_match",
+      "condition": "input.ph >= ideal_ph.min AND input.ph <= ideal_ph.max",
+      "message": "Soil pH is within the optimal range (5.5-7.5) for high-yield maize cultivation."
+    },
+    {
+      "rule_id": "maize_waterlogging_reject",
+      "priority": 5,
+      "severity": "critical",
+      "rule_type": "hard_reject",
+      "condition": "input.soil_drainage == 'poor' OR input.waterlogging_history == true",
+      "message": "Maize is highly sensitive to waterlogging. Poorly drained soils will lead to severe crop failure. Consider crops like paddy instead."
+    },
+    {
+      "rule_id": "maize_low_rainfall_warning",
+      "priority": 3,
+      "severity": "warning",
+      "rule_type": "warning",
+      "condition": "input.rainfall_mm < ideal_rainfall.min AND input.irrigation_available == false",
+      "message": "Expected rainfall is below the 500mm optimal threshold. Without protective irrigation, yield may drop significantly during silking stage."
+    },
+    {
+      "rule_id": "maize_rabi_frost_warning",
+      "priority": 4,
+      "severity": "warning",
+      "rule_type": "warning",
+      "condition": "input.season == 'Rabi' AND input.region IN ['Punjab', 'Haryana', 'Uttar Pradesh']",
+      "message": "Frost risk detected. Monitor weather closely in December-January and be prepared to provide light irrigation to protect the crop."
+    }
+  ],
+  "ui_response_templates": {
+    "best_match_intro": "Maize is highly suitable for your well-drained field conditions and expected rainfall.",
+    "warning_low_rainfall": "Warning: Rainfall is below the preferred range. Protective irrigation is strongly advised during tasseling and silking.",
+    "critical_faw_alert": "Alert: Fall Armyworm incidence is highly likely in your region during this season. Scout fields weekly.",
+    "rabi_sowing_advice": "For Rabi maize, ensure split application of Nitrogen and guard against frost.",
+    "cta_view_advisory": "View full Maize cultivation advisory"
+  },
+  "source_registry": [
+    {
+      "source_id": "src_maize_001",
+      "title": "ICAR - Indian Institute of Maize Research (IIMR) Cultivation Practices",
+      "source_type": "website",
+      "publisher": "ICAR-IIMR",
+      "trust_level": "high",
+      "region_scope": "India",
+      "season_scope": "All",
+      "crop_scope": [
+        "Maize"
+      ],
+      "content_summary": "National guidelines for maize agronomy, varieties, and climate suitability.",
+      "date_published": "2023-01-15",
+      "last_verified_at": "2024-05-18T00:00:00Z"
+    },
+    {
+      "source_id": "src_maize_002",
+      "title": "Standard Operating Procedure (SOP) for Fall Armyworm Management",
+      "source_type": "pdf",
+      "publisher": "Ministry of Agriculture & Farmers Welfare, Govt of India",
+      "trust_level": "high",
+      "region_scope": "India",
+      "season_scope": "Kharif",
+      "crop_scope": [
+        "Maize"
+      ],
+      "content_summary": "Comprehensive chemical, biological, and cultural control strategies for FAW.",
+      "date_published": "2022-06-01",
+      "last_verified_at": "2024-05-18T00:00:00Z"
+    },
+    {
+      "source_id": "src_maize_003",
+      "title": "Winter Maize Cultivation in Bihar",
+      "source_type": "extension_bulletin",
+      "publisher": "Dr. Rajendra Prasad Central Agricultural University (RPCAU), Pusa",
+      "trust_level": "high"
+    },
+    {
+      "source_id": "src_maize_004",
+      "title": "Package of Practices for Maize",
+      "source_type": "website",
+      "publisher": "University of Agricultural Sciences (UAS), Bangalore",
+      "trust_level": "high"
+    }
+  ],
+  "quality_flags": {
+    "is_complete": true,
+    "missing_fields": [],
+    "weakly_supported_fields": [],
+    "review_status": "approved",
+    "approved_by": "Agronomy_AI_System",
+    "review_cycle_days": 180,
+    "last_reviewed_at": "2024-05-18T00:00:00Z"
+  },
+  "updated_at": "2024-05-18T00:00:00Z",
+  "created_at": "2024-05-18T00:00:00Z"
+}

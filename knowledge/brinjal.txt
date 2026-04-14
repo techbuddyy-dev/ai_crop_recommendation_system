@@ -1,0 +1,461 @@
+{
+  "crop_id": "brinjal",
+  "crop_name": "Brinjal",
+  "aliases": ["Baingan", "Eggplant", "Aubergine", "Vankaya", "Kathirikai", "Badane"],
+  "crop_group": "Vegetable",
+  "status": "active",
+  "language": "en",
+  "version": "v1.2",
+
+  "master_profile": {
+    "short_description": "Brinjal (Eggplant) is a hardy, widely cultivated warm-season vegetable crop in India. It is highly versatile, grown throughout the year, and is a staple in various regional cuisines.",
+    "seasons_supported": ["Kharif", "Rabi", "Zaid"],
+    "regions_supported": ["West Bengal", "Odisha", "Bihar", "Maharashtra", "Andhra Pradesh", "Karnataka", "Uttar Pradesh", "Gujarat"],
+    "agro_climatic_zones": ["Lower Gangetic Plains Region", "Eastern Plateau and Hills Region", "Western Plateau and Hills Region", "Southern Plateau and Hills Region"],
+
+    "soil_suitability": {
+      "suitable_soil_textures": ["Sandy loam", "Loam", "Clay loam", "Well-drained alluvial soils"],
+      "unsuitable_soil_textures": ["Heavy clay with poor drainage", "Highly saline and alkaline soils"],
+      "ideal_ph_min": 6.0,
+      "ideal_ph_max": 7.0,
+      "acceptable_ph_min": 5.5,
+      "acceptable_ph_max": 7.5,
+      "salinity_tolerance_note": "Moderately sensitive to soil salinity. High salinity stunts plant growth and reduces fruit yield.",
+      "drainage_requirement": "Requires well-drained soils. Prolonged waterlogging causes root decay and exacerbates soil-borne diseases like bacterial wilt.",
+      "organic_carbon_note": "Highly responsive to organic manure. Application of FYM or compost improves soil structure, moisture retention, and prolonged fruiting."
+    },
+
+    "climate_suitability": {
+      "ideal_temperature_c_min": 25,
+      "ideal_temperature_c_max": 32,
+      "acceptable_temperature_c_min": 15,
+      "acceptable_temperature_c_max": 38,
+      "ideal_humidity_min": 50,
+      "ideal_humidity_max": 80,
+      "ideal_rainfall_mm_min": 600,
+      "ideal_rainfall_mm_max": 1000,
+      "frost_tolerance_note": "Highly sensitive to frost. Frost severely damages the foliage and can kill the plant.",
+      "heat_tolerance_note": "Can tolerate high temperatures better than tomato, but extreme heat (>38°C) combined with dry winds can cause flower drop and misshapen fruits."
+    },
+
+    "water_profile": {
+      "irrigation_required": true,
+      "rainfed_suitable": false,
+      "waterlogging_tolerance": "Low; standing water for more than 48 hours chokes roots, causing rapid wilting and plant death.",
+      "drought_tolerance": "Moderate; possesses a relatively deep and extensive root system, allowing it to withstand short dry spells better than tomatoes.",
+      "critical_water_stages": ["Flowering", "Fruit setting", "Fruit development"]
+    },
+
+    "nutrient_profile": {
+      "nitrogen_demand": "High (100-150 kg/ha applied in splits to sustain continuous fruiting)",
+      "phosphorus_demand": "Moderate (50-80 kg/ha for healthy root establishment)",
+      "potassium_demand": "High (50-100 kg/ha for fruit size, shine, and resistance to pests/diseases)",
+      "micronutrient_notes": ["Zinc (25 kg/ha Zinc Sulphate) is recommended for better fruit set.", "Boron deficiency can cause internal browning and misshapen fruits."]
+    },
+
+    "cropping_context": {
+      "suitable_previous_crops": ["Cereals (Wheat, Paddy, Maize)", "Legumes (Cowpea, Green Gram)", "Cabbage", "Onion"],
+      "unsuitable_previous_crops": ["Other Solanaceous crops (Tomato, Potato, Chili) due to the buildup of bacterial wilt, nematodes, and Phomopsis blight."],
+      "rotation_notes": ["Paddy - Brinjal", "Maize - Legume - Brinjal"],
+      "intercrop_options": ["Coriander", "Onion", "Garlic", "Marigold (as a trap crop)"]
+    },
+
+    "crop_duration": {
+      "duration_days_min": 120,
+      "duration_days_max": 160,
+      "maturity_indicators": ["Fruits attain appropriate size and characteristic color", "Fruit surface is glossy and shiny; dull appearance indicates over-maturity", "Calyx (cap) remains green and fresh"]
+    },
+
+    "recommendation_logic": {
+      "why_recommend_conditions": ["Well-drained soils with good fertility", "Warm climate", "Assured irrigation"],
+      "why_not_recommend_conditions": ["Areas with persistent waterlogging", "Frost-prone regions during winter", "Soils heavily infested with bacterial wilt"],
+      "hard_rejection_conditions": ["Fields with recent history of severe Bacterial Wilt in solanaceous crops", "Highly saline soils"]
+    }
+  },
+
+  "region_season_advisories": [
+    {
+      "advisory_id": "brinjal_maharashtra_kharif",
+      "state_region": "Maharashtra",
+      "district": "Pune, Nashik, Jalgaon, Ahmednagar",
+      "season": "Kharif",
+      "advisory_type": "cultivation_guide",
+      "applicability_filters": {
+        "irrigation": "irrigated (drip preferred)",
+        "soil_type": "medium black to sandy loam",
+        "sowing_window": "May to June (Nursery), June to July (Transplanting)"
+      },
+
+      "sowing": {
+        "sowing_window_start": "June 15",
+        "sowing_window_end": "July 15",
+        "seed_rate": { "value": 200, "unit": "g/ha for hybrids", "range_type": "recommended", "source_confidence": "high" },
+        "seed_treatment": "Treat seeds with Trichoderma viride @ 4g/kg or Captan @ 2g/kg. Follow with Imidacloprid 70 WS @ 5g/kg to protect seedlings from sucking pests (jassids/whiteflies).",
+        "spacing": "90 cm x 60 cm or 120 cm x 60 cm for vigorous hybrids",
+        "sowing_depth_cm": 1.5,
+        "nursery_required": true,
+        "transplanting_required": true
+      },
+
+      "land_preparation": {
+        "summary": "Deep ploughing followed by 2-3 harrowings. Prepare raised beds (120 cm wide, 15-20 cm high) to avoid waterlogging during the monsoon. Using drip irrigation and plastic mulching is highly recommended to control weeds and conserve moisture."
+      },
+
+      "fertilizer": {
+        "basal_dose": "Apply 50 kg N, 50 kg P2O5, and 50 kg K2O per hectare as a basal dose along with 20-25 tonnes/ha of well-rotted FYM.",
+        "top_dressing": "Apply 50-75 kg N per hectare in 2-3 equal splits at 30, 45, and 60 days after transplanting to support continuous flushes of fruiting.",
+        "organic_manure": "Incorporate neem cake @ 500 kg/ha during final land preparation to manage root-knot nematodes and soil-borne pests.",
+        "micronutrients": "Foliar spray of multi-micronutrient mixture during flowering and early fruit development."
+      },
+
+      "irrigation": {
+        "schedule": "Provide light irrigation immediately after transplanting. Irrigate every 3-4 days in summer and 7-10 days in winter. Ensure adequate moisture during fruit development to prevent bitter fruits.",
+        "critical_stages": ["Flowering", "Fruit setting", "Fruit development"],
+        "rainfed_advice": "Ensure excellent drainage during the monsoon. Stagnant water causes wilt."
+      },
+
+      "weed_management": {
+        "summary": "Pre-emergence application of Pendimethalin 30 EC @ 1.0 kg a.i./ha. Use plastic mulching to effectively suppress weeds. Perform manual weeding around the plant base as needed."
+      },
+
+      "pest_management": [
+        {
+          "name": "Shoot and Fruit Borer (Leucinodes orbonalis)",
+          "symptoms": "Larvae bore into tender shoots causing them to droop/wilt (dead heart). Later, they bore into fruits, leaving holes plugged with excreta. This is the most devastating pest.",
+          "management": "Regularly clip and destroy wilted shoots. Install Lucin-lure pheromone traps @ 12-15/ha. Spray Emamectin Benzoate 5 SG @ 0.4 g/L, Spinosad 45 SC @ 0.3 ml/L, or Chlorantraniliprole 18.5 SC @ 0.3 ml/L."
+        },
+        {
+          "name": "Jassids and Whiteflies",
+          "symptoms": "Suck sap from leaves, causing yellowing, curling, and stunted growth. Whiteflies spread viral diseases, while Jassids transmit the Little Leaf phytoplasma.",
+          "management": "Install yellow sticky traps. Spray Imidacloprid 17.8 SL @ 0.3 ml/L or Thiamethoxam 25 WG @ 0.2 g/L. Avoid excessive nitrogen which attracts sucking pests."
+        },
+        {
+          "name": "Epilachna Beetle (Hadda Beetle)",
+          "symptoms": "Adults and grubs scrape the green matter (chlorophyll) from leaves, leaving a characteristic lace-like, skeletonized appearance.",
+          "management": "Hand-pick and destroy grubs/adults in early stages. Spray Quinalphos 25 EC @ 2 ml/L or Dimethoate 30 EC @ 2 ml/L."
+        }
+      ],
+
+      "disease_management": [
+        {
+          "name": "Little Leaf of Brinjal",
+          "symptoms": "Caused by Phytoplasma (transmitted by leafhoppers/jassids). Leaves become extremely small, narrow, and yellowish. Plants become bushy and sterile (no flowers or fruits).",
+          "management": "Uproot and destroy infected plants immediately. Control the leafhopper vector using systemic insecticides (Imidacloprid)."
+        },
+        {
+          "name": "Phomopsis Blight and Fruit Rot",
+          "symptoms": "Circular brown spots on leaves. Fruits show soft, water-soaked, depressed lesions that later turn dark and rot completely.",
+          "management": "Use disease-free seeds. Seed treatment with Thiram. Spray Mancozeb 75 WP @ 2.5 g/L or Carbendazim 50 WP @ 1 g/L."
+        },
+        {
+          "name": "Bacterial Wilt (Ralstonia solanacearum)",
+          "symptoms": "Sudden drooping and wilting of the entire plant while it remains green. Vascular tissues show brown discoloration and exude bacterial ooze when cut.",
+          "management": "Use resistant varieties (e.g., Arka Nidhi, Arka Keshav). Long crop rotation with cereals. Apply bleaching powder @ 15 kg/ha in affected soil."
+        }
+      ],
+
+      "deficiency_management": [
+        {
+          "nutrient": "Nitrogen",
+          "symptoms": "Pale green/yellow older leaves, stunted growth, and small, pale, bitter fruits.",
+          "remedy": "Top dress with Urea or provide N via fertigation."
+        }
+      ],
+
+      "harvest": {
+        "harvest_signs": "Harvest when fruits attain a good size and an attractive, glossy/shiny appearance. The calyx (green cap) should be fresh. If the skin turns dull or yellowish, the fruit is over-mature and seeds are hard.",
+        "post_harvest_notes": "Cut the fruits with a sharp knife or secateurs along with the stalk. Grade according to size and color. Pack in well-ventilated baskets or crates.",
+        "expected_duration_days": 140
+      },
+
+      "special_cautions": ["Do not harvest immediately after spraying chemical pesticides; strictly observe the waiting period (Pre-Harvest Interval - PHI) of 3-7 days depending on the chemical.", "Regularly clipping wilted shoots is crucial; relying solely on chemicals for Shoot & Fruit Borer is ineffective."],
+      "faq": [
+        {
+          "question": "Why do the young shoots of my brinjal plant wilt and dry up suddenly?",
+          "answer": "This is a classic symptom of the Brinjal Shoot and Fruit Borer. The caterpillar bores into the tender shoot, destroying the vascular tissue. You must immediately clip off and destroy these drooping shoots below the bore hole to prevent the pest from multiplying and attacking the fruits."
+        },
+        {
+          "question": "Why are the leaves of my plant becoming very tiny and bushy, with no fruits?",
+          "answer": "This is 'Little Leaf of Brinjal', caused by a phytoplasma transmitted by jassids (leafhoppers). There is no cure. You must pull out and burn the affected plants immediately and spray insecticide to kill the vector insects."
+        }
+      ],
+
+      "source_refs": ["src_iivr_brinjal_pop", "src_mpkv_kharif_brinjal"]
+    },
+    {
+      "advisory_id": "brinjal_wb_odisha_rabi",
+      "state_region": "West Bengal & Odisha",
+      "district": "Hooghly, Nadia, Cuttack, Ganjam",
+      "season": "Rabi",
+      "advisory_type": "cultivation_guide",
+      "applicability_filters": {
+        "irrigation": "irrigated",
+        "soil_type": "alluvial to sandy loam",
+        "sowing_window": "Nursery in Sep-Oct, Transplant in Oct-Nov"
+      },
+
+      "sowing": {
+        "sowing_window_start": "October 15",
+        "sowing_window_end": "November 15",
+        "seed_rate": { "value": 250, "unit": "g/ha", "range_type": "recommended" },
+        "seed_treatment": "Treat nursery beds with Trichoderma and apply Neem cake. Treat seeds with Pseudomonas fluorescens.",
+        "spacing": "75 cm x 60 cm",
+        "sowing_depth_cm": 1.5,
+        "nursery_required": true,
+        "transplanting_required": true
+      },
+
+      "land_preparation": {
+        "summary": "Thorough ploughing followed by laddering. Formation of ridges and furrows is essential to manage irrigation effectively during the cool winter months."
+      },
+
+      "fertilizer": {
+        "basal_dose": "50 kg N, 50 kg P2O5, 50 kg K2O/ha.",
+        "top_dressing": "50 kg N/ha at 30 DAT and 50 kg N/ha at 50 DAT.",
+        "organic_manure": "Mustard cake or Neem cake application is highly beneficial against soil-borne pathogens."
+      },
+
+      "irrigation": {
+        "schedule": "Irrigate at 10-15 day intervals during the cool Rabi season. Do not over-irrigate as cold, wet soils promote damping off and root rots.",
+        "critical_stages": ["Transplanting", "Flowering", "Fruit enlargement"]
+      },
+
+      "weed_management": {
+        "summary": "Hand weeding at 20 and 40 DAT. Avoid deep hoeing to protect shallow feeder roots."
+      },
+
+      "pest_management": [
+        {
+          "name": "Red Spider Mite (Tetranychus urticae)",
+          "symptoms": "Severe yellow stippling and webbing on the underside of leaves during dry spells. Leaves dry and fall off.",
+          "management": "Spray Spiromesifen 22.9 SC @ 1 ml/L or Propargite 57 EC @ 2 ml/L. Ensure complete coverage of the leaf undersurface."
+        }
+      ],
+
+      "disease_management": [
+        {
+          "name": "Damping Off (Pythium/Rhizoctonia)",
+          "symptoms": "Nursery seedlings rot at the soil line and collapse.",
+          "management": "Solarize nursery beds. Drench with Copper Oxychloride 50 WP @ 3g/L or Metalaxyl."
+        }
+      ],
+
+      "harvest": {
+        "harvest_signs": "Fruits are firm, bright in color, and have a fresh green calyx. The skin must not have lost its luster.",
+        "expected_duration_days": 150
+      },
+      "special_cautions": ["Bacterial wilt is endemic in these regions. Grafting brinjal onto wild resistant rootstocks (like Solanum torvum) is highly recommended for complete protection."],
+      "source_refs": ["src_bckv_brinjal_rabi", "src_ouat_vegetable_pop"]
+    }
+  ],
+
+  "risk_library": {
+    "pests": [
+      {
+        "name": "Shoot and Fruit Borer (Leucinodes orbonalis)",
+        "favorable_conditions": ["Warm and humid weather", "Continuous availability of brinjal crop"],
+        "symptoms": ["Drooping of tender shoots (dead heart)", "Bore holes in fruits plugged with excreta"],
+        "management": ["Clipping of infested shoots", "Pheromone traps", "Sprays of Emamectin Benzoate/Spinosad"]
+      },
+      {
+        "name": "Red Spider Mite (Tetranychus urticae)",
+        "favorable_conditions": ["Dry and warm weather", "Prolonged dry spells"],
+        "symptoms": ["Yellow stippling on leaves", "Fine webbing on the undersurface", "Drying and dropping of leaves"],
+        "management": ["Spray Acaricides like Spiromesifen or Propargite", "Maintain adequate soil moisture"]
+      },
+      {
+        "name": "Epilachna Beetle (Hadda Beetle)",
+        "favorable_conditions": ["High humidity", "Summer and Kharif season"],
+        "symptoms": ["Lace-like skeletonization of leaves", "Grubs feeding on leaf surface"],
+        "management": ["Hand picking", "Spray Dimethoate"]
+      }
+    ],
+    "diseases": [
+      {
+        "name": "Little Leaf of Brinjal",
+        "favorable_conditions": ["High population of Jassid vectors"],
+        "symptoms": ["Profound stunting", "Extremely small, narrow leaves", "Bushy appearance", "Sterility"],
+        "management": ["Rogueing of infected plants", "Vector control with Imidacloprid", "Eradication of weed hosts"]
+      },
+      {
+        "name": "Bacterial Wilt (Ralstonia solanacearum)",
+        "favorable_conditions": ["High soil moisture and temperature", "Nematode infestation", "Continuous Solanaceous cropping"],
+        "symptoms": ["Sudden green wilt", "Bacterial ooze from cut stems"],
+        "management": ["Crop rotation", "Resistant varieties/Grafting", "Soil application of Bleaching powder"]
+      },
+      {
+        "name": "Phomopsis Blight",
+        "favorable_conditions": ["High temperature and humidity", "Rainy season"],
+        "symptoms": ["Circular brown leaf spots", "Soft, dark, sunken lesions on fruits"],
+        "management": ["Disease-free seeds", "Spray Mancozeb or Carbendazim"]
+      }
+    ],
+    "abiotic_risks": [
+      {
+        "name": "Poor Fruit Set",
+        "trigger_conditions": ["Temperatures > 35°C", "Excessive nitrogen application", "Moisture stress"],
+        "impact": "Flower drop, elongation of the style (making pollination difficult), and misshapen fruits.",
+        "mitigation": ["Maintain uniform soil moisture", "Apply balanced NPK", "Use growth regulators like NAA (Planofix)"]
+      }
+    ]
+  },
+
+  "retrieval_chunks": [
+    {
+      "chunk_id": "brinjal_overview_001",
+      "chunk_type": "overview",
+      "title": "Brinjal (Eggplant) Crop Overview",
+      "crop_name": "Brinjal",
+      "state_region": "India",
+      "district": "All",
+      "season": "Kharif/Rabi/Zaid",
+      "advisory_category": "overview",
+      "text": "Brinjal, also known as Eggplant or Baingan, is a highly versatile and hardy vegetable crop grown across India. It is cultivated year-round and requires vigilant management of the Shoot and Fruit Borer for profitable yields.",
+      "keywords": ["Brinjal", "Eggplant", "Baingan", "Vegetable", "Shoot Borer"],
+      "metadata_tags": ["general_info", "intro"],
+      "source_ref_ids": ["src_iivr_brinjal_pop"]
+    },
+    {
+      "chunk_id": "brinjal_suitability_001",
+      "chunk_type": "suitability",
+      "title": "Brinjal Soil and Climate Requirements",
+      "crop_name": "Brinjal",
+      "state_region": "India",
+      "district": "All",
+      "season": "All",
+      "advisory_category": "suitability",
+      "text": "Brinjal requires well-drained loamy to clay loam soils. It is moderately tolerant to drought but sensitive to waterlogging. It thrives in warm climates (25-32°C) and is highly susceptible to frost.",
+      "keywords": ["Well-drained", "Loam", "Warm climate", "Frost-sensitive", "Waterlogging"],
+      "metadata_tags": ["soil", "climate", "water"],
+      "source_ref_ids": ["src_mpkv_kharif_brinjal"]
+    },
+    {
+      "chunk_id": "brinjal_shoot_borer_001",
+      "chunk_type": "pest_management",
+      "title": "Managing Brinjal Shoot and Fruit Borer (BSFB)",
+      "crop_name": "Brinjal",
+      "state_region": "India",
+      "district": "All",
+      "season": "All",
+      "advisory_category": "pest_management",
+      "text": "The Shoot and Fruit Borer is the most devastating pest in Brinjal. The first sign is drooping, wilted shoots (dead hearts). Management must involve regularly clipping and destroying these wilted shoots, alongside installing pheromone traps and spraying Emamectin Benzoate. Chemicals alone cannot control it once it enters the fruit.",
+      "keywords": ["BSFB", "Shoot Borer", "Fruit Borer", "Dead heart", "Clipping", "Pheromone"],
+      "metadata_tags": ["pest", "caterpillar", "management"],
+      "source_ref_ids": ["src_iivr_brinjal_pop"]
+    },
+    {
+      "chunk_id": "brinjal_little_leaf_001",
+      "chunk_type": "disease_management",
+      "title": "Little Leaf Disease of Brinjal",
+      "crop_name": "Brinjal",
+      "state_region": "India",
+      "district": "All",
+      "season": "All",
+      "advisory_category": "disease_management",
+      "text": "Little Leaf is caused by a phytoplasma transmitted by jassids (leafhoppers). Infected plants become severely stunted, bushy, and produce extremely tiny leaves with no flowers or fruits. The only cure is to uproot and destroy the plant immediately and spray systemic insecticides like Imidacloprid to kill the vector.",
+      "keywords": ["Little Leaf", "Phytoplasma", "Jassid", "Leafhopper", "Bushy", "Sterile"],
+      "metadata_tags": ["disease", "vector", "phytoplasma"],
+      "source_ref_ids": ["src_mpkv_kharif_brinjal"]
+    }
+  ],
+
+  "structured_explanation_rules": [
+    {
+      "rule_id": "brinjal_drainage_match",
+      "condition": "input.soil_drainage == 'well_drained'",
+      "message": "Your well-drained soil is ideal for Brinjal cultivation, significantly reducing the risk of root rot and severe soil-borne diseases like Bacterial Wilt.",
+      "priority": 1,
+      "severity": "positive_match"
+    },
+    {
+      "rule_id": "brinjal_waterlogging_reject",
+      "condition": "input.soil_drainage == 'poor' OR input.waterlogging_history == true",
+      "message": "Critical Warning: Brinjal is highly sensitive to waterlogging. Poorly drained fields will cause rapid wilting and plant death. Use high raised beds if you proceed.",
+      "priority": 1,
+      "severity": "hard_reject"
+    },
+    {
+      "rule_id": "brinjal_rotation_reject",
+      "condition": "input.previous_crop IN ['potato', 'tomato', 'chili', 'brinjal']",
+      "message": "Critical Warning: Planting brinjal after other solanaceous crops exponentially increases the risk of severe Bacterial Wilt and nematode attacks. Practice crop rotation with cereals or legumes.",
+      "priority": 1,
+      "severity": "hard_reject"
+    },
+    {
+      "rule_id": "brinjal_heat_stress_warning",
+      "condition": "input.max_temp_c > 35 AND input.growth_stage == 'flowering'",
+      "message": "Warning: High temperatures combined with low humidity can cause style elongation and flower drop, leading to poor fruit set. Ensure consistent soil moisture to cool the microclimate.",
+      "priority": 2,
+      "severity": "warning"
+    }
+  ],
+
+  "ui_response_templates": {
+    "best_match_intro": "Baingan (Brinjal) is a highly adaptable and profitable vegetable crop ideally suited for your well-drained soil and climate.",
+    "warning_rotation": "Your previous crop belongs to the same family as brinjal, which highly increases disease risks like Bacterial Wilt. Crop rotation is strongly advised.",
+    "warning_shoot_borer": "Alert: Monitor your crop daily for drooping shoots. Clip them off immediately to stop the Shoot & Fruit Borer from destroying your yield.",
+    "cta_view_advisory": "View full Brinjal (Eggplant) cultivation advisory",
+    "cta_view_bsfb_guide": "Read the Shoot and Fruit Borer Management Protocol"
+  },
+
+  "source_registry": [
+    {
+      "source_id": "src_iivr_brinjal_pop",
+      "title": "Brinjal Production Technology",
+      "source_type": "pdf",
+      "publisher": "ICAR - Indian Institute of Vegetable Research (IIVR), Varanasi",
+      "region_scope": "India",
+      "season_scope": "All Seasons",
+      "crop_scope": ["Brinjal"],
+      "content_summary": "Comprehensive national guidelines covering hybrid selection, IPM for Shoot and Fruit Borer, and management of Little Leaf disease.",
+      "date_published": "2021-09-10",
+      "trust_level": "high"
+    },
+    {
+      "source_id": "src_mpkv_kharif_brinjal",
+      "title": "Package of Practices for Vegetable Crops (Brinjal)",
+      "source_type": "manual",
+      "publisher": "Mahatma Phule Krishi Vidyapeeth (MPKV), Rahuri",
+      "region_scope": "Maharashtra",
+      "season_scope": "Kharif and Rabi",
+      "crop_scope": ["Brinjal"],
+      "content_summary": "State-level agronomic guidelines detailing raised bed preparation, fertigation schedules, and pest control.",
+      "date_published": "2022-05-15",
+      "trust_level": "high"
+    },
+    {
+      "source_id": "src_bckv_brinjal_rabi",
+      "title": "Rabi Brinjal Cultivation Guide",
+      "source_type": "bulletin",
+      "publisher": "Bidhan Chandra Krishi Viswavidyalaya (BCKV)",
+      "region_scope": "West Bengal",
+      "season_scope": "Rabi",
+      "crop_scope": ["Brinjal"],
+      "content_summary": "Guidelines for mitigating Bacterial Wilt in the Lower Gangetic plains using resistant rootstocks and crop rotation.",
+      "date_published": "2023-01-10",
+      "trust_level": "high"
+    },
+    {
+      "source_id": "src_ouat_vegetable_pop",
+      "title": "Vegetable Production Guidelines",
+      "source_type": "manual",
+      "publisher": "Odisha University of Agriculture and Technology (OUAT)",
+      "region_scope": "Odisha",
+      "season_scope": "All Seasons",
+      "crop_scope": ["Brinjal"],
+      "content_summary": "Pest management strategies focusing on Red Spider Mite and Epilachna beetle in coastal climates.",
+      "date_published": "2022-08-20",
+      "trust_level": "high"
+    }
+  ],
+
+  "quality_flags": {
+    "is_complete": true,
+    "missing_fields": [],
+    "weakly_supported_fields": [],
+    "last_reviewed_at": "2024-04-25T00:00:00Z"
+  },
+
+  "updated_at": "2024-04-25T00:00:00Z",
+  "created_at": "2024-01-15T00:00:00Z"
+}

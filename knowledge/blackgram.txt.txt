@@ -1,0 +1,524 @@
+{
+  "crop_id": "blackgram",
+  "crop_name": "Black Gram",
+  "aliases": ["Urad", "Urad Dal", "Urdbean", "Black Lentil", "Mungo bean"],
+  "crop_group": "Pulse",
+  "status": "active",
+  "language": "en",
+  "version": "v1.2",
+
+  "master_profile": {
+    "short_description": "Black Gram (Urad) is a short-duration, highly nutritious pulse crop cultivated extensively in India. It improves soil fertility by fixing atmospheric nitrogen and is ideal for catch cropping, intercropping, and crop rotation.",
+    "seasons_supported": ["Kharif", "Rabi", "Zaid"],
+    "regions_supported": ["Madhya Pradesh", "Uttar Pradesh", "Andhra Pradesh", "Maharashtra", "Tamil Nadu", "Rajasthan", "Karnataka"],
+    "agro_climatic_zones": ["Central Plateau and Hills Region", "Southern Plateau and Hills Region", "Upper Gangetic Plains Region", "East Coast Plains and Hills Region"],
+
+    "soil_suitability": {
+      "suitable_soil_textures": ["Loam", "Clay loam", "Sandy loam", "Medium black soils", "Coastal alluvial"],
+      "unsuitable_soil_textures": ["Heavy clay with poor drainage", "Highly saline and alkaline soils"],
+      "ideal_ph_min": 6.5,
+      "ideal_ph_max": 7.8,
+      "acceptable_ph_min": 5.5,
+      "acceptable_ph_max": 8.5,
+      "salinity_tolerance_note": "Highly sensitive to soil salinity and alkalinity. High salinity severely reduces germination and nodulation.",
+      "drainage_requirement": "Requires well-drained soils; susceptible to waterlogging which can cause immediate root rot.",
+      "organic_carbon_note": "Performs well in soils with medium organic carbon. Addition of well-rotted FYM enhances moisture retention."
+    },
+
+    "climate_suitability": {
+      "ideal_temperature_c_min": 25,
+      "ideal_temperature_c_max": 35,
+      "acceptable_temperature_c_min": 20,
+      "acceptable_temperature_c_max": 40,
+      "ideal_humidity_min": 50,
+      "ideal_humidity_max": 80,
+      "ideal_rainfall_mm_min": 600,
+      "ideal_rainfall_mm_max": 800,
+      "frost_tolerance_note": "Extremely sensitive to frost, which can completely destroy the crop.",
+      "heat_tolerance_note": "Can tolerate high temperatures, but hot dry winds during the flowering stage cause heavy flower drop."
+    },
+
+    "water_profile": {
+      "irrigation_required": false,
+      "rainfed_suitable": true,
+      "waterlogging_tolerance": "Very low; standing water for even 24 hours can cause yellowing and plant mortality.",
+      "drought_tolerance": "Moderate; deep root system helps survive short dry spells, but severe drought during flowering reduces yield.",
+      "critical_water_stages": ["Flowering", "Pod formation", "Grain filling"]
+    },
+
+    "nutrient_profile": {
+      "nitrogen_demand": "Low (15-20 kg/ha as a starter dose, fixes its own N via nodules)",
+      "phosphorus_demand": "Moderate (40-50 kg/ha for proper root development)",
+      "potassium_demand": "Low (20 kg/ha, mostly in deficient soils)",
+      "micronutrient_notes": ["Sulphur application (20 kg/ha) improves protein content.", "Zinc and Molybdenum deficiencies may occur in intensively farmed soils."]
+    },
+
+    "cropping_context": {
+      "suitable_previous_crops": ["Wheat", "Rice", "Maize", "Sorghum", "Mustard"],
+      "unsuitable_previous_crops": ["Continuous cultivation of pulses without rotation increases the risk of soil-borne diseases."],
+      "rotation_notes": ["Rice - Black Gram (Rice fallows in South/East India)", "Maize - Wheat - Black Gram (Zaid)"],
+      "intercrop_options": ["Pigeonpea", "Sorghum", "Pearl Millet", "Maize", "Cotton"]
+    },
+
+    "crop_duration": {
+      "duration_days_min": 70,
+      "duration_days_max": 90,
+      "maturity_indicators": ["Leaves turn yellow and shed", "Pods turn black and dry", "Moisture content in seeds drops to 15-20%"]
+    },
+
+    "recommendation_logic": {
+      "why_recommend_conditions": ["Short growing window available", "Well-drained soils", "Need to improve soil fertility"],
+      "why_not_recommend_conditions": ["Prone to waterlogging", "High soil salinity", "Frost-prone winters (if sown late)"],
+      "hard_rejection_conditions": ["Persistent flooding", "Extremely sandy soils without irrigation"]
+    }
+  },
+
+  "region_season_advisories": [
+    {
+      "advisory_id": "blackgram_mp_kharif",
+      "state_region": "Madhya Pradesh",
+      "district": "All",
+      "season": "Kharif",
+      "advisory_type": "cultivation_guide",
+      "applicability_filters": {
+        "irrigation": "rainfed",
+        "soil_type": "medium black to clay loam",
+        "sowing_window": "onset of monsoon (June-July)"
+      },
+
+      "sowing": {
+        "sowing_window_start": "June 25",
+        "sowing_window_end": "July 15",
+        "seed_rate": { "value": 15, "unit": "kg/ha", "range_type": "recommended", "source_confidence": "high" },
+        "seed_treatment": "Treat seed with Thiram + Carbendazim @ 3g/kg seed or Trichoderma viride @ 5g/kg. Follow by inoculation with Rhizobium and PSB culture @ 5g/kg seed.",
+        "spacing": "30 cm x 10 cm",
+        "sowing_depth_cm": 4,
+        "nursery_required": false,
+        "transplanting_required": false
+      },
+
+      "land_preparation": {
+        "summary": "One deep summer ploughing followed by 1-2 harrowings to achieve a good tilth. Sowing on ridges or Broad Bed Furrow (BBF) is highly recommended for proper drainage during monsoon."
+      },
+
+      "fertilizer": {
+        "basal_dose": "Apply 20 kg N, 50 kg P2O5, 20 kg K2O, and 20 kg Sulphur per hectare at the time of sowing.",
+        "top_dressing": "Not required. A foliar spray of 2% Urea or DAP at flowering can reduce flower drop.",
+        "organic_manure": "Incorporate 5 tonnes/ha of well-rotted FYM or compost 15-20 days before sowing.",
+        "micronutrients": "Foliar spray of 0.5% Zinc sulphate if zinc deficiency is observed."
+      },
+
+      "irrigation": {
+        "schedule": "Primarily rainfed in Kharif. Provide protective irrigation only if dry spells occur during flowering or pod filling stages.",
+        "critical_stages": ["Flowering (35-40 DAS)", "Pod formation (50-55 DAS)"],
+        "rainfed_advice": "Ensure excess rainwater is drained out immediately to prevent waterlogging."
+      },
+
+      "weed_management": {
+        "summary": "Pre-emergence application of Pendimethalin 30 EC @ 1.0 kg a.i./ha in 500 liters of water within 3 days of sowing. One manual weeding at 20-25 days after sowing."
+      },
+
+      "pest_management": [
+        {
+          "name": "Whitefly (Bemisia tabaci)",
+          "symptoms": "Adults and nymphs suck sap from leaves. Crucial as they act as vectors for Mungbean Yellow Mosaic Virus (MYMV).",
+          "management": "Grow YMV-resistant varieties (e.g., PU-31, T-9). Spray Imidacloprid 17.8 SL @ 0.3 ml/L or Thiamethoxam 25 WG @ 0.2 g/L."
+        },
+        {
+          "name": "Pod Borer (Helicoverpa armigera / Maruca vitrata)",
+          "symptoms": "Larvae bore into the pods and feed on developing seeds. Webbing of flowers and pods seen in Maruca.",
+          "management": "Spray Indoxacarb 14.5 SC @ 0.5 ml/L or Emamectin benzoate 5 SG @ 0.4 g/L at the pod initiation stage."
+        }
+      ],
+
+      "disease_management": [
+        {
+          "name": "Mungbean Yellow Mosaic Virus (MYMV)",
+          "symptoms": "Leaves show alternating yellow and green patches. Severe infection leads to complete yellowing, stunted growth, and no pod formation.",
+          "management": "Use resistant varieties. Control whitefly vectors early. Uproot and destroy infected plants."
+        },
+        {
+          "name": "Powdery Mildew",
+          "symptoms": "White powdery patches on leaves, stems, and pods, eventually turning greyish-brown.",
+          "management": "Spray Wettable Sulphur @ 3 g/L or Hexaconazole 5 EC @ 1 ml/L upon appearance of symptoms."
+        }
+      ],
+
+      "deficiency_management": [
+        {
+          "nutrient": "Sulphur",
+          "symptoms": "Yellowing of young leaves, poor growth, and low nodulation.",
+          "remedy": "Apply Gypsum @ 200 kg/ha at land preparation or use Single Super Phosphate (SSP) instead of DAP."
+        }
+      ],
+
+      "harvest": {
+        "harvest_signs": "Leaves shed, pods turn black and brittle. Seeds become hard.",
+        "post_harvest_notes": "Harvest promptly as over-drying can cause pods to shatter. Dry the harvested crop in the sun for 3-4 days before threshing. Store grains at 9-10% moisture.",
+        "expected_duration_days": 80
+      },
+
+      "special_cautions": ["Avoid late sowing in Kharif as terminal drought and dropping temperatures can severely reduce yields.", "Highly susceptible to MYMV; vector control is mandatory."],
+      "faq": [
+        {
+          "question": "Why are my Black Gram leaves turning completely yellow?",
+          "answer": "This is likely due to Mungbean Yellow Mosaic Virus (MYMV), spread by whiteflies. Once infected, the plant cannot be cured. Remove infected plants and spray insecticide to control whiteflies and protect the remaining crop."
+        }
+      ],
+
+      "source_refs": ["src_iipr_blackgram_2022", "src_jnkvv_urad_pop"]
+    },
+    {
+      "advisory_id": "blackgram_south_rabi_rice_fallow",
+      "state_region": "Andhra Pradesh & Tamil Nadu",
+      "district": "Guntur, Krishna, Thanjavur, Nagapattinam",
+      "season": "Rabi",
+      "advisory_type": "cultivation_guide",
+      "applicability_filters": {
+        "irrigation": "residual moisture (rice fallows)",
+        "soil_type": "clay to clay loam (deltaic soils)",
+        "sowing_window": "November to December"
+      },
+
+      "sowing": {
+        "sowing_window_start": "November 15",
+        "sowing_window_end": "December 15",
+        "seed_rate": { "value": 25, "unit": "kg/ha", "range_type": "recommended", "source_confidence": "high" },
+        "seed_treatment": "Treat seeds with Trichoderma viride @ 5g/kg to prevent root rot in moist soils.",
+        "spacing": "Broadcasted uniformly",
+        "sowing_depth_cm": 2,
+        "nursery_required": false,
+        "transplanting_required": false
+      },
+
+      "land_preparation": {
+        "summary": "Zero tillage. Seeds are broadcasted in the standing rice crop 2-3 days before the rice harvest or immediately after harvesting in the stubbles."
+      },
+
+      "fertilizer": {
+        "basal_dose": "Not applied as it is grown on residual fertility.",
+        "top_dressing": "Foliar spray of 2% DAP or TNAU Pulse Wonder @ 5 kg/ha at flowering and 15 days later dramatically improves yield.",
+        "organic_manure": "None for this specific method."
+      },
+
+      "irrigation": {
+        "schedule": "Grown entirely on residual soil moisture. No direct irrigation is usually required.",
+        "critical_stages": ["Flowering", "Pod formation"]
+      },
+
+      "weed_management": {
+        "summary": "Application of post-emergence herbicides like Imazethapyr @ 50 g a.i./ha at 15-20 DAS if weed pressure is high."
+      },
+
+      "pest_management": [
+        {
+          "name": "Spodoptera litura (Tobacco caterpillar)",
+          "symptoms": "Larvae skeletonize leaves and defoliate the plant rapidly at night.",
+          "management": "Use pheromone traps. Spray Novaluron 10 EC @ 1.0 ml/L or Chlorantraniliprole 18.5 SC @ 0.3 ml/L."
+        }
+      ],
+
+      "disease_management": [
+        {
+          "name": "Powdery Mildew",
+          "symptoms": "White powdery growth on upper leaf surfaces, frequent in cool and humid coastal winters.",
+          "management": "Spray Wettable Sulphur @ 3 g/L or Carbendazim @ 1 g/L."
+        }
+      ],
+
+      "harvest": {
+        "harvest_signs": "Pods turn black and dry. Leaves drop.",
+        "post_harvest_notes": "Harvest using sickles and dry in the sun. Avoid mechanical damage to seeds during threshing.",
+        "expected_duration_days": 75
+      },
+      "special_cautions": ["Do not broadcast seeds if the field is highly waterlogged. Ensure there is just enough surface moisture for germination."],
+      "faq": [
+        {
+          "question": "What is the advantage of Rice Fallow Urad?",
+          "answer": "It utilizes the residual moisture and fertilizers from the preceding rice crop, requiring zero tillage and drastically reducing cultivation costs while adding nitrogen to the soil."
+        }
+      ],
+      "source_refs": ["src_tnau_urad_rice_fallow", "src_angrau_blackgram"]
+    },
+    {
+      "advisory_id": "blackgram_up_zaid",
+      "state_region": "Uttar Pradesh & Punjab",
+      "district": "All",
+      "season": "Zaid (Summer)",
+      "advisory_type": "cultivation_guide",
+      "applicability_filters": {
+        "irrigation": "assured irrigation",
+        "soil_type": "loam to sandy loam",
+        "sowing_window": "March to April"
+      },
+
+      "sowing": {
+        "sowing_window_start": "March 15",
+        "sowing_window_end": "April 15",
+        "seed_rate": { "value": 20, "unit": "kg/ha", "range_type": "recommended" },
+        "seed_treatment": "Treat with Imidacloprid @ 5 ml/kg seed to protect against early whitefly infestation.",
+        "spacing": "25 cm x 10 cm",
+        "sowing_depth_cm": 4,
+        "nursery_required": false,
+        "transplanting_required": false
+      },
+
+      "land_preparation": {
+        "summary": "Prepare the land after wheat or mustard harvest. Apply pre-sowing irrigation (rauni) and plough 2-3 times to achieve fine tilth."
+      },
+
+      "fertilizer": {
+        "basal_dose": "15 kg N, 40 kg P2O5 per hectare.",
+        "top_dressing": "Not required."
+      },
+
+      "irrigation": {
+        "schedule": "Requires 3-4 irrigations due to high summer evaporation. Irrigate at 25, 45, and 60 DAS.",
+        "critical_stages": ["Flowering", "Pod filling"]
+      },
+
+      "weed_management": {
+        "summary": "Pre-emergence application of Pendimethalin 30 EC @ 1.0 L/ha."
+      },
+
+      "pest_management": [
+        {
+          "name": "Thrips",
+          "symptoms": "Curling of leaves, flower drop, and deformed pods.",
+          "management": "Spray Fipronil 5 SC @ 1.5 ml/L at bud initiation."
+        }
+      ],
+
+      "disease_management": [
+        {
+          "name": "MYMV",
+          "symptoms": "Yellow mosaic patches. Very common in summer crop.",
+          "management": "Use highly resistant summer varieties (e.g., Pant U-31). Control whiteflies stringently."
+        }
+      ],
+
+      "harvest": {
+        "harvest_signs": "Majority of pods turn black.",
+        "expected_duration_days": 65
+      },
+      "special_cautions": ["Hot dry winds (Loo) during May can cause flower drop. Maintain adequate soil moisture during the reproductive phase."],
+      "source_refs": ["src_iipr_blackgram_2022"]
+    }
+  ],
+
+  "risk_library": {
+    "pests": [
+      {
+        "name": "Whitefly",
+        "favorable_conditions": ["Warm and dry weather", "Presence of alternative host weeds"],
+        "symptoms": ["Yellowing of leaves", "Honeydew secretion", "Sooty mold development"],
+        "management": ["Use yellow sticky traps @ 20/ha", "Seed treatment with systemic insecticides", "Foliar sprays of Acetamiprid or Imidacloprid"]
+      },
+      {
+        "name": "Stem Fly",
+        "favorable_conditions": ["Early growth stages (first 2-3 weeks)"],
+        "symptoms": ["Drooping of first two leaves", "Drying of seedlings", "Brown discoloration inside the stem"],
+        "management": ["Seed treatment with Imidacloprid", "Early sowing"]
+      },
+      {
+        "name": "Pod Borer Complex",
+        "favorable_conditions": ["Flowering and podding stages", "Cloudy weather"],
+        "symptoms": ["Holes in pods", "Webbing of flowers"],
+        "management": ["Indoxacarb or Emamectin benzoate sprays", "Pheromone traps"]
+      }
+    ],
+    "diseases": [
+      {
+        "name": "Yellow Mosaic Virus (YMV)",
+        "favorable_conditions": ["High whitefly population", "Susceptible varieties"],
+        "symptoms": ["Yellow mosaic patches on leaves", "Stunted growth", "Fewer, malformed pods"],
+        "management": ["Cultivate YMV-resistant varieties", "Vector management", "Weed control"]
+      },
+      {
+        "name": "Cercospora Leaf Spot",
+        "favorable_conditions": ["High humidity", "Frequent rainfall"],
+        "symptoms": ["Circular brown spots with grey centers on leaves", "Premature defoliation"],
+        "management": ["Spray Carbendazim 50 WP or Mancozeb 75 WP @ 2 g/L"]
+      },
+      {
+        "name": "Powdery Mildew",
+        "favorable_conditions": ["Cool and dry weather", "Late sown crops"],
+        "symptoms": ["White powdery growth on leaves and stems"],
+        "management": ["Wettable sulphur spray"]
+      }
+    ],
+    "abiotic_risks": [
+      {
+        "name": "Waterlogging",
+        "trigger_conditions": ["Heavy continuous rainfall", "Flat bed sowing on heavy soils"],
+        "impact": "Root asphyxiation, sudden yellowing, root rot, and plant death.",
+        "mitigation": ["Sow on ridges or BBF", "Ensure proper surface drainage"]
+      },
+      {
+        "name": "Terminal Heat Stress",
+        "trigger_conditions": ["Summer/Zaid cropping during May", "Hot dry winds (Loo)"],
+        "impact": "Flower drop, poor pod setting, forced maturity.",
+        "mitigation": ["Frequent light irrigations during flowering", "Use of short-duration summer varieties"]
+      }
+    ]
+  },
+
+  "retrieval_chunks": [
+    {
+      "chunk_id": "blackgram_overview_001",
+      "chunk_type": "overview",
+      "title": "Black Gram (Urad) Overview",
+      "crop_name": "Black Gram",
+      "state_region": "India",
+      "district": "All",
+      "season": "Kharif/Zaid",
+      "advisory_category": "overview",
+      "text": "Black Gram, or Urad Dal, is a high-protein, short-duration pulse crop. It is highly valued for crop rotation and intercropping as it restores soil fertility by fixing nitrogen.",
+      "keywords": ["Urad", "Black Gram", "Pulse", "Nitrogen fixing", "Short duration"],
+      "metadata_tags": ["general_info", "intro"],
+      "source_ref_ids": ["src_iipr_blackgram_2022"]
+    },
+    {
+      "chunk_id": "blackgram_suitability_001",
+      "chunk_type": "suitability",
+      "title": "Black Gram Suitability Conditions",
+      "crop_name": "Black Gram",
+      "state_region": "India",
+      "district": "All",
+      "season": "Kharif",
+      "advisory_category": "suitability",
+      "text": "Urad requires well-drained loamy to medium black soils. It thrives in warm temperatures (25-35°C) and cannot tolerate waterlogging or high soil salinity.",
+      "keywords": ["Loam", "Well-drained", "Warm climate", "Waterlogging-sensitive"],
+      "metadata_tags": ["soil", "climate", "water"],
+      "source_ref_ids": ["src_jnkvv_urad_pop"]
+    },
+    {
+      "chunk_id": "blackgram_mymv_mgmt_001",
+      "chunk_type": "disease_management",
+      "title": "Managing Mungbean Yellow Mosaic Virus (MYMV) in Urad",
+      "crop_name": "Black Gram",
+      "state_region": "India",
+      "district": "All",
+      "season": "Kharif/Zaid",
+      "advisory_category": "disease_management",
+      "text": "MYMV is the most devastating disease in Black Gram, characterized by striking yellow mosaic patterns on leaves. It is transmitted entirely by the Whitefly. Planting resistant varieties like PU-31 and aggressively controlling whiteflies with Imidacloprid are the only effective management strategies.",
+      "keywords": ["MYMV", "Yellow Mosaic Virus", "Whitefly", "Yellow leaves", "Vector control"],
+      "metadata_tags": ["disease", "virus", "pest control"],
+      "source_ref_ids": ["src_iipr_blackgram_2022"]
+    },
+    {
+      "chunk_id": "blackgram_rice_fallow_001",
+      "chunk_type": "cultivation_practice",
+      "title": "Rice Fallow Cultivation of Black Gram",
+      "crop_name": "Black Gram",
+      "state_region": "Andhra Pradesh, Tamil Nadu",
+      "district": "All",
+      "season": "Rabi",
+      "advisory_category": "cultivation_practice",
+      "text": "In coastal regions, Urad is broadcasted directly into standing rice fields just before harvest. It utilizes residual soil moisture and nutrients without requiring any tillage, significantly reducing input costs.",
+      "keywords": ["Rice fallow", "Zero tillage", "Relay cropping", "Residual moisture", "Broadcast"],
+      "metadata_tags": ["agronomy", "rice_fallow", "zero_tillage"],
+      "source_ref_ids": ["src_tnau_urad_rice_fallow"]
+    }
+  ],
+
+  "structured_explanation_rules": [
+    {
+      "rule_id": "blackgram_short_duration_match",
+      "condition": "input.available_growing_days >= 70 AND input.available_growing_days <= 90",
+      "message": "Black Gram is a perfect fit for your short growing window, allowing for a timely subsequent crop while boosting soil nitrogen.",
+      "priority": 1,
+      "severity": "positive_match"
+    },
+    {
+      "rule_id": "blackgram_waterlogging_reject",
+      "condition": "input.soil_drainage == 'poor' OR input.waterlogging_history == true",
+      "message": "Severe Risk: Black Gram is highly sensitive to waterlogging. Poor drainage will lead to rapid root rot and total crop failure.",
+      "priority": 1,
+      "severity": "hard_reject"
+    },
+    {
+      "rule_id": "blackgram_ymv_warning",
+      "condition": "input.region_history_ymv == true",
+      "message": "Your region has a history of Yellow Mosaic Virus. It is mandatory to use YMV-resistant varieties and manage whiteflies diligently.",
+      "priority": 2,
+      "severity": "warning"
+    },
+    {
+      "rule_id": "blackgram_summer_heat_warning",
+      "condition": "input.season == 'Zaid' AND input.max_temp_c > 40",
+      "message": "Warning: Summer temperatures above 40°C can cause severe flower drop. Maintain consistent soil moisture via irrigation during the flowering stage.",
+      "priority": 3,
+      "severity": "warning"
+    }
+  ],
+
+  "ui_response_templates": {
+    "best_match_intro": "Black Gram (Urad) is an excellent short-duration crop for your well-drained field, acting as a great soil improver.",
+    "warning_drainage": "Your field's drainage needs improvement. Sow Urad on ridges or Broad Bed Furrows to avoid water stagnation.",
+    "warning_ymv": "Alert: Ensure you purchase YMV-resistant seeds, as Whitefly populations could pose a severe risk to your crop.",
+    "cta_view_advisory": "View full Urad Dal cultivation advisory",
+    "cta_view_ymv_guide": "Read the MYMV and Whitefly Management Guide"
+  },
+
+  "source_registry": [
+    {
+      "source_id": "src_iipr_blackgram_2022",
+      "title": "Black Gram Production Technology",
+      "source_type": "pdf",
+      "publisher": "ICAR - Indian Institute of Pulses Research (IIPR), Kanpur",
+      "region_scope": "India",
+      "season_scope": "Kharif and Zaid",
+      "crop_scope": ["Black Gram"],
+      "content_summary": "Comprehensive national guidelines covering high-yielding YMV-resistant varieties, integrated nutrient, and pest management for Urad.",
+      "date_published": "2022-04-10",
+      "trust_level": "high"
+    },
+    {
+      "source_id": "src_jnkvv_urad_pop",
+      "title": "Package of Practices for Kharif Pulses",
+      "source_type": "manual",
+      "publisher": "Jawaharlal Nehru Krishi Vishwa Vidyalaya (JNKVV), Jabalpur",
+      "region_scope": "Madhya Pradesh",
+      "season_scope": "Kharif",
+      "crop_scope": ["Black Gram", "Green Gram"],
+      "content_summary": "State-level recommendations for pulse cultivation on black soils of Central India.",
+      "date_published": "2021-06-05",
+      "trust_level": "high"
+    },
+    {
+      "source_id": "src_tnau_urad_rice_fallow",
+      "title": "TNAU Agritech Portal - Rice Fallow Pulses",
+      "source_type": "website",
+      "publisher": "Tamil Nadu Agricultural University (TNAU)",
+      "region_scope": "Tamil Nadu",
+      "season_scope": "Rabi",
+      "crop_scope": ["Black Gram", "Green Gram"],
+      "content_summary": "Specific techniques for zero-tillage relay cropping of pulses in the deltaic regions.",
+      "date_published": "2022-10-15",
+      "trust_level": "high"
+    },
+    {
+      "source_id": "src_angrau_blackgram",
+      "title": "Black Gram Cultivation in Andhra Pradesh",
+      "source_type": "bulletin",
+      "publisher": "Acharya N.G. Ranga Agricultural University (ANGRAU)",
+      "region_scope": "Andhra Pradesh",
+      "season_scope": "Rabi",
+      "crop_scope": ["Black Gram"],
+      "content_summary": "Guide for Rabi and rice fallow urad, focusing on foliar nutrition and pest management.",
+      "date_published": "2021-08-20",
+      "trust_level": "high"
+    }
+  ],
+
+  "quality_flags": {
+    "is_complete": true,
+    "missing_fields": [],
+    "weakly_supported_fields": [],
+    "last_reviewed_at": "2023-11-25T00:00:00Z"
+  },
+
+  "updated_at": "2023-11-25T00:00:00Z",
+  "created_at": "2023-11-25T00:00:00Z"
+}

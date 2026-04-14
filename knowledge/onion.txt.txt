@@ -1,0 +1,440 @@
+{
+  "crop_id": "onion",
+  "crop_name": "Onion",
+  "aliases": ["Pyaz", "Kanda", "Ulli", "Dungri", "Piyaz", "Eerulli"],
+  "crop_group": "Vegetable",
+  "status": "active",
+  "language": "en",
+  "version": "v1.2",
+
+  "master_profile": {
+    "short_description": "Onion is a commercially highly important bulb vegetable crop in India. It requires a cool climate during vegetative growth and a warm, dry climate during bulb maturation and harvest.",
+    "seasons_supported": ["Kharif", "Late Kharif", "Rabi"],
+    "regions_supported": ["Maharashtra", "Karnataka", "Madhya Pradesh", "Gujarat", "Bihar", "Andhra Pradesh", "Rajasthan", "Haryana"],
+    "agro_climatic_zones": ["Western Plateau and Hills Region", "Southern Plateau and Hills Region", "Central Plateau and Hills Region", "Trans-Gangetic Plains Region"],
+
+    "soil_suitability": {
+      "suitable_soil_textures": ["Sandy loam", "Clay loam", "Silt loam", "Friable alluvial soils"],
+      "unsuitable_soil_textures": ["Heavy clay", "Compact or stony soils", "Alkaline or saline soils"],
+      "ideal_ph_min": 6.0,
+      "ideal_ph_max": 7.5,
+      "acceptable_ph_min": 5.8,
+      "acceptable_ph_max": 8.0,
+      "salinity_tolerance_note": "Highly sensitive to salinity. High salt levels restrict root growth and bulb expansion.",
+      "drainage_requirement": "Requires exceptionally well-drained soils. Waterlogging promotes basal rot, purple blotch, and drastically reduces bulb shelf life.",
+      "organic_carbon_note": "Requires high organic matter to maintain soil friability. Hard or compact soils result in misshapen bulbs."
+    },
+
+    "climate_suitability": {
+      "ideal_temperature_c_min": 13,
+      "ideal_temperature_c_max": 24,
+      "acceptable_temperature_c_min": 10,
+      "acceptable_temperature_c_max": 35,
+      "ideal_humidity_min": 50,
+      "ideal_humidity_max": 70,
+      "ideal_rainfall_mm_min": 500,
+      "ideal_rainfall_mm_max": 750,
+      "frost_tolerance_note": "Tolerates mild frost during the early vegetative stage, but severe frost damages the leaves and impacts bulb development.",
+      "heat_tolerance_note": "Requires higher temperatures (25-30°C) during bulb development and maturity, but extreme heat (>35°C) with low moisture can cause early maturity and small bulbs."
+    },
+
+    "water_profile": {
+      "irrigation_required": true,
+      "rainfed_suitable": false,
+      "waterlogging_tolerance": "Very low; standing water for even a short duration causes root decay and favors fungal diseases.",
+      "drought_tolerance": "Low; it has a shallow fibrous root system and requires frequent, light irrigations.",
+      "critical_water_stages": ["Bulb initiation (45-60 DAT)", "Bulb development/enlargement (75-90 DAT)"]
+    },
+
+    "nutrient_profile": {
+      "nitrogen_demand": "High (100-150 kg/ha in splits; do not apply after 60 DAT)",
+      "phosphorus_demand": "Moderate to High (50-80 kg/ha for root establishment)",
+      "potassium_demand": "High (50-100 kg/ha for bulb size, quality, and storage life)",
+      "micronutrient_notes": ["Sulphur (30-45 kg/ha) is critical for pungency (allyl propyl disulphide) and storage quality.", "Zinc and Boron foliar sprays prevent tip burn and improve bulb quality."]
+    },
+
+    "cropping_context": {
+      "suitable_previous_crops": ["Legumes", "Cereals (Wheat, Maize)", "Soybean"],
+      "unsuitable_previous_crops": ["Garlic", "Other Allium species (increases soil-borne diseases and nematodes)"],
+      "rotation_notes": ["Soybean - Rabi Onion", "Maize - Onion", "Paddy - Onion"],
+      "intercrop_options": ["Sugarcane (in early stages)", "Chili"]
+    },
+
+    "crop_duration": {
+      "duration_days_min": 100,
+      "duration_days_max": 150,
+      "maturity_indicators": ["Neck fall (50-75% of tops bend over)", "Leaves turn yellow and dry", "Bulbs attain specific variety color and size"]
+    },
+
+    "recommendation_logic": {
+      "why_recommend_conditions": ["Well-drained friable soils", "Cool vegetative phase followed by warm dry maturity phase", "Assured irrigation"],
+      "why_not_recommend_conditions": ["Heavy, compact clay soils", "Water-scarce areas", "High humidity during harvest"],
+      "hard_rejection_conditions": ["Frequent waterlogging", "High soil salinity/alkalinity"]
+    }
+  },
+
+  "region_season_advisories": [
+    {
+      "advisory_id": "onion_maharashtra_rabi",
+      "state_region": "Maharashtra",
+      "district": "Nashik, Pune, Ahmednagar, Dhule",
+      "season": "Rabi",
+      "advisory_type": "cultivation_guide",
+      "applicability_filters": {
+        "irrigation": "irrigated",
+        "soil_type": "medium black to sandy loam",
+        "sowing_window": "Nursery in Oct-Nov, Transplant in Dec-Jan"
+      },
+
+      "sowing": {
+        "sowing_window_start": "December 15",
+        "sowing_window_end": "January 15",
+        "seed_rate": { "value": 8, "unit": "kg/ha for nursery", "range_type": "recommended", "source_confidence": "high" },
+        "seed_treatment": "Treat seeds with Thiram @ 2g/kg + Carbendazim @ 1g/kg to prevent damping off in nursery. Dip seedling roots in Azospirillum + PSB (50g/L water) before transplanting.",
+        "spacing": "15 cm x 10 cm",
+        "sowing_depth_cm": 2,
+        "nursery_required": true,
+        "transplanting_required": true
+      },
+
+      "land_preparation": {
+        "summary": "Plough 2-3 times to achieve a fine, friable tilth. Create flat beds or Broad Bed Furrows (BBF). BBF is highly recommended to avoid waterlogging and reduce basal rot."
+      },
+
+      "fertilizer": {
+        "basal_dose": "Apply 50% N (50 kg), full P2O5 (50 kg), full K2O (50 kg), and Sulphur (30 kg) per hectare at transplanting.",
+        "top_dressing": "Apply remaining 50% N in two equal splits at 30 and 45 Days After Transplanting (DAT). Stop nitrogen application after 60 DAT to prevent thick necks and poor storage.",
+        "organic_manure": "Apply 20 tonnes/ha of well-rotted FYM or compost during the last ploughing.",
+        "micronutrients": "Foliar spray of micronutrient mixture (Zn, B, Fe) at 45 and 60 DAT if tip yellowing is observed."
+      },
+
+      "irrigation": {
+        "schedule": "Provide a light irrigation immediately after transplanting. Irrigate every 10-12 days during vegetative growth and every 7-8 days during bulb development. Stop irrigation 15 days before harvest.",
+        "critical_stages": ["Bulb initiation", "Bulb enlargement"],
+        "rainfed_advice": "Rabi onion is purely an irrigated crop."
+      },
+
+      "weed_management": {
+        "summary": "Pre-emergence application of Oxyfluorfen 23.5% EC @ 1.5 ml/L or Pendimethalin 30 EC @ 3.5 L/ha within 3 days of transplanting. Follow with 1-2 manual weedings."
+      },
+
+      "pest_management": [
+        {
+          "name": "Onion Thrips (Thrips tabaci)",
+          "symptoms": "Nymphs and adults rasp the leaf surface and suck sap, causing silvery/white blotches and curling of leaves. Severe attack stunts bulb growth.",
+          "management": "Spray Fipronil 5 SC @ 1.5 ml/L or Spinosad 45 SC @ 0.3 ml/L or Profenofos 50 EC @ 1 ml/L. Always add a sticker/spreader to the spray solution."
+        },
+        {
+          "name": "Onion Maggot",
+          "symptoms": "Maggots feed on the roots and the base of the developing bulb, causing yellowing of leaves and rotting of bulbs.",
+          "management": "Soil application of Phorate 10G or Carbofuran 3G. Crop rotation with non-allium crops."
+        }
+      ],
+
+      "disease_management": [
+        {
+          "name": "Purple Blotch (Alternaria porri)",
+          "symptoms": "Small, sunken, whitish lesions with purple centers on leaves and flower stalks. The lesions enlarge, causing leaves to break and die.",
+          "management": "Spray Mancozeb 75 WP @ 2.5 g/L or Tebuconazole 25.9 EC @ 1 ml/L or Azoxystrobin 25 EC @ 1 ml/L. Ensure good drainage and wider spacing."
+        },
+        {
+          "name": "Basal Rot (Fusarium oxysporum)",
+          "symptoms": "Yellowing and dying of leaves from the tip downwards. The base of the bulb rots, roots decay, and white fungal growth is visible.",
+          "management": "Crop rotation for 3-4 years. Seedling root dip in Trichoderma viride. Avoid water stagnation."
+        }
+      ],
+
+      "deficiency_management": [
+        {
+          "nutrient": "Sulphur",
+          "symptoms": "Pale green/yellow younger leaves, reduced pungency, and poor shelf life of bulbs.",
+          "remedy": "Apply Gypsum or use Ammonium Sulphate/SSP as fertilizer sources. Apply elemental sulphur @ 30 kg/ha during land preparation."
+        }
+      ],
+
+      "harvest": {
+        "harvest_signs": "50-75% of the plants show 'neck fall' (tops dry and bend over). Bulbs attain full size and characteristic color.",
+        "post_harvest_notes": "Curing is critical: dry the uprooted plants in the field in windrows for 3-5 days under shade (leaves covering bulbs to prevent sun-scald), then cut the tops leaving 2-2.5 cm of the neck. Store in well-ventilated structures (Chawls).",
+        "expected_duration_days": 130
+      },
+
+      "special_cautions": ["Do not apply Nitrogen late in the season (after 60 DAT) as it causes 'thick neck' bulbs which rot quickly in storage.", "Stop irrigation 10-15 days before harvest to improve curing and keeping quality."],
+      "faq": [
+        {
+          "question": "What is 'bolting' in onion, and why does it happen?",
+          "answer": "Bolting is the premature formation of flower stalks before the bulb fully develops. It is caused by severe temperature fluctuations, late transplanting, or transplanting over-aged seedlings (>8 weeks old)."
+        },
+        {
+          "question": "How can I improve the storage life of my Rabi onions?",
+          "answer": "Stop irrigation 15 days prior to harvest, avoid late nitrogen applications, ensure proper field and shade curing, and leave a 2.5 cm neck when cutting the tops."
+        }
+      ],
+
+      "source_refs": ["src_dogr_onion_pop", "src_mpkv_onion_rabi"]
+    },
+    {
+      "advisory_id": "onion_karnataka_kharif",
+      "state_region": "Karnataka",
+      "district": "Chitradurga, Dharwad, Gadag, Bagalkot",
+      "season": "Kharif",
+      "advisory_type": "cultivation_guide",
+      "applicability_filters": {
+        "irrigation": "rainfed to semi-irrigated",
+        "soil_type": "red sandy loam to medium black soils",
+        "sowing_window": "Nursery in May-June, Transplant in July-August"
+      },
+
+      "sowing": {
+        "sowing_window_start": "July 01",
+        "sowing_window_end": "August 15",
+        "seed_rate": { "value": 8, "unit": "kg/ha for nursery", "range_type": "recommended" },
+        "seed_treatment": "Treat with Metalaxyl 35 WS @ 2g/kg to prevent damping off during monsoon nursery raising.",
+        "spacing": "15 cm x 10 cm on BBF (Broad Bed Furrow)",
+        "sowing_depth_cm": 2,
+        "nursery_required": true,
+        "transplanting_required": true
+      },
+
+      "land_preparation": {
+        "summary": "Since it is a Kharif crop, BBF or raised beds are absolutely mandatory to quickly drain excess monsoon rainwater and prevent basal rot and bulb rot."
+      },
+
+      "fertilizer": {
+        "basal_dose": "60 kg N, 50 kg P2O5, 50 kg K2O/ha.",
+        "top_dressing": "Top-dress 60 kg N/ha at 30-35 DAT. Kharif onions require slightly higher Nitrogen."
+      },
+
+      "irrigation": {
+        "schedule": "Depends heavily on monsoon. If dry spells occur, irrigate at bulb initiation (45 DAT). Ensure field is completely drained after heavy showers.",
+        "critical_stages": ["Bulb initiation", "Bulb development"]
+      },
+
+      "weed_management": {
+        "summary": "Pre-emergence Oxyfluorfen 23.5 EC @ 1.5 ml/L. Kharif weeds are aggressive; ensure manual weeding at 45 DAT."
+      },
+
+      "pest_management": [
+        {
+          "name": "Thrips",
+          "symptoms": "Silvery patches on leaves. Causes 'white tip' symptom.",
+          "management": "Spray Fipronil 5 SC @ 1.5 ml/L or Lambda-cyhalothrin 5 EC @ 1 ml/L."
+        }
+      ],
+
+      "disease_management": [
+        {
+          "name": "Colletotrichum Blight / Anthracnose",
+          "symptoms": "Water-soaked, sunken, circular to irregular lesions with pinkish spore masses. Leaves twist and die. Extremely destructive in Kharif.",
+          "management": "Spray Chlorothalonil 75 WP @ 2g/L or Pyraclostrobin 20 WG @ 1ml/L at 15-day intervals during heavy rains."
+        }
+      ],
+
+      "harvest": {
+        "harvest_signs": "Kharif onions do not store well. Harvest immediately after 50% neck fall. Bulbs are mostly sold directly to fresh markets.",
+        "post_harvest_notes": "Curing in shade for 2-3 days is sufficient before marketing. Do not store for long periods.",
+        "expected_duration_days": 110
+      },
+
+      "special_cautions": ["Kharif onions are highly susceptible to Anthracnose/Twister disease due to high humidity. Preventive fungicide sprays are essential."],
+      "source_refs": ["src_uas_dharwad_onion"]
+    }
+  ],
+
+  "risk_library": {
+    "pests": [
+      {
+        "name": "Thrips (Thrips tabaci)",
+        "favorable_conditions": ["Dry, warm weather", "Close spacing", "Late Rabi season"],
+        "symptoms": ["Silvery white patches on leaves", "Curling of leaf tips", "Stunted bulbs"],
+        "management": ["Use blue sticky traps", "Alternating insecticide sprays (Fipronil, Spinosad, Lambda-cyhalothrin) with silicon stickers"]
+      },
+      {
+        "name": "Onion Maggot",
+        "favorable_conditions": ["High organic matter", "Cool, moist soils"],
+        "symptoms": ["Yellowing of seedlings", "Rotting of bulbs at the base"],
+        "management": ["Soil application of Phorate", "Crop rotation"]
+      }
+    ],
+    "diseases": [
+      {
+        "name": "Purple Blotch (Alternaria porri)",
+        "favorable_conditions": ["High humidity (>70%)", "Frequent rains or heavy dew", "Temperatures between 25-30°C"],
+        "symptoms": ["Purple-centered sunken lesions", "Leaf breakage at the lesion"],
+        "management": ["Spray systemic fungicides (Tebuconazole/Azoxystrobin)", "Avoid waterlogging", "Wider spacing"]
+      },
+      {
+        "name": "Basal Rot (Fusarium oxysporum)",
+        "favorable_conditions": ["Waterlogging", "High soil temperatures", "Damage to roots during transplanting"],
+        "symptoms": ["Yellowing from tip downwards", "Rotting of the basal plate", "White fungal growth on roots"],
+        "management": ["Seedling dip in Trichoderma", "Plant on raised beds (BBF)", "Crop rotation"]
+      },
+      {
+        "name": "Anthracnose / Twister Disease",
+        "favorable_conditions": ["High rainfall and humidity (Kharif season)"],
+        "symptoms": ["Twisting and curling of leaves", "Elongated neck (false stem)", "Pinkish spore masses"],
+        "management": ["Preventive sprays of Chlorothalonil or Pyraclostrobin", "Ensure excellent drainage"]
+      }
+    ],
+    "abiotic_risks": [
+      {
+        "name": "Bolting (Premature Seeding)",
+        "trigger_conditions": ["Sudden drop in temperature during vegetative stage", "Transplanting over-aged seedlings (>60 days)", "Nutrient stress"],
+        "impact": "Flower stalks form, causing the bulb to become hard, lightweight, and unfit for market or storage.",
+        "mitigation": ["Transplant 45-50 day old seedlings", "Use recommended, timely-sown varieties"]
+      },
+      {
+        "name": "Thick Neck",
+        "trigger_conditions": ["Excessive/late nitrogen application", "Excess moisture near harvest"],
+        "impact": "Necks remain green and thick, bulbs do not cure properly, leading to rapid rotting in storage.",
+        "mitigation": ["Halt nitrogen at 60 DAT", "Stop irrigation 15 days before harvest"]
+      }
+    ]
+  },
+
+  "retrieval_chunks": [
+    {
+      "chunk_id": "onion_overview_001",
+      "chunk_type": "overview",
+      "title": "Onion Crop Overview",
+      "crop_name": "Onion",
+      "state_region": "India",
+      "district": "All",
+      "season": "Rabi/Kharif",
+      "advisory_category": "overview",
+      "text": "Onion (Kanda/Pyaz) is a highly commercial bulb vegetable crop. India is the second-largest producer globally. Rabi onions have a longer shelf life and are primarily grown for storage, while Kharif onions meet fresh market demands.",
+      "keywords": ["Onion", "Pyaz", "Kanda", "Bulb", "Vegetable", "Rabi"],
+      "metadata_tags": ["general_info", "intro"],
+      "source_ref_ids": ["src_dogr_onion_pop"]
+    },
+    {
+      "chunk_id": "onion_suitability_001",
+      "chunk_type": "suitability",
+      "title": "Onion Soil and Climate Suitability",
+      "crop_name": "Onion",
+      "state_region": "India",
+      "district": "All",
+      "season": "All",
+      "advisory_category": "suitability",
+      "text": "Onions demand highly friable, well-drained sandy loam or clay loam soils. Heavy clay restricts bulb expansion. It requires cool weather for leafy growth and dry, warm weather for bulb maturity and curing.",
+      "keywords": ["Sandy loam", "Drainage", "Bulb expansion", "Curing", "Friable soil"],
+      "metadata_tags": ["soil", "climate", "water"],
+      "source_ref_ids": ["src_mpkv_onion_rabi"]
+    },
+    {
+      "chunk_id": "onion_curing_001",
+      "chunk_type": "harvest_management",
+      "title": "Curing and Storage of Onion",
+      "crop_name": "Onion",
+      "state_region": "India",
+      "district": "All",
+      "season": "Rabi",
+      "advisory_category": "harvest_management",
+      "text": "Proper curing is essential for the long-term storage of Rabi onions. Stop irrigation 15 days before harvest. After uprooting, dry them in windrows in the field under the shade of their own leaves to prevent sun-scald. Finally, cut tops leaving a 2.5 cm neck to seal the bulb from pathogens.",
+      "keywords": ["Curing", "Storage", "Neck fall", "Harvest", "Sun-scald"],
+      "metadata_tags": ["harvest", "post_harvest", "quality"],
+      "source_ref_ids": ["src_dogr_onion_pop"]
+    },
+    {
+      "chunk_id": "onion_thick_neck_001",
+      "chunk_type": "nutrient_management",
+      "title": "Preventing Thick Neck and Bolting",
+      "crop_name": "Onion",
+      "state_region": "India",
+      "district": "All",
+      "season": "All",
+      "advisory_category": "nutrient_management",
+      "text": "Applying Nitrogen fertilizers late in the season (after 60 days of transplanting) delays maturity and creates 'thick neck' onions that rot easily in storage. Similarly, transplanting seedlings older than 8 weeks induces premature flowering, known as 'bolting'.",
+      "keywords": ["Thick neck", "Bolting", "Nitrogen", "Over-aged seedlings", "Storage loss"],
+      "metadata_tags": ["nutrient", "agronomy", "quality"],
+      "source_ref_ids": ["src_dogr_onion_pop"]
+    }
+  ],
+
+  "structured_explanation_rules": [
+    {
+      "rule_id": "onion_soil_match",
+      "condition": "input.soil_drainage == 'well_drained' AND input.soil_texture IN ['sandy loam', 'loam', 'silt loam', 'alluvial']",
+      "message": "Your friable, well-drained soil is perfect for Onion, allowing for unrestricted bulb expansion and greatly reducing disease risk.",
+      "priority": 1,
+      "severity": "positive_match"
+    },
+    {
+      "rule_id": "onion_heavy_clay_reject",
+      "condition": "input.soil_texture == 'heavy clay'",
+      "message": "Critical Warning: Heavy clay soils severely restrict bulb development, resulting in misshapen, small onions. High risk of waterlogging and basal rot.",
+      "priority": 1,
+      "severity": "hard_reject"
+    },
+    {
+      "rule_id": "onion_late_nitrogen_warning",
+      "condition": "input.growth_stage == 'bulb_development' OR input.days_after_transplanting > 60",
+      "message": "Warning: Do not apply nitrogen fertilizers at this late stage. It will cause 'thick necks', delay maturity, and ruin the storage life of the onions.",
+      "priority": 2,
+      "severity": "warning"
+    },
+    {
+      "rule_id": "onion_harvest_curing_info",
+      "condition": "input.growth_stage == 'maturity'",
+      "message": "Action Required: Stop all irrigation 15 days before uprooting. Ensure proper shade curing of harvested bulbs to maximize shelf life.",
+      "priority": 3,
+      "severity": "info"
+    }
+  ],
+
+  "ui_response_templates": {
+    "best_match_intro": "Kanda (Onion) is an excellent, highly profitable crop for your friable, well-drained soil and available irrigation.",
+    "warning_heavy_soil": "Your field's heavy clay soil will restrict onion bulb growth and cause rotting. Cultivation is not recommended unless grown on heavily amended raised beds.",
+    "warning_pest": "Alert: Thrips are a major threat to onion fields. Keep blue sticky traps ready and monitor the crop closely.",
+    "cta_view_advisory": "View full Onion cultivation advisory",
+    "cta_view_curing_guide": "Read the Harvesting and Curing Guide"
+  },
+
+  "source_registry": [
+    {
+      "source_id": "src_dogr_onion_pop",
+      "title": "Onion Production Technology",
+      "source_type": "pdf",
+      "publisher": "ICAR - Directorate of Onion and Garlic Research (DOGR), Pune",
+      "region_scope": "India",
+      "season_scope": "Kharif, Late Kharif, Rabi",
+      "crop_scope": ["Onion"],
+      "content_summary": "Comprehensive national guidelines covering seasonal varieties, weed management, purple blotch mitigation, and scientific curing/storage methods.",
+      "date_published": "2022-04-10",
+      "trust_level": "high"
+    },
+    {
+      "source_id": "src_mpkv_onion_rabi",
+      "title": "Package of Practices for Rabi Onion",
+      "source_type": "manual",
+      "publisher": "Mahatma Phule Krishi Vidyapeeth (MPKV), Rahuri",
+      "region_scope": "Maharashtra",
+      "season_scope": "Rabi",
+      "crop_scope": ["Onion"],
+      "content_summary": "State-specific agronomic guidelines focusing on Nashik/Pune regions, highlighting nutrient schedules and thrips management.",
+      "date_published": "2021-08-15",
+      "trust_level": "high"
+    },
+    {
+      "source_id": "src_uas_dharwad_onion",
+      "title": "Kharif Onion Cultivation Guide",
+      "source_type": "bulletin",
+      "publisher": "University of Agricultural Sciences (UAS), Dharwad",
+      "region_scope": "Karnataka",
+      "season_scope": "Kharif",
+      "crop_scope": ["Onion"],
+      "content_summary": "Best practices for rainfed/semi-irrigated Kharif onions, emphasizing BBF planting and Anthracnose control.",
+      "date_published": "2022-06-20",
+      "trust_level": "high"
+    }
+  ],
+
+  "quality_flags": {
+    "is_complete": true,
+    "missing_fields": [],
+    "weakly_supported_fields": [],
+    "last_reviewed_at": "2024-05-10T00:00:00Z"
+  },
+
+  "updated_at": "2024-05-10T00:00:00Z",
+  "created_at": "2023-12-25T00:00:00Z"
+}

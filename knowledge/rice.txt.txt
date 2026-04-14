@@ -1,0 +1,537 @@
+{
+  "crop_id": "rice",
+  "crop_name": "Rice",
+  "aliases": ["Paddy", "Dhan", "Chawal", "Nellu"],
+  "crop_group": "Cereal",
+  "status": "active",
+  "language": "en",
+  "version": "v1.2",
+
+  "master_profile": {
+    "short_description": "Rice is a staple cereal crop in India, primarily grown in Kharif season but also in Rabi/Summer (Boro) in eastern and southern states. It requires high temperature, high humidity, and prolonged periods of standing water.",
+    "seasons_supported": ["Kharif", "Rabi", "Zaid", "Summer"],
+    "regions_supported": ["West Bengal", "Uttar Pradesh", "Punjab", "Andhra Pradesh", "Tamil Nadu", "Bihar", "Odisha", "Assam", "Telangana", "Haryana", "Chhattisgarh"],
+    "agro_climatic_zones": ["Lower Gangetic Plains", "Middle Gangetic Plains", "Trans-Gangetic Plains", "East Coast Plains and Hills", "Eastern Plateau and Hills"],
+
+    "soil_suitability": {
+      "suitable_soil_textures": ["Clay", "Clay loam", "Silty clay", "Heavy loam"],
+      "unsuitable_soil_textures": ["Sandy", "Gravelly", "Highly porous soils"],
+      "ideal_ph_min": 5.5,
+      "ideal_ph_max": 6.5,
+      "acceptable_ph_min": 5.0,
+      "acceptable_ph_max": 8.5,
+      "salinity_tolerance_note": "Moderately sensitive to salinity; specific tolerant varieties like CSR 30, CSR 43, and Lunishree exist for coastal/saline belts.",
+      "drainage_requirement": "Poorly drained soils with high water retention are ideal. An impervious sub-layer is highly beneficial to reduce percolation losses.",
+      "organic_carbon_note": "High organic carbon improves water retention, soil microbiology, and nutrient availability."
+    },
+
+    "climate_suitability": {
+      "ideal_temperature_c_min": 21,
+      "ideal_temperature_c_max": 35,
+      "acceptable_temperature_c_min": 15,
+      "acceptable_temperature_c_max": 40,
+      "ideal_humidity_min": 60,
+      "ideal_humidity_max": 90,
+      "ideal_rainfall_mm_min": 1000,
+      "ideal_rainfall_mm_max": 2500,
+      "frost_tolerance_note": "Highly sensitive to frost. Frost during seedling stage can cause complete mortality.",
+      "heat_tolerance_note": "High temperatures above 35°C during anthesis (flowering) can cause spikelet sterility and chaffy grains."
+    },
+
+    "water_profile": {
+      "irrigation_required": true,
+      "rainfed_suitable": true,
+      "waterlogging_tolerance": "High; thrives in standing water due to aerenchyma tissues.",
+      "drought_tolerance": "Low; highly sensitive to moisture stress, except for specific aerobic or upland varieties.",
+      "critical_water_stages": ["Active tillering", "Panicle initiation", "Flowering", "Milking"]
+    },
+
+    "nutrient_profile": {
+      "nitrogen_demand": "High (100-150 kg/ha depending on variety)",
+      "phosphorus_demand": "Medium (50-60 kg/ha)",
+      "potassium_demand": "Medium (40-60 kg/ha)",
+      "micronutrient_notes": ["Zinc deficiency is very common (Khaira disease).", "Iron toxicity can occur in continuously flooded acidic soils.", "Sulphur deficiency is emerging in continuously cropped areas."]
+    },
+
+    "cropping_context": {
+      "suitable_previous_crops": ["Legumes (Moong, Urd)", "Green manure crops like Dhaincha (Sesbania) or Sunhemp", "Potato", "Mustard"],
+      "unsuitable_previous_crops": ["Continuous rice-rice cultivation without rotation degrades soil health and increases pest load."],
+      "rotation_notes": ["Rice-Wheat (North India)", "Rice-Legume (South/East India)", "Rice-Potato-Sunflower (East India)"],
+      "intercrop_options": ["Generally grown as a sole crop; sometimes relay cropped with lathyrus/linseed (Utera cropping)."]
+    },
+
+    "crop_duration": {
+      "duration_days_min": 90,
+      "duration_days_max": 160,
+      "maturity_indicators": ["Panicles turn golden yellow", "Grains become hard", "Moisture content reaches 20-22%", "Lower leaves begin to dry"]
+    },
+
+    "recommendation_logic": {
+      "why_recommend_conditions": ["High rainfall areas", "Heavy clay soils with good water retention", "Assured irrigation availability for critical stages"],
+      "why_not_recommend_conditions": ["Water scarce regions", "Sandy soils with high percolation", "Areas prone to extreme heat stress (>40°C) during flowering window"],
+      "hard_rejection_conditions": ["Desert regions without irrigation", "Extremely sandy, highly drained soils"]
+    }
+  },
+
+  "region_season_advisories": [
+    {
+      "advisory_id": "rice_punjab_kharif_transplanted",
+      "state_region": "Punjab",
+      "district": "All",
+      "season": "Kharif",
+      "advisory_type": "cultivation_guide",
+      "applicability_filters": {
+        "irrigation": "irrigated",
+        "soil_type": "clay loam",
+        "method": "transplanted"
+      },
+
+      "sowing": {
+        "sowing_window_start": "May 15",
+        "sowing_window_end": "June 15",
+        "seed_rate": { "value": 20, "unit": "kg/ha", "range_type": "recommended" },
+        "seed_treatment": "Treat with Carbendazim 50 WP @ 2g/kg seed or soak in Streptocycline (1g/10L water) for bacterial blight prevention.",
+        "spacing": "20 cm x 15 cm",
+        "sowing_depth_cm": 2,
+        "nursery_required": true,
+        "transplanting_required": true
+      },
+
+      "land_preparation": {
+        "summary": "Puddling is essential to reduce percolation losses and control weeds. Incorporate green manure (Dhaincha) 1-2 days before puddling."
+      },
+
+      "fertilizer": {
+        "basal_dose": "1/3 N, full P2O5 and full K2O",
+        "top_dressing": "Remaining N in two equal splits at active tillering (21 DAT) and panicle initiation (42 DAT)",
+        "organic_manure": "10-15 t/ha FYM incorporated before puddling",
+        "micronutrients": "Zinc sulphate @ 25 kg/ha as basal. Do not mix Zinc with DAP."
+      },
+
+      "irrigation": {
+        "schedule": "Maintain 5 cm standing water during transplanting, active tillering, flowering, and grain filling.",
+        "critical_stages": ["Active tillering", "Panicle initiation", "Flowering"],
+        "rainfed_advice": "Not applicable for Punjab (nearly 100% irrigated)."
+      },
+
+      "weed_management": {
+        "summary": "Pre-emergence application of Butachlor 50 EC @ 3 L/ha or Pretilachlor 50 EC @ 1.5 L/ha mixed with 50 kg sand, broadcasted within 3 days of transplanting in standing water."
+      },
+
+      "pest_management": [
+        {
+          "name": "Stem Borer (Yellow Stem Borer)",
+          "symptoms": "Dead heart in vegetative stage, whitehead in reproductive stage.",
+          "management": "Apply Cartap hydrochloride 4G @ 25 kg/ha or spray Chlorantraniliprole 18.5 SC @ 150 ml/ha."
+        },
+        {
+          "name": "Brown Plant Hopper (BPH)",
+          "symptoms": "Hopper burn (drying of plants in circular patches), presence of nymphs/adults at the base of the plant.",
+          "management": "Spray Pymetrozine 50 WG @ 300g/ha or Dinotefuran 20 SG @ 200g/ha. Direct spray towards the basal portion. Avoid excessive nitrogen."
+        }
+      ],
+
+      "disease_management": [
+        {
+          "name": "Bacterial Leaf Blight (BLB)",
+          "symptoms": "Water-soaked to yellowish stripes on leaf margins rolling towards the midrib.",
+          "management": "Use resistant varieties (e.g., PR 126). Avoid excess nitrogen. Drain the field. Spray Streptocycline (15g) + Copper oxychloride (500g) per hectare."
+        },
+        {
+          "name": "Blast (Leaf and Neck)",
+          "symptoms": "Spindle-shaped spots on leaves with grey center and brown margins. Blackening of neck node causing panicle dropping.",
+          "management": "Spray Tricyclazole 75 WP @ 300 g/ha or Azoxystrobin 25 SC @ 500 ml/ha at disease onset."
+        }
+      ],
+
+      "deficiency_management": [
+        {
+          "nutrient": "Zinc",
+          "symptoms": "Rusty brown spots on leaves (Khaira disease), stunted growth, uneven tillering.",
+          "remedy": "Spray 0.5% Zinc sulphate heptahydrate + 0.25% slaked lime. Repeat after 15 days if needed."
+        }
+      ],
+
+      "harvest": {
+        "harvest_signs": "Grains in the lower portion of the panicle reach hard dough stage, and 80-85% grains turn golden yellow.",
+        "post_harvest_notes": "Dry paddy to 14% moisture content before storage or milling to prevent fungal growth.",
+        "expected_duration_days": 130
+      },
+
+      "special_cautions": ["Do not transplant over-aged seedlings (>35 days) as it severely reduces tillering.", "Stop irrigation 15 days before harvest to ensure uniform ripening."],
+      "faq": [
+        {
+          "question": "How to manage water during the early stages of transplanting?",
+          "answer": "Maintain a shallow depth of 2-3 cm for the first week after transplanting to help seedlings establish quickly, then increase depth to 5 cm."
+        }
+      ],
+
+      "source_refs": ["src_pau_rice_2023", "src_icar_rice_mgmt"]
+    },
+    {
+      "advisory_id": "rice_punjab_haryana_dsr",
+      "state_region": "Punjab & Haryana",
+      "district": "All districts",
+      "season": "Kharif",
+      "advisory_type": "cultivation_guide",
+      "applicability_filters": {
+        "irrigation": "irrigated",
+        "soil_type": ["medium to heavy textured", "clay loam"],
+        "method": "Direct Seeded Rice (DSR)"
+      },
+
+      "sowing": {
+        "sowing_window_start": "June 1",
+        "sowing_window_end": "June 15",
+        "seed_rate": { "value": 20, "unit": "kg/ha", "range_type": "recommended" },
+        "seed_treatment": "Treat with Carbendazim @ 2g/kg seed. Seed priming for 8-10 hours in water is recommended for better germination.",
+        "spacing": "20 cm row-to-row using zero-till drill",
+        "sowing_depth_cm": 2.5,
+        "nursery_required": false,
+        "transplanting_required": false
+      },
+
+      "land_preparation": {
+        "summary": "Laser land leveling is critical. Perform pre-sowing irrigation (rauni) and sow at tar-wattar (optimum moisture) condition."
+      },
+
+      "fertilizer": {
+        "basal_dose": "Full P2O5 and full K2O at sowing.",
+        "top_dressing": "Nitrogen applied in 3 equal splits: 3 weeks, 6 weeks, and 9 weeks after sowing.",
+        "micronutrients": "Foliar spray of 0.5% FeSO4 at 30, 45, and 60 DAS if iron deficiency (chlorosis) appears."
+      },
+
+      "irrigation": {
+        "schedule": "First irrigation at 21 days after sowing (DAS). Subsequent irrigations at 5-7 days interval depending on weather.",
+        "critical_stages": ["Tillering", "Flowering", "Grain filling"]
+      },
+
+      "weed_management": {
+        "summary": "Weed control is the biggest challenge in DSR. Spray Pendimethalin 30 EC @ 1.5 L/ha within 24 hours of sowing. Follow up with Bispyribac-sodium 10 SC @ 200 ml/ha at 15-25 DAS for post-emergence control."
+      },
+
+      "pest_management": [
+        {
+          "name": "Nematodes (Root-knot)",
+          "symptoms": "Stunted patches, root galls, yellowing of leaves.",
+          "management": "Ensure crop rotation. Apply Carbofuran 3G @ 33 kg/ha if nematode pressure is high."
+        }
+      ],
+
+      "harvest": {
+        "harvest_signs": "80% grains turn mature and golden. DSR matures 7-10 days earlier than transplanted rice.",
+        "post_harvest_notes": "Combine harvesting is suitable.",
+        "expected_duration_days": 120
+      },
+
+      "special_cautions": ["Do not attempt DSR in light sandy soils due to severe iron deficiency and weed pressure.", "Strictly avoid early irrigation before 21 DAS to prevent weed flush."],
+      "source_refs": ["src_pau_rice_2023", "src_irri_dsr_manual"]
+    },
+    {
+      "advisory_id": "rice_west_bengal_boro",
+      "state_region": "West Bengal",
+      "district": "Hooghly, Burdwan, Nadia, Murshidabad",
+      "season": "Summer (Boro)",
+      "advisory_type": "cultivation_guide",
+      "applicability_filters": {
+        "irrigation": "assured irrigation via tubewell or canal",
+        "soil_type": ["clay", "clay loam"],
+        "method": "transplanted"
+      },
+
+      "sowing": {
+        "sowing_window_start": "November 15",
+        "sowing_window_end": "December 15",
+        "seed_rate": { "value": 30, "unit": "kg/ha", "range_type": "recommended" },
+        "seed_treatment": "Treat with Tricyclazole @ 2g/kg seed. Protect nursery from cold injury using polythene covers.",
+        "spacing": "20 cm x 15 cm",
+        "sowing_depth_cm": 2,
+        "nursery_required": true,
+        "transplanting_required": true
+      },
+
+      "land_preparation": {
+        "summary": "Deep ploughing followed by thorough puddling. Boro rice requires fine tilth."
+      },
+
+      "fertilizer": {
+        "basal_dose": "1/4 N, full P, full K.",
+        "top_dressing": "Remaining N in three splits (active tillering, panicle initiation, heading). Boro responds highly to N fertilizers.",
+        "micronutrients": "Zinc application is highly recommended."
+      },
+
+      "irrigation": {
+        "schedule": "Continuous standing water of 3-5 cm. Water requirement is highest in this season due to high evaporation during March-April.",
+        "critical_stages": ["Panicle initiation", "Booting", "Flowering"]
+      },
+
+      "weed_management": {
+        "summary": "Apply Pretilachlor 50 EC @ 1.5 L/ha at 3 DAT."
+      },
+
+      "pest_management": [
+        {
+          "name": "Yellow Stem Borer",
+          "symptoms": "Whiteheads are very prominent during March-April.",
+          "management": "Apply Fipronil 0.3 G @ 15 kg/ha or spray Cartap Hydrochloride 50 SP @ 1 kg/ha."
+        }
+      ],
+
+      "disease_management": [
+        {
+          "name": "Brown Spot",
+          "symptoms": "Oval, brown spots with yellow halos on leaves and grains.",
+          "management": "Maintain proper soil fertility. Spray Mancozeb @ 2.5 g/L or Propiconazole @ 1 ml/L."
+        }
+      ],
+
+      "harvest": {
+        "harvest_signs": "Complete drying of fields 10 days before harvest. Grains turn hard and golden.",
+        "post_harvest_notes": "Harvest before pre-monsoon showers (Kalbaishakhi) to avoid grain damage.",
+        "expected_duration_days": 135
+      },
+      "special_cautions": ["Protect early sown nurseries from cold waves in December/January."],
+      "source_refs": ["src_bckv_boro_guide"]
+    }
+  ],
+
+  "risk_library": {
+    "pests": [
+      {
+        "name": "Stem Borer (Scirpophaga incertulas)",
+        "favorable_conditions": ["High nitrogen application", "Continuous standing water", "Continuous rice cultivation in the region"],
+        "symptoms": ["Central shoot turns brown and dries (Dead heart) in vegetative stage", "Empty, whitish panicles (Whitehead) at reproductive stage"],
+        "management": ["Use light traps (1/ha)", "Clipping of seedling tips before transplanting", "Apply granular insecticides like Cartap Hydrochloride or Fipronil in standing water"]
+      },
+      {
+        "name": "Brown Plant Hopper - BPH (Nilaparvata lugens)",
+        "favorable_conditions": ["High humidity", "Dense canopy", "Excessive nitrogen use", "Stagnant water"],
+        "symptoms": ["Yellowing and drying of plants in circular patches (Hopper burn)", "Sooty mold growth at the base"],
+        "management": ["Alleyways (30 cm gap for every 2 m) for aeration", "Avoid synthetic pyrethroids (causes resurgence)", "Spray Pymetrozine or Dinotefuran directed at the basal region"]
+      },
+      {
+        "name": "Leaf Folder (Cnaphalocrocis medinalis)",
+        "favorable_conditions": ["High humidity", "Shaded areas", "Excessive nitrogen"],
+        "symptoms": ["Leaves folded longitudinally and fastened with silk", "Larvae feed inside, leaving white longitudinal streaks"],
+        "management": ["Keep bunds weed-free", "Release Trichogramma chilonis", "Spray Cartap Hydrochloride 50 SP"]
+      }
+    ],
+    "diseases": [
+      {
+        "name": "Rice Blast (Magnaporthe oryzae)",
+        "favorable_conditions": ["High humidity (>90%)", "Night temperature 20-22°C", "Dew formation in mornings", "Overcast skies"],
+        "symptoms": ["Spindle or eye-shaped lesions on leaves with grey center and brown border", "Blackening of the neck node (Neck Blast) causing panicle rot"],
+        "management": ["Grow resistant varieties", "Avoid excessive N fertilizer", "Preventive spray of Tricyclazole 75 WP at heading stage"]
+      },
+      {
+        "name": "Sheath Blight (Rhizoctonia solani)",
+        "favorable_conditions": ["High temperature (28-32°C)", "High humidity", "High seed rate/dense planting"],
+        "symptoms": ["Greenish-grey, water-soaked, snake-skin like lesions on leaf sheaths near the water level", "Lesions enlarge and coalesce, moving upwards"],
+        "management": ["Wider spacing", "Apply Validamycin 3L @ 2 ml/L or Hexaconazole 5 EC @ 2 ml/L"]
+      },
+      {
+        "name": "Bacterial Leaf Blight - BLB (Xanthomonas oryzae)",
+        "favorable_conditions": ["Heavy rains", "Strong winds", "Waterlogged conditions"],
+        "symptoms": ["Water-soaked to yellowish stripes along leaf margins", "Milky bacterial ooze drops in early morning"],
+        "management": ["Do not apply N when disease is active", "Drain the field", "Spray Streptocycline"]
+      }
+    ],
+    "abiotic_risks": [
+      {
+        "name": "Drought / Moisture Stress",
+        "trigger_conditions": ["Delayed or deficit monsoon", "Canal water shortage", "Low reservoir levels"],
+        "impact": "Delayed transplanting, poor tillering, spikelet sterility if stress occurs at flowering, reduced grain weight.",
+        "mitigation": ["Adopt Direct Seeded Rice (DSR)", "Implement Alternate Wetting and Drying (AWD) to save 30% water", "Spray 2% KCl during dry spells to induce drought tolerance"]
+      },
+      {
+        "name": "Cold Stress",
+        "trigger_conditions": ["Temperatures falling below 15°C during nursery (Boro season) or flowering (Basmati in late Kharif)"],
+        "impact": "Yellowing of seedlings, poor germination, incomplete panicle exertion, high spikelet sterility.",
+        "mitigation": ["Cover nursery with polythene sheets at night", "Maintain deeper standing water (5-7 cm) during cold nights to keep the microclimate warm"]
+      },
+      {
+        "name": "Iron Toxicity",
+        "trigger_conditions": ["Continuous flooding in highly acidic (pH < 5.0) lateritic soils"],
+        "impact": "Bronzing of leaves (purplish-brown spots), poor root system, stunted growth.",
+        "mitigation": ["Intermittent drainage", "Apply lime to raise pH", "Apply adequate Potassium and Zinc"]
+      }
+    ]
+  },
+
+  "retrieval_chunks": [
+    {
+      "chunk_id": "rice_overview_001",
+      "chunk_type": "overview",
+      "title": "Rice Overview and Importance",
+      "crop_name": "Rice",
+      "state_region": "India",
+      "district": "All",
+      "season": "Kharif",
+      "advisory_category": "overview",
+      "text": "Rice is the most important food crop of India, covering about one-fourth of the total cropped area and providing food for more than half of the Indian population. It grows best in hot, humid conditions.",
+      "keywords": ["staple", "paddy", "kharif", "food crop", "Dhan"],
+      "metadata_tags": ["general_info", "intro"],
+      "source_ref_ids": ["src_icar_rice_mgmt"]
+    },
+    {
+      "chunk_id": "rice_suitability_001",
+      "chunk_type": "suitability",
+      "title": "Ideal Soil and Climate for Rice",
+      "crop_name": "Rice",
+      "state_region": "India",
+      "district": "All",
+      "season": "All",
+      "advisory_category": "suitability",
+      "text": "Rice requires heavy clay or clay loam soils with high water holding capacity. The ideal pH is 5.5-6.5. It thrives in regions receiving 1000-2000mm of rainfall or with assured irrigation networks.",
+      "keywords": ["clay", "water requirement", "pH", "rainfall", "humidity"],
+      "metadata_tags": ["soil", "climate", "suitability"],
+      "source_ref_ids": ["src_icar_rice_mgmt"]
+    },
+    {
+      "chunk_id": "rice_bph_management_001",
+      "chunk_type": "pest_management",
+      "title": "Brown Plant Hopper (BPH) Control in Paddy",
+      "crop_name": "Rice",
+      "state_region": "India",
+      "district": "All",
+      "season": "Kharif",
+      "advisory_category": "pest_management",
+      "text": "Brown Plant Hopper (BPH) causes 'hopper burn'. Manage it by maintaining 30cm alleyways for aeration, avoiding excess Urea, and spraying Dinotefuran 20 SG or Pymetrozine 50 WG directed at the base of the plant.",
+      "keywords": ["BPH", "Hopper burn", "Pymetrozine", "Dinotefuran", "Alleyways"],
+      "metadata_tags": ["Pest", "BPH", "Insecticide"],
+      "source_ref_ids": ["src_pau_rice_2023"]
+    },
+    {
+      "chunk_id": "rice_dsr_weed_001",
+      "chunk_type": "weed_management",
+      "title": "Weed Management in Direct Seeded Rice (DSR)",
+      "crop_name": "Rice",
+      "state_region": "Punjab, Haryana",
+      "district": "All",
+      "season": "Kharif",
+      "advisory_category": "weed_management",
+      "text": "In DSR, weed competition is severe. Pre-emergence application of Pendimethalin 30 EC at 1.5 L/ha within 24 hours of sowing is mandatory. Post-emergence, use Bispyribac-sodium at 20-25 days.",
+      "keywords": ["DSR", "Weed", "Pendimethalin", "Bispyribac-sodium", "Direct seeded"],
+      "metadata_tags": ["Weed control", "DSR", "Herbicide"],
+      "source_ref_ids": ["src_irri_dsr_manual"]
+    },
+    {
+      "chunk_id": "rice_khaira_zinc_001",
+      "chunk_type": "nutrient_management",
+      "title": "Managing Zinc Deficiency (Khaira Disease)",
+      "crop_name": "Rice",
+      "state_region": "India",
+      "district": "All",
+      "season": "All",
+      "advisory_category": "nutrient_management",
+      "text": "Khaira disease in rice is caused by Zinc deficiency. Symptoms include rusty brown spots on older leaves. Apply 25 kg/ha Zinc Sulphate to the soil, or spray 0.5% Zinc Sulphate solution on foliage.",
+      "keywords": ["Zinc", "Khaira", "Brown spots", "Zinc Sulphate"],
+      "metadata_tags": ["Nutrient", "Deficiency", "Disease"],
+      "source_ref_ids": ["src_icar_rice_mgmt"]
+    }
+  ],
+
+  "structured_explanation_rules": [
+    {
+      "rule_id": "rice_ph_match",
+      "condition": "input.ph >= ideal_ph_min AND input.ph <= ideal_ph_max",
+      "message": "Soil pH is highly suitable (5.5-6.5) for optimal rice nutrient uptake and yield.",
+      "priority": 1,
+      "severity": "positive_match"
+    },
+    {
+      "rule_id": "rice_low_water_warning",
+      "condition": "input.rainfall_mm < ideal_rainfall_mm_min AND input.irrigation_available == false",
+      "message": "Insufficient water availability for conventional transplanted rice. Consider Direct Seeded Rice (DSR) or alternative dryland crops.",
+      "priority": 1,
+      "severity": "warning"
+    },
+    {
+      "rule_id": "rice_sandy_soil_rejection",
+      "condition": "input.soil_texture == 'Sandy'",
+      "message": "Sandy soils have extremely high percolation rates, making it impossible to maintain the standing water required for traditional paddy. Not recommended.",
+      "priority": 5,
+      "severity": "critical"
+    },
+    {
+      "rule_id": "rice_salinity_warning",
+      "condition": "input.soil_salinity == 'High'",
+      "message": "High soil salinity detected. Conventional rice varieties will suffer high mortality. You must select salt-tolerant varieties like CSR 30 or Lunishree.",
+      "priority": 3,
+      "severity": "warning"
+    }
+  ],
+
+  "ui_response_templates": {
+    "best_match_intro": "Rice is an excellent choice for your field given the soil clay content and available irrigation.",
+    "warning_low_rainfall": "Your area has lower rainfall than ideal for paddy. Ensure adequate canal or groundwater irrigation support.",
+    "warning_sandy_soil": "Alert: Your soil is too sandy for traditional transplanted rice. Water loss will be severe.",
+    "critical_bph_alert": "Alert: Weather conditions are currently highly favorable for Brown Plant Hopper (BPH). Monitor basal portions of plants closely.",
+    "cta_view_advisory": "View full Paddy Cultivation Advisory",
+    "cta_dsr_guide": "Explore Direct Seeded Rice (DSR) techniques"
+  },
+
+  "source_registry": [
+    {
+      "source_id": "src_pau_rice_2023",
+      "title": "Package of Practices for Kharif Crops 2023",
+      "source_type": "pdf",
+      "publisher": "Punjab Agricultural University (PAU)",
+      "region_scope": "Punjab",
+      "season_scope": "Kharif",
+      "crop_scope": ["Rice", "Maize", "Cotton"],
+      "content_summary": "Official PAU guidelines for Kharif crop cultivation in Punjab.",
+      "date_published": "2023-03-01",
+      "trust_level": "high"
+    },
+    {
+      "source_id": "src_icar_rice_mgmt",
+      "title": "Rice Knowledge Management Portal (RKMP)",
+      "source_type": "website",
+      "publisher": "ICAR - Indian Institute of Rice Research (IIRR)",
+      "region_scope": "India",
+      "season_scope": "All",
+      "crop_scope": ["Rice"],
+      "content_summary": "Comprehensive national level data on rice varieties, pest management, and agronomy.",
+      "date_published": "2022-01-10",
+      "trust_level": "high"
+    },
+    {
+      "source_id": "src_irri_dsr_manual",
+      "title": "Direct Seeded Rice (DSR) Production Manual",
+      "source_type": "pdf",
+      "publisher": "International Rice Research Institute (IRRI)",
+      "region_scope": "South Asia",
+      "season_scope": "Kharif",
+      "crop_scope": ["Rice"],
+      "content_summary": "Best practices for dry direct-seeded rice, weed management, and water saving.",
+      "date_published": "2021-05-15",
+      "trust_level": "high"
+    },
+    {
+      "source_id": "src_bckv_boro_guide",
+      "title": "Boro Rice Cultivation Guidelines",
+      "source_type": "pdf",
+      "publisher": "Bidhan Chandra Krishi Viswavidyalaya (BCKV)",
+      "region_scope": "West Bengal",
+      "season_scope": "Summer (Boro)",
+      "crop_scope": ["Rice"],
+      "content_summary": "Specific practices for maximizing Boro rice yield in the Gangetic plains.",
+      "date_published": "2022-11-01",
+      "trust_level": "high"
+    }
+  ],
+
+  "quality_flags": {
+    "is_complete": true,
+    "missing_fields": [],
+    "weakly_supported_fields": [],
+    "review_status": "approved",
+    "approved_by": "Agronomy_AI_System",
+    "review_cycle_days": 180,
+    "last_reviewed_at": "2023-11-01T00:00:00Z"
+  },
+
+  "updated_at": "2023-11-01T00:00:00Z",
+  "created_at": "2023-10-25T00:00:00Z"
+}

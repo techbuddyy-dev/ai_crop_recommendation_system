@@ -1,0 +1,469 @@
+{
+  "crop_id": "sugarcane",
+  "crop_name": "Sugarcane",
+  "aliases": ["Ganna", "Karumbu", "Cheruku", "Kabbh", "Sherdi"],
+  "crop_group": "Commercial/Cash Crop",
+  "status": "active",
+  "language": "en",
+  "version": "v1.2",
+
+  "master_profile": {
+    "short_description": "Sugarcane is a long-duration, high-water-demanding commercial cash crop in India. It is a major source of sugar, jaggery, and ethanol, predominantly grown in tropical and sub-tropical regions.",
+    "seasons_supported": ["Spring", "Autumn", "Adsali", "Eksali"],
+    "regions_supported": ["Uttar Pradesh", "Maharashtra", "Karnataka", "Tamil Nadu", "Bihar", "Gujarat", "Andhra Pradesh", "Punjab", "Haryana"],
+    "agro_climatic_zones": ["Upper Gangetic Plains Region", "Middle Gangetic Plains Region", "Western Plateau and Hills Region", "Southern Plateau and Hills Region"],
+
+    "soil_suitability": {
+      "suitable_soil_textures": ["Deep loam", "Clay loam", "Alluvial soils", "Medium to deep black soils"],
+      "unsuitable_soil_textures": ["Extremely sandy soils", "Highly acidic soils", "Gravelly shallow soils"],
+      "ideal_ph_min": 6.5,
+      "ideal_ph_max": 7.5,
+      "acceptable_ph_min": 5.5,
+      "acceptable_ph_max": 8.5,
+      "salinity_tolerance_note": "Moderately tolerant to salinity. Salinity during the germination and early tillering phases can drastically reduce plant population.",
+      "drainage_requirement": "Requires well-drained soils. While it needs a lot of water, prolonged waterlogging restricts root aeration and promotes diseases like red rot.",
+      "organic_carbon_note": "Highly responsive to organic manure (FYM, press mud). High organic carbon improves moisture retention, critical for its long growth cycle."
+    },
+
+    "climate_suitability": {
+      "ideal_temperature_c_min": 20,
+      "ideal_temperature_c_max": 35,
+      "acceptable_temperature_c_min": 15,
+      "acceptable_temperature_c_max": 40,
+      "ideal_humidity_min": 50,
+      "ideal_humidity_max": 85,
+      "ideal_rainfall_mm_min": 1500,
+      "ideal_rainfall_mm_max": 2500,
+      "frost_tolerance_note": "Sensitive to severe frost, which damages the apical bud and reduces sucrose content by converting it into reducing sugars.",
+      "heat_tolerance_note": "Tolerates high heat if adequate moisture is available. Dry, hot winds (Loo) increase transpiration and require frequent irrigation."
+    },
+
+    "water_profile": {
+      "irrigation_required": true,
+      "rainfed_suitable": false,
+      "waterlogging_tolerance": "Moderate. Mature cane can withstand brief waterlogging, but stagnant water during early stages stunts tillering and promotes root rot.",
+      "drought_tolerance": "Low to Moderate. Deep roots provide some resilience, but prolonged moisture stress reduces cane girth, internode length, and sugar recovery.",
+      "critical_water_stages": ["Germination (10-35 DAS)", "Tillering (Formative phase, 60-130 DAS)", "Grand Growth (130-250 DAS)"]
+    },
+
+    "nutrient_profile": {
+      "nitrogen_demand": "Very High (150-300 kg/ha depending on region and season; split applications are mandatory)",
+      "phosphorus_demand": "Moderate to High (60-100 kg/ha)",
+      "potassium_demand": "High (60-120 kg/ha; critical for sucrose synthesis and disease resistance)",
+      "micronutrient_notes": ["Zinc (25 kg/ha Zinc Sulphate) is frequently needed.", "Iron deficiency occurs in calcareous soils; corrected via 1% FeSO4 foliar sprays."]
+    },
+
+    "cropping_context": {
+      "suitable_previous_crops": ["Wheat", "Mustard", "Potato", "Paddy", "Green Manure (Dhaincha)"],
+      "unsuitable_previous_crops": ["Continuous sugarcane (without breaks or green manuring) depletes soil fertility and builds up pests like early shoot borer and diseases like red rot."],
+      "rotation_notes": ["Paddy - Wheat - Sugarcane - Ratoon - Wheat", "Mustard - Sugarcane (Spring)", "Green Gram - Sugarcane (Autumn)"],
+      "intercrop_options": ["Wheat", "Mustard", "Potato", "Cabbage", "Onion", "Green Gram", "Garlic"]
+    },
+
+    "crop_duration": {
+      "duration_days_min": 300,
+      "duration_days_max": 540,
+      "maturity_indicators": ["Stoppage of vegetative growth", "Leaves turn yellowish and dry", "Metallic sound when tapped", "Brix reading of 18-20% on a hand refractometer"]
+    },
+
+    "recommendation_logic": {
+      "why_recommend_conditions": ["Assured irrigation availability throughout the year", "Deep fertile soils", "Proximity to sugar mills"],
+      "why_not_recommend_conditions": ["Water-scarce regions without assured irrigation", "Highly saline or waterlogged lands"],
+      "hard_rejection_conditions": ["Desert regions with no groundwater/canal irrigation", "Shallow rocky soils"]
+    }
+  },
+
+  "region_season_advisories": [
+    {
+      "advisory_id": "sugarcane_up_spring",
+      "state_region": "Uttar Pradesh",
+      "district": "Meerut, Muzaffarnagar, Bijnor, Saharanpur, Lakhimpur Kheri",
+      "season": "Spring",
+      "advisory_type": "cultivation_guide",
+      "applicability_filters": {
+        "irrigation": "irrigated",
+        "soil_type": "alluvial loam to clay loam",
+        "sowing_window": "February to mid-March"
+      },
+
+      "sowing": {
+        "sowing_window_start": "February 15",
+        "sowing_window_end": "March 20",
+        "seed_rate": { "value": 35000, "unit": "three-budded setts/ha", "range_type": "recommended", "source_confidence": "high" },
+        "seed_treatment": "Treat setts in 0.1% Carbendazim (Bavistin) 50 WP solution for 15-20 minutes to prevent sett rot and smut. Use hot water treatment (50°C for 2 hours) to control grassy shoot disease.",
+        "spacing": "90 cm row-to-row (trench or flat bed planting)",
+        "sowing_depth_cm": 15,
+        "nursery_required": false,
+        "transplanting_required": false
+      },
+
+      "land_preparation": {
+        "summary": "Deep ploughing up to 25-30 cm using a sub-soiler or mouldboard plough to break hardpans. Follow with 2-3 harrowings and planking to prepare a fine tilth. Use trench planting for better water management and lodging prevention."
+      },
+
+      "fertilizer": {
+        "basal_dose": "Apply 1/3rd N (50 kg), full P2O5 (80 kg), and full K2O (60 kg) per hectare in furrows below the setts at planting.",
+        "top_dressing": "Apply remaining N in two equal splits: at tillering (45-60 DAS) and grand growth (90-120 DAS) stages. Do not apply N after 120 days to avoid delayed maturity and reduced sugar recovery.",
+        "organic_manure": "Incorporate 15-20 tonnes/ha FYM or press mud 3-4 weeks prior to planting.",
+        "micronutrients": "Soil application of 25 kg/ha Zinc Sulphate in zinc-deficient areas."
+      },
+
+      "irrigation": {
+        "schedule": "Provide 6-8 irrigations before the monsoon and 2-3 post-monsoon. Maintain optimum moisture during the formative phase (tillering) to maximize cane population. Stop irrigation 15-20 days before harvest.",
+        "critical_stages": ["Formative Phase (60-130 days)", "Grand Growth Phase (130-250 days)"],
+        "rainfed_advice": "Not applicable for UP spring planting; assured irrigation is mandatory."
+      },
+
+      "weed_management": {
+        "summary": "Pre-emergence application of Atrazine 50 WP @ 2.0 kg a.i./ha or Metribuzin @ 1.0 kg a.i./ha in 500-600 liters of water within 3 days of planting. Do 2-3 hoeings before the canopy closes."
+      },
+
+      "pest_management": [
+        {
+          "name": "Early Shoot Borer (Chilo infuscatellus)",
+          "symptoms": "Causes 'dead heart' in 1-3 month old crop. The central whorl dries up and pulls out easily, emitting an offensive odor.",
+          "management": "Apply Chlorantraniliprole 0.4 GR @ 22.5 kg/ha or Fipronil 0.3 GR @ 25 kg/ha in soil at planting or early tillering. Release Trichogramma chilonis egg parasitoids."
+        },
+        {
+          "name": "Top Borer (Scirpophaga excerptalis)",
+          "symptoms": "Shot holes on leaves, red mining in the midrib, and 'bunchy top' appearance in later stages.",
+          "management": "Install pheromone traps. Soil application of Carbofuran 3G @ 33 kg/ha in the last week of June."
+        }
+      ],
+
+      "disease_management": [
+        {
+          "name": "Red Rot (Colletotrichum falcatum)",
+          "symptoms": "The 'Cancer of Sugarcane'. Leaves turn yellow and dry top-down. Split cane shows reddened internal tissues with crosswise white patches and emits an alcoholic/sour smell.",
+          "management": "Use resistant varieties (e.g., Co 0238, Co 15023). Ensure healthy seed material. Uproot and burn diseased clumps. Avoid waterlogging."
+        },
+        {
+          "name": "Smut (Sporisorium scitamineum)",
+          "symptoms": "Production of a black, whip-like structure from the central growing point of the cane.",
+          "management": "Use hot water treated setts. Rogue out infected clumps in a cloth bag and burn. Avoid keeping ratoon of infected crops."
+        }
+      ],
+
+      "deficiency_management": [
+        {
+          "nutrient": "Iron",
+          "symptoms": "Interveinal chlorosis of young leaves turning them completely white (common in ratoon or calcareous soils).",
+          "remedy": "Foliar spray of 1% Ferrous Sulphate (FeSO4) + 0.1% Citric acid at 15-day intervals."
+        }
+      ],
+
+      "harvest": {
+        "harvest_signs": "Cane becomes brittle, metallic sound on tapping, lower leaves dry. Brix reading above 18%.",
+        "post_harvest_notes": "Harvest close to the ground to ensure higher sugar recovery and better ratoon sprouting. Transport cane to the mill within 24 hours to prevent weight loss and sugar inversion.",
+        "expected_duration_days": 360
+      },
+
+      "special_cautions": ["Earthing up (putting soil at the base of the canes) is essential before the onset of monsoons to prevent lodging.", "Do not over-apply nitrogen late in the season, as it severely reduces sugar recovery."],
+      "faq": [
+        {
+          "question": "What is Red Rot and how do I cure it?",
+          "answer": "Red Rot is a devastating fungal disease known as sugarcane cancer. There is no chemical cure once the cane is infected. Management relies entirely on using resistant varieties, healthy setts, and crop rotation."
+        },
+        {
+          "question": "How can I prevent sugarcane from falling over (lodging) during heavy winds?",
+          "answer": "Adopt trench planting, perform earthing up in June/July, and tie the canes together (propping) in August to withstand strong monsoon winds."
+        }
+      ],
+
+      "source_refs": ["src_iisr_lucknow_pop", "src_upcsr_sugarcane_2023"]
+    },
+    {
+      "advisory_id": "sugarcane_maharashtra_adsali",
+      "state_region": "Maharashtra",
+      "district": "Pune, Kolhapur, Sangli, Satara, Ahmednagar",
+      "season": "Adsali",
+      "advisory_type": "cultivation_guide",
+      "applicability_filters": {
+        "irrigation": "assured irrigation (canals/drip)",
+        "soil_type": "medium to deep black cotton soils",
+        "sowing_window": "July to August"
+      },
+
+      "sowing": {
+        "sowing_window_start": "July 15",
+        "sowing_window_end": "August 15",
+        "seed_rate": { "value": 25000, "unit": "two-budded setts/ha", "range_type": "recommended" },
+        "seed_treatment": "Treat with Carbendazim @ 1g/L for 15 mins. Acetobacter and PSB dip treatment @ 10g/L increases N & P availability.",
+        "spacing": "120 cm x 30 cm (Wider spacing favored in Maharashtra)",
+        "sowing_depth_cm": 20,
+        "nursery_required": false,
+        "transplanting_required": false
+      },
+
+      "land_preparation": {
+        "summary": "Deep ploughing up to 30 cm using a reversible mouldboard plough. Ridge and furrow planting at 120 cm spacing is the standard practice."
+      },
+
+      "fertilizer": {
+        "basal_dose": "10% N (40 kg), 50% P2O5 (85 kg), 50% K2O (85 kg) per hectare.",
+        "top_dressing": "Remaining N in three splits: 20% at 45 days, 30% at 90 days, and 40% N + 50% P2O5 + 50% K2O at earthing up (120-150 days). Total N requirement for Adsali is very high (~400 kg/ha).",
+        "organic_manure": "20-25 tonnes/ha FYM or press mud before planting."
+      },
+
+      "irrigation": {
+        "schedule": "Drip irrigation is highly recommended to save water and apply fertigation. For flood irrigation, water every 10-12 days in winter, and 8-10 days in summer.",
+        "critical_stages": ["Formative Phase", "Grand Growth Phase (Summer months)"]
+      },
+
+      "weed_management": {
+        "summary": "Pre-emergence application of Atrazine 50 WP @ 2.0 kg a.i./ha. Use inter-row power weeders before earthing up."
+      },
+
+      "pest_management": [
+        {
+          "name": "White Grub",
+          "symptoms": "Yellowing and drying of entire clump. Grubs eat the roots and underground portion of the stem.",
+          "management": "Apply Fipronil 0.3 G @ 25 kg/ha in the soil or treat the setts with Imidacloprid."
+        },
+        {
+          "name": "Woolly Aphid",
+          "symptoms": "White wool-like waxy mass on the underside of leaves. Severe sooty mold turns the whole plant black.",
+          "management": "Release predators like Dipha aphidivora or Micromus igorotus. Spray Thiamethoxam 25 WG @ 0.2 g/L in severe cases."
+        }
+      ],
+
+      "disease_management": [
+        {
+          "name": "Rust",
+          "symptoms": "Elongated yellowish-brown to orange-brown rust pustules on the lower leaf surface, severely reducing photosynthesis.",
+          "management": "Spray Mancozeb 75 WP @ 3g/L or Propiconazole 25 EC @ 1ml/L at early signs."
+        }
+      ],
+
+      "harvest": {
+        "harvest_signs": "Adsali crop is ready in 15-18 months. Brix > 19%.",
+        "post_harvest_notes": "Adsali yields the highest tonnage (up to 150-180 t/ha). Supply immediately to factories.",
+        "expected_duration_days": 540
+      },
+      "special_cautions": ["Due to the 18-month duration, the crop passes through two monsoons. Sturdy propping (tying) is essential in August of the second year to prevent severe lodging."],
+      "faq": [
+        {
+          "question": "What is an Adsali crop?",
+          "answer": "Adsali refers to sugarcane planted in July-August that takes 15 to 18 months to mature. It typically produces the highest yields and sugar recovery compared to Spring or Autumn plantings."
+        }
+      ],
+      "source_refs": ["src_vsi_pune_sugarcane", "src_mpkv_sugarcane_pop"]
+    }
+  ],
+
+  "risk_library": {
+    "pests": [
+      {
+        "name": "Early Shoot Borer",
+        "favorable_conditions": ["Dry weather", "High temperatures during formative phase", "Light soils"],
+        "symptoms": ["Dead hearts emitting foul smell", "Can easily be pulled out"],
+        "management": ["Light frequent irrigations", "Trash mulching", "Soil application of Fipronil or Chlorantraniliprole"]
+      },
+      {
+        "name": "Top Borer",
+        "favorable_conditions": ["High humidity", "Monsoon season"],
+        "symptoms": ["Shot holes on leaves", "Red mining in the midrib", "'Bunchy top' appearance"],
+        "management": ["Pheromone traps", "Soil application of Carbofuran 3G in late June"]
+      },
+      {
+        "name": "Pyrilla (Leafhopper)",
+        "favorable_conditions": ["High humidity", "Dense canopy", "High nitrogen"],
+        "symptoms": ["Yellowing of leaves", "Honeydew and severe sooty mold"],
+        "management": ["Release Epiricania melanoleuca parasitoid", "Avoid excessive N application"]
+      }
+    ],
+    "diseases": [
+      {
+        "name": "Red Rot",
+        "favorable_conditions": ["High humidity", "Waterlogging", "Use of infected setts"],
+        "symptoms": ["Yellowing of canopy top-down", "Sour alcoholic smell from split cane", "White transverse patches in red internal tissue"],
+        "management": ["Use resistant varieties (e.g., Co 0238 replacements)", "Healthy seed nursery", "Strict crop rotation", "Avoid waterlogging"]
+      },
+      {
+        "name": "Smut",
+        "favorable_conditions": ["Dry warm weather", "Ratooning of infected crop"],
+        "symptoms": ["Black, whip-like structure emerging from the central growing point"],
+        "management": ["Moist Hot Air Treatment (MHAT)", "Rogue out infected clumps in a cloth bag and burn", "Avoid keeping ratoon of infected crops"]
+      },
+      {
+        "name": "Grassy Shoot Disease (GSD)",
+        "favorable_conditions": ["Infected setts", "Vector transmission (aphids/leafhoppers)"],
+        "symptoms": ["Proliferation of weak, thin, grass-like tillers", "Chlorotic narrow leaves", "No cane formation"],
+        "management": ["Hot water treatment of setts", "Rogue out infected plants early"]
+      }
+    ],
+    "abiotic_risks": [
+      {
+        "name": "Lodging",
+        "trigger_conditions": ["High velocity winds", "Heavy rains", "Shallow planting", "Excessive late nitrogen application"],
+        "impact": "Cane breakage, root damage, increased rodent attack, and significantly reduced sugar recovery.",
+        "mitigation": ["Deep trench planting", "Heavy earthing up before monsoons", "Propping (tying 3-4 adjacent clumps together)"]
+      },
+      {
+        "name": "Iron Chlorosis",
+        "trigger_conditions": ["Highly calcareous soils", "Ratoon crops", "Poor soil aeration"],
+        "impact": "Leaves turn completely white except for the midrib, stunting growth and stopping photosynthesis.",
+        "mitigation": ["Foliar spray of 1% Ferrous Sulphate + 0.1% Citric acid multiple times until recovery"]
+      }
+    ]
+  },
+
+  "retrieval_chunks": [
+    {
+      "chunk_id": "sugarcane_overview_001",
+      "chunk_type": "overview",
+      "title": "Sugarcane Crop Overview",
+      "crop_name": "Sugarcane",
+      "state_region": "India",
+      "district": "All",
+      "season": "Spring/Autumn/Adsali",
+      "advisory_category": "overview",
+      "text": "Sugarcane (Ganna) is a major commercial cash crop in India. It is a long-duration crop requiring enormous water and nutrients, primarily grown for sugar, jaggery (gur), and ethanol production. Cultivation is concentrated in the subtropics (UP, Bihar) and tropics (Maharashtra, Tamil Nadu).",
+      "keywords": ["Ganna", "Sugarcane", "Cash crop", "Sugar", "Ethanol", "Adsali"],
+      "metadata_tags": ["general_info", "intro"],
+      "source_ref_ids": ["src_iisr_lucknow_pop"]
+    },
+    {
+      "chunk_id": "sugarcane_suitability_001",
+      "chunk_type": "suitability",
+      "title": "Sugarcane Soil and Climate Suitability",
+      "crop_name": "Sugarcane",
+      "state_region": "India",
+      "district": "All",
+      "season": "All",
+      "advisory_category": "suitability",
+      "text": "Sugarcane requires deep, fertile, well-drained loam, clay loam, or black soils. It demands assured irrigation for 10-18 months. It is highly sensitive to prolonged waterlogging during the early formative stages and susceptible to extreme frost.",
+      "keywords": ["Irrigation", "Deep soil", "Long duration", "Frost sensitive", "Water requirement"],
+      "metadata_tags": ["soil", "climate", "water"],
+      "source_ref_ids": ["src_vsi_pune_sugarcane"]
+    },
+    {
+      "chunk_id": "sugarcane_redrot_001",
+      "chunk_type": "disease_management",
+      "title": "Managing Red Rot (Sugarcane Cancer)",
+      "crop_name": "Sugarcane",
+      "state_region": "India",
+      "district": "All",
+      "season": "All",
+      "advisory_category": "disease_management",
+      "text": "Red Rot is the most destructive disease of sugarcane, known as sugarcane cancer. Infected canes show yellowing from the top, and when split open, emit an alcoholic smell with transverse white patches inside red tissues. The only management is planting resistant varieties, ensuring strict field drainage, and utilizing clean seed material.",
+      "keywords": ["Red Rot", "Sugarcane cancer", "Alcoholic smell", "Resistant varieties", "Colletotrichum falcatum"],
+      "metadata_tags": ["disease", "red_rot", "management"],
+      "source_ref_ids": ["src_iisr_lucknow_pop"]
+    },
+    {
+      "chunk_id": "sugarcane_earthing_up_001",
+      "chunk_type": "cultivation_practice",
+      "title": "Earthing Up and Propping to Prevent Lodging",
+      "crop_name": "Sugarcane",
+      "state_region": "India",
+      "district": "All",
+      "season": "All",
+      "advisory_category": "cultivation_practice",
+      "text": "To prevent tall, heavy sugarcane from lodging (falling over) during high monsoon winds, two practices are essential. First, 'earthing up' by mounding soil around the base at 120-150 days. Second, 'propping' by tying the leaves of 3-4 adjacent clumps together.",
+      "keywords": ["Earthing up", "Propping", "Lodging", "Monsoon winds", "Tying cane"],
+      "metadata_tags": ["agronomy", "lodging", "crop_support"],
+      "source_ref_ids": ["src_upcsr_sugarcane_2023"]
+    }
+  ],
+
+  "structured_explanation_rules": [
+    {
+      "rule_id": "sugarcane_irrigation_match",
+      "condition": "input.irrigation_available == true AND input.soil_depth == 'deep' AND input.soil_drainage == 'well_drained'",
+      "message": "Excellent conditions for Sugarcane. Assured irrigation and deep, well-drained soils are the critical foundations for this long-duration cash crop.",
+      "priority": 1,
+      "severity": "positive_match"
+    },
+    {
+      "rule_id": "sugarcane_water_reject",
+      "condition": "input.irrigation_available == false AND input.rainfall_mm < 1500",
+      "message": "Critical Warning: Sugarcane requires massive amounts of water (1500-2500 mm). Rainfed cultivation in your low-rainfall region is not possible.",
+      "priority": 1,
+      "severity": "hard_reject"
+    },
+    {
+      "rule_id": "sugarcane_redrot_warning",
+      "condition": "input.disease_history_redrot == true",
+      "message": "Your area has a severe history of Red Rot. It is absolutely mandatory to use resistant varieties (seek alternatives to Co 0238 if it has broken down) and ensure certified healthy seed sources.",
+      "priority": 2,
+      "severity": "critical"
+    },
+    {
+      "rule_id": "sugarcane_lodging_prevention",
+      "condition": "input.days_after_planting >= 120 AND input.days_after_planting <= 150",
+      "message": "Action Required: The crop is entering the grand growth phase. Perform a heavy 'earthing up' now to protect the cane from lodging during the upcoming monsoon winds.",
+      "priority": 3,
+      "severity": "info"
+    }
+  ],
+
+  "ui_response_templates": {
+    "best_match_intro": "Ganna (Sugarcane) is a highly profitable commercial crop perfectly suited for your deep soils and fully irrigated field.",
+    "warning_water": "Sugarcane demands assured irrigation for 10-18 months. Since you lack adequate water sources, consider shorter-duration crops.",
+    "critical_disease_alert": "Alert: Red Rot is highly active in your region. Do not use uncertified seeds and ensure excellent field drainage.",
+    "cta_view_advisory": "View full Sugarcane cultivation guidelines",
+    "cta_view_redrot_guide": "Read the Red Rot Management Protocol"
+  },
+
+  "source_registry": [
+    {
+      "source_id": "src_iisr_lucknow_pop",
+      "title": "Sugarcane Production Technology",
+      "source_type": "pdf",
+      "publisher": "ICAR - Indian Institute of Sugarcane Research (IISR), Lucknow",
+      "region_scope": "North India",
+      "season_scope": "Spring and Autumn",
+      "crop_scope": ["Sugarcane"],
+      "content_summary": "Extensive national guidelines on modern sugarcane agronomy, trench planting, ratoon management, and red rot control.",
+      "date_published": "2022-09-10",
+      "trust_level": "high"
+    },
+    {
+      "source_id": "src_upcsr_sugarcane_2023",
+      "title": "Package of Practices for Sugarcane in UP",
+      "source_type": "manual",
+      "publisher": "U.P. Council of Sugarcane Research, Shahjahanpur",
+      "region_scope": "Uttar Pradesh",
+      "season_scope": "Spring",
+      "crop_scope": ["Sugarcane"],
+      "content_summary": "State-specific varietal recommendations, pest management schedules for top borer and early shoot borer, and nutrient management.",
+      "date_published": "2023-01-15",
+      "trust_level": "high"
+    },
+    {
+      "source_id": "src_vsi_pune_sugarcane",
+      "title": "Modern Sugarcane Cultivation Practices",
+      "source_type": "bulletin",
+      "publisher": "Vasantdada Sugar Institute (VSI), Pune",
+      "region_scope": "Maharashtra",
+      "season_scope": "Adsali and Pre-season",
+      "crop_scope": ["Sugarcane"],
+      "content_summary": "Advanced practices for Adsali cropping, drip fertigation, and biological control of woolly aphid in peninsular India.",
+      "date_published": "2021-11-20",
+      "trust_level": "high"
+    },
+    {
+      "source_id": "src_mpkv_sugarcane_pop",
+      "title": "Sugarcane Agronomy and Plant Protection",
+      "source_type": "website",
+      "publisher": "Mahatma Phule Krishi Vidyapeeth (MPKV), Rahuri",
+      "region_scope": "Maharashtra",
+      "season_scope": "All Seasons",
+      "crop_scope": ["Sugarcane"],
+      "content_summary": "Guidelines on nutrient splitting, earthing up operations, and management of white grub and rust.",
+      "date_published": "2022-04-10",
+      "trust_level": "high"
+    }
+  ],
+
+  "quality_flags": {
+    "is_complete": true,
+    "missing_fields": [],
+    "weakly_supported_fields": [],
+    "last_reviewed_at": "2024-05-15T00:00:00Z"
+  },
+
+  "updated_at": "2024-05-15T00:00:00Z",
+  "created_at": "2023-12-20T00:00:00Z"
+}

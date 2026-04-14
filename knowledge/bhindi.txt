@@ -1,0 +1,451 @@
+{
+  "crop_id": "bhendi",
+  "crop_name": "Bhendi",
+  "aliases": ["Okra", "Bhindi", "Lady's Finger", "Vendakkai", "Bendakaya", "Benda"],
+  "crop_group": "Vegetable",
+  "status": "active",
+  "language": "en",
+  "version": "v1.2",
+
+  "master_profile": {
+    "short_description": "Bhendi (Okra) is a popular, warm-season vegetable crop in India, valued for its tender green pods. It is a short-duration crop widely grown in both Kharif and Zaid (summer) seasons.",
+    "seasons_supported": ["Kharif", "Zaid", "Rabi (in mild winter regions)"],
+    "regions_supported": ["Gujarat", "Maharashtra", "Andhra Pradesh", "Uttar Pradesh", "Tamil Nadu", "Karnataka", "Haryana", "Punjab", "West Bengal"],
+    "agro_climatic_zones": ["Gujarat Plains and Hills Region", "Western Plateau and Hills Region", "Southern Plateau and Hills Region", "Trans-Gangetic Plains Region", "Upper Gangetic Plains Region"],
+
+    "soil_suitability": {
+      "suitable_soil_textures": ["Sandy loam", "Loam", "Clay loam", "Alluvial soils"],
+      "unsuitable_soil_textures": ["Heavy clay with poor drainage", "Highly saline and alkaline soils", "Compacted soils"],
+      "ideal_ph_min": 6.0,
+      "ideal_ph_max": 6.8,
+      "acceptable_ph_min": 5.8,
+      "acceptable_ph_max": 7.5,
+      "salinity_tolerance_note": "Highly sensitive to soil salinity. Saline conditions severely reduce seed germination, plant growth, and pod yield.",
+      "drainage_requirement": "Requires excellent drainage. Extremely sensitive to waterlogging, which restricts root respiration and causes immediate yellowing and wilting.",
+      "organic_carbon_note": "Highly responsive to organic matter. Application of well-rotted FYM ensures good soil tilth, which is critical for its deep taproot system."
+    },
+
+    "climate_suitability": {
+      "ideal_temperature_c_min": 22,
+      "ideal_temperature_c_max": 35,
+      "acceptable_temperature_c_min": 18,
+      "acceptable_temperature_c_max": 40,
+      "ideal_humidity_min": 50,
+      "ideal_humidity_max": 80,
+      "ideal_rainfall_mm_min": 500,
+      "ideal_rainfall_mm_max": 1000,
+      "frost_tolerance_note": "Highly sensitive to frost and extreme cold. Seeds fail to germinate below 17°C, and frost kills the plant.",
+      "heat_tolerance_note": "Highly heat tolerant, but temperatures consistently above 40°C can cause flower drop and rapid toughening (fiber development) of pods."
+    },
+
+    "water_profile": {
+      "irrigation_required": true,
+      "rainfed_suitable": true,
+      "waterlogging_tolerance": "Very low; standing water for even 24 hours damages the crop irreversibly.",
+      "drought_tolerance": "Moderate; the deep taproot helps it survive short dry spells, but moisture stress during flowering/fruiting results in small, tough, and unmarketable pods.",
+      "critical_water_stages": ["Seedling stage", "Flowering (35-40 DAS)", "Pod development"]
+    },
+
+    "nutrient_profile": {
+      "nitrogen_demand": "High (100-120 kg/ha; split applications are necessary for continuous pod flushes)",
+      "phosphorus_demand": "Moderate (50-60 kg/ha for healthy root and shoot development)",
+      "potassium_demand": "Moderate (50-60 kg/ha to improve pod quality and disease resistance)",
+      "micronutrient_notes": ["Boron deficiency can cause malformed and curved pods. Zinc application is beneficial in deficient soils."]
+    },
+
+    "cropping_context": {
+      "suitable_previous_crops": ["Wheat", "Potato", "Legumes", "Onion", "Cereals"],
+      "unsuitable_previous_crops": ["Cotton", "Hollyhock", "Hibiscus (These share the Malvaceae family, increasing risk of shared pests like shoot/fruit borer and whiteflies)."],
+      "rotation_notes": ["Wheat - Bhendi (Summer) - Paddy", "Potato - Bhendi - Mustard"],
+      "intercrop_options": ["Onion", "Radish", "Coriander", "Legumes"]
+    },
+
+    "crop_duration": {
+      "duration_days_min": 90,
+      "duration_days_max": 120,
+      "maturity_indicators": ["Pods reach 6-10 cm in length", "Pods are tender, green, and snap easily when the tip is bent", "First harvest starts 45-50 days after sowing"]
+    },
+
+    "recommendation_logic": {
+      "why_recommend_conditions": ["Warm climate", "Well-drained loamy soils", "Need for a fast-growing, short-duration cash crop"],
+      "why_not_recommend_conditions": ["Frost-prone winter months", "Waterlogged or heavy clay fields", "Highly saline soils"],
+      "hard_rejection_conditions": ["Cold climates with soil temperatures below 15°C", "Persistent flooding"]
+    }
+  },
+
+  "region_season_advisories": [
+    {
+      "advisory_id": "bhendi_gujarat_kharif",
+      "state_region": "Gujarat",
+      "district": "Surat, Anand, Vadodara, Navsari, Valsad",
+      "season": "Kharif",
+      "advisory_type": "cultivation_guide",
+      "applicability_filters": {
+        "irrigation": "rainfed to semi-irrigated",
+        "soil_type": "sandy loam to medium black soils",
+        "sowing_window": "June to July"
+      },
+
+      "sowing": {
+        "sowing_window_start": "June 15",
+        "sowing_window_end": "July 15",
+        "seed_rate": { "value": 10, "unit": "kg/ha", "range_type": "recommended", "source_confidence": "high" },
+        "seed_treatment": "Treat seeds with Thiram or Captan @ 3g/kg seed. Follow with Imidacloprid 70 WS @ 5g/kg seed to protect against early whitefly infestation, which spreads YVMV.",
+        "spacing": "60 cm x 30 cm for Kharif (plants branch more in Kharif compared to summer).",
+        "sowing_depth_cm": 2.5,
+        "nursery_required": false,
+        "transplanting_required": false
+      },
+
+      "land_preparation": {
+        "summary": "Deep ploughing followed by 2-3 harrowings to bring the soil to a fine tilth. Sowing on ridges and furrows is highly recommended in Kharif to ensure proper drainage and avoid waterlogging."
+      },
+
+      "fertilizer": {
+        "basal_dose": "Apply 50 kg N, 50 kg P2O5, and 50 kg K2O per hectare at the time of sowing.",
+        "top_dressing": "Apply remaining 50 kg N per hectare in two splits at 30 and 45 Days After Sowing (DAS).",
+        "organic_manure": "Apply 15-20 tonnes/ha of well-decomposed FYM during the last harrowing.",
+        "micronutrients": "Foliar spray of 0.2% Borax at the flowering stage if pods are observed to be curved or malformed."
+      },
+
+      "irrigation": {
+        "schedule": "Provide life-saving irrigation if a dry spell occurs during the monsoon. Ensure critical stages like flowering and fruiting do not suffer moisture stress.",
+        "critical_stages": ["Flowering", "Pod setting", "Pod elongation"],
+        "rainfed_advice": "Ensure excess rainwater is drained out from the field immediately. Prolonged standing water causes collar rot and yellowing."
+      },
+
+      "weed_management": {
+        "summary": "Pre-emergence application of Pendimethalin 30 EC @ 1.0 kg a.i./ha in 500 liters of water within 48 hours of sowing. Follow with 1-2 manual hoeings at 20 and 40 DAS."
+      },
+
+      "pest_management": [
+        {
+          "name": "Shoot and Fruit Borer (Earias vittella / E. insulana)",
+          "symptoms": "Larvae bore into terminal shoots causing wilting (dead heart). Later, they bore into the pods, rendering them unfit for human consumption.",
+          "management": "Remove and destroy drooping shoots and infested pods. Install pheromone traps @ 5/ha. Spray Spinosad 45 SC @ 0.3 ml/L or Emamectin Benzoate 5 SG @ 0.4 g/L when pest crosses ETL."
+        },
+        {
+          "name": "Whitefly (Bemisia tabaci)",
+          "symptoms": "Sucks sap causing yellowing and stunting. Primarily dangerous as the vector for Yellow Vein Mosaic Virus (YVMV) and Enation Leaf Curl Virus.",
+          "management": "Use yellow sticky traps @ 20/ha. Seed treatment is crucial. Spray Thiamethoxam 25 WG @ 0.2 g/L or Acetamiprid 20 SP @ 0.2 g/L."
+        },
+        {
+          "name": "Red Spider Mite (Tetranychus urticae)",
+          "symptoms": "Causes yellowing and stippling on the upper leaf surface, with fine webs on the lower surface. Leaves dry and fall off.",
+          "management": "Spray Spiromesifen 22.9 SC @ 1 ml/L or Propargite 57 EC @ 2 ml/L. Ensure good spray coverage on the underside of leaves."
+        }
+      ],
+
+      "disease_management": [
+        {
+          "name": "Yellow Vein Mosaic Virus (YVMV)",
+          "symptoms": "The most destructive disease of okra. Veins of the leaves turn completely yellow, forming a thick yellow network. Pods become small, yellowish-green, tough, and malformed.",
+          "management": "Grow YVMV-resistant varieties (e.g., Arka Anamika, Parbhani Kranti, Kashi Kranti). Control whitefly vectors strictly. Uproot and destroy infected plants early."
+        },
+        {
+          "name": "Powdery Mildew (Erysiphe cichoracearum)",
+          "symptoms": "White, powdery fungal growth on the upper and lower surfaces of leaves, causing premature defoliation.",
+          "management": "Spray Wettable Sulphur 80 WP @ 3 g/L or Hexaconazole 5 EC @ 1 ml/L at the first sign of symptoms."
+        }
+      ],
+
+      "deficiency_management": [
+        {
+          "nutrient": "Boron",
+          "symptoms": "Pods become curved, malformed, and do not attain full length.",
+          "remedy": "Foliar spray of 0.2% Borax during the early flowering and pod setting stages."
+        }
+      ],
+
+      "harvest": {
+        "harvest_signs": "Pods are 6-10 cm long, tender, and bright green. The tip of the pod should snap easily when bent. If it bends without breaking, the pod is too fibrous.",
+        "post_harvest_notes": "Harvest every 2-3 days, preferably in the morning or late evening. Wear gloves or long sleeves to protect against the irritating trichomes (hairs) on the leaves and stems. Grade pods by size and avoid bruising.",
+        "expected_duration_days": 100
+      },
+
+      "special_cautions": ["Do not delay harvesting; okra pods become highly fibrous, tough, and unmarketable within 1-2 days of over-maturity.", "Avoid planting okra near cotton fields as both share common pests (shoot and fruit borer, whitefly)."],
+      "faq": [
+        {
+          "question": "Why are the veins on my Bhindi leaves turning completely yellow?",
+          "answer": "This is Yellow Vein Mosaic Virus (YVMV), spread by whiteflies. It severely stunts the plant and ruins the pods. Infected plants cannot be cured and must be uprooted. Use YVMV-resistant varieties and control whiteflies."
+        },
+        {
+          "question": "Why are my Okra pods curved and small?",
+          "answer": "Curved or malformed pods can be caused by Boron deficiency, severe moisture stress, or pest damage from the fruit borer. Check for boreholes. If no pests are present, spray 0.2% Borax and ensure uniform irrigation."
+        }
+      ],
+
+      "source_refs": ["src_iivr_okra_pop", "src_nau_kharif_okra"]
+    },
+    {
+      "advisory_id": "bhendi_up_haryana_zaid",
+      "state_region": "Uttar Pradesh & Haryana",
+      "district": "All districts",
+      "season": "Zaid (Summer)",
+      "advisory_type": "cultivation_guide",
+      "applicability_filters": {
+        "irrigation": "assured irrigation",
+        "soil_type": "sandy loam to loam",
+        "sowing_window": "February to March"
+      },
+
+      "sowing": {
+        "sowing_window_start": "February 15",
+        "sowing_window_end": "March 20",
+        "seed_rate": { "value": 18, "unit": "kg/ha", "range_type": "recommended" },
+        "seed_treatment": "Treat with Imidacloprid @ 5g/kg seed. Seed rate is higher in summer because plant branching is reduced.",
+        "spacing": "45 cm x 15 cm",
+        "sowing_depth_cm": 2,
+        "nursery_required": false,
+        "transplanting_required": false
+      },
+
+      "land_preparation": {
+        "summary": "Pre-sowing irrigation (rauni) is essential. Plough 2-3 times to a fine tilth. Flat bed sowing is acceptable, but ridge sowing saves water."
+      },
+
+      "fertilizer": {
+        "basal_dose": "50 kg N, 50 kg P2O5, 50 kg K2O/ha.",
+        "top_dressing": "50 kg N/ha applied in two splits (30 and 45 DAS)."
+      },
+
+      "irrigation": {
+        "schedule": "Summer Okra requires frequent watering. Irrigate every 5-7 days depending on the heat. Extreme dry soil will cause flower drop and stunted, fibrous pods.",
+        "critical_stages": ["Flowering", "Fruiting"]
+      },
+
+      "weed_management": {
+        "summary": "Apply Pendimethalin 30 EC @ 1 L/ha as pre-emergence."
+      },
+
+      "pest_management": [
+        {
+          "name": "Jassids (Amrasca biguttula)",
+          "symptoms": "Leaf margins turn yellow, curl downward, and turn brick red (hopper burn).",
+          "management": "Spray Flonicamid 50 WG @ 0.3 g/L or Diafenthiuron 50 WP @ 1 g/L."
+        }
+      ],
+
+      "disease_management": [
+        {
+          "name": "Enation Leaf Curl Virus",
+          "symptoms": "Leaf curling, enations (leafy outgrowths) on the underside of leaves, and severe stunting. Transmitted by Whitefly.",
+          "management": "Use tolerant varieties. Strict whitefly management. Rogue infected plants."
+        }
+      ],
+
+      "harvest": {
+        "harvest_signs": "Pods grow very fast in the summer heat. Pick every alternate day to prevent fibrous pods.",
+        "expected_duration_days": 90
+      },
+
+      "special_cautions": ["Do not plant near wheat fields that are about to be harvested, as thrips and aphids may migrate to the young Okra crop."],
+      "source_refs": ["src_hau_zaid_okra"]
+    }
+  ],
+
+  "risk_library": {
+    "pests": [
+      {
+        "name": "Shoot and Fruit Borer (Earias spp.)",
+        "favorable_conditions": ["Warm, humid weather", "Presence of alternative hosts like cotton or hibiscus"],
+        "symptoms": ["Drooping of terminal shoots", "Bore holes in pods", "Rotting of fruits", "Caterpillar inside pod"],
+        "management": ["Clipping drooping shoots", "Pheromone traps @ 5/ha", "Spray of Spinosad, Emamectin Benzoate, or Chlorantraniliprole"]
+      },
+      {
+        "name": "Whitefly (Bemisia tabaci)",
+        "favorable_conditions": ["Dry, hot weather", "Late Kharif/Zaid season"],
+        "symptoms": ["Yellowing of leaves", "Honeydew and sooty mold", "Transmission of YVMV"],
+        "management": ["Yellow sticky traps", "Seed treatment with Imidacloprid", "Foliar sprays of Neonicotinoids (Thiamethoxam, Acetamiprid)"]
+      },
+      {
+        "name": "Jassids",
+        "favorable_conditions": ["High humidity", "Early crop stages"],
+        "symptoms": ["Hopper burn (margins turn yellow then brown/red and curl downwards)"],
+        "management": ["Spray Flonicamid or Diafenthiuron"]
+      }
+    ],
+    "diseases": [
+      {
+        "name": "Yellow Vein Mosaic Virus (YVMV)",
+        "favorable_conditions": ["High whitefly population", "Use of susceptible traditional varieties"],
+        "symptoms": ["Interwoven yellowing of leaf veins", "Complete yellowing of foliage", "Stunted growth", "Pale, tough, malformed pods"],
+        "management": ["Cultivate resistant varieties (e.g., Parbhani Kranti, Arka Anamika)", "Strict Vector (whitefly) control", "Rogueing"]
+      },
+      {
+        "name": "Powdery Mildew",
+        "favorable_conditions": ["Warm days and cool nights", "High humidity without rain"],
+        "symptoms": ["White powdery spots on upper and lower leaves", "Premature leaf drop"],
+        "management": ["Spray Wettable Sulphur @ 3g/L or Hexaconazole"]
+      }
+    ],
+    "abiotic_risks": [
+      {
+        "name": "Over-Maturity / Fibrous Pods",
+        "trigger_conditions": ["Delayed harvest by even 1-2 days", "Extreme heat (>38°C) causing rapid maturation", "Moisture stress"],
+        "impact": "Pods develop thick cellulose fibers and tough seeds, becoming completely unmarketable and inedible.",
+        "mitigation": ["Harvest strictly every 2-3 days", "Maintain adequate, uniform soil moisture during fruiting"]
+      },
+      {
+        "name": "Waterlogging",
+        "trigger_conditions": ["Heavy continuous rains", "Flat bed planting on clay soils"],
+        "impact": "Root asphyxiation, sudden yellowing of the entire plant, collar rot, and rapid mortality.",
+        "mitigation": ["Plant on ridges and furrows", "Ensure rapid surface drainage"]
+      }
+    ]
+  },
+
+  "retrieval_chunks": [
+    {
+      "chunk_id": "bhendi_overview_001",
+      "chunk_type": "overview",
+      "title": "Bhendi (Okra) Crop Overview",
+      "crop_name": "Bhendi",
+      "state_region": "India",
+      "district": "All",
+      "season": "Kharif/Zaid",
+      "advisory_category": "overview",
+      "text": "Bhendi, Okra, or Lady's Finger, is a major warm-season vegetable crop in India. Valued for its tender fruits, it requires frequent, timely harvesting. Yellow Vein Mosaic Virus (YVMV) is its greatest threat, making resistant varieties essential.",
+      "keywords": ["Bhendi", "Okra", "Bhindi", "Vegetable", "YVMV"],
+      "metadata_tags": ["general_info", "intro"],
+      "source_ref_ids": ["src_iivr_okra_pop"]
+    },
+    {
+      "chunk_id": "bhendi_suitability_001",
+      "chunk_type": "suitability",
+      "title": "Bhendi Soil and Climate Requirements",
+      "crop_name": "Bhendi",
+      "state_region": "India",
+      "district": "All",
+      "season": "All",
+      "advisory_category": "suitability",
+      "text": "Bhendi grows best in well-drained sandy loam or clay loam soils with a pH of 6.0-6.8. It requires warm temperatures (22-35°C) and is highly sensitive to frost, waterlogging, and soil salinity.",
+      "keywords": ["Well-drained", "Warm climate", "Waterlogging-sensitive", "Frost-sensitive", "Salinity"],
+      "metadata_tags": ["soil", "climate", "water"],
+      "source_ref_ids": ["src_nau_kharif_okra"]
+    },
+    {
+      "chunk_id": "bhendi_harvest_001",
+      "chunk_type": "harvest_management",
+      "title": "Harvesting Guidelines for Bhendi",
+      "crop_name": "Bhendi",
+      "state_region": "India",
+      "district": "All",
+      "season": "All",
+      "advisory_category": "harvest_management",
+      "text": "Okra pods grow exceptionally fast and must be harvested every 2 to 3 days when they are 6-10 cm long and tender. You can test tenderness by bending the very tip of the pod; it should snap easily. Delaying harvest causes the pods to become highly fibrous, tough, and unfit for consumption.",
+      "keywords": ["Harvest", "Tender pods", "Fibrous", "Over-maturity", "Snap test"],
+      "metadata_tags": ["harvest", "quality", "marketability"],
+      "source_ref_ids": ["src_iivr_okra_pop"]
+    },
+    {
+      "chunk_id": "bhendi_yvmv_001",
+      "chunk_type": "disease_management",
+      "title": "Managing Yellow Vein Mosaic Virus (YVMV)",
+      "crop_name": "Bhendi",
+      "state_region": "India",
+      "district": "All",
+      "season": "All",
+      "advisory_category": "disease_management",
+      "text": "YVMV is the most destructive disease of okra. Veins turn yellow, forming a thick network, and pods become small, yellow, and malformed. It is transmitted solely by the Whitefly. There is no cure; infected plants must be uprooted. Use resistant varieties like Arka Anamika and strictly control whiteflies.",
+      "keywords": ["YVMV", "Yellow Vein Mosaic Virus", "Whitefly", "Yellow veins", "Arka Anamika"],
+      "metadata_tags": ["disease", "virus", "vector_control"],
+      "source_ref_ids": ["src_iivr_okra_pop"]
+    }
+  ],
+
+  "structured_explanation_rules": [
+    {
+      "rule_id": "bhendi_drainage_match",
+      "condition": "input.soil_drainage == 'well_drained'",
+      "message": "Your well-drained soil is ideal for Bhendi cultivation, preventing collar rot and ensuring healthy taproot development.",
+      "priority": 1,
+      "severity": "positive_match"
+    },
+    {
+      "rule_id": "bhendi_waterlogging_reject",
+      "condition": "input.soil_drainage == 'poor' OR input.waterlogging_history == true",
+      "message": "Critical Warning: Bhendi is highly sensitive to waterlogging. Poorly drained fields will cause immediate yellowing, root asphyxiation, and crop death. Use ridge and furrow planting if you proceed.",
+      "priority": 1,
+      "severity": "hard_reject"
+    },
+    {
+      "rule_id": "bhendi_rotation_reject",
+      "condition": "input.previous_crop == 'cotton'",
+      "message": "Critical Warning: Planting Bhendi after Cotton is highly unadvisable as both belong to the Malvaceae family. This guarantees a severe attack by the Shoot and Fruit Borer and Whiteflies.",
+      "priority": 1,
+      "severity": "hard_reject"
+    },
+    {
+      "rule_id": "bhendi_harvest_alert",
+      "condition": "input.growth_stage == 'fruiting' OR input.days_after_sowing > 45",
+      "message": "Action Required: Okra is now fruiting. You must harvest every 2-3 days without fail. Delaying harvest will result in fibrous, unmarketable pods.",
+      "priority": 2,
+      "severity": "info"
+    },
+    {
+      "rule_id": "bhendi_yvmv_warning",
+      "condition": "input.region_history_yvmv == true OR input.pest_history_whitefly == true",
+      "message": "Alert: Your region has a high risk of Whitefly-transmitted Yellow Vein Mosaic Virus (YVMV). It is mandatory to sow YVMV-resistant varieties (like Parbhani Kranti).",
+      "priority": 3,
+      "severity": "warning"
+    }
+  ],
+
+  "ui_response_templates": {
+    "best_match_intro": "Bhindi (Okra) is an excellent, fast-yielding vegetable crop perfectly suited for your well-drained soil and warm climate.",
+    "warning_rotation": "Since you previously grew Cotton, planting Bhindi will severely increase the risk of borer and whitefly attacks. Crop rotation with cereals or legumes is strongly advised.",
+    "warning_pest": "Alert: Keep a close watch for drooping terminal shoots (dead hearts). Clip and destroy them immediately to manage the Shoot Borer.",
+    "cta_view_advisory": "View full Bhindi (Okra) cultivation advisory",
+    "cta_view_yvmv_guide": "Read the YVMV and Whitefly Management Guide"
+  },
+
+  "source_registry": [
+    {
+      "source_id": "src_iivr_okra_pop",
+      "title": "Okra Production Technology",
+      "source_type": "pdf",
+      "publisher": "ICAR - Indian Institute of Vegetable Research (IIVR), Varanasi",
+      "region_scope": "India",
+      "season_scope": "Kharif and Zaid",
+      "crop_scope": ["Bhendi"],
+      "content_summary": "Comprehensive national guidelines highlighting YVMV resistant varieties, Shoot and Fruit borer management, and harvest timing.",
+      "date_published": "2021-11-10",
+      "trust_level": "high"
+    },
+    {
+      "source_id": "src_nau_kharif_okra",
+      "title": "Package of Practices for Vegetable Crops",
+      "source_type": "manual",
+      "publisher": "Navsari Agricultural University (NAU), Gujarat",
+      "region_scope": "Gujarat",
+      "season_scope": "Kharif",
+      "crop_scope": ["Bhendi"],
+      "content_summary": "State-specific agronomic guidelines emphasizing ridge planting, nutrient management, and pest control for Okra during the monsoon.",
+      "date_published": "2022-03-20",
+      "trust_level": "high"
+    },
+    {
+      "source_id": "src_hau_zaid_okra",
+      "title": "Package of Practices for Summer Vegetables",
+      "source_type": "bulletin",
+      "publisher": "CCS Haryana Agricultural University (HAU)",
+      "region_scope": "Haryana",
+      "season_scope": "Zaid",
+      "crop_scope": ["Bhendi"],
+      "content_summary": "Guidelines for highly irrigated summer okra, adjusting seed rates for low branching, and managing severe jassid attacks.",
+      "date_published": "2023-01-15",
+      "trust_level": "high"
+    }
+  ],
+
+  "quality_flags": {
+    "is_complete": true,
+    "missing_fields": [],
+    "weakly_supported_fields": [],
+    "last_reviewed_at": "2024-04-25T00:00:00Z"
+  },
+
+  "updated_at": "2024-04-25T00:00:00Z",
+  "created_at": "2024-01-20T00:00:00Z"
+}

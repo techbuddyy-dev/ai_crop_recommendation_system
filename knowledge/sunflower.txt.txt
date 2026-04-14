@@ -1,0 +1,522 @@
+{
+  "crop_id": "sunflower",
+  "crop_name": "Sunflower",
+  "aliases": ["Surajmukhi", "Suryamukhi"],
+  "crop_group": "Oilseed",
+  "status": "active",
+  "language": "en",
+  "version": "v1.2",
+
+  "master_profile": {
+    "short_description": "Sunflower is a major commercial oilseed crop in India. Being photo-insensitive, it can be grown throughout the year. It is valued for its high-quality edible oil and short duration.",
+    "seasons_supported": ["Kharif", "Rabi", "Zaid", "Spring"],
+    "regions_supported": ["Karnataka", "Maharashtra", "Andhra Pradesh", "Telangana", "Tamil Nadu", "Punjab", "Haryana", "Bihar"],
+    "agro_climatic_zones": ["Southern Plateau and Hills Region", "Western Plateau and Hills Region", "Trans-Gangetic Plains Region", "Middle Gangetic Plains Region"],
+
+    "soil_suitability": {
+      "suitable_soil_textures": ["Loam", "Sandy loam", "Deep black soils (Vertisols)", "Alluvial soils"],
+      "unsuitable_soil_textures": ["Heavy clay with poor drainage", "Highly acidic soils"],
+      "ideal_ph_min": 6.5,
+      "ideal_ph_max": 8.0,
+      "acceptable_ph_min": 6.0,
+      "acceptable_ph_max": 8.5,
+      "salinity_tolerance_note": "Moderately tolerant to soil salinity, but performs poorly in highly alkaline conditions.",
+      "drainage_requirement": "Requires well-drained soils; highly sensitive to waterlogging, which stunts growth and causes collar rot.",
+      "organic_carbon_note": "Benefits significantly from organic matter (FYM) to improve moisture retention and soil structure."
+    },
+
+    "climate_suitability": {
+      "ideal_temperature_c_min": 20,
+      "ideal_temperature_c_max": 25,
+      "acceptable_temperature_c_min": 15,
+      "acceptable_temperature_c_max": 38,
+      "ideal_humidity_min": 50,
+      "ideal_humidity_max": 75,
+      "ideal_rainfall_mm_min": 300,
+      "ideal_rainfall_mm_max": 600,
+      "frost_tolerance_note": "Tolerates mild cold up to 15°C, but highly sensitive to severe frost.",
+      "heat_tolerance_note": "High temperatures (>38°C) during flowering dry out the stigma and reduce pollen viability, causing poor seed set (chaffiness)."
+    },
+
+    "water_profile": {
+      "irrigation_required": false,
+      "rainfed_suitable": true,
+      "waterlogging_tolerance": "Very low; standing water for more than 2-3 days severely affects roots and reduces yield.",
+      "drought_tolerance": "High; its deep and extensive root system allows it to endure dry spells, though moisture is critical at the flowering stage.",
+      "critical_water_stages": ["Seedling stage", "Bud initiation (button stage)", "Flowering", "Seed development"]
+    },
+
+    "nutrient_profile": {
+      "nitrogen_demand": "Moderate to High (60-80 kg/ha for hybrids)",
+      "phosphorus_demand": "Moderate (40-60 kg/ha; essential for robust root and head development)",
+      "potassium_demand": "Moderate (30-40 kg/ha)",
+      "micronutrient_notes": ["Boron is extremely critical to prevent chaffy (empty) seeds. Foliar spray of 0.2% Borax at the ray floret opening stage is highly recommended.", "Sulphur (20-30 kg/ha) increases oil content and quality."]
+    },
+
+    "cropping_context": {
+      "suitable_previous_crops": ["Pigeonpea", "Maize", "Sorghum", "Soybean", "Potato"],
+      "unsuitable_previous_crops": ["Continuous cultivation of sunflower can deplete soil nutrients heavily and increase necrosis virus and Alternaria leaf spot."],
+      "rotation_notes": ["Pigeonpea - Sunflower", "Maize - Sunflower (Rabi)", "Soybean - Sunflower", "Potato - Sunflower (Spring)"],
+      "intercrop_options": ["Groundnut (3:1 or 4:1)", "Pigeonpea", "Castor", "Soybean"]
+    },
+
+    "crop_duration": {
+      "duration_days_min": 90,
+      "duration_days_max": 115,
+      "maturity_indicators": ["Back of the capitulum (head) turns lemon yellow", "Bracts dry up and turn brown", "Seeds become hard and black/striped"]
+    },
+
+    "recommendation_logic": {
+      "why_recommend_conditions": ["Short growing window", "Need for a cash crop that is photo-insensitive", "Moderate rainfall/dryland conditions"],
+      "why_not_recommend_conditions": ["Areas with persistent waterlogging", "High continuous rainfall zones", "Severely acidic soils"],
+      "hard_rejection_conditions": ["Extreme frost prone areas during the vegetative phase", "Soils with extreme waterlogging"]
+    }
+  },
+
+  "region_season_advisories": [
+    {
+      "advisory_id": "sunflower_karnataka_kharif",
+      "state_region": "Karnataka",
+      "district": "Koppal, Raichur, Gadag, Bellary, Chitradurga",
+      "season": "Kharif",
+      "advisory_type": "cultivation_guide",
+      "applicability_filters": {
+        "irrigation": "rainfed",
+        "soil_type": "medium to deep black soils, red loams",
+        "sowing_window": "July to mid-August"
+      },
+
+      "sowing": {
+        "sowing_window_start": "July 01",
+        "sowing_window_end": "August 15",
+        "seed_rate": { "value": 5, "unit": "kg/ha", "range_type": "recommended", "source_confidence": "high" },
+        "seed_treatment": "Treat seeds with Imidacloprid 70 WS @ 5g/kg to protect against early sucking pests (vectors of necrosis). Treat with Thiram or Captan @ 2g/kg for seed-borne diseases.",
+        "spacing": "60 cm x 30 cm for hybrids",
+        "sowing_depth_cm": 4,
+        "nursery_required": false,
+        "transplanting_required": false
+      },
+
+      "land_preparation": {
+        "summary": "Plough the land deep (15-20 cm) followed by 2-3 harrowings. Bring the soil to a fine tilth. Ensure proper levelling to prevent water stagnation."
+      },
+
+      "fertilizer": {
+        "basal_dose": "Apply 50% N (30 kg), 100% P2O5 (60 kg), 100% K2O (40 kg) and Sulphur (20 kg) per hectare at sowing.",
+        "top_dressing": "Apply remaining 50% N (30 kg) at 30 days after sowing. Earthing up should be done along with top dressing.",
+        "organic_manure": "Apply 5-8 tonnes of well-decomposed FYM or compost per hectare 2-3 weeks before sowing.",
+        "micronutrients": "Critical: Spray 0.2% Borax (2g/L of water) at the capitulum initiation stage (button stage) to ensure proper seed setting and prevent chaffiness."
+      },
+
+      "irrigation": {
+        "schedule": "For rainfed crops, moisture conservation is key. If grown under irrigation, provide water at critical stages: bud initiation (35-40 DAS), flowering (50-60 DAS), and seed filling (70-80 DAS).",
+        "critical_stages": ["Bud initiation (Button stage)", "Flowering", "Seed development"],
+        "rainfed_advice": "Practice timely intercultivation until 30-35 DAS. Avoid intercultivation during and after flowering to prevent root damage."
+      },
+
+      "weed_management": {
+        "summary": "Pre-emergence application of Pendimethalin 30 EC @ 1.0 kg a.i./ha in 500 liters of water within 2-3 days of sowing. Follow with one hand weeding at 20-25 DAS."
+      },
+
+      "pest_management": [
+        {
+          "name": "Head Borer (Helicoverpa armigera)",
+          "symptoms": "Larvae feed on developing seeds in the capitulum. Fecal matter is visible on the flower head.",
+          "management": "Install pheromone traps @ 5/ha. Spray HaNPV @ 250 LE/ha or Emamectin Benzoate 5 SG @ 0.4 g/L during early larval stages. Avoid spraying chemical insecticides during full bloom to protect honey bees."
+        },
+        {
+          "name": "Thrips & Jassids",
+          "symptoms": "Sucking sap from leaves causes yellowing and curling. Thrips act as vectors for the deadly Sunflower Necrosis Virus.",
+          "management": "Seed treatment with Imidacloprid. Spray Imidacloprid 17.8 SL @ 0.3 ml/L or Thiamethoxam 25 WG @ 0.2 g/L before flowering."
+        }
+      ],
+
+      "disease_management": [
+        {
+          "name": "Sunflower Necrosis Disease (SND)",
+          "symptoms": "Chlorotic rings on leaves, twisting of leaves, and necrosis of the stem and floral bracts. Severe stunting if infected early.",
+          "management": "Control the thrips vector. Weed out alternate hosts (e.g., Parthenium). Rogue out and burn infected plants early."
+        },
+        {
+          "name": "Alternaria Leaf Spot",
+          "symptoms": "Dark brown, circular to irregular spots with concentric rings on lower leaves, which later spread upward, causing defoliation.",
+          "management": "Spray Mancozeb 75 WP @ 2.5 g/L or Propiconazole 25 EC @ 1 ml/L at disease onset and repeat after 15 days."
+        }
+      ],
+
+      "deficiency_management": [
+        {
+          "nutrient": "Boron",
+          "symptoms": "Capitulum deformation, poor seed set in the center of the head, large number of chaffy (empty) seeds.",
+          "remedy": "Foliar spray of 0.2% Borax (2g/L) at the star/button stage (ray floret opening)."
+        }
+      ],
+
+      "harvest": {
+        "harvest_signs": "The back of the flower head turns lemon-yellow to yellowish-brown. Bracts dry up. Seed moisture is around 20%.",
+        "post_harvest_notes": "Cut the heads, sun-dry them for 3-4 days, and thresh by beating with sticks or using a mechanical thresher. Dry the seeds further to 9-10% moisture for storage.",
+        "expected_duration_days": 95
+      },
+
+      "special_cautions": ["Do NOT spray chemical insecticides during 9 AM to 4 PM at the flowering stage to protect pollinating honey bees, which are essential for good yield.", "Hand pollination (rubbing two blooming heads together gently) during morning hours on alternate days can significantly increase seed setting."],
+      "faq": [
+        {
+          "question": "Why are the seeds in the center of my sunflower head empty?",
+          "answer": "This is known as chaffiness. It is usually caused by Boron deficiency, moisture stress during flowering, or poor pollination due to a lack of bees. Spraying Borax and maintaining bee populations helps."
+        }
+      ],
+
+      "source_refs": ["src_uas_raichur_sunflower", "src_iior_sunflower_pop"]
+    },
+    {
+      "advisory_id": "sunflower_maharashtra_rabi",
+      "state_region": "Maharashtra",
+      "district": "Latur, Osmanabad, Beed, Solapur, Ahmednagar",
+      "season": "Rabi",
+      "advisory_type": "cultivation_guide",
+      "applicability_filters": {
+        "irrigation": "semi-irrigated",
+        "soil_type": "medium to deep black soils",
+        "sowing_window": "September to October"
+      },
+
+      "sowing": {
+        "sowing_window_start": "September 15",
+        "sowing_window_end": "October 30",
+        "seed_rate": { "value": 5, "unit": "kg/ha", "range_type": "recommended" },
+        "seed_treatment": "Treat with Metalaxyl @ 3g/kg seed to manage downy mildew and Thiamethoxam 30 FS @ 10ml/kg for sucking pests.",
+        "spacing": "60 cm x 30 cm",
+        "sowing_depth_cm": 4,
+        "nursery_required": false,
+        "transplanting_required": false
+      },
+
+      "land_preparation": {
+        "summary": "Use harrowing to preserve residual soil moisture from Kharif. Form ridges and furrows to facilitate irrigation."
+      },
+
+      "fertilizer": {
+        "basal_dose": "30 kg N, 60 kg P2O5, 30 kg K2O/ha.",
+        "top_dressing": "Top-dress 30 kg N/ha exactly at 30 days after sowing."
+      },
+
+      "irrigation": {
+        "schedule": "First irrigation at 30 DAS. Critical irrigations at bud initiation (40 DAS), 50% flowering (60 DAS), and seed filling (75 DAS).",
+        "critical_stages": ["Button stage", "Flowering", "Grain filling"]
+      },
+
+      "weed_management": {
+        "summary": "Pre-emergence Pendimethalin 30 EC @ 1.0 kg a.i./ha followed by one hoeing at 30 DAS."
+      },
+
+      "pest_management": [
+        {
+          "name": "Spodoptera litura (Tobacco caterpillar)",
+          "symptoms": "Larvae feed gregariously on leaves, causing skeletonization.",
+          "management": "Use pheromone traps @ 10/ha. Spray Spinetoram 11.7 SC @ 0.5 ml/L or Chlorpyrifos 20 EC @ 2 ml/L if crossing ETL."
+        }
+      ],
+
+      "disease_management": [
+        {
+          "name": "Powdery Mildew",
+          "symptoms": "White to grey powdery growth on older leaves during cooler Rabi months, leading to premature drying.",
+          "management": "Spray Wettable Sulphur 80 WP @ 3 g/L or Hexaconazole 5 EC @ 1 ml/L."
+        }
+      ],
+
+      "harvest": {
+        "harvest_signs": "Back of the capitulum turns lemon-yellow. Drooping of heads.",
+        "expected_duration_days": 105
+      },
+      "special_cautions": ["Do not plant sunflower in fields that had a severe outbreak of Sunflower Necrosis Disease in the previous Kharif season."],
+      "source_refs": ["src_mpkv_sunflower_pop"]
+    },
+    {
+      "advisory_id": "sunflower_punjab_spring",
+      "state_region": "Punjab & Haryana",
+      "district": "All districts",
+      "season": "Spring (Zaid)",
+      "advisory_type": "cultivation_guide",
+      "applicability_filters": {
+        "irrigation": "assured irrigation",
+        "soil_type": "loam to sandy loam",
+        "sowing_window": "January to February"
+      },
+
+      "sowing": {
+        "sowing_window_start": "January 15",
+        "sowing_window_end": "February 15",
+        "seed_rate": { "value": 5, "unit": "kg/ha", "range_type": "recommended" },
+        "seed_treatment": "Treat with Captan @ 2g/kg seed.",
+        "spacing": "60 cm x 30 cm",
+        "sowing_depth_cm": 4,
+        "nursery_required": false,
+        "transplanting_required": false
+      },
+
+      "land_preparation": {
+        "summary": "Plough 2-3 times after harvesting potato or late wheat. Sowing on ridges running East-West helps capture sunlight and protects young seedlings from cold northern winds."
+      },
+
+      "fertilizer": {
+        "basal_dose": "30 kg N, 30 kg P2O5 per hectare.",
+        "top_dressing": "30 kg N per hectare at 30 DAS."
+      },
+
+      "irrigation": {
+        "schedule": "Requires 6-9 irrigations due to high evaporation in summer. Irrigate every 10-15 days initially, and every 7-10 days during flowering and grain filling.",
+        "critical_stages": ["Flowering", "Seed development"]
+      },
+
+      "weed_management": {
+        "summary": "Apply Pendimethalin @ 1 L/ha as pre-emergence."
+      },
+
+      "pest_management": [
+        {
+          "name": "Birds (Parrots and Pigeons)",
+          "symptoms": "Birds peck and eat the developing seeds from the capitulum.",
+          "management": "Bird scaring using reflective ribbons or noise makers during morning and evening hours from grain filling to harvest."
+        }
+      ],
+
+      "harvest": {
+        "harvest_signs": "Back of head turns lemon yellow.",
+        "expected_duration_days": 110
+      },
+      "special_cautions": ["Frequent irrigation is required during May due to intense heat, otherwise seed set will be drastically reduced."],
+      "faq": [
+        {
+          "question": "How to protect spring sunflower from birds?",
+          "answer": "Since sunflower is often the only standing crop in summer, bird pressure is immense. Tie the upper leaves over the head or use reflective tapes and acoustic scarers to minimize damage."
+        }
+      ],
+      "source_refs": ["src_pau_sunflower_spring"]
+    }
+  ],
+
+  "risk_library": {
+    "pests": [
+      {
+        "name": "Head Borer (Helicoverpa armigera)",
+        "favorable_conditions": ["Cloudy weather during flowering"],
+        "symptoms": ["Holes in the back of the capitulum", "Larvae feeding on seeds"],
+        "management": ["Bird perches @ 50/ha", "Bt sprays", "Hand picking of large larvae"]
+      },
+      {
+        "name": "Parrots and Birds",
+        "favorable_conditions": ["Grain filling to maturity stage", "Isolated fields in summer"],
+        "symptoms": ["Seeds plucked out from the head"],
+        "management": ["Bird scaring using reflective ribbons or noise makers", "Tying the leaves over the head"]
+      },
+      {
+        "name": "Thrips",
+        "favorable_conditions": ["Dry spells during early vegetative growth"],
+        "symptoms": ["Silvering of leaves", "Vector for Necrosis virus"],
+        "management": ["Seed treatment with Imidacloprid", "Foliar spray of Thiamethoxam"]
+      }
+    ],
+    "diseases": [
+      {
+        "name": "Sunflower Necrosis Disease (SND)",
+        "favorable_conditions": ["High thrips population", "Presence of Parthenium weeds"],
+        "symptoms": ["Necrotic rings", "Twisted leaves", "Stunted heads", "Complete crop failure if infected early"],
+        "management": ["Thrips control", "Weed eradication", "Barrier crop like sorghum (4-6 rows around field)"]
+      },
+      {
+        "name": "Powdery Mildew",
+        "favorable_conditions": ["Cool nights and warm days (Rabi season)", "High humidity"],
+        "symptoms": ["White powdery growth on leaves"],
+        "management": ["Spray Wettable Sulphur @ 3 g/L"]
+      },
+      {
+        "name": "Alternaria Leaf Spot",
+        "favorable_conditions": ["Continuous high humidity and rains (Kharif)"],
+        "symptoms": ["Dark brown concentric spots on leaves", "Premature defoliation"],
+        "management": ["Spray Mancozeb or Propiconazole"]
+      }
+    ],
+    "abiotic_risks": [
+      {
+        "name": "Poor Pollination / Chaffiness",
+        "trigger_conditions": ["High temperatures (>38°C)", "Lack of honey bees", "Boron deficiency", "Moisture stress"],
+        "impact": "High percentage of empty seeds, drastic yield reduction.",
+        "mitigation": ["Avoid insecticide sprays during bloom", "Foliar spray of Borax at button stage", "Hand pollination", "Maintain adequate irrigation"]
+      }
+    ]
+  },
+
+  "retrieval_chunks": [
+    {
+      "chunk_id": "sunflower_overview_001",
+      "chunk_type": "overview",
+      "title": "Sunflower Crop Overview",
+      "crop_name": "Sunflower",
+      "state_region": "India",
+      "district": "All",
+      "season": "Kharif/Rabi/Zaid",
+      "advisory_category": "overview",
+      "text": "Sunflower is a highly adaptable, photo-insensitive oilseed crop. It can be grown year-round and is prized for its high-quality edible oil. It requires cross-pollination by bees for good yields.",
+      "keywords": ["Surajmukhi", "Oilseed", "Photo-insensitive", "Cross-pollination"],
+      "metadata_tags": ["general_info", "intro"],
+      "source_ref_ids": ["src_iior_sunflower_pop"]
+    },
+    {
+      "chunk_id": "sunflower_suitability_001",
+      "chunk_type": "suitability",
+      "title": "Sunflower Soil and Climate Requirements",
+      "crop_name": "Sunflower",
+      "state_region": "India",
+      "district": "All",
+      "season": "All",
+      "advisory_category": "suitability",
+      "text": "Sunflower performs best in well-drained loamy or black cotton soils. It is highly sensitive to waterlogging. Moderate temperatures (20-25°C) are ideal; extreme heat during flowering reduces seed set.",
+      "keywords": ["Loam", "Well-drained", "Waterlogging-sensitive", "Heat stress"],
+      "metadata_tags": ["soil", "climate", "water"],
+      "source_ref_ids": ["src_uas_raichur_sunflower"]
+    },
+    {
+      "chunk_id": "sunflower_boron_001",
+      "chunk_type": "nutrient_management",
+      "title": "Importance of Boron in Sunflower",
+      "crop_name": "Sunflower",
+      "state_region": "India",
+      "district": "All",
+      "season": "All",
+      "advisory_category": "nutrient_management",
+      "text": "Boron is critical for sunflower to prevent 'chaffiness' (empty seeds). A foliar spray of 0.2% Borax at the ray floret opening (button) stage ensures proper seed filling and maximizes yield.",
+      "keywords": ["Boron", "Borax", "Chaffiness", "Seed filling", "Empty seeds"],
+      "metadata_tags": ["fertilizer", "micronutrient", "yield"],
+      "source_ref_ids": ["src_iior_sunflower_pop"]
+    },
+    {
+      "chunk_id": "sunflower_pollination_001",
+      "chunk_type": "cultivation_practice",
+      "title": "Hand Pollination and Bee Safety",
+      "crop_name": "Sunflower",
+      "state_region": "India",
+      "district": "All",
+      "season": "All",
+      "advisory_category": "cultivation_practice",
+      "text": "Sunflower relies heavily on honey bees for cross-pollination. Do NOT spray chemical insecticides between 9 AM and 4 PM during flowering. If bee activity is low, perform hand pollination by gently rubbing two blooming heads together on alternate days.",
+      "keywords": ["Pollination", "Honey bees", "Hand pollination", "Insecticide warning", "Seed set"],
+      "metadata_tags": ["agronomy", "pollination", "yield"],
+      "source_ref_ids": ["src_uas_raichur_sunflower"]
+    },
+    {
+      "chunk_id": "sunflower_snd_001",
+      "chunk_type": "disease_management",
+      "title": "Sunflower Necrosis Disease (SND)",
+      "crop_name": "Sunflower",
+      "state_region": "India",
+      "district": "All",
+      "season": "Kharif",
+      "advisory_category": "disease_management",
+      "text": "Sunflower Necrosis Disease (SND) is a devastating viral disease transmitted by thrips. It causes twisted leaves and necrotic rings, leading to total crop failure if infected early. Manage it by controlling thrips with Imidacloprid, weeding out Parthenium, and planting 4-6 border rows of sorghum as a barrier.",
+      "keywords": ["SND", "Necrosis", "Thrips", "Virus", "Barrier crop"],
+      "metadata_tags": ["disease", "virus", "vector"],
+      "source_ref_ids": ["src_iior_sunflower_pop"]
+    }
+  ],
+
+  "structured_explanation_rules": [
+    {
+      "rule_id": "sunflower_soil_match",
+      "condition": "input.soil_drainage == 'well_drained' AND input.soil_texture IN ['loam', 'sandy loam', 'black soil']",
+      "message": "Your well-drained soil is ideal for Sunflower, allowing deep root penetration and preventing collar rot.",
+      "priority": 1,
+      "severity": "positive_match"
+    },
+    {
+      "rule_id": "sunflower_waterlogging_reject",
+      "condition": "input.soil_drainage == 'poor'",
+      "message": "Critical Warning: Sunflower is extremely sensitive to water stagnation. Poorly drained fields will cause total crop failure.",
+      "priority": 1,
+      "severity": "hard_reject"
+    },
+    {
+      "rule_id": "sunflower_boron_recommendation",
+      "condition": "input.growth_stage == 'bud_initiation'",
+      "message": "The crop is approaching the flowering stage. Ensure a spray of 0.2% Borax and avoid harsh insecticides during daytime to protect honey bees.",
+      "priority": 2,
+      "severity": "info"
+    },
+    {
+      "rule_id": "sunflower_bird_warning",
+      "condition": "input.growth_stage == 'seed_development' OR input.growth_stage == 'maturity'",
+      "message": "Warning: As seeds develop, parrot and bird attacks increase. Deploy reflective ribbons or acoustic scarers immediately.",
+      "priority": 3,
+      "severity": "warning"
+    }
+  ],
+
+  "ui_response_templates": {
+    "best_match_intro": "Surajmukhi (Sunflower) is an excellent, short-duration cash crop for your field, suitable for any season.",
+    "warning_drainage": "Your field has poor drainage. To grow Sunflower successfully, you must ensure ridged sowing and effective water runoff.",
+    "warning_pollination": "Alert: Do not spray insecticides during the day while your crop is flowering. Protect the bees!",
+    "cta_view_advisory": "View full Sunflower cultivation advisory",
+    "cta_view_snd_guide": "Read the Necrosis Disease & Thrips Management Guide"
+  },
+
+  "source_registry": [
+    {
+      "source_id": "src_uas_raichur_sunflower",
+      "title": "Package of Practices for Oilseed Crops (Sunflower)",
+      "source_type": "manual",
+      "publisher": "University of Agricultural Sciences (UAS), Raichur",
+      "region_scope": "Karnataka",
+      "season_scope": "Kharif and Rabi",
+      "crop_scope": ["Sunflower"],
+      "content_summary": "State-level guidelines detailing fertilization, Boron application, and viral disease management in Karnataka.",
+      "date_published": "2022-06-15",
+      "trust_level": "high"
+    },
+    {
+      "source_id": "src_iior_sunflower_pop",
+      "title": "Sunflower Production Technology",
+      "source_type": "pdf",
+      "publisher": "ICAR - Indian Institute of Oilseeds Research (IIOR), Hyderabad",
+      "region_scope": "India",
+      "season_scope": "All Seasons",
+      "crop_scope": ["Sunflower"],
+      "content_summary": "National advisory covering photo-insensitivity, hybrid selection, bee-safe pest management, and chaffiness mitigation.",
+      "date_published": "2021-05-10",
+      "trust_level": "high"
+    },
+    {
+      "source_id": "src_mpkv_sunflower_pop",
+      "title": "Rabi Sunflower Cultivation Practices",
+      "source_type": "bulletin",
+      "publisher": "Mahatma Phule Krishi Vidyapeeth (MPKV), Rahuri",
+      "region_scope": "Maharashtra",
+      "season_scope": "Rabi",
+      "crop_scope": ["Sunflower"],
+      "content_summary": "Guidelines for semi-irrigated Rabi sunflower on black soils of Maharashtra.",
+      "date_published": "2022-09-01",
+      "trust_level": "high"
+    },
+    {
+      "source_id": "src_pau_sunflower_spring",
+      "title": "Package of Practices for Spring Crops",
+      "source_type": "manual",
+      "publisher": "Punjab Agricultural University (PAU), Ludhiana",
+      "region_scope": "Punjab",
+      "season_scope": "Zaid/Spring",
+      "crop_scope": ["Sunflower"],
+      "content_summary": "Management of highly irrigated summer sunflower, focusing on bird protection and heat stress.",
+      "date_published": "2023-01-20",
+      "trust_level": "high"
+    }
+  ],
+
+  "quality_flags": {
+    "is_complete": true,
+    "missing_fields": [],
+    "weakly_supported_fields": [],
+    "last_reviewed_at": "2024-04-10T00:00:00Z"
+  },
+
+  "updated_at": "2024-04-10T00:00:00Z",
+  "created_at": "2023-12-10T00:00:00Z"
+}

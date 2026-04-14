@@ -1,0 +1,505 @@
+{
+  "crop_id": "ragi",
+  "crop_name": "Ragi",
+  "aliases": ["Finger Millet", "Mandua", "Kezhvaragu", "Nachani", "Madua"],
+  "crop_group": "Millet",
+  "status": "active",
+  "language": "en",
+  "version": "v1.2",
+
+  "master_profile": {
+    "short_description": "Ragi (Finger Millet) is a highly nutritious, climate-resilient dryland crop widely cultivated in India. It is known for its high calcium content and excellent storage qualities.",
+    "seasons_supported": ["Kharif", "Rabi", "Zaid", "Summer"],
+    "regions_supported": ["Karnataka", "Tamil Nadu", "Andhra Pradesh", "Odisha", "Uttarakhand", "Maharashtra", "Jharkhand", "Bihar"],
+    "agro_climatic_zones": ["Southern Plateau and Hills Region", "Western Plateau and Hills Region", "Eastern Himalayan Region", "East Coast Plains and Hills Region"],
+
+    "soil_suitability": {
+      "suitable_soil_textures": ["Red lateritic soils", "Sandy loam", "Loam", "Shallow black soils"],
+      "unsuitable_soil_textures": ["Heavy clay with poor drainage", "Highly waterlogged soils"],
+      "ideal_ph_min": 5.5,
+      "ideal_ph_max": 7.5,
+      "acceptable_ph_min": 4.5,
+      "acceptable_ph_max": 8.0,
+      "salinity_tolerance_note": "Moderately tolerant to soil salinity and can tolerate slight acidity better than most cereals.",
+      "drainage_requirement": "Requires well-drained soils; highly susceptible to water stagnation.",
+      "organic_carbon_note": "Responds excellently to organic manure (FYM), which helps retain moisture in sandy and red soils."
+    },
+
+    "climate_suitability": {
+      "ideal_temperature_c_min": 25,
+      "ideal_temperature_c_max": 30,
+      "acceptable_temperature_c_min": 15,
+      "acceptable_temperature_c_max": 35,
+      "ideal_humidity_min": 40,
+      "ideal_humidity_max": 75,
+      "ideal_rainfall_mm_min": 500,
+      "ideal_rainfall_mm_max": 1000,
+      "frost_tolerance_note": "Highly sensitive to frost.",
+      "heat_tolerance_note": "Tolerates high temperatures well but extreme heat (>38°C) during flowering can cause spikelet sterility."
+    },
+
+    "water_profile": {
+      "irrigation_required": false,
+      "rainfed_suitable": true,
+      "waterlogging_tolerance": "Low; standing water for more than 24-48 hours can severely impact the crop.",
+      "drought_tolerance": "High; it has an excellent ability to withstand dry spells and revive after rainfall.",
+      "critical_water_stages": ["Tillering", "Flowering", "Grain filling"]
+    },
+
+    "nutrient_profile": {
+      "nitrogen_demand": "Moderate (40-60 kg/ha for rainfed, 60-90 kg/ha for irrigated)",
+      "phosphorus_demand": "Moderate (30-40 kg/ha)",
+      "potassium_demand": "Low to Moderate (20-30 kg/ha)",
+      "micronutrient_notes": ["Zinc deficiency can occur in intensively cultivated areas. Responds well to Zinc Sulphate application."]
+    },
+
+    "cropping_context": {
+      "suitable_previous_crops": ["Legumes (Cowpea, Green gram, Black gram)", "Groundnut", "Sesame"],
+      "unsuitable_previous_crops": ["Other millets or continuous ragi without rotation can deplete soil nutrients and increase disease pressure (Blast)."],
+      "rotation_notes": ["Groundnut - Ragi", "Cowpea - Ragi", "Potato - Ragi (in hilly regions)"],
+      "intercrop_options": ["Pigeonpea (Tur) in 8:2 or 4:1 ratio", "Field bean (Avare)", "Mustard (in North India)", "Niger"]
+    },
+
+    "crop_duration": {
+      "duration_days_min": 90,
+      "duration_days_max": 125,
+      "maturity_indicators": ["Earheads turn brown", "Grains become hard and dark brown/red", "Leaves start drying and turning yellow"]
+    },
+
+    "recommendation_logic": {
+      "why_recommend_conditions": ["Low to medium rainfall regions", "Well-drained red or laterite soils", "Areas requiring climate-resilient nutritional security"],
+      "why_not_recommend_conditions": ["Frequent flooding or waterlogging", "Heavy clay soils with poor drainage"],
+      "hard_rejection_conditions": ["Frost-prone regions during the growing season", "Persistent standing water"]
+    }
+  },
+
+  "region_season_advisories": [
+    {
+      "advisory_id": "ragi_karnataka_kharif",
+      "state_region": "Karnataka",
+      "district": "Tumkur, Hassan, Mandya, Bengaluru Rural, Kolar",
+      "season": "Kharif",
+      "advisory_type": "cultivation_guide",
+      "applicability_filters": {
+        "irrigation": "rainfed",
+        "soil_type": "red sandy loam",
+        "sowing_window": "June to July"
+      },
+
+      "sowing": {
+        "sowing_window_start": "June 15",
+        "sowing_window_end": "July 31",
+        "seed_rate": { "value": 10, "unit": "kg/ha", "range_type": "recommended", "source_confidence": "high" },
+        "seed_treatment": "Treat seeds with Azospirillum and PSB @ 25 g/kg seed. For disease control, treat with Carbendazim @ 2 g/kg seed.",
+        "spacing": "22.5 cm x 10 cm or 30 cm x 10 cm",
+        "sowing_depth_cm": 3,
+        "nursery_required": false,
+        "transplanting_required": false
+      },
+
+      "land_preparation": {
+        "summary": "Plough the land 2-3 times with a mouldboard plough after the first pre-monsoon showers. Use a cultivator or harrow to achieve fine tilth. Incorporate FYM during the last ploughing."
+      },
+
+      "fertilizer": {
+        "basal_dose": "Apply 50% Nitrogen (25 kg), 100% Phosphorus (40 kg), and 100% Potassium (25 kg) per hectare at the time of sowing.",
+        "top_dressing": "Apply remaining 50% Nitrogen (25 kg/ha) 25-30 days after sowing when soil moisture is adequate.",
+        "organic_manure": "Incorporate 7.5 to 10 tonnes/ha of well-decomposed FYM or compost 2-3 weeks before sowing.",
+        "micronutrients": "Apply Zinc Sulphate @ 12.5 kg/ha as basal dose if the soil is deficient."
+      },
+
+      "irrigation": {
+        "schedule": "Primarily rainfed. If dry spells exceed 15-20 days, provide life-saving protective irrigation, especially at flowering and grain-filling stages.",
+        "critical_stages": ["Tillering (20-25 DAS)", "Flowering (55-65 DAS)", "Grain filling (75-85 DAS)"],
+        "rainfed_advice": "Practice timely intercultivation (hoeing) at 15 and 30 DAS to control weeds and conserve soil moisture by breaking capillaries."
+      },
+
+      "weed_management": {
+        "summary": "Pre-emergence application of Isoproturon @ 0.5 kg a.i./ha or post-emergence application of 2,4-D sodium salt @ 0.75 kg a.i./ha at 20-25 DAS for broad-leaved weeds. Two manual weedings at 15 and 30 days are highly effective."
+      },
+
+      "pest_management": [
+        {
+          "name": "Pink Stem Borer",
+          "symptoms": "Dead hearts in young plants, white earheads in mature plants.",
+          "management": "Remove and destroy dead hearts. Spray Quinalphos 25 EC @ 2 ml/liter or Chlorpyriphos 20 EC @ 2 ml/liter if infestation exceeds 10%."
+        },
+        {
+          "name": "Aphids / Root Aphids",
+          "symptoms": "Yellowing of plants, stunted growth, presence of ants around the base.",
+          "management": "Spray Dimethoate 30 EC @ 1.7 ml/liter of water. For root aphids, drench the soil around the plant base."
+        }
+      ],
+
+      "disease_management": [
+        {
+          "name": "Blast (Leaf, Neck, and Finger)",
+          "symptoms": "Spindle-shaped spots with grey centers on leaves. Blackening of the neck (Neck Blast) causing earheads to droop. Brownish discoloration on fingers.",
+          "management": "Grow resistant varieties (e.g., ML-365, GPU-28). Spray Tricyclazole 75 WP @ 0.6 g/liter or Carbendazim 50 WP @ 1 g/liter at 50% flowering and repeat after 10 days if cloudy weather persists."
+        },
+        {
+          "name": "Seedling Blight",
+          "symptoms": "Yellowing and drying of seedlings in patches.",
+          "management": "Seed treatment with Mancozeb @ 2 g/kg of seed. Ensure proper drainage in the field/nursery."
+        }
+      ],
+
+      "deficiency_management": [
+        {
+          "nutrient": "Nitrogen",
+          "symptoms": "Stunted growth and uniform yellowing of older leaves.",
+          "remedy": "Top dress with Urea immediately after weeding or when adequate soil moisture is available."
+        }
+      ],
+
+      "harvest": {
+        "harvest_signs": "Earheads turn completely brown, grains become hard and dry (moisture ~15%). The stalk may remain slightly green.",
+        "post_harvest_notes": "Cut earheads, sun-dry for 3-4 days, and thresh using a tractor or manual beating. Store grains at <10-12% moisture. Stalks are harvested separately for high-quality cattle fodder.",
+        "expected_duration_days": 110
+      },
+
+      "special_cautions": ["Avoid applying heavy nitrogen doses as it increases susceptibility to Blast disease and causes lodging."],
+      "faq": [
+        {
+          "question": "Can Ragi be transplanted?",
+          "answer": "Yes, transplanting is highly recommended if irrigation is available or if monsoon is delayed. Use 21-25 days old seedlings. It generally yields 15-20% higher than direct broadcasting."
+        }
+      ],
+
+      "source_refs": ["src_uas_bangalore_ragi_2022", "src_iimr_ragi_pop"]
+    },
+    {
+      "advisory_id": "ragi_tamilnadu_rabi_irrigated",
+      "state_region": "Tamil Nadu",
+      "district": "Dharmapuri, Krishnagiri, Salem, Erode",
+      "season": "Rabi / Summer",
+      "advisory_type": "cultivation_guide",
+      "applicability_filters": {
+        "irrigation": "irrigated",
+        "soil_type": ["red loam", "sandy loam"],
+        "method": "transplanted"
+      },
+
+      "sowing": {
+        "sowing_window_start": "September 15",
+        "sowing_window_end": "October 30",
+        "seed_rate": { "value": 5, "unit": "kg/ha", "range_type": "recommended" },
+        "seed_treatment": "Treat with Pseudomonas fluorescens @ 10g/kg seed for organic disease management.",
+        "spacing": "30 cm x 10 cm",
+        "sowing_depth_cm": 2,
+        "nursery_required": true,
+        "transplanting_required": true
+      },
+
+      "land_preparation": {
+        "summary": "Prepare a raised bed nursery. For the main field, plough thoroughly and form ridges and furrows or beds and channels for efficient irrigation."
+      },
+
+      "fertilizer": {
+        "basal_dose": "Apply 30 kg N, 30 kg P2O5, and 30 kg K2O/ha.",
+        "top_dressing": "Apply 30 kg N/ha at 25-30 DAT.",
+        "organic_manure": "Apply 12.5 t/ha FYM or compost."
+      },
+
+      "irrigation": {
+        "schedule": "Irrigate immediately after transplanting, life irrigation on the 3rd day, and subsequently every 7-10 days depending on soil type.",
+        "critical_stages": ["Tillering", "Flowering", "Dough stage"]
+      },
+
+      "weed_management": {
+        "summary": "Hand weeding twice at 15 and 30 days after transplanting. Alternatively, use a cycle weeder in between rows."
+      },
+
+      "pest_management": [
+        {
+          "name": "Earhead Caterpillar / Bug",
+          "symptoms": "Caterpillars webbing the earheads and feeding on developing grains.",
+          "management": "Dust Malathion 5% or spray Neem Seed Kernel Extract (NSKE) 5% at the time of panicle emergence."
+        }
+      ],
+
+      "disease_management": [
+        {
+          "name": "Finger Blast",
+          "symptoms": "Brownish discoloration of the fingers, leading to chaffy grains.",
+          "management": "Spray Tricyclazole 75 WP @ 0.6 g/L or Saaf @ 2 g/L at 50% flowering."
+        }
+      ],
+
+      "harvest": {
+        "harvest_signs": "Leaves turn yellowish, and the earheads turn brown. Seeds become hard.",
+        "post_harvest_notes": "Harvest the earheads first, dry them, and then harvest the straw for fodder.",
+        "expected_duration_days": 105
+      },
+      "special_cautions": ["Do not transplant seedlings older than 25 days, as it reduces tillering capacity."],
+      "faq": [
+        {
+          "question": "What is the System of Ragi Intensification (SRI)?",
+          "answer": "SRI in Ragi involves transplanting 15-day-old single seedlings at a wider square spacing (25x25 cm), applying organic manures, and using a cycle weeder to aerate the soil, often yielding 30-40% more grain."
+        }
+      ],
+      "source_refs": ["src_tnau_agritech_ragi"]
+    },
+    {
+      "advisory_id": "ragi_odisha_kharif_tribal",
+      "state_region": "Odisha",
+      "district": "Koraput, Malkangiri, Rayagada, Kandhamal",
+      "season": "Kharif",
+      "advisory_type": "cultivation_guide",
+      "applicability_filters": {
+        "irrigation": "rainfed",
+        "soil_type": ["lateritic", "red soil"],
+        "topography": "hilly / sloping"
+      },
+
+      "sowing": {
+        "sowing_window_start": "June 1",
+        "sowing_window_end": "July 15",
+        "seed_rate": { "value": 10, "unit": "kg/ha" },
+        "seed_treatment": "Treat seeds with Trichoderma viride @ 5g/kg or Beejamrutha to prevent soil-borne fungal infections.",
+        "spacing": "25 cm x 10 cm in lines across the slope",
+        "sowing_depth_cm": 3,
+        "nursery_required": false,
+        "transplanting_required": false
+      },
+
+      "land_preparation": {
+        "summary": "Plough across the slope to prevent soil erosion. Create small bunds to conserve rainwater."
+      },
+
+      "fertilizer": {
+        "basal_dose": "20 kg N, 20 kg P2O5, 20 kg K2O/ha.",
+        "top_dressing": "20 kg N/ha at 30 days after sowing.",
+        "organic_manure": "Use abundant FYM (5-10 t/ha) to improve the moisture-holding capacity of lateritic soils."
+      },
+
+      "irrigation": {
+        "schedule": "Completely rainfed.",
+        "critical_stages": ["Flowering", "Grain formation"]
+      },
+
+      "weed_management": {
+        "summary": "Line sowing allows easy manual hoeing at 20 and 35 DAS. Avoid chemical herbicides in organic tribal belts."
+      },
+
+      "disease_management": [
+        {
+          "name": "Blast",
+          "symptoms": "Spots on leaves and neck rot.",
+          "management": "Grow resistant varieties like Chilika or Bhairabi. Avoid excess chemical nitrogen."
+        }
+      ],
+
+      "harvest": {
+        "harvest_signs": "Complete browning of panicles.",
+        "expected_duration_days": 115
+      },
+      "special_cautions": ["Do not broadcast seeds on slopes, as heavy monsoon rains can wash them away. Always sow in lines."],
+      "source_refs": ["src_ouat_ragi_odisha"]
+    }
+  ],
+
+  "risk_library": {
+    "pests": [
+      {
+        "name": "Pink Stem Borer (Sesamia inferens)",
+        "favorable_conditions": ["Dry weather followed by sudden rains", "Presence of alternative grassy weed hosts"],
+        "symptoms": ["Dead hearts in vegetative stage", "Chaffy white earheads"],
+        "management": ["Timely sowing", "Destruction of stubbles", "Apply Carbofuran 3G granules in whorls"]
+      },
+      {
+        "name": "Earhead Caterpillar / Bug",
+        "favorable_conditions": ["High humidity during the dough stage of the crop"],
+        "symptoms": ["Webbing of the earheads", "Punctured and shriveled grains", "Foul smell from bugs"],
+        "management": ["Dust Malathion 5%", "Spray Neem Seed Kernel Extract (NSKE) 5%"]
+      },
+      {
+        "name": "Root Aphids",
+        "favorable_conditions": ["Prolonged dry spells", "Sandy soils"],
+        "symptoms": ["Stunted growth", "Yellowing of leaves", "Presence of black ants near the base"],
+        "management": ["Drench the root zone with Dimethoate 30 EC solution"]
+      }
+    ],
+    "diseases": [
+      {
+        "name": "Blast (Pyricularia grisea)",
+        "favorable_conditions": ["High humidity (>85%)", "Cloudy days and drizzle", "High nitrogen application"],
+        "symptoms": ["Spindle spots on leaves with grey centers", "Rotting of the neck region (Neck Blast)", "Discolored fingers"],
+        "management": ["Use resistant varieties (GPU 28, GPU 48)", "Seed treatment with Carbendazim", "Foliar sprays of Tricyclazole or Saaf"]
+      },
+      {
+        "name": "Mottle Streak Virus",
+        "favorable_conditions": ["Presence of leafhopper vectors"],
+        "symptoms": ["Mottling and streaking of leaves", "Severe stunting"],
+        "management": ["Rogue out infected plants", "Spray systemic insecticides to control vectors"]
+      }
+    ],
+    "abiotic_risks": [
+      {
+        "name": "Moisture Stress during Flowering",
+        "trigger_conditions": ["Prolonged dry spells (over 20 days) during the 50-65 DAS window"],
+        "impact": "Spikelet sterility, poor grain filling, severe yield reduction.",
+        "mitigation": ["Protective irrigation", "Foliar spray of 2% Urea or 1% KCl during dry spells to induce drought tolerance"]
+      }
+    ]
+  },
+
+  "retrieval_chunks": [
+    {
+      "chunk_id": "ragi_overview_001",
+      "chunk_type": "overview",
+      "title": "Ragi (Finger Millet) Overview",
+      "crop_name": "Ragi",
+      "state_region": "India",
+      "district": "All",
+      "season": "Kharif",
+      "advisory_category": "overview",
+      "text": "Ragi is a robust, drought-resilient millet extensively grown in Southern India. It is highly valued for its exceptional calcium and iron content, making it a superfood.",
+      "keywords": ["Finger Millet", "Mandua", "Calcium", "Dryland", "Superfood"],
+      "metadata_tags": ["general_info", "intro", "nutrition"],
+      "source_ref_ids": ["src_iimr_ragi_pop"]
+    },
+    {
+      "chunk_id": "ragi_suitability_001",
+      "chunk_type": "suitability",
+      "title": "Ragi Soil and Climate Requirements",
+      "crop_name": "Ragi",
+      "state_region": "India",
+      "district": "All",
+      "season": "All",
+      "advisory_category": "suitability",
+      "text": "Ragi grows best in well-drained red, loamy, or sandy loam soils with pH 5.5 to 7.5. It requires an annual rainfall of 500-1000mm and thrives in temperatures between 25-30°C.",
+      "keywords": ["Red soil", "Rainfall", "Temperature", "Well-drained"],
+      "metadata_tags": ["soil", "climate", "water"],
+      "source_ref_ids": ["src_uas_bangalore_ragi_2022"]
+    },
+    {
+      "chunk_id": "ragi_sri_method_001",
+      "chunk_type": "cultivation_practice",
+      "title": "System of Ragi Intensification (SRI)",
+      "crop_name": "Ragi",
+      "state_region": "India",
+      "district": "All",
+      "season": "All",
+      "advisory_category": "cultivation_practice",
+      "text": "The System of Ragi Intensification (SRI) involves transplanting young (15-20 days) single seedlings at a wide square spacing (25x25 cm), applying organic manure, and active mechanical weeding. This promotes massive root and tiller growth, increasing yields by up to 50%.",
+      "keywords": ["SRI", "Transplanting", "Spacing", "Yield increase", "Cycle weeder"],
+      "metadata_tags": ["SRI", "agronomy", "yield"],
+      "source_ref_ids": ["src_tnau_agritech_ragi"]
+    },
+    {
+      "chunk_id": "ragi_blast_management_001",
+      "chunk_type": "disease_management",
+      "title": "Blast Disease in Ragi",
+      "crop_name": "Ragi",
+      "state_region": "India",
+      "district": "All",
+      "season": "Kharif",
+      "advisory_category": "disease_management",
+      "text": "Blast is the most devastating disease in ragi, affecting leaves, neck, and fingers. It thrives in high humidity (>85%). Manage it by sowing resistant varieties like GPU 28 or GPU 48 and spraying Tricyclazole 75 WP at heading stages.",
+      "keywords": ["Blast", "Neck blast", "Finger blast", "Tricyclazole", "GPU 28", "Humidity"],
+      "metadata_tags": ["Disease", "Blast", "Fungicide"],
+      "source_ref_ids": ["src_iimr_ragi_pop"]
+    }
+  ],
+
+  "structured_explanation_rules": [
+    {
+      "rule_id": "ragi_dryland_suitability",
+      "condition": "input.rainfall_mm >= 500 AND input.rainfall_mm <= 900 AND input.irrigation_available == false",
+      "message": "Excellent conditions for Ragi. It is highly resilient and will perform well as a rainfed crop in this rainfall range.",
+      "priority": 1,
+      "severity": "positive_match"
+    },
+    {
+      "rule_id": "ragi_waterlogging_reject",
+      "condition": "input.soil_drainage == 'poor'",
+      "message": "Ragi cannot tolerate water stagnation. Soils with poor drainage will lead to root rot and crop failure.",
+      "priority": 1,
+      "severity": "hard_reject"
+    },
+    {
+      "rule_id": "ragi_blast_disease_warning",
+      "condition": "input.humidity >= 85 AND input.weather_forecast == 'cloudy'",
+      "message": "High humidity and cloudy weather increase the risk of Blast disease. Monitor the crop closely and keep fungicides like Tricyclazole ready.",
+      "priority": 2,
+      "severity": "warning"
+    },
+    {
+      "rule_id": "ragi_sri_recommendation",
+      "condition": "input.irrigation_available == true AND input.labor_availability == 'high'",
+      "message": "Since you have irrigation and labor, consider using the System of Ragi Intensification (SRI) for transplanting to boost your yields by 30-50%.",
+      "priority": 3,
+      "severity": "info"
+    }
+  ],
+
+  "ui_response_templates": {
+    "best_match_intro": "Ragi (Finger Millet) is an outstanding choice for your field, given the well-drained soil and rainfed conditions.",
+    "warning_low_rainfall": "Your area experiences slightly lower rainfall, but Ragi's drought tolerance makes it a safer bet than most cereals.",
+    "info_sri_method": "Tip: You can maximize your harvest by adopting the SRI transplanting method. Space seedlings 25x25 cm apart.",
+    "cta_view_advisory": "View full Finger Millet cultivation advisory",
+    "cta_view_blast_guide": "Read the Blast Disease Management Guide"
+  },
+
+  "source_registry": [
+    {
+      "source_id": "src_uas_bangalore_ragi_2022",
+      "title": "Package of Practices for Kharif Crops",
+      "source_type": "manual",
+      "publisher": "University of Agricultural Sciences (UAS), Bangalore",
+      "region_scope": "Karnataka",
+      "season_scope": "Kharif",
+      "crop_scope": ["Ragi"],
+      "content_summary": "State-recommended agricultural practices, pest management, and varietal selection for Ragi in Karnataka.",
+      "date_published": "2022-05-01",
+      "trust_level": "high"
+    },
+    {
+      "source_id": "src_iimr_ragi_pop",
+      "title": "Finger Millet Cultivation Guidelines",
+      "source_type": "pdf",
+      "publisher": "ICAR - Indian Institute of Millets Research (IIMR)",
+      "region_scope": "India",
+      "season_scope": "Kharif and Rabi",
+      "crop_scope": ["Finger Millet"],
+      "content_summary": "Comprehensive national guidelines on finger millet agronomy and processing.",
+      "date_published": "2021-10-15",
+      "trust_level": "high"
+    },
+    {
+      "source_id": "src_tnau_agritech_ragi",
+      "title": "TNAU Agritech Portal - Finger Millet",
+      "source_type": "website",
+      "publisher": "Tamil Nadu Agricultural University (TNAU)",
+      "region_scope": "Tamil Nadu",
+      "season_scope": "Rabi/Summer",
+      "crop_scope": ["Ragi"],
+      "content_summary": "Detailed guide on irrigated and transplanted Ragi cultivation, including SRI techniques.",
+      "date_published": "2023-02-10",
+      "trust_level": "high"
+    },
+    {
+      "source_id": "src_ouat_ragi_odisha",
+      "title": "Millet Cultivation in Tribal Areas of Odisha",
+      "source_type": "bulletin",
+      "publisher": "Odisha University of Agriculture and Technology (OUAT)",
+      "region_scope": "Odisha",
+      "season_scope": "Kharif",
+      "crop_scope": ["Ragi"],
+      "content_summary": "Specific practices for sloped and lateritic soils in the Eastern Ghats.",
+      "date_published": "2022-06-20",
+      "trust_level": "high"
+    }
+  ],
+
+  "quality_flags": {
+    "is_complete": true,
+    "missing_fields": [],
+    "weakly_supported_fields": [],
+    "last_reviewed_at": "2024-03-01T00:00:00Z"
+  },
+
+  "updated_at": "2024-03-01T00:00:00Z",
+  "created_at": "2023-11-10T00:00:00Z"
+}

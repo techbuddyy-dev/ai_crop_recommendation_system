@@ -1,0 +1,422 @@
+{
+  "crop_id": "greengram",
+  "crop_name": "Green Gram",
+  "aliases": ["Moong", "Mungbean", "Moong Dal", "Golden Gram"],
+  "crop_group": "Pulse",
+  "status": "active",
+  "language": "en",
+  "version": "v1.2",
+
+  "master_profile": {
+    "short_description": "Green Gram (Moong) is a rapid-growing, short-duration pulse crop widely cultivated in India. It is highly nutritious, easily digestible, and excellent for improving soil fertility through biological nitrogen fixation.",
+    "seasons_supported": ["Kharif", "Zaid", "Rabi"],
+    "regions_supported": ["Rajasthan", "Madhya Pradesh", "Maharashtra", "Uttar Pradesh", "Andhra Pradesh", "Odisha", "Karnataka"],
+    "agro_climatic_zones": ["Western Dry Region", "Central Plateau and Hills Region", "Upper Gangetic Plains Region", "East Coast Plains and Hills Region"],
+
+    "soil_suitability": {
+      "suitable_soil_textures": ["Loam", "Sandy loam", "Clay loam", "Well-drained alluvial soils"],
+      "unsuitable_soil_textures": ["Heavy clay with poor drainage", "Highly saline and alkaline soils"],
+      "ideal_ph_min": 6.5,
+      "ideal_ph_max": 7.5,
+      "acceptable_ph_min": 5.5,
+      "acceptable_ph_max": 8.0,
+      "salinity_tolerance_note": "Highly sensitive to salinity and alkalinity. High salt concentrations severely restrict root nodulation and plant growth.",
+      "drainage_requirement": "Requires excellent drainage; extremely sensitive to waterlogging even for short periods.",
+      "organic_carbon_note": "Performs best in soils with medium organic carbon. Application of FYM or compost improves soil structure and moisture retention."
+    },
+
+    "climate_suitability": {
+      "ideal_temperature_c_min": 25,
+      "ideal_temperature_c_max": 35,
+      "acceptable_temperature_c_min": 20,
+      "acceptable_temperature_c_max": 40,
+      "ideal_humidity_min": 40,
+      "ideal_humidity_max": 70,
+      "ideal_rainfall_mm_min": 500,
+      "ideal_rainfall_mm_max": 800,
+      "frost_tolerance_note": "Highly sensitive to frost, which causes severe tissue damage and plant death.",
+      "heat_tolerance_note": "Can tolerate high temperatures up to 40°C, but extremely hot and dry winds during flowering can cause flower drop and pollen desiccation."
+    },
+
+    "water_profile": {
+      "irrigation_required": false,
+      "rainfed_suitable": true,
+      "waterlogging_tolerance": "Very low; standing water causes root suffocation, yellowing, and mortality within 24-48 hours.",
+      "drought_tolerance": "Moderate; the deep root system helps it survive dry spells, though moisture stress during flowering significantly reduces yield.",
+      "critical_water_stages": ["Pre-flowering (25-30 DAS)", "Pod formation (45-50 DAS)"]
+    },
+
+    "nutrient_profile": {
+      "nitrogen_demand": "Low (15-20 kg/ha as a starter dose; mostly fixes its own atmospheric nitrogen)",
+      "phosphorus_demand": "Moderate (40-50 kg/ha; essential for root proliferation and nodule formation)",
+      "potassium_demand": "Low (20 kg/ha; mostly recommended for deficient soils)",
+      "micronutrient_notes": ["Sulphur (20 kg/ha) is critical for amino acid and protein synthesis.", "Zinc (25 kg/ha of Zinc Sulphate) is recommended in deficient areas."]
+    },
+
+    "cropping_context": {
+      "suitable_previous_crops": ["Wheat", "Potato", "Mustard", "Sugarcane", "Rice"],
+      "unsuitable_previous_crops": ["Continuous pulse cultivation without rotation increases nematode and soil-borne disease pressure."],
+      "rotation_notes": ["Rice - Wheat - Green Gram (Zaid)", "Maize - Mustard - Green Gram"],
+      "intercrop_options": ["Pearl Millet", "Sorghum", "Maize", "Cotton", "Sugarcane"]
+    },
+
+    "crop_duration": {
+      "duration_days_min": 60,
+      "duration_days_max": 75,
+      "maturity_indicators": ["Leaves turn yellow and begin to drop", "Pods turn brown/black and become dry", "Seeds rattle inside the pods", "Seed moisture reaches 15%"]
+    },
+
+    "recommendation_logic": {
+      "why_recommend_conditions": ["Short growing window available (catch crop)", "Zaid (summer) season with assured irrigation", "Need for a soil-restoring legume"],
+      "why_not_recommend_conditions": ["Flood-prone or poorly drained areas", "Saline or alkaline soils", "Frost-prone areas"],
+      "hard_rejection_conditions": ["Persistent waterlogging", "High soil EC (>3 dS/m)"]
+    }
+  },
+
+  "region_season_advisories": [
+    {
+      "advisory_id": "greengram_up_zaid",
+      "state_region": "Uttar Pradesh",
+      "district": "All districts",
+      "season": "Zaid",
+      "advisory_type": "cultivation_guide",
+      "applicability_filters": {
+        "irrigation": "irrigated",
+        "soil_type": "loam to sandy loam",
+        "sowing_window": "March to mid-April"
+      },
+
+      "sowing": {
+        "sowing_window_start": "March 15",
+        "sowing_window_end": "April 15",
+        "seed_rate": { "value": 20, "unit": "kg/ha", "range_type": "recommended", "source_confidence": "high" },
+        "seed_treatment": "Treat seed with Thiram @ 2g/kg + Carbendazim @ 1g/kg or Trichoderma viride @ 5g/kg. Follow with Rhizobium and PSB culture @ 5g/kg seed.",
+        "spacing": "25-30 cm x 10 cm",
+        "sowing_depth_cm": 4,
+        "nursery_required": false,
+        "transplanting_required": false
+      },
+
+      "land_preparation": {
+        "summary": "After harvesting the Rabi crop (e.g., wheat or mustard), apply a pre-sowing irrigation (Palewa). Plough the field 2-3 times to get a fine tilth and ensure proper levelling to avoid water stagnation."
+      },
+
+      "fertilizer": {
+        "basal_dose": "Apply 15-20 kg N, 40 kg P2O5, and 20 kg Sulphur per hectare at sowing. Drill fertilizers 5 cm below the seed.",
+        "top_dressing": "Not generally required. Foliar spray of 2% Urea or 2% DAP at pre-flowering and pod development stages boosts yield.",
+        "organic_manure": "Apply 5 tonnes/ha of well-rotted FYM during final land preparation.",
+        "micronutrients": "Foliar application of 0.5% Zinc Sulphate if zinc deficiency symptoms appear."
+      },
+
+      "irrigation": {
+        "schedule": "Provide 3-4 irrigations in the Zaid (summer) season. First irrigation at 20-25 DAS, second at pre-flowering (35-40 DAS), and third at pod filling (50-55 DAS).",
+        "critical_stages": ["Pre-flowering", "Pod formation"],
+        "rainfed_advice": "For Kharif crop, it is mostly rainfed. Ensure proper drainage to avoid waterlogging."
+      },
+
+      "weed_management": {
+        "summary": "Apply Pendimethalin 30 EC @ 1.0 kg a.i./ha as pre-emergence within 3 days of sowing. Do one manual weeding at 20-25 DAS."
+      },
+
+      "pest_management": [
+        {
+          "name": "Whitefly (Bemisia tabaci)",
+          "symptoms": "Adults and nymphs suck sap from leaves. It is the primary vector for Mungbean Yellow Mosaic Virus (MYMV).",
+          "management": "Use MYMV resistant varieties (e.g., Samrat, SML-668). Spray Imidacloprid 17.8 SL @ 0.3 ml/L or Thiamethoxam 25 WG @ 0.2 g/L."
+        },
+        {
+          "name": "Thrips",
+          "symptoms": "Scraping and sucking of sap from flowers, causing flower drop and deformed pods.",
+          "management": "Spray Dimethoate 30 EC @ 1.7 ml/L or Fipronil 5 SC @ 1.5 ml/L during bud initiation stage."
+        }
+      ],
+
+      "disease_management": [
+        {
+          "name": "Mungbean Yellow Mosaic Virus (MYMV)",
+          "symptoms": "Leaves show alternating yellow and green patches. Severe infection leads to complete yellowing, stunting, and no pod formation.",
+          "management": "Cultivate resistant varieties. Control the whitefly vector strictly. Uproot and burn infected plants immediately."
+        },
+        {
+          "name": "Powdery Mildew",
+          "symptoms": "White powdery patches appear on the upper surface of leaves, spreading to stems and pods.",
+          "management": "Spray Wettable Sulphur @ 3g/L or Hexaconazole 5 EC @ 1 ml/L at the first appearance of symptoms."
+        }
+      ],
+
+      "deficiency_management": [
+        {
+          "nutrient": "Sulphur",
+          "symptoms": "Yellowing of young leaves, poor plant growth, and reduced nodule formation.",
+          "remedy": "Apply Gypsum @ 200 kg/ha at sowing or substitute DAP with Single Super Phosphate (SSP)."
+        }
+      ],
+
+      "harvest": {
+        "harvest_signs": "Leaves drop, pods turn black or brown and dry out, seeds become hard.",
+        "post_harvest_notes": "Moong pods are prone to shattering. Harvest in the morning when pods are slightly moist with dew. Sun-dry for 3-4 days, thresh, and dry seeds to 9-10% moisture for storage.",
+        "expected_duration_days": 65
+      },
+
+      "special_cautions": ["Shattering of pods is a major issue in older varieties; timely harvesting or multiple pickings may be required.", "Do not over-irrigate, as it promotes vegetative growth at the expense of pod formation."],
+      "faq": [
+        {
+          "question": "Can I grow Moong without irrigation in the summer?",
+          "answer": "No, Zaid (summer) Moong requires 3-4 assured irrigations due to high evaporation rates and lack of rainfall. For rainfed cultivation, sow during the Kharif season."
+        }
+      ],
+
+      "source_refs": ["src_iipr_mungbean_2022", "src_nduat_zaid_pop"]
+    },
+    {
+      "advisory_id": "greengram_rajasthan_kharif",
+      "state_region": "Rajasthan",
+      "district": "Jodhpur, Nagaur, Jaipur, Ajmer",
+      "season": "Kharif",
+      "advisory_type": "cultivation_guide",
+      "applicability_filters": {
+        "irrigation": "rainfed",
+        "soil_type": "sandy to sandy loam",
+        "sowing_window": "July"
+      },
+
+      "sowing": {
+        "sowing_window_start": "July 01",
+        "sowing_window_end": "July 30",
+        "seed_rate": { "value": 15, "unit": "kg/ha", "range_type": "recommended" },
+        "seed_treatment": "Treat with Imidacloprid 600 FS @ 5 ml/kg to protect against early sucking pests (vectors for MYMV).",
+        "spacing": "30 cm x 10 cm",
+        "sowing_depth_cm": 5,
+        "nursery_required": false,
+        "transplanting_required": false
+      },
+
+      "land_preparation": {
+        "summary": "Deep summer ploughing to expose soil-borne pests. Minimum tillage at the onset of monsoon to conserve soil moisture."
+      },
+
+      "fertilizer": {
+        "basal_dose": "10 kg N and 30 kg P2O5 per hectare.",
+        "top_dressing": "Not required in rainfed arid conditions."
+      },
+
+      "irrigation": {
+        "schedule": "Completely rainfed. Depends on monsoon.",
+        "critical_stages": ["Flowering"],
+        "rainfed_advice": "Interculture using a wheel hoe at 20-25 days creates a dust mulch to conserve moisture during dry spells."
+      },
+
+      "weed_management": {
+        "summary": "Manual weeding at 25 DAS is highly effective."
+      },
+
+      "pest_management": [
+        {
+          "name": "Bihar Hairy Caterpillar",
+          "symptoms": "Gregarious feeding by hairy caterpillars defoliating the crop rapidly.",
+          "management": "Destroy egg masses and gregarious young larvae manually. Spray Quinalphos 25 EC @ 2 ml/L."
+        }
+      ],
+
+      "disease_management": [
+        {
+          "name": "Macrophomina Blight (Dry Root Rot)",
+          "symptoms": "Sudden drying of plants during prolonged dry spells. Roots become brittle.",
+          "management": "Seed treatment with Trichoderma. Deep sowing ensures roots reach cooler, moist soil zones."
+        }
+      ],
+
+      "harvest": {
+        "harvest_signs": "Pods turn dark brown/black.",
+        "expected_duration_days": 65
+      },
+
+      "special_cautions": ["Avoid very late sowing (August) as it increases the risk of terminal drought and powdery mildew."],
+      "source_refs": ["src_cazri_moong_pop"]
+    }
+  ],
+
+  "risk_library": {
+    "pests": [
+      {
+        "name": "Whitefly",
+        "favorable_conditions": ["Hot and dry weather", "Presence of alternate host crops"],
+        "symptoms": ["Yellowing of leaves", "Sooty mold due to honeydew", "Transmission of YMV"],
+        "management": ["Yellow sticky traps", "Seed treatment with systemic insecticides", "Foliar sprays of Neonicotinoids"]
+      },
+      {
+        "name": "Pod Borer",
+        "favorable_conditions": ["Cloudy weather during flowering and podding"],
+        "symptoms": ["Holes in pods", "Webbing of flowers"],
+        "management": ["Pheromone traps", "Spray of Emamectin Benzoate or Indoxacarb"]
+      },
+      {
+        "name": "Thrips",
+        "favorable_conditions": ["Dry weather during bud initiation"],
+        "symptoms": ["Flower drop", "Deformed pods", "Scraped leaf surfaces"],
+        "management": ["Spray Dimethoate or Fipronil"]
+      }
+    ],
+    "diseases": [
+      {
+        "name": "Yellow Mosaic Virus (YMV)",
+        "favorable_conditions": ["High whitefly population", "Susceptible varieties"],
+        "symptoms": ["Yellow mosaic mottling on leaves", "Stunted growth", "Drastic yield reduction"],
+        "management": ["Use resistant varieties", "Control whitefly vectors", "Rogueing of infected plants"]
+      },
+      {
+        "name": "Cercospora Leaf Spot",
+        "favorable_conditions": ["High humidity", "Frequent rains (Kharif)"],
+        "symptoms": ["Brown circular spots with grey centers on leaves"],
+        "management": ["Spray Carbendazim or Mancozeb"]
+      }
+    ],
+    "abiotic_risks": [
+      {
+        "name": "Heat Stress / Terminal Drought",
+        "trigger_conditions": ["Temperatures >40°C during flowering", "Delayed irrigation in Zaid season"],
+        "impact": "Flower drop, pollen sterility, and poor pod setting.",
+        "mitigation": ["Ensure timely irrigation at pre-flowering", "Spray 2% KNO3 or 2% Urea"]
+      },
+      {
+        "name": "Pod Shattering",
+        "trigger_conditions": ["Over-maturity", "High temperatures at harvest", "Delayed harvesting"],
+        "impact": "Seeds fall to the ground, leading to major yield losses.",
+        "mitigation": ["Harvest in the morning when dew is present", "Select shatter-resistant varieties", "Perform multiple pickings if necessary"]
+      }
+    ]
+  },
+
+  "retrieval_chunks": [
+    {
+      "chunk_id": "greengram_overview_001",
+      "chunk_type": "overview",
+      "title": "Green Gram (Moong) Overview",
+      "crop_name": "Green Gram",
+      "state_region": "India",
+      "district": "All",
+      "season": "Kharif/Zaid",
+      "advisory_category": "overview",
+      "text": "Green Gram, or Moong, is an ultra-short duration, protein-rich pulse crop. It is highly valued as a catch crop in the summer (Zaid) season between Rabi and Kharif crops to restore soil fertility.",
+      "keywords": ["Moong", "Green Gram", "Catch crop", "Zaid", "Nitrogen fixing"],
+      "metadata_tags": ["general_info", "intro"],
+      "source_ref_ids": ["src_iipr_mungbean_2022"]
+    },
+    {
+      "chunk_id": "greengram_suitability_001",
+      "chunk_type": "suitability",
+      "title": "Green Gram Suitability Conditions",
+      "crop_name": "Green Gram",
+      "state_region": "India",
+      "district": "All",
+      "season": "All",
+      "advisory_category": "suitability",
+      "text": "Moong requires well-drained loamy soils and warm temperatures (25-35°C). It is extremely sensitive to waterlogging and soil salinity, requiring careful water management.",
+      "keywords": ["Loam", "Well-drained", "Warm climate", "Waterlogging-sensitive"],
+      "metadata_tags": ["soil", "climate", "water"],
+      "source_ref_ids": ["src_nduat_zaid_pop"]
+    },
+    {
+      "chunk_id": "greengram_shattering_001",
+      "chunk_type": "harvest_management",
+      "title": "Managing Pod Shattering in Moong",
+      "crop_name": "Green Gram",
+      "state_region": "India",
+      "district": "All",
+      "season": "Kharif/Zaid",
+      "advisory_category": "harvest_management",
+      "text": "Pod shattering is a major cause of yield loss in Green Gram if harvesting is delayed. Harvest the crop in the early morning when dew is present to prevent brittle pods from bursting open. If the variety does not mature synchronously, perform 2-3 manual pickings.",
+      "keywords": ["Shattering", "Harvest", "Pod bursting", "Moong pods", "Yield loss"],
+      "metadata_tags": ["harvest", "losses", "agronomy"],
+      "source_ref_ids": ["src_iipr_mungbean_2022"]
+    }
+  ],
+
+  "structured_explanation_rules": [
+    {
+      "rule_id": "greengram_catch_crop_match",
+      "condition": "input.available_growing_days >= 60 AND input.available_growing_days <= 75 AND input.irrigation_available == true",
+      "message": "Green Gram is the ideal catch crop for your short window, providing a quick harvest and enriching the soil before the next major season.",
+      "priority": 1,
+      "severity": "positive_match"
+    },
+    {
+      "rule_id": "greengram_waterlogging_reject",
+      "condition": "input.soil_drainage == 'poor' OR input.waterlogging_history == true",
+      "message": "Severe Risk: Green Gram cannot tolerate waterlogging. Heavy clay soils with poor drainage will lead to crop mortality.",
+      "priority": 1,
+      "severity": "hard_reject"
+    },
+    {
+      "rule_id": "greengram_ymv_warning",
+      "condition": "input.region_history_ymv == true",
+      "message": "Your area has a high incidence of Yellow Mosaic Virus. Please select MYMV-resistant varieties like Samrat or SML-668.",
+      "priority": 2,
+      "severity": "warning"
+    },
+    {
+      "rule_id": "greengram_harvest_shattering_warning",
+      "condition": "input.growth_stage == 'maturity' AND input.max_temp_c > 35",
+      "message": "Harvest Alert: High temperatures can dry out pods quickly, causing shattering. Harvest early in the morning.",
+      "priority": 3,
+      "severity": "warning"
+    }
+  ],
+
+  "ui_response_templates": {
+    "best_match_intro": "Moong (Green Gram) is a perfect fit for your well-drained field and short growing window.",
+    "warning_drainage": "Your field's drainage needs attention. Ensure raised bed sowing or proper leveling to avoid water stagnation, which can kill the Moong crop.",
+    "warning_ymv": "Alert: Ensure you plant MYMV-resistant seeds, as Whiteflies are highly active in your region.",
+    "cta_view_advisory": "View full Moong Dal cultivation advisory",
+    "cta_view_shattering_guide": "Read the Harvesting and Shattering Guide"
+  },
+
+  "source_registry": [
+    {
+      "source_id": "src_iipr_mungbean_2022",
+      "title": "Mungbean Production Technology",
+      "source_type": "pdf",
+      "publisher": "ICAR - Indian Institute of Pulses Research (IIPR), Kanpur",
+      "region_scope": "India",
+      "season_scope": "Kharif and Zaid",
+      "crop_scope": ["Green Gram"],
+      "content_summary": "National guidelines for Moong cultivation, featuring MYMV resistant varieties and summer (Zaid) crop management.",
+      "date_published": "2022-03-10",
+      "trust_level": "high"
+    },
+    {
+      "source_id": "src_nduat_zaid_pop",
+      "title": "Package of Practices for Zaid Crops",
+      "source_type": "manual",
+      "publisher": "Narendra Deva University of Agriculture and Technology (NDUAT), Ayodhya",
+      "region_scope": "Uttar Pradesh",
+      "season_scope": "Zaid",
+      "crop_scope": ["Green Gram", "Black Gram"],
+      "content_summary": "State-level recommendations for summer pulse cultivation with assured irrigation.",
+      "date_published": "2021-02-15",
+      "trust_level": "high"
+    },
+    {
+      "source_id": "src_cazri_moong_pop",
+      "title": "Kharif Pulse Cultivation in Arid Zones",
+      "source_type": "bulletin",
+      "publisher": "Central Arid Zone Research Institute (CAZRI)",
+      "region_scope": "Rajasthan",
+      "season_scope": "Kharif",
+      "crop_scope": ["Green Gram", "Moth Bean"],
+      "content_summary": "Guide for dryland Moong cultivation focusing on moisture conservation and arid pest management.",
+      "date_published": "2022-05-20",
+      "trust_level": "high"
+    }
+  ],
+
+  "quality_flags": {
+    "is_complete": true,
+    "missing_fields": [],
+    "weakly_supported_fields": [],
+    "last_reviewed_at": "2024-03-01T00:00:00Z"
+  },
+
+  "updated_at": "2024-03-01T00:00:00Z",
+  "created_at": "2023-11-28T00:00:00Z"
+}

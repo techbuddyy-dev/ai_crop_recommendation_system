@@ -1,0 +1,469 @@
+{
+  "crop_id": "cabbage",
+  "crop_name": "Cabbage",
+  "aliases": ["Patta Gobhi", "Bandh Gobhi", "Kobi", "Muttaikose", "Elekosu"],
+  "crop_group": "Vegetable",
+  "status": "active",
+  "language": "en",
+  "version": "v1.2",
+
+  "master_profile": {
+    "short_description": "Cabbage is a prominent winter (Rabi) season cole crop in India, valued for its dense, leafy heads. It requires a cool, moist climate and is highly responsive to good nutrient management.",
+    "seasons_supported": ["Rabi", "Kharif (in hilly regions)"],
+    "regions_supported": ["West Bengal", "Odisha", "Bihar", "Madhya Pradesh", "Uttar Pradesh", "Maharashtra", "Karnataka", "Punjab", "Haryana", "Himachal Pradesh"],
+    "agro_climatic_zones": ["Lower Gangetic Plains Region", "Middle Gangetic Plains Region", "Trans-Gangetic Plains Region", "Western Plateau and Hills Region", "Western Himalayan Region"],
+
+    "soil_suitability": {
+      "suitable_soil_textures": ["Sandy loam (for early crops)", "Clay loam (for late crops)", "Silt loam", "Alluvial soils"],
+      "unsuitable_soil_textures": ["Heavy, poorly drained clay", "Highly acidic soils"],
+      "ideal_ph_min": 6.0,
+      "ideal_ph_max": 6.5,
+      "acceptable_ph_min": 5.5,
+      "acceptable_ph_max": 7.5,
+      "salinity_tolerance_note": "Moderately sensitive to soil salinity. High salinity impairs head formation and stunts growth.",
+      "drainage_requirement": "Requires well-drained soils. Waterlogging restricts root growth and promotes diseases like soft rot and black rot.",
+      "organic_carbon_note": "Highly responsive to organic matter. FYM application improves moisture retention and structural stability for the shallow root system."
+    },
+
+    "climate_suitability": {
+      "ideal_temperature_c_min": 15,
+      "ideal_temperature_c_max": 20,
+      "acceptable_temperature_c_min": 10,
+      "acceptable_temperature_c_max": 25,
+      "ideal_humidity_min": 60,
+      "ideal_humidity_max": 85,
+      "ideal_rainfall_mm_min": 500,
+      "ideal_rainfall_mm_max": 800,
+      "frost_tolerance_note": "Mature plants are moderately tolerant to frost, but severe frost can damage the outer wrapper leaves.",
+      "heat_tolerance_note": "Highly sensitive to heat. Temperatures above 25°C restrict head formation, resulting in loose, unmarketable leafy rosettes."
+    },
+
+    "water_profile": {
+      "irrigation_required": true,
+      "rainfed_suitable": false,
+      "waterlogging_tolerance": "Very low; standing water causes root asphyxiation and increases susceptibility to bacterial soft rot.",
+      "drought_tolerance": "Low; sudden moisture stress followed by heavy watering causes the mature heads to split open.",
+      "critical_water_stages": ["Transplanting establishment", "Head initiation (cupping stage)", "Head enlargement"]
+    },
+
+    "nutrient_profile": {
+      "nitrogen_demand": "High (120-150 kg/ha; applied in splits to maintain continuous leafy growth)",
+      "phosphorus_demand": "Moderate to High (60-80 kg/ha; critical for root development)",
+      "potassium_demand": "High (80-100 kg/ha; essential for compact head formation and transportability)",
+      "micronutrient_notes": ["Boron deficiency causes 'Hollow Stem' and internal browning.", "Molybdenum deficiency can occur in acidic soils, causing 'Whiptail' and stunting growth."]
+    },
+
+    "cropping_context": {
+      "suitable_previous_crops": ["Cereals (Wheat, Paddy, Maize)", "Legumes", "Onion", "Potato"],
+      "unsuitable_previous_crops": ["Other Crucifers/Cole crops (Cauliflower, Mustard, Broccoli, Radish) due to severe buildup of Diamondback Moth (DBM) and Clubroot disease."],
+      "rotation_notes": ["Paddy - Cabbage", "Maize - Cabbage - Legume", "Onion - Cabbage"],
+      "intercrop_options": ["Tomato (helps deter DBM)", "Coriander", "Garlic", "Mustard (as a trap crop for DBM)"]
+    },
+
+    "crop_duration": {
+      "duration_days_min": 60,
+      "duration_days_max": 120,
+      "maturity_indicators": ["Heads become firm and solid to the touch", "Outer wrapper leaves curl slightly backwards", "Heads reach varietal specific size/weight"]
+    },
+
+    "recommendation_logic": {
+      "why_recommend_conditions": ["Cool winter climate", "Well-drained soils with good organic content", "Assured irrigation"],
+      "why_not_recommend_conditions": ["Hot, dry weather (>28°C)", "Highly acidic soils (pH <5.5) causing Clubroot", "Waterlogged areas"],
+      "hard_rejection_conditions": ["Summer seasons in the plains", "Fields with severe Clubroot history"]
+    }
+  },
+
+  "region_season_advisories": [
+    {
+      "advisory_id": "cabbage_up_rabi",
+      "state_region": "Uttar Pradesh & Punjab",
+      "district": "Meerut, Agra, Varanasi, Ludhiana, Jalandhar",
+      "season": "Rabi",
+      "advisory_type": "cultivation_guide",
+      "applicability_filters": {
+        "irrigation": "irrigated",
+        "soil_type": "sandy loam to clay loam",
+        "sowing_window": "September to October (Nursery), October to November (Transplanting)"
+      },
+
+      "sowing": {
+        "sowing_window_start": "October 01",
+        "sowing_window_end": "November 15",
+        "seed_rate": { "value": 400, "unit": "g/ha", "range_type": "recommended", "source_confidence": "high" },
+        "seed_treatment": "Hot water treatment (50°C for 30 minutes) to manage Black Rot (seed-borne bacteria). Treat with Trichoderma viride @ 4g/kg or Captan @ 2g/kg to prevent damping-off in nursery.",
+        "spacing": "45 cm x 45 cm for early varieties; 60 cm x 45 cm for late/large varieties.",
+        "sowing_depth_cm": 1.5,
+        "nursery_required": true,
+        "transplanting_required": true
+      },
+
+      "land_preparation": {
+        "summary": "Deep ploughing followed by 2-3 harrowings to bring the soil to a fine tilth. Prepare raised beds or ridges and furrows to ensure proper drainage and root aeration."
+      },
+
+      "fertilizer": {
+        "basal_dose": "Apply 60 kg N, 80 kg P2O5, and 80 kg K2O per hectare at transplanting along with 20 tonnes/ha well-rotted FYM.",
+        "top_dressing": "Apply 60 kg N per hectare in two splits at 30 and 45 Days After Transplanting (DAT) right before earthing up.",
+        "organic_manure": "Neem cake @ 500 kg/ha incorporated during land preparation helps control soil-borne pests.",
+        "micronutrients": "Foliar spray of 0.2% Borax at 30 and 45 DAT to prevent hollow stem and internal browning."
+      },
+
+      "irrigation": {
+        "schedule": "Provide light irrigation immediately after transplanting. Irrigate every 10-15 days depending on soil moisture. Ensure uniform soil moisture during head formation to prevent splitting.",
+        "critical_stages": ["Head initiation (cupping)", "Head enlargement"],
+        "rainfed_advice": "Not recommended; Cabbage is highly sensitive to moisture stress and requires assured irrigation."
+      },
+
+      "weed_management": {
+        "summary": "Pre-plant incorporation of Fluchloralin 45 EC @ 1.0 kg a.i./ha or Pendimethalin 30 EC @ 1.0 kg a.i./ha. Perform shallow hoeing at 20-25 DAT followed by earthing up at 30-35 DAT."
+      },
+
+      "pest_management": [
+        {
+          "name": "Diamondback Moth (DBM) - Plutella xylostella",
+          "symptoms": "Pale green larvae feed on the lower leaf surface, leaving the upper epidermis intact (window-pane effect). Severe infestation skeletonizes leaves and ruins the head.",
+          "management": "Plant 1 row of mustard for every 25 rows of cabbage as a trap crop. Spray Bacillus thuringiensis (Bt) @ 1g/L, Spinosad 45 SC @ 0.3 ml/L, or Cartap Hydrochloride 50 SP @ 1 g/L."
+        },
+        {
+          "name": "Cabbage Aphids",
+          "symptoms": "Clusters of small, grayish-green insects suck sap from leaves, causing curling, yellowing, and sooty mold. They often hide inside the wrapper leaves.",
+          "management": "Use yellow sticky traps. Spray Imidacloprid 17.8 SL @ 0.3 ml/L or Thiamethoxam 25 WG @ 0.2 g/L before head formation."
+        },
+        {
+          "name": "Cabbage Butterfly / Caterpillar",
+          "symptoms": "Large, velvety green caterpillars feed voraciously on margins of leaves and bore into the heads, contaminating them with excreta.",
+          "management": "Hand-pick egg masses and gregarious young larvae. Spray Quinalphos 25 EC @ 2 ml/L or Emamectin Benzoate 5 SG @ 0.4 g/L."
+        }
+      ],
+
+      "disease_management": [
+        {
+          "name": "Black Rot (Xanthomonas campestris)",
+          "symptoms": "V-shaped yellow lesions starting from leaf margins. Veins turn black. The vascular tissue inside the stem turns black and emits a foul smell.",
+          "management": "Hot water seed treatment is crucial. Spray Streptocycline @ 0.1 g/L + Copper Oxychloride 50 WP @ 3 g/L. Practice 3-year crop rotation."
+        },
+        {
+          "name": "Clubroot (Plasmodiophora brassicae)",
+          "symptoms": "Stunted growth, yellowing, and daytime wilting. Roots develop massive, club-like swollen galls.",
+          "management": "Avoid cultivating in acidic soils (pH <5.5). Apply agricultural lime to raise soil pH above 7.0. Avoid rotation with other crucifers."
+        },
+        {
+          "name": "Damping Off",
+          "symptoms": "Seedlings topple over and rot at the soil line in the nursery.",
+          "management": "Drench nursery beds with Metalaxyl + Mancozeb @ 2.5 g/L. Avoid overcrowding and overwatering in the nursery."
+        }
+      ],
+
+      "deficiency_management": [
+        {
+          "nutrient": "Boron",
+          "symptoms": "Hollow stem with internal browning; leaves become thick and brittle.",
+          "remedy": "Apply Borax @ 10-15 kg/ha as a basal dose or foliar spray of 0.2% Borax at the pre-cupping stage."
+        }
+      ],
+
+      "harvest": {
+        "harvest_signs": "Heads are solid and firm to the pressure of a thumb. Harvesting delayed beyond maturity causes heads to split.",
+        "post_harvest_notes": "Cut heads with a sharp knife, retaining 2-3 wrapper leaves to protect the head from bruising during transport. Do not harvest during the hottest part of the day.",
+        "expected_duration_days": 90
+      },
+
+      "special_cautions": ["Do not let the soil completely dry out followed by heavy irrigation, as the sudden water uptake will cause the mature heads to split open.", "Do not spray toxic systemic insecticides near harvest; observe a strict Pre-Harvest Interval (PHI) of 10-15 days."],
+      "faq": [
+        {
+          "question": "Why are the heads of my cabbage splitting open?",
+          "answer": "Head splitting is a physiological disorder caused by fluctuating soil moisture. A long dry spell followed by heavy irrigation or rain forces the inner leaves to grow faster than the outer leaves, causing the head to crack. Maintain uniform soil moisture."
+        },
+        {
+          "question": "Why are there V-shaped yellow patches on the edges of the leaves?",
+          "answer": "This is a classic symptom of Black Rot, a devastating bacterial disease. The bacteria enter through water pores at the leaf edges. Use disease-free, hot-water-treated seeds and apply copper-based bactericides to prevent its spread."
+        }
+      ],
+
+      "source_refs": ["src_iivr_cabbage_pop", "src_nduat_rabi_cabbage"]
+    },
+    {
+      "advisory_id": "cabbage_mh_kar_rabi",
+      "state_region": "Maharashtra & Karnataka",
+      "district": "Pune, Nashik, Belagavi, Hassan",
+      "season": "Rabi",
+      "advisory_type": "cultivation_guide",
+      "applicability_filters": {
+        "irrigation": "irrigated (drip preferred)",
+        "soil_type": "medium black to red loamy soils",
+        "sowing_window": "Nursery in Aug-Sep, Transplant in Sep-Oct"
+      },
+
+      "sowing": {
+        "sowing_window_start": "September 15",
+        "sowing_window_end": "October 30",
+        "seed_rate": { "value": 300, "unit": "g/ha for hybrids", "range_type": "recommended" },
+        "seed_treatment": "Treat nursery seedbed with Trichoderma. Pre-soak seeds in Pseudomonas fluorescens.",
+        "spacing": "60 cm x 45 cm on raised beds",
+        "sowing_depth_cm": 1.5,
+        "nursery_required": true,
+        "transplanting_required": true
+      },
+
+      "land_preparation": {
+        "summary": "Deep ploughing, fine tilth. Raised beds (15 cm high, 90 cm wide) covered with silver-black plastic mulch are highly recommended for drip irrigation and weed control."
+      },
+
+      "fertilizer": {
+        "basal_dose": "75 kg N, 75 kg P2O5, 75 kg K2O/ha.",
+        "top_dressing": "Through fertigation: Apply remaining 75 kg N and 75 kg K2O in 8-10 splits until head maturity.",
+        "organic_manure": "25 tonnes/ha FYM or compost."
+      },
+
+      "irrigation": {
+        "schedule": "Drip irrigation daily or on alternate days for 45-60 mins. Prevents soil moisture fluctuation, vastly reducing head splitting.",
+        "critical_stages": ["Cupping", "Head filling"]
+      },
+
+      "weed_management": {
+        "summary": "Mulching completely suppresses weeds on the beds. Spray Oxyfluorfen on walkways if required."
+      },
+
+      "pest_management": [
+        {
+          "name": "Diamondback Moth (DBM)",
+          "symptoms": "Holes in the wrapper leaves; small green caterpillars hanging by silk threads when disturbed.",
+          "management": "Intercrop with tomato (repels DBM) or use mustard as a trap crop. Spray Novaluron 10 EC @ 1 ml/L or Spinetoram 11.7 SC @ 0.5 ml/L."
+        }
+      ],
+
+      "disease_management": [
+        {
+          "name": "Alternaria Leaf Spot",
+          "symptoms": "Dark brown circular spots with concentric rings on wrapper leaves, reducing market value.",
+          "management": "Spray Mancozeb 75 WP @ 2.5 g/L or Azoxystrobin 23 SC @ 1 ml/L."
+        }
+      ],
+
+      "harvest": {
+        "harvest_signs": "Heads are compact, solid, and weigh 1-2 kg depending on the hybrid. Harvest before they lose their bright green color.",
+        "expected_duration_days": 85
+      },
+      "special_cautions": ["Hybrids grow fast; delay in harvesting leads to bursting of heads.", "Do not plant in fields where cauliflower or mustard was grown previously to avoid Clubroot."],
+      "source_refs": ["src_mpkv_cabbage_rabi", "src_iihr_cabbage_pop"]
+    }
+  ],
+
+  "risk_library": {
+    "pests": [
+      {
+        "name": "Diamondback Moth (DBM)",
+        "favorable_conditions": ["Dry weather", "Continuous cropping of crucifers"],
+        "symptoms": ["Window-pane effect on leaves", "Holes in wrapper leaves", "Larvae feeding inside the head"],
+        "management": ["Mustard trap crop", "Tomato intercrop", "Pheromone traps", "Sprays of Spinosad, Novaluron, or Bt"]
+      },
+      {
+        "name": "Cabbage Aphids",
+        "favorable_conditions": ["Cloudy, cool weather", "High nitrogen levels"],
+        "symptoms": ["Curled, yellowing leaves", "Sooty mold", "Contamination of heads"],
+        "management": ["Yellow sticky traps", "Systemic insecticides (Thiamethoxam, Imidacloprid)"]
+      },
+      {
+        "name": "Cabbage Butterfly",
+        "favorable_conditions": ["Cool, dry winters"],
+        "symptoms": ["Massive defoliation by velvety green caterpillars", "Excreta inside the head"],
+        "management": ["Hand-picking egg masses", "Spray Emamectin Benzoate"]
+      }
+    ],
+    "diseases": [
+      {
+        "name": "Black Rot",
+        "favorable_conditions": ["Warm, humid weather", "Overhead irrigation", "Infected seeds"],
+        "symptoms": ["V-shaped yellow lesions on leaf margins", "Blackening of veins and vascular tissue", "Foul smell"],
+        "management": ["Hot water seed treatment", "Copper fungicides + Streptocycline"]
+      },
+      {
+        "name": "Clubroot",
+        "favorable_conditions": ["Acidic soils (pH < 6.0)", "Poor drainage", "Continuous crucifer cropping"],
+        "symptoms": ["Wilting during the day", "Massive root galls/swelling", "Stunted growth"],
+        "management": ["Soil liming", "Long crop rotation avoiding crucifers", "Raised bed planting"]
+      }
+    ],
+    "abiotic_risks": [
+      {
+        "name": "Head Splitting",
+        "trigger_conditions": ["Heavy irrigation after a prolonged dry spell", "Delayed harvest", "Excess nitrogen"],
+        "impact": "Mature heads crack open, becoming unmarketable and highly susceptible to secondary soft rot.",
+        "mitigation": ["Maintain uniform soil moisture using drip irrigation", "Harvest promptly upon maturity"]
+      },
+      {
+        "name": "Hollow Stem",
+        "trigger_conditions": ["Boron deficiency", "Excessive nitrogen causing rapid growth"],
+        "impact": "The central core/stem becomes hollow and turns brown inside, severely reducing quality.",
+        "mitigation": ["Soil application of Borax", "Foliar boron sprays (0.2%) at cupping stage"]
+      }
+    ]
+  },
+
+  "retrieval_chunks": [
+    {
+      "chunk_id": "cabbage_overview_001",
+      "chunk_type": "overview",
+      "title": "Cabbage Crop Overview",
+      "crop_name": "Cabbage",
+      "state_region": "India",
+      "district": "All",
+      "season": "Rabi",
+      "advisory_category": "overview",
+      "text": "Cabbage (Patta Gobhi) is a major winter vegetable crop in India. It thrives in cool climates and is highly responsive to irrigation and fertilizers. Successful cultivation relies heavily on managing the Diamondback Moth and maintaining uniform moisture.",
+      "keywords": ["Cabbage", "Patta Gobhi", "Cole crop", "Winter vegetable", "DBM"],
+      "metadata_tags": ["general_info", "intro"],
+      "source_ref_ids": ["src_iivr_cabbage_pop"]
+    },
+    {
+      "chunk_id": "cabbage_suitability_001",
+      "chunk_type": "suitability",
+      "title": "Cabbage Soil and Climate Requirements",
+      "crop_name": "Cabbage",
+      "state_region": "India",
+      "district": "All",
+      "season": "Rabi",
+      "advisory_category": "suitability",
+      "text": "Cabbage requires cool temperatures (15-20°C) for optimal solid head formation. It prefers well-drained sandy loam or clay loam soils. Soils that are highly acidic (pH <5.5) promote Clubroot disease and should be limed.",
+      "keywords": ["Cool climate", "Head formation", "Acidic soil", "Clubroot"],
+      "metadata_tags": ["soil", "climate", "water"],
+      "source_ref_ids": ["src_nduat_rabi_cabbage"]
+    },
+    {
+      "chunk_id": "cabbage_splitting_001",
+      "chunk_type": "abiotic_risk",
+      "title": "Head Splitting in Cabbage",
+      "crop_name": "Cabbage",
+      "state_region": "India",
+      "district": "All",
+      "season": "Rabi",
+      "advisory_category": "irrigation",
+      "text": "Head splitting is a severe issue in cabbage, caused when a dry spell is suddenly followed by heavy irrigation or rain. The rapid uptake of water bursts the outer leaves. To prevent this, maintain consistent, uniform soil moisture using drip irrigation and do not delay harvest.",
+      "keywords": ["Head splitting", "Moisture stress", "Irrigation", "Cracking", "Over-maturity"],
+      "metadata_tags": ["irrigation", "quality", "disorder"],
+      "source_ref_ids": ["src_mpkv_cabbage_rabi"]
+    },
+    {
+      "chunk_id": "cabbage_dbm_001",
+      "chunk_type": "pest_management",
+      "title": "Managing Diamondback Moth (DBM)",
+      "crop_name": "Cabbage",
+      "state_region": "India",
+      "district": "All",
+      "season": "Rabi",
+      "advisory_category": "pest_management",
+      "text": "The Diamondback Moth (DBM) is the most destructive pest of cabbage. The larvae cause the 'window-pane' effect on leaves and ruin the head. Plant 1 row of mustard for every 25 rows of cabbage to trap DBM, and spray Spinosad or Bt when larval numbers rise.",
+      "keywords": ["Diamondback Moth", "DBM", "Mustard trap crop", "Window-pane", "Spinosad"],
+      "metadata_tags": ["pest", "caterpillar", "IPM"],
+      "source_ref_ids": ["src_iihr_cabbage_pop"]
+    }
+  ],
+
+  "structured_explanation_rules": [
+    {
+      "rule_id": "cabbage_temperature_match",
+      "condition": "input.avg_temp_c >= 12 AND input.avg_temp_c <= 25",
+      "message": "The temperature range is optimal for Cabbage, promoting the development of firm, compact heads.",
+      "priority": 1,
+      "severity": "positive_match"
+    },
+    {
+      "rule_id": "cabbage_high_heat_reject",
+      "condition": "input.max_temp_c > 28 AND input.growth_stage == 'head_formation'",
+      "message": "Warning: High temperatures (>28°C) will prevent compact head formation, resulting in loose, unmarketable leafy rosettes. Ensure adequate moisture to cool the microclimate.",
+      "priority": 1,
+      "severity": "hard_reject"
+    },
+    {
+      "rule_id": "cabbage_ph_clubroot_warning",
+      "condition": "input.ph < 5.5",
+      "message": "Critical Risk: Your soil is highly acidic, creating an ideal environment for Clubroot disease. Apply agricultural lime before transplanting to raise the pH.",
+      "priority": 1,
+      "severity": "hard_reject"
+    },
+    {
+      "rule_id": "cabbage_rotation_reject",
+      "condition": "input.previous_crop IN ['mustard', 'cauliflower', 'radish', 'broccoli', 'cabbage']",
+      "message": "Warning: Planting cabbage after other cruciferous crops will lead to a severe buildup of Diamondback Moth (DBM) and Black Rot. Practice crop rotation with cereals or legumes.",
+      "priority": 2,
+      "severity": "warning"
+    },
+    {
+      "rule_id": "cabbage_splitting_warning",
+      "condition": "input.growth_stage == 'maturity' AND input.soil_moisture_fluctuation == 'high'",
+      "message": "Alert: You are at the harvesting stage. Severe soil moisture fluctuations (heavy watering after a dry spell) will cause mature heads to split open. Harvest immediately.",
+      "priority": 3,
+      "severity": "warning"
+    }
+  ],
+
+  "ui_response_templates": {
+    "best_match_intro": "Patta Gobhi (Cabbage) is an excellent winter crop for your field, given the cool climate and well-drained soil.",
+    "warning_rotation": "Since you previously grew a mustard/cole crop, pest pressure (especially DBM) will be exceptionally high. Crop rotation is strongly advised.",
+    "warning_ph": "Your soil is too acidic for Cabbage, which will likely cause Clubroot disease. Please apply lime to raise the pH before planting.",
+    "info_trap_crop": "Tip: To protect your crop from the devastating Diamondback Moth, plant one row of Mustard for every 25 rows of Cabbage as a trap crop.",
+    "cta_view_advisory": "View full Cabbage cultivation advisory",
+    "cta_view_dbm_guide": "Read the Diamondback Moth IPM Guide"
+  },
+
+  "source_registry": [
+    {
+      "source_id": "src_iivr_cabbage_pop",
+      "title": "Cabbage Production Technology",
+      "source_type": "pdf",
+      "publisher": "ICAR - Indian Institute of Vegetable Research (IIVR), Varanasi",
+      "region_scope": "India",
+      "season_scope": "Rabi",
+      "crop_scope": ["Cabbage"],
+      "content_summary": "Comprehensive national guidelines covering high-yielding hybrids, integrated management of Diamondback Moth (trap cropping), and physiological disorder management.",
+      "date_published": "2021-09-15",
+      "trust_level": "high"
+    },
+    {
+      "source_id": "src_nduat_rabi_cabbage",
+      "title": "Package of Practices for Cole Crops",
+      "source_type": "manual",
+      "publisher": "Narendra Deva University of Agriculture and Technology (NDUAT), Ayodhya",
+      "region_scope": "Uttar Pradesh",
+      "season_scope": "Rabi",
+      "crop_scope": ["Cabbage", "Cauliflower"],
+      "content_summary": "State-specific agronomic guidelines for the Indo-Gangetic plains, detailing Boron application, Black Rot prevention via seed treatment, and irrigation schedules.",
+      "date_published": "2022-08-20",
+      "trust_level": "high"
+    },
+    {
+      "source_id": "src_mpkv_cabbage_rabi",
+      "title": "Cabbage Cultivation on Raised Beds",
+      "source_type": "bulletin",
+      "publisher": "Mahatma Phule Krishi Vidyapeeth (MPKV), Rahuri",
+      "region_scope": "Maharashtra",
+      "season_scope": "Rabi",
+      "crop_scope": ["Cabbage"],
+      "content_summary": "Focuses on drip fertigation, plastic mulching, and preventing head splitting in hybrid cabbage.",
+      "date_published": "2022-10-10",
+      "trust_level": "high"
+    },
+    {
+      "source_id": "src_iihr_cabbage_pop",
+      "title": "Integrated Pest Management in Cabbage",
+      "source_type": "website",
+      "publisher": "ICAR - Indian Institute of Horticultural Research (IIHR), Bengaluru",
+      "region_scope": "India",
+      "season_scope": "All Seasons",
+      "crop_scope": ["Cabbage"],
+      "content_summary": "Detailed pest management strategies, specifically the use of Mustard as a trap crop for DBM and biological controls for aphids.",
+      "date_published": "2023-01-05",
+      "trust_level": "high"
+    }
+  ],
+
+  "quality_flags": {
+    "is_complete": true,
+    "missing_fields": [],
+    "weakly_supported_fields": [],
+    "last_reviewed_at": "2024-05-20T00:00:00Z"
+  },
+
+  "updated_at": "2024-05-20T00:00:00Z",
+  "created_at": "2024-01-30T00:00:00Z"
+}

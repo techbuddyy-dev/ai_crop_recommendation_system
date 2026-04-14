@@ -1,0 +1,409 @@
+{
+  "crop_id": "cauliflower",
+  "crop_name": "Cauliflower",
+  "aliases": ["Phool Gobhi", "Gobi"],
+  "crop_group": "Vegetable",
+  "status": "active",
+  "language": "en",
+  "version": "v1.2",
+  "master_profile": {
+    "short_description": "Cauliflower is a cool-season vegetable crop grown for its white tender head (curd). It requires fertile, well-drained soil and is sensitive to temperature and micronutrient deficiencies.",
+    "seasons_supported": ["Rabi", "Kharif (Early varieties)"],
+    "regions_supported": ["All over India", "Punjab", "Haryana", "Uttar Pradesh", "Maharashtra", "Bihar", "West Bengal"],
+    "agro_climatic_zones": ["Plains", "Hills", "Trans-Gangetic Plains", "Upper Gangetic Plains", "Western Plateau and Hills"],
+    "soil_suitability": {
+      "suitable_soil_textures": ["Loamy", "Sandy Loam", "Clay Loam"],
+      "unsuitable_soil_textures": ["Heavy Clay", "Highly Sandy", "Poorly Drained Soils"],
+      "ideal_ph_min": { "value": 5.5, "unit": "pH", "range_type": "ideal", "source_confidence": "high" },
+      "ideal_ph_max": { "value": 6.6, "unit": "pH", "range_type": "ideal", "source_confidence": "high" },
+      "acceptable_ph_min": { "value": 5.0, "unit": "pH", "range_type": "acceptable", "source_confidence": "medium" },
+      "acceptable_ph_max": { "value": 7.5, "unit": "pH", "range_type": "acceptable", "source_confidence": "medium" },
+      "salinity_tolerance_note": "Moderately sensitive to salinity. High salinity delays maturity and reduces curd size.",
+      "drainage_requirement": "Well-drained soil is essential to prevent waterlogging and soil-borne diseases like damping off and clubroot.",
+      "organic_carbon_note": "High organic matter content is preferred for robust vegetative growth and better moisture retention."
+    },
+    "climate_suitability": {
+      "ideal_temperature_c_min": { "value": 15, "unit": "C", "range_type": "ideal", "source_confidence": "high" },
+      "ideal_temperature_c_max": { "value": 25, "unit": "C", "range_type": "ideal", "source_confidence": "high" },
+      "acceptable_temperature_c_min": { "value": 10, "unit": "C", "range_type": "acceptable", "source_confidence": "medium" },
+      "acceptable_temperature_c_max": { "value": 30, "unit": "C", "range_type": "acceptable", "source_confidence": "medium" },
+      "ideal_humidity_min": { "value": 60, "unit": "%", "range_type": "ideal", "source_confidence": "medium" },
+      "ideal_humidity_max": { "value": 85, "unit": "%", "range_type": "ideal", "source_confidence": "medium" },
+      "ideal_rainfall_mm_min": { "value": 500, "unit": "mm", "range_type": "ideal", "source_confidence": "medium" },
+      "ideal_rainfall_mm_max": { "value": 800, "unit": "mm", "range_type": "ideal", "source_confidence": "medium" },
+      "frost_tolerance_note": "Mature curds can be damaged by severe frost, causing browning and rot.",
+      "heat_tolerance_note": "High temperatures cause poor curd formation, loose curds, riciness, and yellowing."
+    },
+    "water_profile": {
+      "irrigation_required": true,
+      "rainfed_suitable": false,
+      "waterlogging_tolerance": "Low. Waterlogging causes root rot, damping off, and plant mortality within 48 hours.",
+      "drought_tolerance": "Low. Water stress during curd formation leads to small, buttoned curds and strong pungent flavors.",
+      "critical_water_stages": ["Seedling establishment", "Curd initiation", "Curd development"]
+    },
+    "nutrient_profile": {
+      "nitrogen_demand": "High (120-150 kg/ha). Required for vegetative growth before curd formation.",
+      "phosphorus_demand": "Moderate (60-80 kg/ha). Important for root development.",
+      "potassium_demand": "High (80-100 kg/ha). Essential for curd compactness and quality.",
+      "micronutrient_notes": ["Boron deficiency causes browning/brown rot and hollow stem.", "Molybdenum deficiency causes 'whiptail' where leaves become strap-like.", "Calcium deficiency causes tip burn."]
+    },
+    "cropping_context": {
+      "suitable_previous_crops": ["Legumes", "Cereals", "Cucurbits", "Tomato", "Potato"],
+      "unsuitable_previous_crops": ["Cabbage", "Broccoli", "Mustard", "Radish (other crucifers to avoid clubroot and DBM pest carryover)"],
+      "rotation_notes": ["Rotate with non-cruciferous crops to manage Diamondback moth, clubroot, and black rot."],
+      "intercrop_options": ["Onion", "Garlic", "Marigold (as trap crop)", "Coriander"]
+    },
+    "crop_duration": {
+      "duration_days_min": { "value": 60, "unit": "days", "range_type": "minimum", "source_confidence": "high" },
+      "duration_days_max": { "value": 120, "unit": "days", "range_type": "maximum", "source_confidence": "high" },
+      "maturity_indicators": ["Curds are compact, firm, and white to creamy-white in color", "Curd size has reached maximum for the variety before separating/loosening (riciness)"]
+    },
+    "recommendation_logic": {
+      "why_recommend_conditions": ["Cool climate", "Well-drained loamy soil", "Assured irrigation", "High organic matter"],
+      "why_not_recommend_conditions": ["Extreme heat without heat-tolerant varieties", "Waterlogged fields", "Heavy clay soils with poor drainage", "Highly acidic soils"],
+      "hard_rejection_conditions": ["Highly saline soils", "Regions with no irrigation facility", "Severe clubroot infested fields"]
+    }
+  },
+  "region_season_advisories": [
+    {
+      "advisory_id": "cauliflower_tn_rabi",
+      "state_region": "Tamil Nadu",
+      "district": "General Plains",
+      "season": "Rabi",
+      "advisory_type": "cultivation_guide",
+      "sowing": {
+        "sowing_window_start": "September",
+        "sowing_window_end": "October",
+        "seed_rate": "300 - 400 g/ha (varies by variety/hybrid)",
+        "seed_treatment": "Treat with Azospirillum (25g for 250g seeds). For diseases, hot water at 50°C for 30 min, then Trichoderma harzianum.",
+        "spacing": "60 cm x 45 cm",
+        "sowing_depth_cm": { "value": 1.5, "unit": "cm", "range_type": "ideal", "source_confidence": "high" },
+        "nursery_required": true,
+        "transplanting_required": true
+      },
+      "land_preparation": {
+        "summary": "Plough 3-4 times to get a fine tilth. Form ridges and furrows. Apply 300 kg FYM per 100 sq.m nursery area."
+      },
+      "fertilizer": {
+        "basal_dose": "FYM 25 t/ha. NPK as per soil test, generally 50:50:50 kg/ha NPK basal.",
+        "top_dressing": "50 kg N/ha 30 days after transplanting.",
+        "organic_manure": "25 t/ha FYM",
+        "micronutrients": "Apply 50 g Sodium Molybdate and 100 g Borax in nursery (per 100 sq m) or as foliar spray later."
+      },
+      "irrigation": {
+        "schedule": "Immediate irrigation after transplanting, life irrigation on 3rd day, then once a week.",
+        "critical_stages": ["Curd initiation", "Curd development"],
+        "rainfed_advice": "Not recommended."
+      },
+      "weed_management": {
+        "summary": "First weeding 20-25 days after transplanting. Earthing up 30 days after transplanting."
+      },
+      "pest_management": [
+        {
+          "name": "Diamondback Moth",
+          "symptoms": "Larvae feed on leaves causing shot holes and skeletonization.",
+          "management": "Mustard trap crop (2:1). Pheromone traps @ 12/ha. Spray Bt @ 2g/l or NSKE 5%."
+        }
+      ],
+      "disease_management": [
+        {
+          "name": "Damping Off",
+          "symptoms": "Seedlings rot at soil line and collapse.",
+          "management": "Raised nursery beds. Seed treatment with Trichoderma. Drench with Copper oxychloride."
+        }
+      ],
+      "deficiency_management": [
+        {
+          "nutrient": "Boron",
+          "symptoms": "Brown rot / Browning (water-soaked areas on curd turning rusty brown).",
+          "remedy": "Foliar spray of Borax @ 0.2% (1 kg in 500 l water/ha) 30 days after planting."
+        },
+        {
+          "nutrient": "Molybdenum",
+          "symptoms": "Whiptail (leaf blades fail to develop, leaving only bare midrib).",
+          "remedy": "Spray Sodium Molybdate (100 g in 500 l water) 30 days after planting."
+        }
+      ],
+      "harvest": {
+        "harvest_signs": "Curds are firm, compact, and perfectly white. Blanching helps keep them white.",
+        "post_harvest_notes": "Trim outer leaves but retain a few to protect the curd during transport. Store in a cool, humid place.",
+        "expected_duration_days": { "value": 90, "unit": "days", "range_type": "ideal", "source_confidence": "high" }
+      },
+      "special_cautions": ["Blanching is required (tying leaves over curd) to protect from direct sunlight to maintain white color.", "Avoid transplanting over-aged seedlings to prevent buttoning."],
+      "faq": [
+        {
+          "question": "Why is my cauliflower head turning yellow?",
+          "answer": "Exposure to sunlight causes yellowing. Tie the inner leaves over the head (blanching) as it develops."
+        },
+        {
+          "question": "What causes buttoning in cauliflower?",
+          "answer": "Buttoning (development of small, unmarketable heads) is caused by transplanting over-aged seedlings, nitrogen deficiency, or moisture stress."
+        }
+      ],
+      "source_refs": ["src_tnau_agritech"]
+    },
+    {
+      "advisory_id": "cauliflower_punjab_haryana_rabi",
+      "state_region": "Punjab & Haryana",
+      "district": "All districts",
+      "season": "Rabi (Mid to Late)",
+      "advisory_type": "cultivation_guide",
+      "sowing": {
+        "sowing_window_start": "August",
+        "sowing_window_end": "October",
+        "seed_rate": "300 - 400 g/ha for main season varieties",
+        "seed_treatment": "Hot water treatment (50°C for 30 minutes) to prevent Black Rot. Seed treatment with Captan or Thiram @ 3g/kg.",
+        "spacing": "60 cm x 45 cm for mid-season, 60 cm x 60 cm for late-season varieties.",
+        "sowing_depth_cm": { "value": 1.5, "unit": "cm", "range_type": "ideal", "source_confidence": "high" },
+        "nursery_required": true,
+        "transplanting_required": true
+      },
+      "land_preparation": {
+        "summary": "Deep summer ploughing followed by 2-3 harrowings. Prepare ridges and furrows to ensure good drainage."
+      },
+      "fertilizer": {
+        "basal_dose": "Apply 40 t/ha FYM. 60 kg N, 60 kg P2O5, and 60 kg K2O per hectare.",
+        "top_dressing": "Apply 60 kg N/ha in two equal splits at 3-4 weeks and 6 weeks after transplanting.",
+        "organic_manure": "40 t/ha well-rotted FYM",
+        "micronutrients": "Foliar spray of 0.3% Borax at curd initiation if soils are boron deficient."
+      },
+      "irrigation": {
+        "schedule": "Irrigate immediately post-transplant. Subsequent irrigations every 8-10 days depending on winter rains.",
+        "critical_stages": ["Seedling establishment", "Curd initiation (button stage)", "Curd enlargement"],
+        "rainfed_advice": "Strictly irrigated crop."
+      },
+      "weed_management": {
+        "summary": "Pre-plant incorporation of Fluchloralin 45 EC @ 1.0 kg a.i./ha or Pendimethalin 30 EC @ 1.0 kg a.i./ha. Earthing up at 30 DAT."
+      },
+      "pest_management": [
+        {
+          "name": "Cabbage Butterfly / Caterpillar",
+          "symptoms": "Velvety green caterpillars feed voraciously on leaves, leaving large irregular holes.",
+          "management": "Hand-pick egg masses. Spray Quinalphos 25 EC @ 2 ml/L or Emamectin Benzoate 5 SG @ 0.4 g/L."
+        },
+        {
+          "name": "Diamondback Moth (DBM)",
+          "symptoms": "Larvae scrape the leaf surface, creating a 'window-pane' effect, and later eat holes in the leaves.",
+          "management": "Plant mustard as a trap crop. Spray Spinosad 45 SC @ 0.3 ml/L or Novaluron 10 EC @ 1 ml/L."
+        }
+      ],
+      "disease_management": [
+        {
+          "name": "Black Rot",
+          "symptoms": "V-shaped yellow to necrotic lesions starting from leaf margins. Blackened veins.",
+          "management": "Use hot water treated seeds. Spray Streptocycline @ 0.1 g/L + Copper Oxychloride @ 3 g/L."
+        }
+      ],
+      "deficiency_management": [
+        {
+          "nutrient": "Boron",
+          "symptoms": "Hollow stems and water-soaked, browning curds.",
+          "remedy": "Apply 15-20 kg/ha Borax to the soil before planting, or spray 0.2-0.3% Borax during the vegetative phase."
+        }
+      ],
+      "harvest": {
+        "harvest_signs": "Curds reach full size, are compact, and have not started to separate (become 'ricey').",
+        "post_harvest_notes": "Cut the stem just below the curd, keeping 2-3 wrapper leaves to prevent bruising.",
+        "expected_duration_days": { "value": 100, "unit": "days", "range_type": "ideal", "source_confidence": "high" }
+      },
+      "special_cautions": ["Do not delay harvest; over-mature curds become loose and develop a 'ricey' or fuzzy appearance.", "Ensure a strict Pre-Harvest Interval (PHI) of at least 10 days after any pesticide spray."],
+      "faq": [
+        {
+          "question": "What is 'riciness' in cauliflower?",
+          "answer": "Riciness is a disorder where the surface of the curd becomes uneven and fuzzy, resembling grains of rice. It happens due to high temperatures, temperature fluctuations, or over-maturity."
+        }
+      ],
+      "source_refs": ["src_pau_cauliflower_rabi"]
+    }
+  ],
+  "risk_library": {
+    "pests": [
+      {
+        "name": "Diamondback Moth (DBM)",
+        "favorable_conditions": ["Dry and warm weather", "Continuous cropping of crucifers"],
+        "symptoms": ["Holes in leaves", "Skeletonized leaves", "Window-pane effect", "Damage to curd"],
+        "management": ["Grow Indian mustard as trap crop", "Use pheromone traps", "Spray Bt, Spinosad, or NSKE 5%"]
+      },
+      {
+        "name": "Aphids",
+        "favorable_conditions": ["Cloudy weather", "High humidity", "Cool temperatures"],
+        "symptoms": ["Yellowing of leaves", "Curling", "Stunted growth", "Sooty mold from honeydew"],
+        "management": ["Yellow sticky traps", "Spray Imidacloprid or 3% Neem oil"]
+      },
+      {
+        "name": "Cabbage Butterfly",
+        "favorable_conditions": ["Cool, dry winters"],
+        "symptoms": ["Massive defoliation by velvety green caterpillars", "Excreta inside the curd"],
+        "management": ["Hand-picking egg masses", "Spray Emamectin Benzoate"]
+      }
+    ],
+    "diseases": [
+      {
+        "name": "Black Rot",
+        "favorable_conditions": ["Warm, humid, wet weather", "Infected seed or crop debris"],
+        "symptoms": ["V-shaped yellow lesions on leaf margins", "Blackened veins", "Systemic rotting of plant"],
+        "management": ["Crop rotation (3 years)", "Hot water seed treatment", "Streptocycline + Copper Oxychloride sprays"]
+      },
+      {
+        "name": "Clubroot",
+        "favorable_conditions": ["Acidic soils (pH < 6.0)", "Poor drainage", "Continuous crucifer cropping"],
+        "symptoms": ["Wilting during the day", "Massive root galls/swelling", "Stunted growth"],
+        "management": ["Soil liming to raise pH above 7.0", "Long crop rotation avoiding crucifers", "Raised bed planting"]
+      }
+    ],
+    "abiotic_risks": [
+      {
+        "name": "Buttoning",
+        "trigger_conditions": ["Nitrogen deficiency", "Transplanting over-aged seedlings", "Moisture stress", "Early varieties planted late"],
+        "impact": "Premature, tiny curds that are unmarketable.",
+        "mitigation": ["Apply adequate nitrogen", "Transplant at proper seedling age (3-4 weeks)", "Maintain consistent soil moisture"]
+      },
+      {
+        "name": "Whiptail",
+        "trigger_conditions": ["Molybdenum deficiency", "Highly acidic soils"],
+        "impact": "Leaf blades fail to develop, leaving only bare midribs; plants fail to produce curds.",
+        "mitigation": ["Apply Sodium Molybdate", "Lime acidic soils"]
+      },
+      {
+        "name": "Riciness",
+        "trigger_conditions": ["High temperatures", "Temperature fluctuations", "Delayed harvest", "Excess nitrogen"],
+        "impact": "Curd surface becomes granular, loose, and fuzzy, reducing market value.",
+        "mitigation": ["Use climate-appropriate varieties", "Harvest promptly", "Avoid excess late nitrogen"]
+      }
+    ]
+  },
+  "retrieval_chunks": [
+    {
+      "chunk_id": "cauliflower_overview_001",
+      "chunk_type": "overview",
+      "title": "Cauliflower Overview",
+      "crop_name": "Cauliflower",
+      "state_region": "India",
+      "district": "All",
+      "season": "Rabi",
+      "advisory_category": "overview",
+      "text": "Cauliflower (Phool Gobhi) is a highly nutritious cool-season vegetable. It requires well-drained loamy soils with a pH of 5.5-6.6 and cool, moist climates for optimal solid curd formation. It is highly sensitive to micronutrient deficiencies like Boron and Molybdenum.",
+      "keywords": ["cauliflower", "phool gobi", "cool season", "curd", "micronutrients"],
+      "metadata_tags": ["overview", "general", "intro"],
+      "source_ref_ids": ["src_tnau_agritech"]
+    },
+    {
+      "chunk_id": "cauliflower_whiptail_001",
+      "chunk_type": "deficiency_management",
+      "title": "Whiptail Disorder in Cauliflower",
+      "crop_name": "Cauliflower",
+      "state_region": "India",
+      "district": "All",
+      "season": "All",
+      "advisory_category": "deficiency_management",
+      "text": "Whiptail is a severe physiological disorder in cauliflower caused by Molybdenum deficiency, particularly common in acidic soils. The leaf blades fail to develop, leaving only a strap-like midrib, and the plant fails to form a curd. Correct this by liming the soil to raise pH or applying Sodium Molybdate as a foliar spray.",
+      "keywords": ["Whiptail", "Molybdenum", "Acidic soil", "Strap-like leaf", "Sodium Molybdate"],
+      "metadata_tags": ["disorder", "deficiency", "molybdenum"],
+      "source_ref_ids": ["src_tnau_agritech"]
+    },
+    {
+      "chunk_id": "cauliflower_browning_001",
+      "chunk_type": "deficiency_management",
+      "title": "Browning and Hollow Stem (Boron Deficiency)",
+      "crop_name": "Cauliflower",
+      "state_region": "India",
+      "district": "All",
+      "season": "All",
+      "advisory_category": "deficiency_management",
+      "text": "Boron deficiency in cauliflower leads to 'Browning' (water-soaked areas on the curd that turn rusty brown) and 'Hollow Stem' (the central core of the stem becomes hollow and decays). To prevent this, apply Borax to the soil before planting or use a 0.2-0.3% Borax foliar spray during vegetative growth.",
+      "keywords": ["Browning", "Hollow Stem", "Boron", "Borax", "Brown rot"],
+      "metadata_tags": ["disorder", "deficiency", "boron"],
+      "source_ref_ids": ["src_pau_cauliflower_rabi"]
+    },
+    {
+      "chunk_id": "cauliflower_blanching_001",
+      "chunk_type": "cultivation_practice",
+      "title": "Blanching of Cauliflower Curds",
+      "crop_name": "Cauliflower",
+      "state_region": "India",
+      "district": "All",
+      "season": "All",
+      "advisory_category": "cultivation_practice",
+      "text": "Blanching is the practice of protecting the developing cauliflower curd from direct sunlight to keep it perfectly white and prevent yellowing. This is done by loosely tying the large outer leaves over the head when the curd is about the size of a tennis ball.",
+      "keywords": ["Blanching", "White curd", "Yellowing", "Tying leaves", "Sunlight protection"],
+      "metadata_tags": ["agronomy", "quality", "cultivation"],
+      "source_ref_ids": ["src_tnau_agritech"]
+    }
+  ],
+  "structured_explanation_rules": [
+    {
+      "rule_id": "cauli_ph_match",
+      "condition": "input.ph >= 5.5 AND input.ph <= 6.6",
+      "message": "Soil pH is within the optimal range for cauliflower, ensuring good availability of micronutrients like Boron."
+    },
+    {
+      "rule_id": "cauli_acidic_molybdenum_warning",
+      "condition": "input.ph < 5.5",
+      "message": "Warning: Highly acidic soil restricts Molybdenum availability, which can cause 'Whiptail' disorder. Apply agricultural lime and consider Sodium Molybdate sprays."
+    },
+    {
+      "rule_id": "cauli_high_temp_warning",
+      "condition": "input.max_temp_c > 25 AND input.growth_stage == 'curd_formation'",
+      "message": "Alert: Temperatures above 25°C during curd formation will cause loose, ricey, or yellowing curds. Ensure you have selected a heat-tolerant early variety."
+    },
+    {
+      "rule_id": "cauli_rotation_reject",
+      "condition": "input.previous_crop IN ['cabbage', 'mustard', 'broccoli', 'radish', 'cauliflower']",
+      "message": "Warning: Planting cauliflower after other cruciferous crops strongly increases the risk of Diamondback Moth and Clubroot disease. Rotate with cereals or legumes."
+    }
+  ],
+  "ui_response_templates": {
+    "best_match_intro": "Phool Gobhi (Cauliflower) is highly suitable for your field's cool climate and loamy, well-drained soil.",
+    "warning_low_rainfall": "Cauliflower requires consistent moisture to form solid curds. Ensure you have assured irrigation, preferably drip, to prevent 'buttoning'.",
+    "warning_rotation": "Your previous crop was a crucifer. Pest and disease pressure will be very high. Crop rotation is strongly recommended.",
+    "info_blanching": "Tip: Don't forget to tie the inner leaves over the developing curd (blanching) to keep it perfectly white for the market.",
+    "cta_view_advisory": "View full Cauliflower cultivation advisory",
+    "cta_view_deficiency_guide": "Read the Boron and Molybdenum Management Guide"
+  },
+  "source_registry": [
+    {
+      "source_id": "src_tnau_agritech",
+      "title": "TNAU Agritech Portal - Cauliflower Cultivation",
+      "source_type": "website",
+      "publisher": "Tamil Nadu Agricultural University",
+      "region_scope": "India, Tamil Nadu",
+      "season_scope": "Rabi",
+      "crop_scope": ["Cauliflower"],
+      "content_summary": "Comprehensive guide on cauliflower soil, climate, irrigation, blanching, and fertilizer management.",
+      "date_published": "2021-08-15",
+      "trust_level": "high"
+    },
+    {
+      "source_id": "src_pau_cauliflower_rabi",
+      "title": "Package of Practices for Vegetable Crops",
+      "source_type": "manual",
+      "publisher": "Punjab Agricultural University (PAU), Ludhiana",
+      "region_scope": "Punjab",
+      "season_scope": "Rabi",
+      "crop_scope": ["Cauliflower", "Cabbage"],
+      "content_summary": "Specific guidelines for early, mid, and late-season cauliflower varieties, focusing on physiological disorders like riciness and buttoning.",
+      "date_published": "2023-01-20",
+      "trust_level": "high"
+    },
+    {
+      "source_id": "src_icar_ipm",
+      "title": "ICAR - IPM in Cauliflower",
+      "source_type": "report",
+      "publisher": "Indian Council of Agricultural Research",
+      "region_scope": "India",
+      "season_scope": "All",
+      "crop_scope": ["Cauliflower"],
+      "content_summary": "Integrated Pest and Disease Management strategies for cauliflower, highly focusing on Diamondback Moth and Black Rot.",
+      "date_published": "2022-05-10",
+      "trust_level": "high"
+    }
+  ],
+  "quality_flags": {
+    "is_complete": true,
+    "missing_fields": [],
+    "weakly_supported_fields": [],
+    "last_reviewed_at": "2023-10-25T00:00:00Z"
+  },
+  "updated_at": "2023-10-25T00:00:00Z",
+  "created_at": "2023-10-25T00:00:00Z"
+}

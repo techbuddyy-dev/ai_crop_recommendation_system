@@ -1,0 +1,470 @@
+{
+  "crop_id": "pearl_millet",
+  "crop_name": "Pearl Millet",
+  "aliases": ["Bajra", "Sajje", "Kambu", "Cumbu", "Bajari"],
+  "crop_group": "Millet",
+  "status": "active",
+  "language": "en",
+  "version": "v1.2",
+
+  "master_profile": {
+    "short_description": "Pearl Millet (Bajra) is a highly drought-tolerant and climate-resilient coarse cereal, serving as a staple food and fodder crop in the arid and semi-arid regions of India.",
+    "seasons_supported": ["Kharif", "Zaid"],
+    "regions_supported": ["Rajasthan", "Gujarat", "Haryana", "Uttar Pradesh", "Maharashtra", "Karnataka", "Madhya Pradesh"],
+    "agro_climatic_zones": ["Western Dry Region", "Gujarat Plains and Hills Region", "Trans-Gangetic Plains Region", "Central Plateau and Hills Region"],
+
+    "soil_suitability": {
+      "suitable_soil_textures": ["Sandy", "Sandy loam", "Light loam"],
+      "unsuitable_soil_textures": ["Heavy clay", "Poorly drained soils"],
+      "ideal_ph_min": 6.0,
+      "ideal_ph_max": 8.0,
+      "acceptable_ph_min": 5.5,
+      "acceptable_ph_max": 8.5,
+      "salinity_tolerance_note": "Highly tolerant to soil salinity and alkalinity compared to other cereals.",
+      "drainage_requirement": "Requires exceptionally well-drained soils; highly sensitive to waterlogging even for a few hours.",
+      "organic_carbon_note": "Typically grown in soils with very low organic carbon; adding FYM significantly boosts yield and moisture retention."
+    },
+
+    "climate_suitability": {
+      "ideal_temperature_c_min": 25,
+      "ideal_temperature_c_max": 35,
+      "acceptable_temperature_c_min": 20,
+      "acceptable_temperature_c_max": 42,
+      "ideal_humidity_min": 30,
+      "ideal_humidity_max": 60,
+      "ideal_rainfall_mm_min": 250,
+      "ideal_rainfall_mm_max": 600,
+      "frost_tolerance_note": "Extremely sensitive to frost; requires warm weather throughout its growth cycle.",
+      "heat_tolerance_note": "Excellent heat tolerance. Can withstand temperatures up to 42°C during vegetative growth, though high heat during anthesis may cause pollen desiccation."
+    },
+
+    "water_profile": {
+      "irrigation_required": false,
+      "rainfed_suitable": true,
+      "waterlogging_tolerance": "Very low; standing water causes immediate root suffocation and plant death.",
+      "drought_tolerance": "Exceptionally high; extensive and deep fibrous root system helps it survive severe drought spells.",
+      "critical_water_stages": ["Tillering", "Flowering (Anthesis)", "Grain filling"]
+    },
+
+    "nutrient_profile": {
+      "nitrogen_demand": "Low to Moderate (40-60 kg/ha for rainfed, 80-100 kg/ha for irrigated hybrids)",
+      "phosphorus_demand": "Low to Moderate (20-30 kg/ha)",
+      "potassium_demand": "Low (20 kg/ha, mostly in deficient soils)",
+      "micronutrient_notes": ["Zinc and Iron fortification is common in newer biofortified varieties (e.g., Dhanshakti); soil application of Zinc Sulphate (25 kg/ha) is recommended in deficient sandy soils."]
+    },
+
+    "cropping_context": {
+      "suitable_previous_crops": ["Legumes (Moth bean, Moong, Cluster bean/Guar)"],
+      "unsuitable_previous_crops": ["Continuous pearl millet cultivation increases Downy Mildew and Ergot inoculum."],
+      "rotation_notes": ["Pearl Millet - Mustard", "Pearl Millet - Wheat", "Pearl Millet - Gram"],
+      "intercrop_options": ["Moong bean (Green gram)", "Moth bean", "Cluster bean (Guar)", "Cowpea"]
+    },
+
+    "crop_duration": {
+      "duration_days_min": 70,
+      "duration_days_max": 90,
+      "maturity_indicators": ["Leaves turn yellow and dry", "Grain becomes hard and cannot be crushed easily between fingers", "Moisture content drops to 15-20%"]
+    },
+
+    "recommendation_logic": {
+      "why_recommend_conditions": ["Arid and semi-arid climates", "Low rainfall areas (<400 mm)", "Sandy soils with low fertility"],
+      "why_not_recommend_conditions": ["High rainfall areas (>800 mm)", "Heavy, poorly drained clay soils"],
+      "hard_rejection_conditions": ["Prone to prolonged flooding or waterlogging", "Frost-prone environments"]
+    }
+  },
+
+  "region_season_advisories": [
+    {
+      "advisory_id": "pearl_millet_rajasthan_kharif",
+      "state_region": "Rajasthan",
+      "district": "Barmer, Jodhpur, Bikaner, Jaipur, Alwar",
+      "season": "Kharif",
+      "advisory_type": "cultivation_guide",
+      "applicability_filters": {
+        "irrigation": "rainfed",
+        "soil_type": "sandy to sandy loam",
+        "sowing_window": "onset of monsoon (July)"
+      },
+
+      "sowing": {
+        "sowing_window_start": "July 01",
+        "sowing_window_end": "July 25",
+        "seed_rate": { "value": 4, "unit": "kg/ha", "range_type": "recommended", "source_confidence": "high" },
+        "seed_treatment": "Treat seeds with Apron 35 SD (Metalaxyl) @ 6g/kg seed to prevent Downy Mildew. Follow with Azospirillum and PSB culture @ 25g/kg seed.",
+        "spacing": "45 cm x 10-15 cm",
+        "sowing_depth_cm": 2.5,
+        "nursery_required": false,
+        "transplanting_required": false
+      },
+
+      "land_preparation": {
+        "summary": "One deep summer ploughing is recommended to destroy resting spores of diseases and insects like white grub. Use a cultivator or disc harrow after the first shower to prepare a fine seedbed."
+      },
+
+      "fertilizer": {
+        "basal_dose": "Apply 20 kg Nitrogen and 20 kg Phosphorus per hectare at the time of sowing.",
+        "top_dressing": "Top dress with 20 kg Nitrogen per hectare at 25-30 days after sowing, coinciding with rains.",
+        "organic_manure": "Add 5-8 tonnes of well-rotted FYM/ha one month before sowing to improve soil moisture retention.",
+        "micronutrients": "Apply Zinc Sulphate @ 25 kg/ha as a basal dose once in 3 years if soil test shows deficiency."
+      },
+
+      "irrigation": {
+        "schedule": "Completely rainfed. If a long dry spell occurs and irrigation is available, apply life-saving irrigation at boot leaf or flowering stages.",
+        "critical_stages": ["Tillering", "Booting", "Flowering", "Grain formation"],
+        "rainfed_advice": "Interculture (hoeing/weeding) using a blade harrow or wheel hoe at 20-25 days creates a dust mulch, breaking capillary action to conserve moisture."
+      },
+
+      "weed_management": {
+        "summary": "Pre-emergence application of Atrazine @ 0.5 kg a.i./ha in 500 liters of water. Manual weeding and hoeing at 20 and 35 days after sowing."
+      },
+
+      "pest_management": [
+        {
+          "name": "White Grub",
+          "symptoms": "Grubs feed on roots, causing plants to dry up and easily pull out of the soil.",
+          "management": "Deep summer ploughing. Seed treatment with Imidacloprid 600 FS @ 5 ml/kg seed. Apply Quinalphos 5G @ 15 kg/ha in soil before sowing."
+        }
+      ],
+
+      "disease_management": [
+        {
+          "name": "Downy Mildew (Green Ear Disease)",
+          "symptoms": "Leaves show pale, chlorotic streaks with white downy fungal growth on the lower surface. Earheads transform into leafy, green, tufted structures.",
+          "management": "Grow resistant hybrids (e.g., HHB 67, RHB 173). Seed treatment with Metalaxyl (Apron 35 SD). Roguing and burning of infected plants."
+        },
+        {
+          "name": "Ergot",
+          "symptoms": "Pinkish or light-colored sweet, sticky fluid (honeydew) exudes from infected spikelets, which later turn into dark, hard sclerotia.",
+          "management": "Avoid late sowing. Use certified seeds. Float seeds in 10% salt solution before sowing to remove light, sclerotia-mixed seeds."
+        }
+      ],
+
+      "deficiency_management": [
+        {
+          "nutrient": "Zinc",
+          "symptoms": "Broad chlorotic bands on leaves, stunted growth.",
+          "remedy": "Foliar spray of 0.5% Zinc Sulphate + 0.25% slaked lime at 25-30 days."
+        }
+      ],
+
+      "harvest": {
+        "harvest_signs": "Leaves turn yellowish and dry, grain moisture reduces to around 15%, grains become hard.",
+        "post_harvest_notes": "Harvest earheads manually and sun-dry for a few days before threshing. Dry grains to 10-12% moisture for safe storage. Harvest remaining stalks (kadbi) for cattle fodder.",
+        "expected_duration_days": 80
+      },
+
+      "special_cautions": ["Do not consume Ergot-infected grains as they contain toxic alkaloids harmful to humans and livestock."],
+      "faq": [
+        {
+          "question": "Can I feed bajra stalks to cattle?",
+          "answer": "Yes, dry pearl millet stover (kadbi) is a valuable dry fodder in arid regions, although its nutritional quality is improved by chopping and mixing with green fodder or legume hay."
+        }
+      ],
+
+      "source_refs": ["src_cazri_bajra_pop", "src_iimr_pearl_millet_2022"]
+    },
+    {
+      "advisory_id": "pearl_millet_gujarat_summer",
+      "state_region": "Gujarat & Haryana",
+      "district": "Banaskantha, Kutch, Hisar, Bhiwani",
+      "season": "Zaid (Summer)",
+      "advisory_type": "cultivation_guide",
+      "applicability_filters": {
+        "irrigation": "assured irrigation",
+        "soil_type": "sandy loam to loam",
+        "sowing_window": "February to March"
+      },
+
+      "sowing": {
+        "sowing_window_start": "February 15",
+        "sowing_window_end": "March 15",
+        "seed_rate": { "value": 5, "unit": "kg/ha", "range_type": "recommended" },
+        "seed_treatment": "Treat with Metalaxyl (Apron 35 SD) @ 6g/kg seed. Avoid sowing if night temperatures are below 15°C.",
+        "spacing": "45 cm x 10 cm",
+        "sowing_depth_cm": 3,
+        "nursery_required": false,
+        "transplanting_required": false
+      },
+
+      "land_preparation": {
+        "summary": "Prepare fine seedbed with 2 harrowings. Apply a pre-sowing irrigation (rauni) to ensure uniform germination."
+      },
+
+      "fertilizer": {
+        "basal_dose": "Apply 40 kg N and 30 kg P2O5 per hectare.",
+        "top_dressing": "Apply 40 kg N in two splits: at 3 weeks (tillering) and at booting stage.",
+        "organic_manure": "Apply 10 tonnes FYM/ha."
+      },
+
+      "irrigation": {
+        "schedule": "Requires 5-6 irrigations in summer. First irrigation at 20-25 DAS, subsequent irrigations at 10-12 day intervals.",
+        "critical_stages": ["Tillering", "Anthesis (Flowering)", "Grain filling"]
+      },
+
+      "weed_management": {
+        "summary": "Pre-emergence Atrazine @ 0.5 kg a.i./ha or manual weeding at 20 and 35 DAS."
+      },
+
+      "pest_management": [
+        {
+          "name": "Shoot Fly",
+          "symptoms": "Drying of central shoot forming a dead heart.",
+          "management": "Seed treatment with Imidacloprid. Maintain higher plant population."
+        }
+      ],
+
+      "disease_management": [
+        {
+          "name": "Smut",
+          "symptoms": "Ovaries replaced by large, plump green sori that later turn dark brown/black.",
+          "management": "Use certified disease-free seeds. Remove and burn smutted earheads."
+        }
+      ],
+
+      "harvest": {
+        "harvest_signs": "Complete drying of earheads and hardening of grains.",
+        "post_harvest_notes": "Prompt harvesting to avoid damage from early monsoon showers and birds.",
+        "expected_duration_days": 85
+      },
+      "special_cautions": ["High temperatures (>42°C) coupled with dry winds during flowering can cause pollen wash-out and poor seed set. Ensure the field is adequately irrigated during anthesis."],
+      "faq": [
+        {
+          "question": "How to protect summer bajra from birds?",
+          "answer": "Birds are a major menace in summer bajra. Use reflective ribbons, scarecrows, and acoustic bird scarers during the dough stage."
+        }
+      ],
+      "source_refs": ["src_jau_summer_bajra", "src_hau_bajra"]
+    }
+  ],
+
+  "risk_library": {
+    "pests": [
+      {
+        "name": "White Grub",
+        "favorable_conditions": ["Sandy soils", "First monsoon showers"],
+        "symptoms": ["Yellowing and wilting of plants", "Roots eaten away"],
+        "management": ["Deep summer ploughing", "Seed treatment", "Soil application of granular insecticides"]
+      },
+      {
+        "name": "Shoot Fly",
+        "favorable_conditions": ["Late sowing", "Cool temperatures during early stages"],
+        "symptoms": ["Dead heart formation in seedlings"],
+        "management": ["Timely sowing", "Seed treatment with Imidacloprid"]
+      },
+      {
+        "name": "Birds",
+        "favorable_conditions": ["Isolated summer crop fields", "Dough to maturity stage"],
+        "symptoms": ["Grains removed from panicles", "Shattered earheads"],
+        "management": ["Use of reflective tapes", "Acoustic scarers", "Manual scaring"]
+      }
+    ],
+    "diseases": [
+      {
+        "name": "Downy Mildew (Green Ear)",
+        "favorable_conditions": ["High humidity (>80%)", "Moderate temperatures (20-25°C)"],
+        "symptoms": ["Chlorotic streaks on leaves", "Floral parts turn into leafy structures"],
+        "management": ["Resistant varieties", "Metalaxyl seed treatment"]
+      },
+      {
+        "name": "Ergot",
+        "favorable_conditions": ["High humidity, continuous drizzle during flowering"],
+        "symptoms": ["Honeydew oozing from florets", "Hard black sclerotia replacing grains"],
+        "management": ["Salt water seed treatment", "Avoid late sowing"]
+      },
+      {
+        "name": "Smut",
+        "favorable_conditions": ["High humidity during grain formation"],
+        "symptoms": ["Green, plump sori turning black filled with spores"],
+        "management": ["Use certified seeds", "Collect and burn infected panicles"]
+      }
+    ],
+    "abiotic_risks": [
+      {
+        "name": "Waterlogging",
+        "trigger_conditions": ["Heavy, continuous rainfall on poorly drained soils"],
+        "impact": "Root suffocation, severe yellowing, stunted growth, and death within 48 hours.",
+        "mitigation": ["Ensure cultivation on sandy/well-drained soils", "Provide surface drainage channels"]
+      },
+      {
+        "name": "High Temperature at Anthesis",
+        "trigger_conditions": ["Temperatures exceeding 42°C with dry winds during flowering (summer crop)"],
+        "impact": "Pollen desiccation, poor pollination, resulting in chaffy or empty earheads.",
+        "mitigation": ["Apply irrigation during the flowering stage to create a favorable microclimate"]
+      }
+    ]
+  },
+
+  "retrieval_chunks": [
+    {
+      "chunk_id": "pearl_millet_overview_001",
+      "chunk_type": "overview",
+      "title": "Pearl Millet (Bajra) Overview",
+      "crop_name": "Pearl Millet",
+      "state_region": "India",
+      "district": "All",
+      "season": "Kharif",
+      "advisory_category": "overview",
+      "text": "Pearl Millet, or Bajra, is a hardy, drought-tolerant cereal crop perfectly suited for the arid and semi-arid regions of India. It provides essential food security and fodder where other crops fail.",
+      "keywords": ["Bajra", "Dryland", "Arid", "Drought-tolerant", "Millet"],
+      "metadata_tags": ["general_info", "intro"],
+      "source_ref_ids": ["src_cazri_bajra_pop"]
+    },
+    {
+      "chunk_id": "pearl_millet_suitability_001",
+      "chunk_type": "suitability",
+      "title": "Pearl Millet Soil and Climate Requirements",
+      "crop_name": "Pearl Millet",
+      "state_region": "India",
+      "district": "All",
+      "season": "All",
+      "advisory_category": "suitability",
+      "text": "Bajra thrives in sandy or light loam soils with excellent drainage. It requires minimal rainfall (250-600mm) and withstands high temperatures up to 42°C, making it ideal for desert-fringe agriculture.",
+      "keywords": ["Sandy soil", "Low rainfall", "High temperature", "Well-drained"],
+      "metadata_tags": ["soil", "climate", "water"],
+      "source_ref_ids": ["src_iimr_pearl_millet_2022"]
+    },
+    {
+      "chunk_id": "pearl_millet_ergot_warning_001",
+      "chunk_type": "warning",
+      "title": "Ergot Disease and Toxicity Warning",
+      "crop_name": "Pearl Millet",
+      "state_region": "India",
+      "district": "All",
+      "season": "Kharif",
+      "advisory_category": "warning",
+      "text": "WARNING: Ergot disease replaces bajra grains with hard, dark sclerotia containing toxic alkaloids. Consuming ergot-infected grains is highly dangerous for humans and livestock. Float seeds in a 10% salt solution before sowing to separate and destroy floating sclerotia.",
+      "keywords": ["Ergot", "Toxicity", "Sclerotia", "Honeydew", "Salt water treatment"],
+      "metadata_tags": ["disease", "toxicity", "seed_treatment"],
+      "source_ref_ids": ["src_iimr_pearl_millet_2022"]
+    },
+    {
+      "chunk_id": "pearl_millet_summer_001",
+      "chunk_type": "cultivation_practice",
+      "title": "Summer Bajra Cultivation",
+      "crop_name": "Pearl Millet",
+      "state_region": "Gujarat, Haryana",
+      "district": "All",
+      "season": "Zaid",
+      "advisory_category": "cultivation_practice",
+      "text": "Growing Pearl Millet in the summer (Zaid) under assured irrigation results in higher yields and fewer downy mildew issues compared to the Kharif crop. However, bird protection is critical as it may be the only standing crop in the region.",
+      "keywords": ["Summer bajra", "Zaid", "Irrigated", "Bird damage", "High yield"],
+      "metadata_tags": ["season", "summer", "yield"],
+      "source_ref_ids": ["src_jau_summer_bajra"]
+    },
+    {
+      "chunk_id": "pearl_millet_birds_001",
+      "chunk_type": "pest_management",
+      "title": "Bird Damage Management in Bajra",
+      "crop_name": "Pearl Millet",
+      "state_region": "India",
+      "district": "All",
+      "season": "Zaid",
+      "advisory_category": "pest_management",
+      "text": "Birds are a major threat to bajra during the dough to maturity stage, especially in isolated summer fields. Use reflective ribbons, acoustic scarers, or traditional scarecrows. Harvest immediately upon physiological maturity to minimize losses.",
+      "keywords": ["Birds", "Scarecrow", "Reflective ribbon", "Damage", "Summer"],
+      "metadata_tags": ["pest", "birds", "prevention"],
+      "source_ref_ids": ["src_hau_bajra"]
+    }
+  ],
+
+  "structured_explanation_rules": [
+    {
+      "rule_id": "pearl_millet_arid_suitability",
+      "condition": "input.rainfall_mm >= 200 AND input.rainfall_mm <= 600 AND input.soil_texture IN ['sandy', 'sandy loam']",
+      "message": "Perfect alignment with Bajra's requirements. Your low rainfall and sandy soils are ideal for this drought-hardy crop.",
+      "priority": 1,
+      "severity": "positive_match"
+    },
+    {
+      "rule_id": "pearl_millet_waterlogging_reject",
+      "condition": "input.soil_drainage == 'poor' OR input.soil_texture == 'clay'",
+      "message": "Bajra is highly susceptible to waterlogging. Heavy clay soils with poor drainage will lead to crop failure.",
+      "priority": 1,
+      "severity": "hard_reject"
+    },
+    {
+      "rule_id": "pearl_millet_ergot_warning",
+      "condition": "input.humidity > 80 AND input.growth_stage == 'flowering'",
+      "message": "High humidity during flowering increases the risk of Ergot disease. Monitor earheads for honeydew oozing.",
+      "priority": 2,
+      "severity": "warning"
+    },
+    {
+      "rule_id": "pearl_millet_high_ph_info",
+      "condition": "input.ph >= 7.5 AND input.ph <= 8.5",
+      "message": "Your soil is mildly alkaline. Bajra is highly tolerant to such conditions and will perform better here than most other cereals.",
+      "priority": 3,
+      "severity": "info"
+    }
+  ],
+
+  "ui_response_templates": {
+    "best_match_intro": "Bajra (Pearl Millet) is highly recommended for your field. It is the most reliable crop for low-rainfall, sandy regions.",
+    "warning_heavy_soil": "Your field's heavy soil might cause drainage issues. Consider planting on ridges or selecting a different crop if water stagnation is common.",
+    "warning_birds": "Alert: Ensure bird scaring measures are in place as earheads reach the dough stage.",
+    "info_salinity_tolerance": "Good news: Bajra's high tolerance to alkalinity makes it well-suited for your soil's pH levels.",
+    "cta_view_advisory": "View full Bajra cultivation advisory",
+    "cta_view_ergot_guide": "Read the Ergot Disease Safety Guide"
+  },
+
+  "source_registry": [
+    {
+      "source_id": "src_cazri_bajra_pop",
+      "title": "Package of Practices for Pearl Millet in Arid Regions",
+      "source_type": "manual",
+      "publisher": "Central Arid Zone Research Institute (CAZRI), Jodhpur",
+      "region_scope": "Rajasthan",
+      "season_scope": "Kharif",
+      "crop_scope": ["Pearl Millet"],
+      "content_summary": "Extensive guidelines for cultivating bajra in the arid western zones of India, including moisture conservation and pest control.",
+      "date_published": "2021-06-01",
+      "trust_level": "high"
+    },
+    {
+      "source_id": "src_iimr_pearl_millet_2022",
+      "title": "Pearl Millet Cultivation Guidelines",
+      "source_type": "pdf",
+      "publisher": "ICAR - Indian Institute of Millets Research (IIMR)",
+      "region_scope": "India",
+      "season_scope": "Kharif and Zaid",
+      "crop_scope": ["Pearl Millet"],
+      "content_summary": "National advisory on pearl millet hybrids, disease management, and biofortification.",
+      "date_published": "2022-03-15",
+      "trust_level": "high"
+    },
+    {
+      "source_id": "src_jau_summer_bajra",
+      "title": "Summer Pearl Millet Production Technology",
+      "source_type": "bulletin",
+      "publisher": "Junagadh Agricultural University (JAU)",
+      "region_scope": "Gujarat",
+      "season_scope": "Zaid",
+      "crop_scope": ["Pearl Millet"],
+      "content_summary": "Guide on maximizing yields for irrigated summer bajra in Gujarat.",
+      "date_published": "2023-01-10",
+      "trust_level": "high"
+    },
+    {
+      "source_id": "src_hau_bajra",
+      "title": "Package of Practices for Kharif and Zaid Crops",
+      "source_type": "manual",
+      "publisher": "Chaudhary Charan Singh Haryana Agricultural University (CCS HAU)",
+      "region_scope": "Haryana",
+      "season_scope": "Kharif and Zaid",
+      "crop_scope": ["Pearl Millet"],
+      "content_summary": "Guidelines for bajra farming in Trans-Gangetic plains, covering agronomy and pest management.",
+      "date_published": "2023-04-05",
+      "trust_level": "high"
+    }
+  ],
+
+  "quality_flags": {
+    "is_complete": true,
+    "missing_fields": [],
+    "weakly_supported_fields": [],
+    "last_reviewed_at": "2024-03-15T00:00:00Z"
+  },
+
+  "updated_at": "2024-03-15T00:00:00Z",
+  "created_at": "2023-11-12T00:00:00Z"
+}

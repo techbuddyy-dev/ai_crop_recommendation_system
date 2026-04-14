@@ -1,0 +1,465 @@
+{
+  "crop_id": "wheat",
+  "crop_name": "Wheat",
+  "aliases": ["Gehun", "Kanak", "Godhuma"],
+  "crop_group": "Cereal",
+  "status": "active",
+  "language": "en",
+  "version": "v1.2",
+
+  "master_profile": {
+    "short_description": "Wheat is the second most important cereal crop in India, primarily grown in the Rabi season. It requires cool climate during early growth and warm, dry weather for grain ripening.",
+    "seasons_supported": ["Rabi"],
+    "regions_supported": ["Uttar Pradesh", "Punjab", "Haryana", "Madhya Pradesh", "Rajasthan", "Bihar", "Gujarat", "Maharashtra", "West Bengal"],
+    "agro_climatic_zones": ["North Western Plain Zone", "North Eastern Plain Zone", "Central Zone", "Peninsular Zone"],
+
+    "soil_suitability": {
+      "suitable_soil_textures": ["Loam", "Clay loam", "Sandy loam", "Heavy Cotton Soils (Black Soil)"],
+      "unsuitable_soil_textures": ["Heavy clay with poor drainage", "Highly acidic soils", "Coarse sand"],
+      "ideal_ph_min": 6.0,
+      "ideal_ph_max": 7.5,
+      "acceptable_ph_min": 5.5,
+      "acceptable_ph_max": 8.5,
+      "salinity_tolerance_note": "Moderately tolerant to salinity. Specific salt-tolerant varieties like KRL 210, KRL 213 exist.",
+      "drainage_requirement": "Well-drained soils are essential; highly sensitive to waterlogging.",
+      "organic_carbon_note": "Soils with medium to high organic carbon (0.5-0.75%) yield best results."
+    },
+
+    "climate_suitability": {
+      "ideal_temperature_c_min": 14,
+      "ideal_temperature_c_max": 25,
+      "acceptable_temperature_c_min": 4,
+      "acceptable_temperature_c_max": 35,
+      "ideal_humidity_min": 50,
+      "ideal_humidity_max": 70,
+      "ideal_rainfall_mm_min": 250,
+      "ideal_rainfall_mm_max": 750,
+      "frost_tolerance_note": "Tolerant during vegetative stage, but highly susceptible to frost during flowering/anthesis phase.",
+      "heat_tolerance_note": "Terminal heat stress (temperatures >30°C) during grain filling reduces grain weight and yield. Early sowing or heat-tolerant varieties are recommended for late-harvested fields."
+    },
+
+    "water_profile": {
+      "irrigation_required": true,
+      "rainfed_suitable": true,
+      "waterlogging_tolerance": "Low; waterlogging for more than 2-3 days severely stunts growth and causes root rot.",
+      "drought_tolerance": "Moderate; rainfed varieties have deeper root systems and are grown extensively in Central India.",
+      "critical_water_stages": ["Crown Root Initiation (CRI) - 21 DAS", "Tillering", "Late Jointing", "Flowering", "Milking", "Dough stage"]
+    },
+
+    "nutrient_profile": {
+      "nitrogen_demand": "High (120-150 kg/ha for irrigated, 40-60 kg/ha for rainfed)",
+      "phosphorus_demand": "Medium (60 kg/ha)",
+      "potassium_demand": "Low to Medium (40 kg/ha, mostly basal)",
+      "micronutrient_notes": ["Zinc deficiency is common in intensive wheat zones, requiring 25 kg/ha Zinc Sulphate application.", "Manganese deficiency appears in sandy soils after paddy, especially in Punjab/Haryana."]
+    },
+
+    "cropping_context": {
+      "suitable_previous_crops": ["Rice", "Soybean", "Maize", "Cotton", "Moong", "Pigeonpea", "Sorghum (with caution)"],
+      "unsuitable_previous_crops": ["Late-harvested sugarcane (delays sowing significantly)"],
+      "rotation_notes": ["Rice-Wheat is dominant in Indo-Gangetic plains", "Soybean-Wheat in Central India (MP/Maharashtra)", "Cotton-Wheat in NW India"],
+      "intercrop_options": ["Mustard", "Chickpea (Gram)", "Linseed", "Sugarcane (autumn planted)"]
+    },
+
+    "crop_duration": {
+      "duration_days_min": 100,
+      "duration_days_max": 150,
+      "maturity_indicators": ["Leaves and stems turn yellow and dry", "Grains become hard", "Moisture content drops to 15-20%", "Ears turn golden brown"]
+    },
+
+    "recommendation_logic": {
+      "why_recommend_conditions": ["Cool winter climate", "Assured irrigation", "Well-drained loamy or black soils"],
+      "why_not_recommend_conditions": ["High humidity during winter", "Poorly drained soils", "Acidic soils below pH 5.5"],
+      "hard_rejection_conditions": ["Tropical zones with no distinct winter season", "Persistent waterlogging"]
+    }
+  },
+
+  "region_season_advisories": [
+    {
+      "advisory_id": "wheat_nw_plains_rabi",
+      "state_region": "Punjab & Haryana",
+      "district": "All",
+      "season": "Rabi",
+      "advisory_type": "cultivation_guide",
+      "applicability_filters": {
+        "irrigation": "irrigated",
+        "soil_type": "loam to sandy loam",
+        "sowing_window": "timely sown"
+      },
+
+      "sowing": {
+        "sowing_window_start": "November 01",
+        "sowing_window_end": "November 25",
+        "seed_rate": { "value": 100, "unit": "kg/ha", "range_type": "recommended" },
+        "seed_treatment": "Treat seed with Carboxin 75 WP or Tebuconazole 2DS @ 2g/kg seed for loose smut control.",
+        "spacing": "22.5 cm row-to-row",
+        "sowing_depth_cm": 5,
+        "nursery_required": false,
+        "transplanting_required": false
+      },
+
+      "land_preparation": {
+        "summary": "Plough field 2-3 times followed by planking to get fine tilth and conserve moisture. If rice residue is present, use Happy Seeder or Super Seeder for direct sowing."
+      },
+
+      "fertilizer": {
+        "basal_dose": "Half N (60 kg/ha), full P2O5 (60 kg/ha) and full K2O (40 kg/ha) at sowing.",
+        "top_dressing": "Remaining N in two equal splits: first at 1st irrigation (CRI stage) and second at 2nd irrigation.",
+        "organic_manure": "Apply 10-15 tonnes/ha FYM or compost 3-4 weeks before sowing if available.",
+        "micronutrients": "Foliar spray of 0.5% Zinc sulphate + 0.25% unslaked lime if zinc deficiency appears."
+      },
+
+      "irrigation": {
+        "schedule": "Provide 4 to 6 irrigations. First irrigation is most critical at CRI stage (21 days after sowing).",
+        "critical_stages": ["CRI (20-25 DAS)", "Tillering (40-45 DAS)", "Jointing (60-65 DAS)", "Flowering (80-85 DAS)", "Milking (100-105 DAS)", "Dough (115-120 DAS)"],
+        "rainfed_advice": "Apply one irrigation at CRI or boot stage if limited water is available."
+      },
+
+      "weed_management": {
+        "summary": "Apply Clodinafop 15 WP @ 400g/ha for grassy weeds (Phalaris minor) and Metsulfuron methyl 20 WP @ 20g/ha for broadleaf weeds at 30-35 DAS."
+      },
+
+      "pest_management": [
+        {
+          "name": "Aphids",
+          "symptoms": "Yellowing of leaves, presence of honeydew and sooty mold, curling of earheads.",
+          "management": "Spray Imidacloprid 17.8 SL @ 100 ml/ha or Thiamethoxam 25 WG @ 50 g/ha when aphid population reaches ETL (15 aphids/shoot)."
+        },
+        {
+          "name": "Termites",
+          "symptoms": "Drying of entire plant, damaged roots.",
+          "management": "Seed treatment with Chlorpyriphos 20 EC @ 4 ml/kg seed. Apply well-rotten FYM."
+        }
+      ],
+
+      "disease_management": [
+        {
+          "name": "Yellow Rust (Stripe Rust)",
+          "symptoms": "Yellow pustules arranged in parallel stripes on leaves.",
+          "management": "Grow resistant varieties (e.g., HD 2967, PBW 725). Spray Propiconazole 25 EC or Tebuconazole 250 EC @ 500 ml/ha."
+        },
+        {
+          "name": "Loose Smut",
+          "symptoms": "Ears are transformed into a black powdery mass of spores.",
+          "management": "Solar energy seed treatment or treat seed with Vitavax (Carboxin) @ 2g/kg."
+        }
+      ],
+
+      "deficiency_management": [
+        {
+          "nutrient": "Manganese",
+          "symptoms": "Interveinal chlorosis appearing as greyish-yellow specks on middle leaves.",
+          "remedy": "Foliar spray of 0.5% Manganese Sulphate (2.5 kg/ha) at 2-3 days before first irrigation and repeat 2-3 times."
+        }
+      ],
+
+      "harvest": {
+        "harvest_signs": "Leaves and stems turn dry and yellow. Grain becomes hard and produces a cracking sound when crushed between teeth.",
+        "post_harvest_notes": "Dry the grains to bring moisture content down to 10-12% for safe storage to prevent storage grain pests.",
+        "expected_duration_days": 140
+      },
+
+      "special_cautions": ["Do not delay first irrigation (CRI stage) beyond 21-25 days.", "Avoid excessive nitrogen application to prevent lodging and aphid infestation."],
+      "faq": [
+        {
+          "question": "What happens if sowing is delayed beyond November?",
+          "answer": "Yield decreases by roughly 30-40 kg per hectare for every day's delay in December due to terminal heat stress at grain filling."
+        }
+      ],
+
+      "source_refs": ["src_iari_wheat_pop_2022", "src_pau_rabi_2023"]
+    },
+    {
+      "advisory_id": "wheat_mp_central_rainfed",
+      "state_region": "Madhya Pradesh",
+      "district": "Sehore, Vidisha, Hoshangabad, Ashoknagar",
+      "season": "Rabi",
+      "advisory_type": "cultivation_guide",
+      "applicability_filters": {
+        "irrigation": "rainfed or limited irrigation",
+        "soil_type": "black cotton soil (vertisols)",
+        "sowing_window": "timely sown"
+      },
+
+      "sowing": {
+        "sowing_window_start": "October 25",
+        "sowing_window_end": "November 10",
+        "seed_rate": { "value": 80, "unit": "kg/ha", "range_type": "recommended" },
+        "seed_treatment": "Treat with Carboxin + Thiram @ 2-3 g/kg seed. Trichoderma viride @ 5g/kg can be used for organic management of root rot.",
+        "spacing": "20 cm row-to-row",
+        "sowing_depth_cm": 6,
+        "nursery_required": false,
+        "transplanting_required": false
+      },
+
+      "land_preparation": {
+        "summary": "Deep summer ploughing followed by harrowing. Moisture conservation is critical. Planking after sowing is strictly recommended to lock in residual moisture from Kharif."
+      },
+
+      "fertilizer": {
+        "basal_dose": "Entire dose of N (40 kg/ha), P2O5 (30 kg/ha) and K2O (20 kg/ha) should be applied deep (below seed layer) at the time of sowing.",
+        "top_dressing": "Not recommended under strictly rainfed conditions.",
+        "organic_manure": "Apply 5-10 tonnes/ha well-decomposed FYM.",
+        "micronutrients": "Foliar application of 2% Urea or KNO3 during dry spells at boot stage helps combat moisture stress."
+      },
+
+      "irrigation": {
+        "schedule": "Completely rainfed. Rely on conserved soil moisture and winter dew.",
+        "critical_stages": ["CRI", "Booting"],
+        "rainfed_advice": "If one life-saving irrigation is available, apply it at the CRI stage (21-25 DAS). If two are available, apply at CRI and Booting stages."
+      },
+
+      "weed_management": {
+        "summary": "Use wide spacing and do mechanical weeding at 30 DAS. Pre-emergence Pendimethalin 30 EC @ 1 L/ha if soil moisture allows."
+      },
+
+      "pest_management": [
+        {
+          "name": "Termites",
+          "symptoms": "Patchy drying of the crop, easily uprooted plants with chewed roots.",
+          "management": "Ensure FYM is fully decomposed. Seed treatment with Chlorpyriphos 20 EC @ 4 ml/kg."
+        },
+        {
+          "name": "Pink Stem Borer",
+          "symptoms": "Dead hearts in early vegetative stage, white heads in reproductive stage.",
+          "management": "Avoid late sowing. Remove stubbles of previous crop (like maize/sorghum). Spray Quinalphos 25 EC."
+        }
+      ],
+
+      "disease_management": [
+        {
+          "name": "Black Rust (Stem Rust)",
+          "symptoms": "Dark brown to black elongated pustules on stem and leaves.",
+          "management": "Use resistant varieties like HI 1544, HI 8627 (Malav Shakti). Spray Mancozeb @ 2.5g/L at initial appearance."
+        }
+      ],
+
+      "deficiency_management": [
+        {
+          "nutrient": "Nitrogen",
+          "symptoms": "Stunted growth and pale yellow leaves starting from the bottom.",
+          "remedy": "Foliar spray of 2% Urea solution during flowering if basal dose was insufficient."
+        }
+      ],
+
+      "harvest": {
+        "harvest_signs": "Complete drying of stalks and spikelets. Grain moisture around 10-12%.",
+        "post_harvest_notes": "Harvest in the morning hours to prevent shattering. Sharbati wheat grains should be kept dry to maintain luster.",
+        "expected_duration_days": 130
+      },
+
+      "special_cautions": ["Do not sow shallow; ensure seed reaches the moist soil zone (5-7 cm deep).", "Avoid excessive nitrogen which promotes rapid vegetative growth and early depletion of soil moisture."],
+      "faq": [
+        {
+          "question": "Can I grow Sharbati wheat with heavy irrigation?",
+          "answer": "Heavy irrigation can decrease the grain quality and luster of Sharbati wheat, which is best expressed under restricted irrigation/rainfed conditions."
+        }
+      ],
+
+      "source_refs": ["src_jnkvv_wheat_2022"]
+    }
+  ],
+
+  "risk_library": {
+    "pests": [
+      {
+        "name": "Wheat Aphid",
+        "favorable_conditions": ["Cloudy weather", "High nitrogen application", "Late sown crop", "High humidity"],
+        "symptoms": ["Honeydew secretion", "Sooty mold on leaves", "Stunted growth", "Poor grain filling"],
+        "management": ["Avoid late sowing", "Use recommended nitrogen doses", "Spray systemic insecticides like Imidacloprid 17.8 SL @ 100 ml/ha"]
+      },
+      {
+        "name": "Rodents",
+        "favorable_conditions": ["Proximity to uncultivated land", "Maturity stage of crop", "Lodged crop"],
+        "symptoms": ["Cut tillers", "Burrows in fields", "Missing earheads"],
+        "management": ["Zinc phosphide (2%) or Bromadiolone (0.005%) baits inside burrows", "Deep ploughing to destroy burrows"]
+      },
+      {
+        "name": "Termites",
+        "favorable_conditions": ["Dry sandy/loamy soils", "Un-decomposed FYM", "Rainfed conditions"],
+        "symptoms": ["Drying of entire plant", "Roots chewed off", "Easy to uproot"],
+        "management": ["Use only well-decomposed FYM", "Seed treatment with Chlorpyriphos 20 EC @ 4 ml/kg"]
+      }
+    ],
+    "diseases": [
+      {
+        "name": "Yellow Rust (Stripe Rust)",
+        "favorable_conditions": ["Temperature 10-20°C", "Intermittent rains", "High humidity / Heavy dew"],
+        "symptoms": ["Yellow, powdery pustules arranged in parallel stripes on leaves", "Black powder at maturity"],
+        "management": ["Cultivate resistant varieties (e.g., PBW 725, DBW 187)", "Foliar spray of Propiconazole 25 EC @ 0.1%"]
+      },
+      {
+        "name": "Karnal Bunt",
+        "favorable_conditions": ["Rainfall/High humidity at flowering time", "Cool temperatures (18-22°C)"],
+        "symptoms": ["A few grains in an ear convert into a black, sooty mass emitting a foul, fishy odor (trimethylamine)."],
+        "management": ["Avoid excessive irrigation during flowering", "Crop rotation with non-host crops", "Spray Propiconazole at heading stage"]
+      },
+      {
+        "name": "Powdery Mildew",
+        "favorable_conditions": ["Cloudy weather", "High nitrogen", "Dense crop canopy"],
+        "symptoms": ["White powdery growth on leaves, stems, and ears", "Premature drying of leaves"],
+        "management": ["Spray Wettable Sulphur @ 2.5 g/L", "Avoid excessive nitrogen application"]
+      }
+    ],
+    "abiotic_risks": [
+      {
+        "name": "Terminal Heat Stress",
+        "trigger_conditions": ["Late sowing (December)", "Sudden rise in temperature (>30°C) in March/April during grain filling"],
+        "impact": "Shrivelled grains, reduced test weight, forced maturity, significant yield loss.",
+        "mitigation": ["Timely sowing", "Use heat-tolerant varieties (e.g., DBW 187, DBW 222)", "Foliar spray of Potassium Nitrate (KNO3) 0.2% at booting", "Maintain adequate soil moisture during grain filling via light irrigation"]
+      },
+      {
+        "name": "Waterlogging",
+        "trigger_conditions": ["Heavy winter rains", "Poorly drained heavy clay fields", "Excessive irrigation"],
+        "impact": "Yellowing of leaves, oxygen starvation to roots, stunted growth, increased susceptibility to root rots.",
+        "mitigation": ["Ensure proper field leveling", "Create drainage channels", "Spray 2% urea once water drains to aid recovery"]
+      }
+    ]
+  },
+
+  "retrieval_chunks": [
+    {
+      "chunk_id": "wheat_overview_001",
+      "chunk_type": "overview",
+      "title": "Wheat crop overview",
+      "crop_name": "Wheat",
+      "state_region": "India",
+      "district": "All",
+      "season": "Rabi",
+      "advisory_category": "overview",
+      "text": "Wheat is a major rabi season cereal crop in North and Central India, requiring a cool growing period and warm ripening phase.",
+      "keywords": ["Rabi", "Cereal", "Winter crop", "Food security"],
+      "metadata_tags": ["general_info", "intro"],
+      "source_ref_ids": ["src_iari_wheat_pop_2022"]
+    },
+    {
+      "chunk_id": "wheat_suitability_001",
+      "chunk_type": "suitability",
+      "title": "Wheat suitability requirements",
+      "crop_name": "Wheat",
+      "state_region": "India",
+      "district": "All",
+      "season": "Rabi",
+      "advisory_category": "suitability",
+      "text": "Wheat thrives in well-drained loamy soils with pH between 6.0 and 7.5. It needs cool temperatures (14-25°C) and requires 4-6 irrigations in the absence of rain.",
+      "keywords": ["loam", "temperature", "irrigation", "pH"],
+      "metadata_tags": ["soil", "climate", "water"],
+      "source_ref_ids": ["src_iari_wheat_pop_2022"]
+    },
+    {
+      "chunk_id": "wheat_irrigation_CRI_001",
+      "chunk_type": "water_management",
+      "title": "Importance of CRI Stage Irrigation",
+      "crop_name": "Wheat",
+      "state_region": "India",
+      "district": "All",
+      "season": "Rabi",
+      "advisory_category": "water_management",
+      "text": "The Crown Root Initiation (CRI) stage occurs 20-25 days after sowing. It is the most critical stage for irrigation. Moisture stress at this stage severely reduces tiller formation and drastically drops final yield.",
+      "keywords": ["CRI", "Irrigation", "Tillering", "Crown Root"],
+      "metadata_tags": ["Water", "Critical Stage"],
+      "source_ref_ids": ["src_pau_rabi_2023"]
+    },
+    {
+      "chunk_id": "wheat_terminal_heat_001",
+      "chunk_type": "climate_management",
+      "title": "Managing Terminal Heat Stress",
+      "crop_name": "Wheat",
+      "state_region": "North India",
+      "district": "All",
+      "season": "Rabi",
+      "advisory_category": "climate_management",
+      "text": "Late sown wheat is highly susceptible to terminal heat stress in March-April, leading to shriveled grains. Mitigate this by spraying Potassium Nitrate (0.2%) at booting and ensuring soil moisture is maintained via light irrigation during grain filling.",
+      "keywords": ["Terminal heat", "Shriveled grains", "Potassium Nitrate", "Late sown"],
+      "metadata_tags": ["Heat stress", "Climate"],
+      "source_ref_ids": ["src_iari_wheat_pop_2022"]
+    }
+  ],
+
+  "structured_explanation_rules": [
+    {
+      "rule_id": "wheat_ph_match",
+      "condition": "input.ph >= ideal_ph_min AND input.ph <= ideal_ph_max",
+      "message": "Soil pH is excellent for optimal wheat nutrient uptake.",
+      "priority": 1,
+      "severity": "positive_match"
+    },
+    {
+      "rule_id": "wheat_waterlogging_warning",
+      "condition": "input.soil_drainage == 'poor'",
+      "message": "Wheat is highly sensitive to waterlogging. Ensure adequate drainage before sowing to prevent root rot.",
+      "priority": 1,
+      "severity": "hard_reject"
+    },
+    {
+      "rule_id": "wheat_late_sowing_warning",
+      "condition": "input.sowing_date > 'December 10'",
+      "message": "Sowing is significantly delayed. Yield will be reduced due to terminal heat stress. Select short-duration, heat-tolerant varieties like DBW 187.",
+      "priority": 2,
+      "severity": "warning"
+    },
+    {
+      "rule_id": "wheat_rainfed_soil_check",
+      "condition": "input.irrigation_available == false AND input.soil_texture == 'Sandy'",
+      "message": "Rainfed wheat is not recommended on sandy soils due to poor moisture retention. Consider drought-hardy crops like Mustard or Gram.",
+      "priority": 3,
+      "severity": "hard_reject"
+    }
+  ],
+
+  "ui_response_templates": {
+    "best_match_intro": "Wheat is a highly recommended Rabi crop for your field, given the suitable temperature and soil conditions.",
+    "warning_terminal_heat": "Based on your delayed sowing schedule, expect potential terminal heat stress. Ensure late-stage irrigation and use heat-tolerant varieties.",
+    "warning_waterlogging": "Caution: Your field has poor drainage. Wheat roots require high aeration; ensure furrows are made to drain excess water.",
+    "cta_view_advisory": "View full wheat cultivation guidelines",
+    "cta_view_pest_guide": "View Aphid and Termite Management Guide"
+  },
+
+  "source_registry": [
+    {
+      "source_id": "src_iari_wheat_pop_2022",
+      "title": "Wheat Cultivation Practices - ICAR-IARI",
+      "source_type": "pdf",
+      "publisher": "Indian Agricultural Research Institute (IARI)",
+      "region_scope": "North Western Plain Zone",
+      "season_scope": "Rabi",
+      "crop_scope": ["Wheat"],
+      "content_summary": "Comprehensive guide on wheat cultivation, varieties, and management in Northern India.",
+      "date_published": "2022-10-01",
+      "trust_level": "high"
+    },
+    {
+      "source_id": "src_pau_rabi_2023",
+      "title": "Package of Practices for Rabi Crops 2023-24",
+      "source_type": "manual",
+      "publisher": "Punjab Agricultural University (PAU)",
+      "region_scope": "Punjab",
+      "season_scope": "Rabi",
+      "crop_scope": ["Wheat", "Mustard", "Gram"],
+      "content_summary": "Official PAU guidelines for winter crop cultivation in Punjab.",
+      "date_published": "2023-09-15",
+      "trust_level": "high"
+    },
+    {
+      "source_id": "src_jnkvv_wheat_2022",
+      "title": "Rainfed Wheat Cultivation in Central India",
+      "source_type": "bulletin",
+      "publisher": "Jawaharlal Nehru Krishi Vishwa Vidyalaya (JNKVV)",
+      "region_scope": "Madhya Pradesh",
+      "season_scope": "Rabi",
+      "crop_scope": ["Wheat"],
+      "content_summary": "Specific practices for Sharbati and Durum wheat under rainfed and semi-irrigated conditions.",
+      "date_published": "2022-08-20",
+      "trust_level": "high"
+    }
+  ],
+
+  "quality_flags": {
+    "is_complete": true,
+    "missing_fields": [],
+    "weakly_supported_fields": [],
+    "last_reviewed_at": "2024-01-15T00:00:00Z"
+  },
+
+  "updated_at": "2024-01-15T00:00:00Z",
+  "created_at": "2023-11-01T00:00:00Z"
+}

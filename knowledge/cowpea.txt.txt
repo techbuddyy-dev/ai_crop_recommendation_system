@@ -1,0 +1,435 @@
+{
+  "crop_id": "cowpea",
+  "crop_name": "Cowpea",
+  "aliases": ["Lobia", "Chawli", "Chavali", "Barbati", "Black-eyed pea"],
+  "crop_group": "Pulse",
+  "status": "active",
+  "language": "en",
+  "version": "v1.2",
+
+  "master_profile": {
+    "short_description": "Cowpea is a versatile, warm-season pulse crop grown for grain, vegetable (green pods), and fodder. It is highly drought-tolerant and acts as an excellent cover crop to prevent soil erosion and fix atmospheric nitrogen.",
+    "seasons_supported": ["Kharif", "Zaid", "Rabi"],
+    "regions_supported": ["Uttar Pradesh", "Punjab", "Haryana", "Gujarat", "Maharashtra", "Karnataka", "Tamil Nadu", "Kerala"],
+    "agro_climatic_zones": ["Trans-Gangetic Plains Region", "Upper Gangetic Plains Region", "Gujarat Plains and Hills Region", "Western Plateau and Hills Region", "West Coast Plains and Ghats Region"],
+
+    "soil_suitability": {
+      "suitable_soil_textures": ["Sandy loam", "Loam", "Clay loam", "Red lateritic soils"],
+      "unsuitable_soil_textures": ["Heavy clay with poor drainage", "Highly saline and alkaline soils"],
+      "ideal_ph_min": 6.0,
+      "ideal_ph_max": 7.5,
+      "acceptable_ph_min": 5.5,
+      "acceptable_ph_max": 8.0,
+      "salinity_tolerance_note": "Moderately sensitive to soil salinity and highly sensitive to alkalinity.",
+      "drainage_requirement": "Requires well-drained soils; extremely sensitive to waterlogging, which can cause immediate root rot.",
+      "organic_carbon_note": "Responds well to organic matter, but typically grown in marginal soils. FYM application improves moisture retention."
+    },
+
+    "climate_suitability": {
+      "ideal_temperature_c_min": 25,
+      "ideal_temperature_c_max": 35,
+      "acceptable_temperature_c_min": 20,
+      "acceptable_temperature_c_max": 40,
+      "ideal_humidity_min": 50,
+      "ideal_humidity_max": 80,
+      "ideal_rainfall_mm_min": 400,
+      "ideal_rainfall_mm_max": 750,
+      "frost_tolerance_note": "Highly sensitive to frost; extreme cold stunts growth and kills the plant.",
+      "heat_tolerance_note": "High heat tolerance, but temperatures exceeding 38°C during flowering can cause flower drop and reduced pod setting."
+    },
+
+    "water_profile": {
+      "irrigation_required": false,
+      "rainfed_suitable": true,
+      "waterlogging_tolerance": "Very low; standing water for even 24 hours severely limits root aeration and nodulation.",
+      "drought_tolerance": "High; its deep taproot system allows it to withstand prolonged dry spells efficiently.",
+      "critical_water_stages": ["Flowering (40-45 DAS)", "Pod formation (55-60 DAS)"]
+    },
+
+    "nutrient_profile": {
+      "nitrogen_demand": "Low (15-20 kg/ha as starter dose; fixes its own nitrogen)",
+      "phosphorus_demand": "Moderate (40-50 kg/ha; essential for root and nodule development)",
+      "potassium_demand": "Low to Moderate (20-30 kg/ha depending on soil test)",
+      "micronutrient_notes": ["Molybdenum and Cobalt seed treatments sometimes enhance nodulation in deficient soils. Sulphur (20 kg/ha) improves protein content."]
+    },
+
+    "cropping_context": {
+      "suitable_previous_crops": ["Wheat", "Potato", "Mustard", "Rice", "Maize"],
+      "unsuitable_previous_crops": ["Continuous pulse or legume cultivation increases soil-borne disease incidence and nematodes."],
+      "rotation_notes": ["Rice - Wheat - Cowpea (Zaid)", "Maize - Potato - Cowpea", "Rice - Cowpea (Rice fallows)"],
+      "intercrop_options": ["Sorghum", "Pearl Millet", "Maize", "Cassava", "Castor", "Cotton"]
+    },
+
+    "crop_duration": {
+      "duration_days_min": 65,
+      "duration_days_max": 90,
+      "maturity_indicators": ["Pods turn yellow to brown and become dry", "Leaves start turning yellow and defoliate", "Seeds become hard with 15% moisture"]
+    },
+
+    "recommendation_logic": {
+      "why_recommend_conditions": ["Dryland or rainfed conditions", "Need for a fast-growing summer catch crop", "Dual purpose requirement (grain and fodder)"],
+      "why_not_recommend_conditions": ["Poorly drained heavy soils", "Frost-prone winters", "High salinity soils"],
+      "hard_rejection_conditions": ["Frequent flooding or persistent waterlogging"]
+    }
+  },
+
+  "region_season_advisories": [
+    {
+      "advisory_id": "cowpea_up_zaid",
+      "state_region": "Uttar Pradesh",
+      "district": "All districts",
+      "season": "Zaid",
+      "advisory_type": "cultivation_guide",
+      "applicability_filters": {
+        "irrigation": "irrigated",
+        "soil_type": "loam to sandy loam",
+        "sowing_window": "March to mid-April"
+      },
+
+      "sowing": {
+        "sowing_window_start": "March 01",
+        "sowing_window_end": "April 15",
+        "seed_rate": { "value": 20, "unit": "kg/ha", "range_type": "recommended", "source_confidence": "high" },
+        "seed_treatment": "Treat seed with Thiram @ 2g/kg or Trichoderma viride @ 5g/kg. Follow with Rhizobium and PSB culture @ 5g/kg seed.",
+        "spacing": "30 cm x 10 cm (for grain); closer spacing for fodder",
+        "sowing_depth_cm": 4,
+        "nursery_required": false,
+        "transplanting_required": false
+      },
+
+      "land_preparation": {
+        "summary": "After harvesting the Rabi crop, give a pre-sowing irrigation. Plough the field 2-3 times followed by planking to get a fine, leveled seedbed to avoid water stagnation."
+      },
+
+      "fertilizer": {
+        "basal_dose": "Apply 15-20 kg N, 40 kg P2O5, and 20 kg Sulphur per hectare at the time of sowing.",
+        "top_dressing": "Not required. Foliar spray of 2% Urea at flowering can reduce flower drop and boost yield.",
+        "organic_manure": "Apply 5 tonnes/ha of well-rotted FYM or compost during land preparation.",
+        "micronutrients": "Foliar application of 0.5% Zinc Sulphate if deficiency symptoms are observed."
+      },
+
+      "irrigation": {
+        "schedule": "In Zaid (summer), provide 3-4 irrigations at intervals of 10-15 days depending on soil type. First irrigation around 20-25 DAS.",
+        "critical_stages": ["Flowering", "Pod formation"],
+        "rainfed_advice": "For Kharif crop, grown rainfed. Ensure proper drainage to avoid waterlogging during monsoons."
+      },
+
+      "weed_management": {
+        "summary": "Pre-emergence application of Pendimethalin 30 EC @ 1.0 kg a.i./ha in 500 liters of water. One manual weeding at 20-25 days after sowing."
+      },
+
+      "pest_management": [
+        {
+          "name": "Aphids and Jassids",
+          "symptoms": "Nymphs and adults suck sap from tender leaves and shoots, causing curling, yellowing, and stunted growth.",
+          "management": "Spray Imidacloprid 17.8 SL @ 0.3 ml/L or Dimethoate 30 EC @ 1.7 ml/L."
+        },
+        {
+          "name": "Pod Borer (Maruca vitrata)",
+          "symptoms": "Larvae bore into buds, flowers, and pods. Webbing of flowers and pods is a characteristic symptom.",
+          "management": "Spray Emamectin Benzoate 5 SG @ 0.4 g/L or Indoxacarb 14.5 SC @ 0.5 ml/L at flowering/pod initiation."
+        }
+      ],
+
+      "disease_management": [
+        {
+          "name": "Cowpea Mosaic Virus (CPMV)",
+          "symptoms": "Mottling, blistering, and distortion of leaves. Stunted plant growth with severely reduced pod setting.",
+          "management": "Transmitted by aphids. Control vectors using systemic insecticides. Use resistant varieties. Uproot and burn infected plants."
+        },
+        {
+          "name": "Anthracnose",
+          "symptoms": "Dark brown, sunken lesions on stems, leaves, and pods. Can cause girdling of stems and plant death.",
+          "management": "Use disease-free seeds. Spray Carbendazim 50 WP or Mancozeb 75 WP @ 2 g/L at the first sign of disease."
+        }
+      ],
+
+      "deficiency_management": [
+        {
+          "nutrient": "Phosphorus",
+          "symptoms": "Stunted growth, dark green leaves with purplish or reddish discoloration, poor root and nodule development.",
+          "remedy": "Ensure adequate basal application of DAP or SSP."
+        }
+      ],
+
+      "harvest": {
+        "harvest_signs": "Leaves shed, pods turn yellowish-brown and dry out. Seeds become hard.",
+        "post_harvest_notes": "Harvest when 80% of pods are fully mature. Dry the harvested crop in the sun for a few days, thresh, and dry seeds to 10% moisture before storage.",
+        "expected_duration_days": 75
+      },
+
+      "special_cautions": ["Do not apply excessive nitrogen, as it promotes heavy vegetative growth and suppresses pod formation.", "Ensure harvest is done before pods shatter in the field."],
+      "faq": [
+        {
+          "question": "Can I grow cowpea as a green manure crop?",
+          "answer": "Yes, cowpea is an excellent green manure crop. Sow at a higher seed rate (35-40 kg/ha) and plough it back into the soil at 45-50 days (flowering stage) to enrich soil organic matter and nitrogen."
+        }
+      ],
+
+      "source_refs": ["src_iipr_cowpea_pop", "src_nduat_zaid_pop"]
+    },
+    {
+      "advisory_id": "cowpea_gujarat_kharif",
+      "state_region": "Gujarat & Maharashtra",
+      "district": "Banaskantha, Sabarkantha, Jalgaon, Nashik",
+      "season": "Kharif",
+      "advisory_type": "cultivation_guide",
+      "applicability_filters": {
+        "irrigation": "rainfed",
+        "soil_type": ["sandy loam", "medium black soils"],
+        "sowing_window": "June to July"
+      },
+
+      "sowing": {
+        "sowing_window_start": "June 15",
+        "sowing_window_end": "July 15",
+        "seed_rate": { "value": 15, "unit": "kg/ha", "range_type": "recommended" },
+        "seed_treatment": "Treat with Imidacloprid 600 FS @ 5 ml/kg to protect from early sucking pests.",
+        "spacing": "45 cm x 10 cm",
+        "sowing_depth_cm": 4,
+        "nursery_required": false,
+        "transplanting_required": false
+      },
+
+      "land_preparation": {
+        "summary": "Deep summer ploughing followed by harrowing. Ridge and furrow sowing is advised to avoid water stagnation during monsoon rains."
+      },
+
+      "fertilizer": {
+        "basal_dose": "20 kg N and 40 kg P2O5 per hectare.",
+        "top_dressing": "Not required under rainfed conditions."
+      },
+
+      "irrigation": {
+        "schedule": "Completely rainfed. Depends on monsoon showers.",
+        "critical_stages": ["Flowering"],
+        "rainfed_advice": "Interculture at 20 DAS helps in weed control and moisture conservation."
+      },
+
+      "weed_management": {
+        "summary": "Pre-emergence Pendimethalin @ 1 L/ha followed by one hand weeding at 25 DAS."
+      },
+
+      "pest_management": [
+        {
+          "name": "Hairy Caterpillar",
+          "symptoms": "Gregarious feeding by hairy larvae, defoliating plants rapidly.",
+          "management": "Destroy egg masses. Spray Quinalphos 25 EC @ 2 ml/L."
+        }
+      ],
+
+      "disease_management": [
+        {
+          "name": "Root-knot Nematode",
+          "symptoms": "Stunted growth, yellowing, and prominent galls/knots on roots.",
+          "management": "Deep summer ploughing. Crop rotation with non-hosts (cereals). Apply neem cake @ 1 t/ha."
+        }
+      ],
+
+      "harvest": {
+        "harvest_signs": "Pods turn brown and seeds rattle inside.",
+        "expected_duration_days": 80
+      },
+      "special_cautions": ["Do not plant Cowpea if the field has a known history of severe nematode infestation."],
+      "source_refs": ["src_jau_kharif_cowpea"]
+    }
+  ],
+
+  "risk_library": {
+    "pests": [
+      {
+        "name": "Aphids",
+        "favorable_conditions": ["Cloudy weather", "High humidity"],
+        "symptoms": ["Curled leaves", "Honeydew and sooty mold", "Vector for viral diseases"],
+        "management": ["Use yellow sticky traps", "Foliar spray of Dimethoate or Imidacloprid"]
+      },
+      {
+        "name": "Spotted Pod Borer",
+        "favorable_conditions": ["Warm and humid weather during flowering"],
+        "symptoms": ["Webbed flowers and pods", "Boreholes in developing pods"],
+        "management": ["Pheromone traps", "Spray Emamectin Benzoate"]
+      },
+      {
+        "name": "Root-Knot Nematode (Meloidogyne spp.)",
+        "favorable_conditions": ["Sandy loam soils", "Continuous legume cultivation"],
+        "symptoms": ["Stunted patches in field", "Yellowing", "Galls or knots on the root system"],
+        "management": ["Crop rotation with cereals", "Deep summer ploughing", "Application of Neem cake"]
+      }
+    ],
+    "diseases": [
+      {
+        "name": "Cowpea Mosaic Virus",
+        "favorable_conditions": ["High aphid vector population"],
+        "symptoms": ["Yellow and green mosaic patterns", "Stunted growth"],
+        "management": ["Use resistant varieties", "Control aphid vectors", "Rogueing"]
+      },
+      {
+        "name": "Root Rot / Collar Rot",
+        "favorable_conditions": ["Waterlogging", "Heavy clay soils", "High soil moisture and temperature"],
+        "symptoms": ["Sudden wilting", "Brown/black rotting at collar region"],
+        "management": ["Seed treatment with Trichoderma", "Avoid waterlogging", "Crop rotation"]
+      },
+      {
+        "name": "Powdery Mildew",
+        "favorable_conditions": ["Cool and dry weather later in the season"],
+        "symptoms": ["White powdery growth on the upper surface of leaves"],
+        "management": ["Spray Wettable Sulphur @ 3g/L"]
+      }
+    ],
+    "abiotic_risks": [
+      {
+        "name": "Waterlogging",
+        "trigger_conditions": ["Heavy continuous rains", "Poorly drained soils"],
+        "impact": "Root asphyxiation, sudden yellowing, root rot, and plant death.",
+        "mitigation": ["Sow on ridges or BBF", "Ensure proper surface drainage"]
+      }
+    ]
+  },
+
+  "retrieval_chunks": [
+    {
+      "chunk_id": "cowpea_overview_001",
+      "chunk_type": "overview",
+      "title": "Cowpea (Lobia) Overview",
+      "crop_name": "Cowpea",
+      "state_region": "India",
+      "district": "All",
+      "season": "Kharif/Zaid",
+      "advisory_category": "overview",
+      "text": "Cowpea, or Lobia, is a highly versatile pulse, fodder, and green manure crop. It is fast-growing, drought-tolerant, and excellent for soil fertility restoration.",
+      "keywords": ["Lobia", "Cowpea", "Pulse", "Green Manure", "Fodder"],
+      "metadata_tags": ["general_info", "intro"],
+      "source_ref_ids": ["src_iipr_cowpea_pop"]
+    },
+    {
+      "chunk_id": "cowpea_suitability_001",
+      "chunk_type": "suitability",
+      "title": "Cowpea Suitability Conditions",
+      "crop_name": "Cowpea",
+      "state_region": "India",
+      "district": "All",
+      "season": "All",
+      "advisory_category": "suitability",
+      "text": "Cowpea thrives in well-drained loamy soils and warm temperatures (25-35°C). It is highly drought-tolerant but extremely sensitive to waterlogging and frost.",
+      "keywords": ["Loam", "Well-drained", "Warm climate", "Drought tolerant", "Waterlogging-sensitive"],
+      "metadata_tags": ["soil", "climate", "water"],
+      "source_ref_ids": ["src_iipr_cowpea_pop"]
+    },
+    {
+      "chunk_id": "cowpea_nematode_warning_001",
+      "chunk_type": "warning",
+      "title": "Root-Knot Nematode Management in Cowpea",
+      "crop_name": "Cowpea",
+      "state_region": "India",
+      "district": "All",
+      "season": "All",
+      "advisory_category": "warning",
+      "text": "Cowpea is highly susceptible to Root-Knot Nematodes, especially in sandy soils. If plants appear stunted and yellow with knot-like galls on the roots, avoid planting legumes in that field for 2-3 years. Rotate with cereals like Maize or Sorghum and apply neem cake.",
+      "keywords": ["Nematodes", "Root-knot", "Galls", "Crop rotation", "Neem cake"],
+      "metadata_tags": ["pest", "nematode", "soil_health"],
+      "source_ref_ids": ["src_jau_kharif_cowpea"]
+    },
+    {
+      "chunk_id": "cowpea_fodder_vs_grain_001",
+      "chunk_type": "cultivation_practice",
+      "title": "Fodder vs Grain Cowpea Cultivation",
+      "crop_name": "Cowpea",
+      "state_region": "India",
+      "district": "All",
+      "season": "All",
+      "advisory_category": "cultivation_practice",
+      "text": "When growing Cowpea for fodder or green manure, use a higher seed rate (35-40 kg/ha) and closer spacing to encourage vegetative growth. For grain purposes, use a lower seed rate (15-20 kg/ha) with wider spacing (30-45 cm) to promote branching and pod development.",
+      "keywords": ["Fodder", "Grain", "Seed rate", "Spacing", "Green manure"],
+      "metadata_tags": ["agronomy", "seed_rate", "purpose"],
+      "source_ref_ids": ["src_nduat_zaid_pop"]
+    }
+  ],
+
+  "structured_explanation_rules": [
+    {
+      "rule_id": "cowpea_catch_crop_match",
+      "condition": "input.available_growing_days >= 65 AND input.available_growing_days <= 90 AND input.irrigation_available == true",
+      "message": "Cowpea is an ideal short-duration catch crop for your summer window, offering grain/vegetable yield while improving soil nitrogen.",
+      "priority": 1,
+      "severity": "positive_match"
+    },
+    {
+      "rule_id": "cowpea_waterlogging_reject",
+      "condition": "input.soil_drainage == 'poor'",
+      "message": "Severe Risk: Cowpea cannot survive in poorly drained soils. Stagnant water will cause rapid root rot and crop failure.",
+      "priority": 1,
+      "severity": "hard_reject"
+    },
+    {
+      "rule_id": "cowpea_mosaic_warning",
+      "condition": "input.pest_history_aphids == true",
+      "message": "High risk of Cowpea Mosaic Virus if aphid populations are historically high. Use resistant varieties and monitor pest levels closely.",
+      "priority": 2,
+      "severity": "warning"
+    },
+    {
+      "rule_id": "cowpea_nematode_reject",
+      "condition": "input.pest_history_nematodes == true",
+      "message": "Critical Warning: Your field has a history of nematodes. Cowpea is highly susceptible to root-knot nematodes. Consider crop rotation with cereals first.",
+      "priority": 3,
+      "severity": "hard_reject"
+    }
+  ],
+
+  "ui_response_templates": {
+    "best_match_intro": "Lobia (Cowpea) is a perfect fit for your well-drained field, acting as a great soil improver and providing reliable yields.",
+    "warning_drainage": "Your field's drainage needs improvement. Sow Lobia on ridges or raised beds to avoid water stagnation, which can kill the crop.",
+    "info_fodder_mode": "Tip: If you are growing this for fodder, increase your seed rate and plant closer together for maximum biomass.",
+    "cta_view_advisory": "View full Lobia (Cowpea) cultivation advisory",
+    "cta_view_nematode_guide": "Read the Root-Knot Nematode Management Guide"
+  },
+
+  "source_registry": [
+    {
+      "source_id": "src_iipr_cowpea_pop",
+      "title": "Cowpea Production Technology",
+      "source_type": "pdf",
+      "publisher": "ICAR - Indian Institute of Pulses Research (IIPR), Kanpur",
+      "region_scope": "India",
+      "season_scope": "Kharif and Zaid",
+      "crop_scope": ["Cowpea"],
+      "content_summary": "National guidelines covering high-yielding varieties, integrated nutrient, and pest management for Cowpea.",
+      "date_published": "2021-08-10",
+      "trust_level": "high"
+    },
+    {
+      "source_id": "src_nduat_zaid_pop",
+      "title": "Package of Practices for Zaid Crops",
+      "source_type": "manual",
+      "publisher": "Narendra Deva University of Agriculture and Technology (NDUAT), Ayodhya",
+      "region_scope": "Uttar Pradesh",
+      "season_scope": "Zaid",
+      "crop_scope": ["Cowpea", "Green Gram", "Black Gram"],
+      "content_summary": "State-level recommendations for summer pulse cultivation with assured irrigation in the Indo-Gangetic plains.",
+      "date_published": "2021-02-15",
+      "trust_level": "high"
+    },
+    {
+      "source_id": "src_jau_kharif_cowpea",
+      "title": "Kharif Pulse Cultivation Guide",
+      "source_type": "bulletin",
+      "publisher": "Junagadh Agricultural University (JAU)",
+      "region_scope": "Gujarat",
+      "season_scope": "Kharif",
+      "crop_scope": ["Cowpea", "Green Gram"],
+      "content_summary": "Provides best practices for rainfed Kharif pulses in Gujarat, including nematode and pest management.",
+      "date_published": "2022-05-10",
+      "trust_level": "high"
+    }
+  ],
+
+  "quality_flags": {
+    "is_complete": true,
+    "missing_fields": [],
+    "weakly_supported_fields": [],
+    "last_reviewed_at": "2024-04-10T00:00:00Z"
+  },
+
+  "updated_at": "2024-04-10T00:00:00Z",
+  "created_at": "2023-11-29T00:00:00Z"
+}

@@ -1,0 +1,441 @@
+{
+  "crop_id": "soybean",
+  "crop_name": "Soybean",
+  "aliases": ["Soyabean", "Bhatmas", "Golden Bean", "Miracle Crop"],
+  "crop_group": "Oilseed",
+  "status": "active",
+  "language": "en",
+  "version": "v1.2",
+
+  "master_profile": {
+    "short_description": "Soybean is a major Kharif oilseed and legume crop in India, renowned for its high protein (40%) and oil (20%) content. It is the primary cash crop in Central India.",
+    "seasons_supported": ["Kharif"],
+    "regions_supported": ["Madhya Pradesh", "Maharashtra", "Rajasthan", "Karnataka", "Telangana", "Chhattisgarh"],
+    "agro_climatic_zones": ["Central Plateau and Hills Region", "Western Plateau and Hills Region", "Southern Plateau and Hills Region"],
+
+    "soil_suitability": {
+      "suitable_soil_textures": ["Clay loam", "Deep black cotton soils (Vertisols)", "Loam"],
+      "unsuitable_soil_textures": ["Sandy", "Gravelly", "Shallow soils", "Highly saline soils"],
+      "ideal_ph_min": 6.0,
+      "ideal_ph_max": 7.5,
+      "acceptable_ph_min": 5.5,
+      "acceptable_ph_max": 8.0,
+      "salinity_tolerance_note": "Moderately sensitive to salinity and highly sensitive to alkalinity.",
+      "drainage_requirement": "Requires exceptionally well-drained soils; highly susceptible to waterlogging, which restricts oxygen to roots and kills nodules.",
+      "organic_carbon_note": "High organic carbon improves soil aeration and moisture retention, which is critical during short dry spells."
+    },
+
+    "climate_suitability": {
+      "ideal_temperature_c_min": 25,
+      "ideal_temperature_c_max": 32,
+      "acceptable_temperature_c_min": 15,
+      "acceptable_temperature_c_max": 38,
+      "ideal_humidity_min": 60,
+      "ideal_humidity_max": 85,
+      "ideal_rainfall_mm_min": 600,
+      "ideal_rainfall_mm_max": 1000,
+      "frost_tolerance_note": "Highly sensitive to frost, though rarely an issue as it is primarily a Kharif crop.",
+      "heat_tolerance_note": "Temperatures above 38°C during flowering cause severe flower drop and poor pod setting."
+    },
+
+    "water_profile": {
+      "irrigation_required": false,
+      "rainfed_suitable": true,
+      "waterlogging_tolerance": "Very low; standing water for more than 48 hours causes severe root rot and plant mortality.",
+      "drought_tolerance": "Moderate; can withstand brief dry spells but sensitive to terminal drought during pod filling.",
+      "critical_water_stages": ["Flowering (40-45 DAS)", "Pod development (60-70 DAS)", "Grain filling"]
+    },
+
+    "nutrient_profile": {
+      "nitrogen_demand": "Low to Moderate (20-25 kg/ha as starter dose; fixes bulk of its requirement via Bradyrhizobium japonicum nodules)",
+      "phosphorus_demand": "High (60-80 kg/ha; critical for root and nodule development)",
+      "potassium_demand": "Moderate (40 kg/ha)",
+      "micronutrient_notes": ["Sulphur (20-30 kg/ha) is vital for oil synthesis.", "Zinc (25 kg/ha Zinc Sulphate) is recommended for deficient deep black soils."]
+    },
+
+    "cropping_context": {
+      "suitable_previous_crops": ["Wheat", "Chickpea", "Mustard", "Potato"],
+      "unsuitable_previous_crops": ["Continuous soybean cultivation without rotation builds up soil-borne pathogens like Rhizoctonia and pests like Girdle Beetle."],
+      "rotation_notes": ["Soybean - Wheat (Dominant in MP)", "Soybean - Chickpea"],
+      "intercrop_options": ["Pigeonpea (Tur) in 4:2 ratio", "Maize", "Sorghum"]
+    },
+
+    "crop_duration": {
+      "duration_days_min": 90,
+      "duration_days_max": 110,
+      "maturity_indicators": ["Leaves turn yellow and drop off completely", "Pods turn yellow/brown and become dry", "Seeds rattle in the pods", "Seed moisture drops to 15%"]
+    },
+
+    "recommendation_logic": {
+      "why_recommend_conditions": ["Heavy soils with good moisture retention", "Rainfed Kharif season", "Areas with well-distributed monsoon"],
+      "why_not_recommend_conditions": ["Poorly drained soils prone to flooding", "High salinity areas"],
+      "hard_rejection_conditions": ["Fields with severe history of waterlogging without drainage infrastructure", "Extremely sandy soils"]
+    }
+  },
+
+  "region_season_advisories": [
+    {
+      "advisory_id": "soybean_mp_kharif",
+      "state_region": "Madhya Pradesh",
+      "district": "Indore, Ujjain, Dewas, Dhar, Sehore",
+      "season": "Kharif",
+      "advisory_type": "cultivation_guide",
+      "applicability_filters": {
+        "irrigation": "rainfed",
+        "soil_type": "medium to deep black soils",
+        "sowing_window": "onset of monsoon (mid-June to early July)"
+      },
+
+      "sowing": {
+        "sowing_window_start": "June 15",
+        "sowing_window_end": "July 10",
+        "seed_rate": { "value": 70, "unit": "kg/ha", "range_type": "recommended", "source_confidence": "high" },
+        "seed_treatment": "Follow FIR sequence: 1. Fungicide (Penflufen + Trifloxystrobin @ 1ml/kg), 2. Insecticide (Thiamethoxam 30 FS @ 10ml/kg for stem fly), 3. Rhizobium (Bradyrhizobium japonicum @ 5g/kg).",
+        "spacing": "45 cm x 5-7 cm",
+        "sowing_depth_cm": 3,
+        "nursery_required": false,
+        "transplanting_required": false
+      },
+
+      "land_preparation": {
+        "summary": "Deep summer ploughing once in 3 years. Use Broad Bed Furrow (BBF) or Ridge & Furrow planter to ensure proper drainage during heavy rains and moisture conservation during dry spells."
+      },
+
+      "fertilizer": {
+        "basal_dose": "Apply 25 kg N, 60 kg P2O5, 40 kg K2O, and 25 kg Sulphur per hectare at the time of sowing.",
+        "top_dressing": "Not required. A foliar spray of 2% Urea or DAP at pod initiation can boost yields if soil moisture is adequate.",
+        "organic_manure": "Apply 5-10 tonnes/ha well-rotted FYM mixed during the last harrowing.",
+        "micronutrients": "Foliar application of 0.5% Zinc Sulphate if zinc deficiency (interveinal chlorosis) is observed."
+      },
+
+      "irrigation": {
+        "schedule": "Primarily rainfed. Provide protective irrigation if a dry spell exceeds 15-20 days during flowering or pod filling stages.",
+        "critical_stages": ["Flowering", "Pod development", "Seed filling"],
+        "rainfed_advice": "BBF method acts as a moisture conservation technique during dry spells and a drainage channel during excess rains."
+      },
+
+      "weed_management": {
+        "summary": "Pre-emergence application of Pendimethalin 30 EC @ 1.0 kg a.i./ha within 3 days of sowing. Post-emergence application of Imazethapyr 10 SL @ 100g a.i./ha at 15-20 DAS for broad-leaved weeds."
+      },
+
+      "pest_management": [
+        {
+          "name": "Girdle Beetle (Obereopsis brevis)",
+          "symptoms": "Adults make two circular rings (girdles) on the stem/petiole, causing the upper part to dry and droop. Larvae tunnel inside the stem.",
+          "management": "Spray Thiacloprid 21.7 SC @ 750 ml/ha or Profenofos 50 EC @ 1.25 L/ha. Remove and destroy infested plant parts."
+        },
+        {
+          "name": "Tobacco Caterpillar / Defoliators",
+          "symptoms": "Larvae defoliate the plant, leaving only the veins. Heavy infestation can strip the entire field.",
+          "management": "Install pheromone traps. Spray Chlorantraniliprole 18.5 SC @ 150 ml/ha or Indoxacarb 15.8 EC @ 330 ml/ha."
+        },
+        {
+          "name": "Whitefly (Vector for YMV)",
+          "symptoms": "Sucks sap and transmits Yellow Mosaic Virus.",
+          "management": "Seed treatment with Imidacloprid. Install yellow sticky traps. Spray Thiamethoxam 25 WG @ 100 g/ha."
+        }
+      ],
+
+      "disease_management": [
+        {
+          "name": "Yellow Mosaic Virus (YMV)",
+          "symptoms": "Alternating yellow and green patches on leaves, leading to complete yellowing, stunting, and severely reduced pod count.",
+          "management": "Grow YMV-resistant/tolerant varieties (e.g., JS 20-34, JS 20-98). Control whitefly vectors. Rogue infected plants early."
+        },
+        {
+          "name": "Collar Rot / Root Rot (Rhizoctonia/Sclerotium)",
+          "symptoms": "Sudden yellowing and drying of plants in patches. Brown to black lesions at the collar region near the soil surface.",
+          "management": "Avoid waterlogging (use BBF method). Seed treatment with Penflufen + Trifloxystrobin. Follow crop rotation."
+        }
+      ],
+
+      "deficiency_management": [
+        {
+          "nutrient": "Sulphur",
+          "symptoms": "Uniform yellowing of new leaves, poor growth, reduced oil content.",
+          "remedy": "Apply Gypsum @ 250 kg/ha before sowing or use Single Super Phosphate (SSP) as the phosphorus source."
+        }
+      ],
+
+      "harvest": {
+        "harvest_signs": "Leaves drop completely, stems and pods turn brown. Grain moisture reaches 14-15%.",
+        "post_harvest_notes": "Harvest promptly as pods can shatter in some varieties. Sun-dry the threshed seeds to bring moisture down to 10-12% for safe storage to maintain viability.",
+        "expected_duration_days": 100
+      },
+
+      "special_cautions": ["Soybean seed loses viability very quickly. Always test seed germination percentage before sowing (should be >70%).", "Do not sow seeds deeper than 3-4 cm; deep sowing causes poor emergence."],
+      "faq": [
+        {
+          "question": "Why is my soybean crop suddenly turning yellow and drying in patches?",
+          "answer": "This is often due to Collar Rot or Root Rot caused by excessive soil moisture (waterlogging). Ensure proper drainage and avoid flat-bed sowing in heavy black soils."
+        },
+        {
+          "question": "What is the BBF method?",
+          "answer": "Broad Bed Furrow (BBF) is a sowing technique where raised beds are formed with furrows in between. It protects the crop from waterlogging during heavy rains and retains moisture during dry spells."
+        }
+      ],
+
+      "source_refs": ["src_iisr_soybean_pop", "src_jnkvv_kharif_soybean"]
+    },
+    {
+      "advisory_id": "soybean_mh_vidarbha_kharif",
+      "state_region": "Maharashtra",
+      "district": "Amravati, Akola, Wardha, Yavatmal, Buldhana",
+      "season": "Kharif",
+      "advisory_type": "cultivation_guide",
+      "applicability_filters": {
+        "irrigation": "rainfed",
+        "soil_type": "medium black soils",
+        "sowing_window": "delayed monsoon (late June to mid-July)"
+      },
+      "sowing": {
+        "sowing_window_start": "June 25",
+        "sowing_window_end": "July 15",
+        "seed_rate": { "value": 75, "unit": "kg/ha", "range_type": "recommended" },
+        "seed_treatment": "Treat with Carboxin+Thiram @ 3g/kg. Must inoculate with Bradyrhizobium and PSB. If delayed sowing, reduce row spacing slightly.",
+        "spacing": "45 cm x 5 cm",
+        "sowing_depth_cm": 3,
+        "nursery_required": false,
+        "transplanting_required": false
+      },
+      "land_preparation": {
+        "summary": "Deep ploughing. Crucial to open dead furrows at every 4 to 5 rows to drain out excess water and conserve moisture during breaks in monsoon."
+      },
+      "fertilizer": {
+        "basal_dose": "30 kg N, 75 kg P2O5, 30 kg K2O, and 20 kg S per hectare. Use DAP and MOP.",
+        "top_dressing": "Foliar spray of 2% Urea or KNO3 during prolonged dry spells at flowering."
+      },
+      "irrigation": {
+        "schedule": "Strictly rainfed. If dry spell >15 days occurs at pod filling, apply protective irrigation via sprinklers.",
+        "critical_stages": ["Flowering", "Seed filling"]
+      },
+      "weed_management": {
+        "summary": "Diclosulam 84 WDG @ 26 g/ha as pre-emergence or Imazethapyr post-emergence at 20 DAS."
+      },
+      "pest_management": [
+        {
+          "name": "Stem Fly (Melanagromyza sojae)",
+          "symptoms": "Drooping of the first two leaves, distinct brown tunneling inside the main stem.",
+          "management": "Seed treatment with Thiamethoxam 30 FS @ 10ml/kg seed."
+        }
+      ],
+      "disease_management": [
+        {
+          "name": "Rhizoctonia Aerial Blight",
+          "symptoms": "Water-soaked lesions on leaves, rapid defoliation during continuous rains.",
+          "management": "Spray Hexaconazole 5 EC @ 1 ml/L or Pyraclostrobin."
+        }
+      ],
+      "harvest": {
+        "harvest_signs": "Complete leaf drop, pods rattle.",
+        "expected_duration_days": 105
+      },
+      "special_cautions": ["Do not sow if rainfall is less than 100mm. Sowing in dry soil severely impacts germination."],
+      "faq": [
+        {
+          "question": "What is the FIR sequence for seed treatment?",
+          "answer": "F-I-R stands for Fungicide, Insecticide, and Rhizobium. Always apply Fungicide first, wait 2 hours, apply Insecticide, wait 2 hours, and finally apply the Rhizobium biofertilizer."
+        }
+      ],
+      "source_refs": ["src_pdkv_soybean_pop"]
+    }
+  ],
+
+  "risk_library": {
+    "pests": [
+      {
+        "name": "Girdle Beetle",
+        "favorable_conditions": ["High humidity", "Overcast sky"],
+        "symptoms": ["Drooping of trifoliate leaves", "Two parallel rings on the stem/petiole"],
+        "management": ["Deep summer ploughing", "Use of systemic insecticides", "Destruction of infested parts"]
+      },
+      {
+        "name": "Stem Fly (Melanagromyza sojae)",
+        "favorable_conditions": ["Early sowing stages"],
+        "symptoms": ["Drying of seedlings", "Reddish-brown tunnel inside the main stem"],
+        "management": ["Seed treatment with Thiamethoxam", "Timely sowing"]
+      },
+      {
+        "name": "Tobacco Caterpillar (Spodoptera litura)",
+        "favorable_conditions": ["Intermittent rains", "Dense canopy"],
+        "symptoms": ["Skeletonized leaves", "Defoliation"],
+        "management": ["Pheromone traps @ 5/ha", "Spray Chlorantraniliprole"]
+      }
+    ],
+    "diseases": [
+      {
+        "name": "Yellow Mosaic Virus (YMV)",
+        "favorable_conditions": ["High whitefly population"],
+        "symptoms": ["Yellowing of leaves", "Stunted growth", "Poor pod setting"],
+        "management": ["Resistant varieties", "Vector control"]
+      },
+      {
+        "name": "Charcoal Rot",
+        "favorable_conditions": ["High soil temperature (>30°C)", "Moisture stress during podding"],
+        "symptoms": ["Premature yellowing", "Black microsclerotia inside the lower stem/tap root"],
+        "management": ["Moisture conservation", "Irrigation during dry spells", "Seed treatment with Trichoderma"]
+      }
+    ],
+    "abiotic_risks": [
+      {
+        "name": "Waterlogging",
+        "trigger_conditions": ["Heavy, continuous monsoon showers", "Flat bed sowing on clay soils"],
+        "impact": "Root asphyxiation, nodule death, rapid yellowing, and plant mortality.",
+        "mitigation": ["Broad Bed Furrow (BBF) or Ridge and Furrow sowing method", "Proper field leveling"]
+      },
+      {
+        "name": "Poor Seed Viability",
+        "trigger_conditions": ["Improper storage", "High moisture during storage"],
+        "impact": "Poor germination leading to patchy plant stand.",
+        "mitigation": ["Conduct germination test before sowing", "Store seeds at < 10% moisture"]
+      }
+    ]
+  },
+
+  "retrieval_chunks": [
+    {
+      "chunk_id": "soybean_overview_001",
+      "chunk_type": "overview",
+      "title": "Soybean Crop Overview",
+      "crop_name": "Soybean",
+      "state_region": "India",
+      "district": "All",
+      "season": "Kharif",
+      "advisory_category": "overview",
+      "text": "Soybean is a miracle crop, rich in both protein and oil. Cultivated widely in Central India during the Kharif season, it has transformed the agricultural economy of states like Madhya Pradesh and Maharashtra.",
+      "keywords": ["Soybean", "Oilseed", "Legume", "Kharif", "Protein"],
+      "metadata_tags": ["general_info", "intro"],
+      "source_ref_ids": ["src_iisr_soybean_pop"]
+    },
+    {
+      "chunk_id": "soybean_suitability_001",
+      "chunk_type": "suitability",
+      "title": "Soybean Suitability Conditions",
+      "crop_name": "Soybean",
+      "state_region": "India",
+      "district": "All",
+      "season": "Kharif",
+      "advisory_category": "suitability",
+      "text": "Soybean thrives in well-drained, deep black cotton soils and clay loams. It is extremely sensitive to waterlogging, requiring raised beds or BBF methods for successful cultivation during heavy monsoons.",
+      "keywords": ["Black soil", "Drainage", "Waterlogging-sensitive", "BBF"],
+      "metadata_tags": ["soil", "climate", "water"],
+      "source_ref_ids": ["src_jnkvv_kharif_soybean"]
+    },
+    {
+      "chunk_id": "soybean_bbf_method_001",
+      "chunk_type": "cultivation_practice",
+      "title": "Broad Bed Furrow (BBF) Method for Soybean",
+      "crop_name": "Soybean",
+      "state_region": "India",
+      "district": "All",
+      "season": "Kharif",
+      "advisory_category": "cultivation_practice",
+      "text": "The BBF method creates raised beds separated by furrows. It safely drains excess rainwater preventing root suffocation, while the furrows conserve moisture during dry spells, increasing soybean yields significantly.",
+      "keywords": ["BBF", "Broad Bed Furrow", "Drainage", "Waterlogging", "Yield boost"],
+      "metadata_tags": ["agronomy", "water_management", "BBF"],
+      "source_ref_ids": ["src_iisr_soybean_pop"]
+    },
+    {
+      "chunk_id": "soybean_seed_treatment_fir_001",
+      "chunk_type": "cultivation_practice",
+      "title": "FIR Seed Treatment Sequence",
+      "crop_name": "Soybean",
+      "state_region": "India",
+      "district": "All",
+      "season": "Kharif",
+      "advisory_category": "cultivation_practice",
+      "text": "For Soybean, strictly follow the FIR sequence for seed treatment: Fungicide first, wait 2 hours, then Insecticide, wait 2 hours, and finally Rhizobium culture. This ensures the chemicals do not kill the beneficial nitrogen-fixing bacteria.",
+      "keywords": ["FIR", "Seed treatment", "Rhizobium", "Fungicide", "Insecticide"],
+      "metadata_tags": ["agronomy", "seed_treatment"],
+      "source_ref_ids": ["src_iisr_soybean_pop"]
+    }
+  ],
+
+  "structured_explanation_rules": [
+    {
+      "rule_id": "soybean_soil_match",
+      "condition": "input.soil_texture IN ['clay loam', 'black soil'] AND input.soil_drainage == 'well_drained'",
+      "message": "Your soil type is ideal for Soybean. The moisture retention of black soil combined with good drainage will support robust growth.",
+      "priority": 1,
+      "severity": "positive_match"
+    },
+    {
+      "rule_id": "soybean_waterlogging_reject",
+      "condition": "input.soil_drainage == 'poor' OR input.waterlogging_history == true",
+      "message": "Critical Warning: Soybean is highly susceptible to waterlogging. You must use the Broad Bed Furrow (BBF) or Ridge method, or switch to a water-tolerant crop.",
+      "priority": 1,
+      "severity": "hard_reject"
+    },
+    {
+      "rule_id": "soybean_ymv_warning",
+      "condition": "input.region_history_ymv == true",
+      "message": "Your region is prone to Yellow Mosaic Virus. Ensure you select YMV-resistant varieties like JS 20-34 or JS 20-98.",
+      "priority": 2,
+      "severity": "warning"
+    },
+    {
+      "rule_id": "soybean_germination_test_warning",
+      "condition": "input.seed_tested == false",
+      "message": "Soybean seeds lose viability fast. Please conduct a simple germination test at home before bulk sowing to ensure >70% viability.",
+      "priority": 3,
+      "severity": "warning"
+    }
+  ],
+
+  "ui_response_templates": {
+    "best_match_intro": "Soybean is a highly recommended and profitable cash crop for your field's soil profile.",
+    "warning_drainage": "Because your field has drainage issues, flat-bed sowing of Soybean will likely fail. Please adopt the Broad Bed Furrow (BBF) technique.",
+    "warning_germination": "Don't forget to test your seed germination! Soybean seed is delicate and low germination can ruin your yield.",
+    "cta_view_advisory": "View full Soybean cultivation guidelines",
+    "cta_view_bbf_guide": "Learn how to sow using the BBF Method"
+  },
+
+  "source_registry": [
+    {
+      "source_id": "src_iisr_soybean_pop",
+      "title": "Soybean Production Technology",
+      "source_type": "pdf",
+      "publisher": "ICAR - Indian Institute of Soybean Research (IISR), Indore",
+      "region_scope": "India",
+      "season_scope": "Kharif",
+      "crop_scope": ["Soybean"],
+      "content_summary": "National guidelines emphasizing the BBF method, YMV resistant varieties, and integrated pest management (FIR sequence).",
+      "date_published": "2022-05-10",
+      "trust_level": "high"
+    },
+    {
+      "source_id": "src_jnkvv_kharif_soybean",
+      "title": "Package of Practices for Kharif Crops",
+      "source_type": "manual",
+      "publisher": "Jawaharlal Nehru Krishi Vishwa Vidyalaya (JNKVV), Jabalpur",
+      "region_scope": "Madhya Pradesh",
+      "season_scope": "Kharif",
+      "crop_scope": ["Soybean"],
+      "content_summary": "State-specific agronomic practices tailored for the black soils of Madhya Pradesh.",
+      "date_published": "2021-06-01",
+      "trust_level": "high"
+    },
+    {
+      "source_id": "src_pdkv_soybean_pop",
+      "title": "Soybean Cultivation in Vidarbha",
+      "source_type": "bulletin",
+      "publisher": "Dr. Panjabrao Deshmukh Krishi Vidyapeeth (PDKV), Akola",
+      "region_scope": "Maharashtra",
+      "season_scope": "Kharif",
+      "crop_scope": ["Soybean"],
+      "content_summary": "Guide for managing dry spells and pest outbreaks in the Vidarbha region.",
+      "date_published": "2022-04-15",
+      "trust_level": "high"
+    }
+  ],
+
+  "quality_flags": {
+    "is_complete": true,
+    "missing_fields": [],
+    "weakly_supported_fields": [],
+    "last_reviewed_at": "2024-05-01T00:00:00Z"
+  },
+
+  "updated_at": "2024-05-01T00:00:00Z",
+  "created_at": "2023-11-30T00:00:00Z"
+}
