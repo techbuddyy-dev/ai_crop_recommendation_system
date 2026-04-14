@@ -12,7 +12,6 @@ from typing import Any, TypedDict
 import threading
 
 import numpy as np
-import shap
 from tenacity import retry, wait_exponential, stop_after_attempt, retry_if_exception_type
 from langgraph.graph import StateGraph, END
 from langchain_google_genai import ChatGoogleGenerativeAI, GoogleGenerativeAIEmbeddings
@@ -78,16 +77,6 @@ def _get_artifact():
     return _artifact
 
 
-def _get_explainer():
-    global _explainer
-    if _explainer is None:
-        with _init_lock:
-            if _explainer is None:
-                artifact = _get_artifact()
-                _explainer = shap.TreeExplainer(artifact["model"])
-    return _explainer
-
-
 def _get_vectorstore() -> Chroma:
     global _vectorstore
     if _vectorstore is None:
@@ -121,8 +110,7 @@ def _get_llm() -> ChatGoogleGenerativeAI:
 
 # ── Node 1: ML Prediction + SHAP ───────────────────────────────────────
 def predict_node(state: AgriState) -> dict:
-    """Compute SHAP drivers for the target crop."""
-    # 1. Compute SHAP for the requested crop
+    """Compute feature drivers. Using RF feature_importances_ to save RAM on Railway."""
     artifact = _get_artifact()
     features_df = build_features(
         soil_ph=state["soil_ph"], temp=state["temp"],
@@ -131,28 +119,17 @@ def predict_node(state: AgriState) -> dict:
         bin_edges=artifact["bin_edges"],
     )
 
-    explainer = _get_explainer()
-    shap_values = explainer.shap_values(features_df)
-
-    # Get SHAP for target crop
-    crop_name = state["target_crop"]
-    crop_classes = list(artifact["label_encoder"].classes_)
-    class_idx = crop_classes.index(crop_name)
-
-    if isinstance(shap_values, list):
-        sv = shap_values[class_idx][0]
-    else:
-        sv = shap_values[0, :, class_idx]
-
     feature_names = list(features_df.columns)
-    contribs = sorted(zip(feature_names, sv), key=lambda x: -abs(x[1]))
+    
+    # We use global feature_importances_ instead of SHAP to prevent massive Memory Spikes (OOM)
+    importances = artifact["model"].feature_importances_
+    contribs = sorted(zip(feature_names, importances), key=lambda x: -x[1])
 
-    # Build SHAP summary text
+    # Build summary text
     lines = []
     for feat, val in contribs[:5]:
-        direction = "POSITIVE" if val > 0 else "NEGATIVE"
         display = FEATURE_DISPLAY.get(feat, feat)
-        lines.append(f"- {display}: {direction} impact (SHAP value: {val:+.4f})")
+        lines.append(f"- {display}: highly influential factor (Importance Scale: {val:.4f})")
 
     shap_text = "\n".join(lines) if lines else "No significant drivers identified."
 
