@@ -15,7 +15,7 @@ from rag.graph import run_pipeline
 MODEL_PATH = Path(__file__).parent / "model.pkl.gz"
 
 app = FastAPI(
-    title="Agronomist AI Server",
+    title="IntelliFarm AI Server",
     description="Single API endpoint for predicting crops and returning RAG evaluations for the top 3 recommendations.",
     version="1.0"
 )
@@ -102,6 +102,6 @@ def predict_and_evaluate(req: CropPredictionRequest):
 
 if __name__ == "__main__":
     print("=" * 60)
-    print("Starting the Single-Endpoint Agronomist API Server...")
+    print("Starting the Single-Endpoint IntelliFarm API Server...")
     print("=" * 60)
     uvicorn.run("api:app", host="0.0.0.0", port=8000, reload=True)

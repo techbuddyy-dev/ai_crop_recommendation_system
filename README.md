@@ -1,4 +1,4 @@
-# 🌱 AI Crop Recommendation System: The Digital Agronomist
+# 🌱 IntelliFarm AI Server: The Digital Agronomist
 
 Welcome to the **AI Crop Recommendation System**, a next-generation "Digital Agronomist" built to solve the black-box problem in traditional agricultural machine learning.
 
